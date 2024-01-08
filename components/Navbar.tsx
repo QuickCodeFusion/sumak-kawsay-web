@@ -8,12 +8,15 @@ import {
 import { ButtonUI } from './ui/button'
 
 const Navbar = (): React.JSX.Element => {
+  const readPDF = () => {
+    window.open('/whitepaper.pdf', '_blank')
+  }
   return (
            <NavigationMenu className='w-full'>
                 <NavigationMenuList className='w-screen flex justify-around p-2'>
                     <Image className='flex' src='/vercel.svg' alt='logo' width={100} height={100}></Image>
                     <NavigationMenuItem className='flex justify-between gap-2'>
-                        <ButtonUI variant={'ghost'}>WHITEPAPER</ButtonUI>
+                        <ButtonUI variant={'ghost'} onClick={readPDF}>WHITEPAPER</ButtonUI>
                         <ButtonUI variant={'outline'}>WHITEPAPER</ButtonUI>
                     </NavigationMenuItem>
                 </NavigationMenuList>
