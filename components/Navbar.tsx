@@ -8,7 +8,7 @@ import {
 import { ButtonUI } from './ui/button'
 
 const Navbar = (): React.JSX.Element => {
-  const readPDF = () => {
+  const readPDF = (): void => {
     window.open('/whitepaper.pdf', '_blank')
   }
   return (
