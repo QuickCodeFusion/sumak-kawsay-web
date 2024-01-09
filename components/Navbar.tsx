@@ -19,7 +19,7 @@ const Navbar = (): React.JSX.Element => {
                     <Image className='flex' src='/node.png' alt='logo' width={50} height={50}></Image>
                     <NavigationMenuItem className='flex justify-between gap-2'>
                         <ButtonUI variant={'ghost'} className='text-white uppercase' onClick={readPDF}>whitepaper</ButtonUI>
-                        <ConnectButton></ConnectButton>
+                        <ConnectButton label='Connect'></ConnectButton>
                     </NavigationMenuItem>
                 </NavigationMenuList>
             </NavigationMenu>
