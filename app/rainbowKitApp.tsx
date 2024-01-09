@@ -1,6 +1,7 @@
 'use client'
 import '@rainbow-me/rainbowkit/styles.css'
 import {
+  darkTheme,
   getDefaultWallets,
   RainbowKitProvider
 } from '@rainbow-me/rainbowkit'
@@ -37,7 +38,7 @@ const wagmiConfig = createConfig({
 const RainbowKitApp = ({ children }: { children: React.ReactNode }): React.JSX.Element => {
   return (
         <WagmiConfig config={wagmiConfig}>
-            <RainbowKitProvider chains={chains}>
+            <RainbowKitProvider showRecentTransactions={true} chains={chains} theme={darkTheme()}>
                 {children}
             </RainbowKitProvider>
         </WagmiConfig>

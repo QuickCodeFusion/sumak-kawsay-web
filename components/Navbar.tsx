@@ -6,6 +6,7 @@ import {
   NavigationMenuList
 } from './ui/navigation-menu'
 import { ButtonUI } from './ui/button'
+import { ConnectButton } from '@rainbow-me/rainbowkit'
 
 const Navbar = (): React.JSX.Element => {
   const readPDF = (): void => {
@@ -17,7 +18,7 @@ const Navbar = (): React.JSX.Element => {
                     <Image className='flex' src='/vercel.svg' alt='logo' width={100} height={100}></Image>
                     <NavigationMenuItem className='flex justify-between gap-2'>
                         <ButtonUI variant={'ghost'} onClick={readPDF}>WHITEPAPER</ButtonUI>
-                        <ButtonUI variant={'outline'}>WHITEPAPER</ButtonUI>
+                        <ConnectButton label='Connect'></ConnectButton>
                     </NavigationMenuItem>
                 </NavigationMenuList>
             </NavigationMenu>
