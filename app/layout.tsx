@@ -21,7 +21,8 @@ const RootLayout = ({
       <body className={
         cn(
           'min-h-screen',
-          inter.className
+          inter.className,
+          'bg-[url("/background.png")] bg-cover bg-no-repeat bg-center bg-fixed backdrop-blur-md'
         )
       }>
         <Providers>
