@@ -1,14 +1,14 @@
 import { useAddRecentTransaction } from '@rainbow-me/rainbowkit'
-const ButtonTransaction = (): React.JSX.Element => {
+const ButtonTransaction = ({ hash, description }: { hash: string, description: string }): React.JSX.Element => {
   const addRecentTransaction = useAddRecentTransaction()
   return (
       <button
+      className='text-white'
         onClick={() => {
           addRecentTransaction({
-            hash: '0x...',
-            description: '...'
+            hash,
+            description
           })
-          console.log('Added recent transaction')
         }}
       >
         Add recent transaction

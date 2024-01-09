@@ -38,7 +38,13 @@ const wagmiConfig = createConfig({
 const RainbowKitApp = ({ children }: { children: React.ReactNode }): React.JSX.Element => {
   return (
         <WagmiConfig config={wagmiConfig}>
-            <RainbowKitProvider showRecentTransactions={true} chains={chains} theme={darkTheme()}>
+            <RainbowKitProvider showRecentTransactions={true} chains={chains} theme={darkTheme({
+              accentColor: '#6b7280',
+              accentColorForeground: 'white',
+              borderRadius: 'large',
+              fontStack: 'system',
+              overlayBlur: 'none'
+            })}>
                 {children}
             </RainbowKitProvider>
         </WagmiConfig>
