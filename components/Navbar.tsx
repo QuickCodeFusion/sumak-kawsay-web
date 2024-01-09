@@ -6,15 +6,20 @@ import {
   NavigationMenuList
 } from './ui/navigation-menu'
 import { ButtonUI } from './ui/button'
+import { ConnectButton } from '@rainbow-me/rainbowkit'
 
 const Navbar = (): React.JSX.Element => {
+  const readPDF = (): void => {
+    window.open('/whitepaper.pdf', '_blank')
+  }
+
   return (
-           <NavigationMenu className='w-full'>
+           <NavigationMenu className='w-full bg-black bg-opacity-55'>
                 <NavigationMenuList className='w-screen flex justify-around p-2'>
-                    <Image className='flex' src='/vercel.svg' alt='logo' width={100} height={100}></Image>
+                    <Image className='flex' src='/node.png' alt='logo' width={50} height={50}></Image>
                     <NavigationMenuItem className='flex justify-between gap-2'>
-                        <ButtonUI variant={'ghost'}>WHITEPAPER</ButtonUI>
-                        <ButtonUI variant={'outline'}>WHITEPAPER</ButtonUI>
+                        <ButtonUI variant={'ghost'} className='text-white uppercase' onClick={readPDF}>whitepaper</ButtonUI>
+                        <ConnectButton></ConnectButton>
                     </NavigationMenuItem>
                 </NavigationMenuList>
             </NavigationMenu>
