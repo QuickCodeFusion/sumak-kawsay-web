@@ -2,6 +2,10 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { cn } from '@/lib/utils'
+import { Providers } from './providers'
+import Footer from '@/components/Footer'
+import Navbar from '@/components/Navbar'
+import { ThemeProvider } from './themeDark'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,9 +24,24 @@ const RootLayout = ({
       <body className={
         cn(
           'min-h-screen',
-          inter.className
+          inter.className,
+          'bg-[url("/background.png")] bg-cover bg-no-repeat bg-center bg-fixed backdrop-blur-md',
+          'h-screen flex'
         )
-      }>{children}</body>
+      }>
+        <Providers>
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+          >
+          <Navbar/>
+          {children}
+          <Footer/>
+          </ThemeProvider>
+        </Providers>
+      </body>
     </html>
   )
 }
