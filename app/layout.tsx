@@ -3,6 +3,8 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import { cn } from '@/lib/utils'
 import { Providers } from './providers'
+import Footer from '@/components/Footer'
+import Navbar from '@/components/Navbar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -22,11 +24,14 @@ const RootLayout = ({
         cn(
           'min-h-screen',
           inter.className,
-          'bg-[url("/background.png")] bg-cover bg-no-repeat bg-center bg-fixed backdrop-blur-md'
+          'bg-[url("/background.png")] bg-cover bg-no-repeat bg-center bg-fixed backdrop-blur-md',
+          'h-screen flex'
         )
       }>
         <Providers>
+          <Navbar/>
           {children}
+          <Footer/>
         </Providers>
       </body>
     </html>

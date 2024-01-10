@@ -1,12 +1,10 @@
-import Navbar from '@/components/Navbar'
 import PresaleCountdown from '@/components/PresaleCountdown'
 import { TimeData } from '@/components/TimeData'
 import { ButtonModal } from '@/components/ButtonModal'
 
 const Home = (): React.JSX.Element => {
   return (
-    <main>
-      <Navbar/>
+    <main className='h-[77vh] md:h-[81vh]'>
       <PresaleCountdown/>
       <section>
         <div className='flex flex-col text-center text-white justify-center gap-10 md:gap-16 items-center my-12'>
