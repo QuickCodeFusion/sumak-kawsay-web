@@ -1,11 +1,10 @@
-import Navbar from '@/components/Navbar'
 import PresaleCountdown from '@/components/PresaleCountdown'
 import { TimeData } from '@/components/TimeData'
+import { ButtonModal } from '@/components/ButtonModal'
 
 const Home = (): React.JSX.Element => {
   return (
-    <main>
-      <Navbar/>
+    <main className='h-[77vh] md:h-[81vh] grid place-items-center'>
       <PresaleCountdown/>
       <section>
         <div className='flex flex-col text-center text-white justify-center gap-10 md:gap-16 items-center my-12'>
@@ -15,7 +14,8 @@ const Home = (): React.JSX.Element => {
           <p className='text-md md:text-lg font-semibold'>Buy tokens now and reap the benefits of the blockchain revolution!</p>
         </div>
       </section>
-      <TimeData/>
+      <TimeData stage={1} progress={2000} goal={10000}/>
+      <ButtonModal/>
     </main>
   )
 }
