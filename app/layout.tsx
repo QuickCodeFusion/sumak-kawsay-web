@@ -5,6 +5,7 @@ import { cn } from '@/lib/utils'
 import { Providers } from './providers'
 import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
+import { ThemeProvider } from './themeDark'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -29,9 +30,16 @@ const RootLayout = ({
         )
       }>
         <Providers>
+        <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+          >
           <Navbar/>
           {children}
           <Footer/>
+          </ThemeProvider>
         </Providers>
       </body>
     </html>

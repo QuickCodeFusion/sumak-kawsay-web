@@ -10,40 +10,43 @@ import {
 } from './ui/modal'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
+import { SelectCoin } from './SelectCoin'
 
 export const ButtonModal = (): React.JSX.Element => {
   return (
-    <>
-    <Dialog className="relative z-50">
+    <Dialog>
       <DialogTrigger asChild>
-        <ButtonUI className='w-52 uppercase rounded-full bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 border-none text-white' variant={'outline'}>Edit Profile</ButtonUI>
+        <ButtonUI className='w-52 uppercase rounded-full bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 border-none text-white' variant={'outline'}>buy now</ButtonUI>
       </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px]">
-        <DialogHeader>
-          <DialogTitle>Edit profile</DialogTitle>
-          <DialogDescription>
-            Make changes to your profile here. Click save when you’re done.
+      <DialogContent className="sm:max-w-[500px] rounded-full overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-52 z-0">
+            <div className="m-auto h-full w-96 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-b-full filter blur-3xl"></div>
+        </div>
+        <DialogHeader className='z-10 uppercase'>
+          <DialogTitle >be an investor</DialogTitle>
+          <DialogDescription className='text-white font-semibold'>
+            balance: {'0'}
           </DialogDescription>
         </DialogHeader>
-        <div className="grid gap-4 py-4">
-          <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="name" className="text-right">
-              Name
-            </Label>
-            <Input id="name" value="Pedro Duarte" className="col-span-3" />
+        <div className="grid gap-4 py-4 z-10">
+          <div className="grid grid-cols-5 gap-1 ">
+          <Label htmlFor="amount" className='uppercase col-span-5'>amount</Label>
+          <Input id="amount" type='number' className="col-span-3 appearance-none rounded-e-none" /><SelectCoin/>
           </div>
-          <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="username" className="text-right">
-              Username
-            </Label>
-            <Input id="username" value="@peduarte" className="col-span-3" />
+          <div className="grid gap-1 z-10">
+            <Label htmlFor="get-amount" className='uppercase'>amount</Label>
+            <Input id="get-amount" type='number' value={''} className="col-span-3" />
+          </div>
+          <div className='grid divide-y divide-dashed gap-4'>
+            <div className='flex justify-between w-full '><span>$precio{''}</span><span>{'0'}</span></div>
+            <div className='flex justify-between w-full '><span>Bonus 0%{''}</span><span>{'0'}</span></div>
+            <div className='flex justify-between w-full '><span>Total Amount{''}</span><span>{'0'}</span></div>
           </div>
         </div>
         <DialogFooter>
-          <ButtonUI type="submit">Save changes</ButtonUI>
+          <ButtonUI className='w-full uppercase rounded-full bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 border-none text-white' variant={'outline'} type="submit">aprove</ButtonUI>
         </DialogFooter>
       </DialogContent>
     </Dialog>
-    </>
   )
 }
