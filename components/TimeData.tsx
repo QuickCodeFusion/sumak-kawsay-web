@@ -1,6 +1,5 @@
 'use client'
 import { useEffect, useState } from 'react'
-import { ButtonUI } from './ui/button'
 import { Progress } from './ui/progress-bar'
 
 interface props {
@@ -24,9 +23,6 @@ export const TimeData: React.FC<props> = ({ stage, progress, goal }): React.JSX.
           </p>
         </div>
         <Progress value={percentage} className='w-3/4 md:w-[1000px] h-7 md:h-10 outline-dashed outline-1 outline-white'/>
-        <ButtonUI className='w-52 uppercase rounded-full bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 border-none text-white' variant={'outline'}>
-            buy now
-        </ButtonUI>
     </div>
   )
 }
