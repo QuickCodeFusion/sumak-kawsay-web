@@ -1,9 +1,10 @@
 import PresaleCountdown from '@/components/PresaleCountdown'
 import { TimeData } from '@/components/TimeData'
+import { ButtonModal } from '@/components/ButtonModal'
 
 const Home = (): React.JSX.Element => {
   return (
-    <main className='h-[77vh] md:h-[81vh]'>
+    <main className='h-[77vh] md:h-[81vh] grid place-items-center'>
       <PresaleCountdown/>
       <section>
         <div className='flex flex-col text-center text-white justify-center gap-10 md:gap-16 items-center my-12'>
@@ -14,6 +15,7 @@ const Home = (): React.JSX.Element => {
         </div>
       </section>
       <TimeData/>
+      <ButtonModal/>
     </main>
   )
 }
