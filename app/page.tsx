@@ -4,7 +4,7 @@ import { ButtonModal } from '@/components/ButtonModal'
 
 const Home = (): React.JSX.Element => {
   return (
-    <main className='h-[77vh] md:h-[81vh] grid place-items-center'>
+    <main className='h-5/6 flex gap-4 flex-col justify-center'>
       <PresaleCountdown/>
       <section>
         <div className='flex flex-col text-center text-white justify-center gap-10 md:gap-16 items-center my-12'>
