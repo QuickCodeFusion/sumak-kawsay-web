@@ -1,6 +1,7 @@
 import Navbar from '@/components/Navbar'
 import PresaleCountdown from '@/components/PresaleCountdown'
 import { TimeData } from '@/components/TimeData'
+import { ButtonModal } from '@/components/ButtonModal'
 
 const Home = (): React.JSX.Element => {
   return (
@@ -16,6 +17,7 @@ const Home = (): React.JSX.Element => {
         </div>
       </section>
       <TimeData/>
+      <ButtonModal/>
     </main>
   )
 }
