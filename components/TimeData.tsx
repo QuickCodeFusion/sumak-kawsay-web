@@ -11,7 +11,7 @@ export const TimeData: React.FC<props> = ({ stage, progress, goal }): React.JSX.
   const [percentage, setPercentage] = useState(0)
   useEffect(() => {
     setPercentage((progress / goal) * 100)
-  }, [stage, progress, goal])
+  }, [])
   return (
     <div className='grid place-items-center gap-4 '>
         <div className='w-3/4 md:w-[1000px] flex justify-between  font-bold text-white'>
