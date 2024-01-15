@@ -2,6 +2,12 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger
+} from '@/components/ui/tooltip'
 
 const Footer = (): React.JSX.Element => {
   const networks = [
@@ -25,8 +31,12 @@ const Footer = (): React.JSX.Element => {
     }
   ]
 
+  const readPDF = (): void => {
+    window.open('/whitepaper.pdf', '_blank')
+  }
+
   return (
-    <footer className="flex justify-center gap-6">
+    <footer className="flex mt-5 p-5 justify-center gap-6">
         {
             networks.map((network) => (
                 <Link key={network.id} href={network.url} className="p-4 bg-gray-100 bg-opacity-30 hover:bg-white hover:bg-opacity-70 rounded-full">
@@ -34,6 +44,18 @@ const Footer = (): React.JSX.Element => {
                 </Link>
             ))
         }
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger>
+              <div className='p-4 bg-gray-100 bg-opacity-30 hover:bg-white hover:bg-opacity-70 rounded-full'>
+                <Image src='/expediente.png' alt='whitepaper' width={28} height={28} onClick={readPDF} className='cursor-pointer '/>
+              </div>
+            </TooltipTrigger>
+            <TooltipContent side='bottom'>
+              <p>whitepaper</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
     </footer>
   )
 }
