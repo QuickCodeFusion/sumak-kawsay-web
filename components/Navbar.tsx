@@ -13,7 +13,10 @@ const Navbar = (): React.JSX.Element => {
                 <NavigationMenuList className='w-screen flex justify-around p-2'>
                     <Image className='flex' src='/node.png' alt='logo' width={50} height={50}></Image>
                     <NavigationMenuItem className='flex justify-between gap-5'>
-                        <ConnectButton label='Connect' showBalance={{ smallScreen: false, largeScreen: true }}></ConnectButton>
+                        <ConnectButton label='Connect' accountStatus={{
+                          smallScreen: 'avatar',
+                          largeScreen: 'full'
+                        }} showBalance={{ smallScreen: true, largeScreen: true }}></ConnectButton>
                     </NavigationMenuItem>
                 </NavigationMenuList>
             </NavigationMenu>
