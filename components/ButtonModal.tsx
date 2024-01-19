@@ -20,7 +20,7 @@ export const ButtonModal = (): React.JSX.Element => {
           <ButtonUI className='w-52 uppercase rounded-full bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 border-none text-white' variant={'outline'}>buy now</ButtonUI>
         </DialogTrigger>
       </div>
-      <DialogContent className="sm:max-w-[500px] overflow-hidden">
+      <DialogContent className="w-5/6 sm:max-w-[500px] overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-52 z-0">
             <div className="m-auto h-full w-96 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-b-full filter blur-3xl"></div>
         </div>

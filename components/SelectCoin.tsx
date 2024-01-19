@@ -56,14 +56,14 @@ export const SelectCoin = (): JSX.Element => {
         >
           {value !== ''
             ? frameworks.find((framework) => framework.value === value)?.label
-            : 'Select framework...'}
+            : 'Select '}
           <CaretSortIcon className="ml-2 h-4 w-4 shrink-0 opacity-50" />
         </ButtonUI>
       </PopoverTrigger>
       <PopoverContent className="w-[200px] p-0">
         <Command>
-          <CommandInput placeholder="Search framework..." className="h-9" />
-          <CommandEmpty>No framework found.</CommandEmpty>
+          <CommandInput placeholder="Search" className="h-9" />
+          <CommandEmpty>No frame</CommandEmpty>
           <CommandGroup>
             {frameworks.map((framework) => (
               <CommandItem

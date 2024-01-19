@@ -23,10 +23,8 @@ const RootLayout = ({
     <html lang="es">
       <body className={
         cn(
-          'min-h-screen',
           inter.className,
-          'bg-[url("/background.png")] bg-cover bg-no-repeat bg-center bg-fixed backdrop-blur-md',
-          'h-screen flex'
+          'bg-[url("/background.png")] bg-cover bg-no-repeat bg-center bg-fixed backdrop-blur-md h-auto'
         )
       }>
         <Providers>
