@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 const Home = (): React.JSX.Element => {
   return (
-    <main className='flex gap-4 pt-8 justify-center w-screen'>
+    <main className='flex flex-col md:flex-row gap-4 pt-8 justify-center w-screen'>
       <section>
         <div className='flex flex-col text-center text-white justify-center gap-10 md:gap-16 items-center my-12'>
           <h1 className='text-4xl md:text-6xl font-bold'>
@@ -20,7 +20,7 @@ const Home = (): React.JSX.Element => {
           </ButtonUI>
         </div>
       </section>
-      <section className='backdrop-blur bg-black/50 border rounded p-4 flex flex-col w-1/2 mx-12'>
+      <section className='backdrop-blur bg-black/50 border rounded p-4 flex flex-col w-full md:w-1/2 mx-0 md:mx-12'>
         <PresaleCountdown/>
         <TimeData stage={1} progress={2000} goal={10000}/>
         <BuyInfo/>
