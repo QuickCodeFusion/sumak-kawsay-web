@@ -38,7 +38,7 @@ const Navbar = (): React.JSX.Element => {
                     {networks.map((network) => (
                       <NavigationMenuItem key={network.id}>
                         <Link href={network.url} target='_blank'>
-                          <Image src={network.image} alt={network.title} width={35} height={35}></Image>
+                          <Image className='hover:scale-110' src={network.image} alt={network.title} width={35} height={35}></Image>
                         </Link>
                       </NavigationMenuItem>
                     ))}
