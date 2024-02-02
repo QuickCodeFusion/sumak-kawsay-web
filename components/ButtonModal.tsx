@@ -1,3 +1,4 @@
+'use client'
 import { ButtonUI } from './ui/button'
 import {
   Dialog,
@@ -11,8 +12,13 @@ import {
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { SelectCoin } from './SelectCoin'
+import BalanceOf from '@/utils/functionsContract/BalanceOf'
+import CurrentPrice from '@/utils/functionsContract/CurrentPrice'
+import { useSelector } from '@/lib/redux/hooks'
 
 export const ButtonModal = (): React.JSX.Element => {
+  const { currentPrice } = useSelector((state) => state.currentPrice)
+  console.log(currentPrice)
   return (
     <Dialog>
       <div className='flex justify-center'>
@@ -26,8 +32,8 @@ export const ButtonModal = (): React.JSX.Element => {
         </div>
         <DialogHeader className='z-10 uppercase'>
           <DialogTitle >be an investor</DialogTitle>
-          <DialogDescription className='text-white font-semibold'>
-            balance: {'0'}
+          <DialogDescription className='text-white font-semibold flex gap-2'>
+            balance: <BalanceOf />
           </DialogDescription>
         </DialogHeader>
         <div className="grid gap-4 py-4 z-10">
@@ -40,8 +46,8 @@ export const ButtonModal = (): React.JSX.Element => {
             <Input id="get-amount" type='number' value={''} className="col-span-3" />
           </div>
           <div className='grid divide-y divide-dashed gap-4'>
-            <div className='flex justify-between w-full '><span>$precio{''}</span><span>{'0'}</span></div>
-            <div className='flex justify-between w-full '><span>Bonus 0%{''}</span><span>{'0'}</span></div>
+            <div className='flex justify-between w-full '><span>$precio{''}</span><span><CurrentPrice/></span></div>
+            <div className='flex justify-between w-full '><span>Bonus </span><span>{((0.000100 - currentPrice) / (0.000100) * 100)}%</span></div>
             <div className='flex justify-between w-full '><span>Total Amount{''}</span><span>{'0'}</span></div>
           </div>
         </div>

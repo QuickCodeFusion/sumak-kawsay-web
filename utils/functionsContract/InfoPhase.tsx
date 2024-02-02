@@ -14,12 +14,10 @@ const InfoPhase = (): JSX.Element => {
     abi: AbyContractAddress,
     functionName: 'tokensSold'
   })
-  console.log(data)
   const phase = String(data?.phase)
   const price = Number(data?.price) / 10 ** 18
   const total = Number(data?.total)
   const sold = Number(tokensold)
-  console.log(price)
   return <TimeData stage={phase} progress={sold} goal={total} value={price} />
 }
 
