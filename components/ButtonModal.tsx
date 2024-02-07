@@ -15,10 +15,21 @@ import { SelectCoin } from './SelectCoin'
 import BalanceOf from '@/utils/functionsContract/BalanceOf'
 import CurrentPrice from '@/utils/functionsContract/CurrentPrice'
 import { useSelector } from '@/lib/redux/hooks'
+import { useState } from 'react'
+import BuyWrite from '@/utils/functionsContract/BuyWrite'
 
 export const ButtonModal = (): React.JSX.Element => {
   const { currentPrice } = useSelector((state) => state.currentPrice)
-  console.log(currentPrice)
+  const [value, setValue] = useState({
+    send: 0,
+    amount: 0
+  })
+  const handlesend = (event: React.ChangeEvent<HTMLInputElement>): void => {
+    setValue({
+      send: Number(event.target.value),
+      amount: (Number(event.target.value) / currentPrice)
+    })
+  }
   return (
     <Dialog>
       <div className='flex justify-center'>
@@ -39,20 +50,20 @@ export const ButtonModal = (): React.JSX.Element => {
         <div className="grid gap-4 py-4 z-10">
           <div className="grid grid-cols-5 gap-1 ">
           <Label htmlFor="amount" className='uppercase col-span-5'>amount</Label>
-          <Input id="amount" type='number' className="col-span-3 appearance-none rounded-e-none" /><SelectCoin/>
+          <Input id="amount" type='number' onChange={handlesend} className="col-span-3 appearance-none rounded-e-none" /><SelectCoin/>
           </div>
           <div className="grid gap-1 z-10">
             <Label htmlFor="get-amount" className='uppercase'>amount</Label>
-            <Input id="get-amount" type='number' value={''} className="col-span-3" />
+            <Input id="get-amount" type='number' value={value.amount} className="col-span-3" />
           </div>
           <div className='grid divide-y divide-dashed gap-4'>
-            <div className='flex justify-between w-full '><span>$precio{''}</span><span><CurrentPrice/></span></div>
+            <div className='flex justify-between w-full '><span>precio$</span><span><CurrentPrice/></span></div>
             <div className='flex justify-between w-full '><span>Bonus </span><span>{((0.000100 - currentPrice) / (0.000100) * 100)}%</span></div>
-            <div className='flex justify-between w-full '><span>Total Amount{''}</span><span>{'0'}</span></div>
+            <div className='flex justify-between w-full '><span>Total Amount</span><span>{value.amount}</span></div>
           </div>
         </div>
-        <DialogFooter>
-          <ButtonUI className='w-full uppercase rounded-full bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 border-none text-white' variant={'outline'} type="submit">aprove</ButtonUI>
+        <DialogFooter >
+          <BuyWrite send={value.send} amount={value.amount} />
         </DialogFooter>
       </DialogContent>
     </Dialog>

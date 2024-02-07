@@ -4,7 +4,7 @@ import { AbyToken } from '@/configWagmi/AbyContrat'
 
 const SymbolToken = (): JSX.Element => {
   const { data, isLoading } = useContractRead({
-    address: '0x654AE429F03fd1f428D479a89640Fa799C2A19aE',
+    address: '0x4e27Fd1f1Ae3Cf0E6f6Ec73F4Af5bc5449006ccd',
     abi: AbyToken,
     functionName: 'symbol'
   })

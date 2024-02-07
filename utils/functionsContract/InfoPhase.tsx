@@ -5,12 +5,12 @@ import { TimeData } from '@/components/TimeData'
 
 const InfoPhase = (): JSX.Element => {
   const { data } = useContractRead({
-    address: '0x47633E0A6dA0DD5437D9573619Bf6a989f7816fb',
+    address: '0x8533C3C16163cCddEB23F21746c9EdA6bfa7BE5B',
     abi: AbyContractAddress,
     functionName: 'currentPhase'
   })
   const { data: tokensold } = useContractRead({
-    address: '0x47633E0A6dA0DD5437D9573619Bf6a989f7816fb',
+    address: '0x8533C3C16163cCddEB23F21746c9EdA6bfa7BE5B',
     abi: AbyContractAddress,
     functionName: 'tokensSold'
   })
