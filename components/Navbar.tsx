@@ -29,6 +29,11 @@ const networks = [
   }
 ]
 
+const currentDate = new Date()
+const stopRenderingDate = new Date('2024-04-01')
+
+const shouldRenderComponents = currentDate < stopRenderingDate
+
 const Navbar = (): React.JSX.Element => {
   return (
            <NavigationMenu className='w-full bg-opacity-55'>
@@ -42,10 +47,11 @@ const Navbar = (): React.JSX.Element => {
                         </Link>
                       </NavigationMenuItem>
                     ))}
+                    { shouldRenderComponents &&
                         <ConnectButton label='Connect wallet' accountStatus={{
                           smallScreen: 'avatar',
                           largeScreen: 'full'
-                        }} showBalance={{ smallScreen: true, largeScreen: true }}></ConnectButton>
+                        }} showBalance={{ smallScreen: true, largeScreen: true }}></ConnectButton>}
                     </NavigationMenuList>
                 </NavigationMenuList>
             </NavigationMenu>
