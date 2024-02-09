@@ -13,7 +13,7 @@ const BalanceOf = (): JSX.Element => {
     functionName: 'balanceOf',
     args: [address]
   })
-  const balance = Number(0)
+  const balance = Number(data)
   dispatch(setBalanceOf(balance))
   return (<div>{isLoading ? 'loading...' : data?.toString()}</div>)
 }

@@ -10,6 +10,7 @@ import ClaimTokens from '@/utils/functionsContract/ClaimFunction'
 const Claim = (): React.JSX.Element => {
   const { balanceOf } = useSelector((state) => state.balanceOf)
   const { isConnected } = useAccount()
+  console.log(balanceOf)
   return (
         <div className='w-full grid place-items-center '>
             <div className="h-[4rem] w-full bg-sky-500/50 grid place-items-center">

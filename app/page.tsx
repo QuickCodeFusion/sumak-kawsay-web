@@ -26,9 +26,9 @@ const Home = (): React.JSX.Element => {
         <InfoPhase/>
         <BuyInfo/>
       </section>
-      {/* <section className='backdrop-blur bg-white border rounded-3xl overflow-hidden flex flex-col min-w-[400px] md:w-1/2 mx-0 md:mx-12'>
+      <section className='backdrop-blur bg-white border rounded-3xl overflow-hidden flex flex-col min-w-[400px] md:w-1/2 mx-0 md:mx-12'>
         <Claim/>
-      </section> */}
+      </section>
     </main>
   )
 }
