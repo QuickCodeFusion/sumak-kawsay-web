@@ -10,7 +10,6 @@ const ClaimTokens = ({ boolean }: { boolean: boolean }): JSX.Element => {
     account: address,
     functionName: 'claimTokens'
   })
-  console.log(data)
   return (
       <div className='flex justify-center w-full'>
         <ButtonUI

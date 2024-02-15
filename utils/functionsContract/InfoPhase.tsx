@@ -16,7 +16,7 @@ const InfoPhase = (): JSX.Element => {
   })
   const phase = String(data?.phase)
   const price = Number(data?.price) / 10 ** 18
-  const total = Number(data?.total)
+  const total = Number(1000000)
   const sold = Number(tokensold)
   return <TimeData stage={phase ?? ''} progress={sold ?? 0} goal={total ?? 0} value={price ?? 0} />
 }

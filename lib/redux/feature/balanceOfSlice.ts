@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit'
 export const balanceOfSlice = createSlice({
   name: 'balanceOf',
   initialState: {
-    balanceOf: 0
+    balanceOf: null
   },
   reducers: {
     setBalanceOf: (state, action) => {

@@ -7,6 +7,11 @@ import {
 } from './ui/navigation-menu'
 import { ConnectButton } from '@rainbow-me/rainbowkit'
 import Link from 'next/link'
+import { useSelector, useDispatch } from '@/lib/redux/hooks'
+import { useEffect } from 'react'
+import { toast } from 'sonner'
+import { useWaitForTransaction } from 'wagmi'
+import { setStatusTransaction } from '@/lib/redux/feature/statusTransaction'
 
 const networks = [
   {
@@ -30,6 +35,21 @@ const networks = [
 ]
 
 const Navbar = (): React.JSX.Element => {
+  const dispatch = useDispatch()
+  const { waitTransaction } = useSelector(state => state.waitTransaction)
+  const { status } = useWaitForTransaction({
+    hash: waitTransaction
+  })
+  useEffect(() => {
+    if (status === 'success') {
+      toast.success(
+        'Compra Exitosa', {
+          style: { background: 'green', color: '#FFF' }
+        }
+      )
+      dispatch(setStatusTransaction(status))
+    }
+  }, [status])
   return (
            <NavigationMenu className='w-full bg-opacity-55'>
                 <NavigationMenuList className='w-screen flex justify-between px-8'>

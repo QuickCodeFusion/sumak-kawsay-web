@@ -3,7 +3,6 @@ import PresaleCountdown from '@/components/PresaleCountdown'
 import { ButtonUI } from '@/components/ui/button'
 import Link from 'next/link'
 import InfoPhase from '@/utils/functionsContract/InfoPhase'
-import Claim from '@/components/Claim'
 
 const Home = (): React.JSX.Element => {
   return (
@@ -25,9 +24,6 @@ const Home = (): React.JSX.Element => {
         <PresaleCountdown/>
         <InfoPhase/>
         <BuyInfo/>
-      </section>
-      <section className='backdrop-blur bg-white border rounded-3xl overflow-hidden flex flex-col min-w-[400px] md:w-1/2 mx-0 md:mx-12'>
-        <Claim/>
       </section>
     </main>
   )
