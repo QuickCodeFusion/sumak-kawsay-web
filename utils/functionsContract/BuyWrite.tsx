@@ -1,3 +1,4 @@
+'use client'
 import React, { useState, useEffect } from 'react'
 import { useContractWrite, useAccount } from 'wagmi'
 import { parseEther } from 'viem'

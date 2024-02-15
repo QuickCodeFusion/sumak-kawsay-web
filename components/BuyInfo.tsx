@@ -1,3 +1,4 @@
+'use client'
 import { ButtonModal } from './ButtonModal'
 import NameToken from '../utils/functionsToken/NameToken'
 import SymbolToken from '@/utils/functionsToken/SymbolToken'
