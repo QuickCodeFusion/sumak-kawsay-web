@@ -12,15 +12,15 @@ const BuyInfo = (): JSX.Element => {
             '>
                 <li>
                     <p>Token Name</p>
-                    <p><NameToken/></p>
+                    <NameToken/>
                 </li>
                 <li>
                     <p>Token Symbol</p>
-                    <p><SymbolToken/></p>
+                    <SymbolToken/>
                 </li>
                 <li>
                     <p>Current Price</p>
-                    <p><CurrentPrice/></p>
+                    <CurrentPrice/>
                 </li>
             </ul>
             <ButtonModal/>
