@@ -26,6 +26,7 @@ export const TimeData: React.FC<props> = ({ stage, progress, goal, value }): Rea
           </p>
           <p className='text-sm uppercase md:text-lg'>
             {progress} / {goal} DWIT
+            {progress} / {goal} DWIT
           </p>
         </div>
         <Progress value={percentage ?? 0} className='w-3/4 h-3 md:h-5 outline-dashed outline-1 outline-white'/>

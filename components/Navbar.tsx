@@ -33,6 +33,11 @@ const networks = [
   }
 ]
 
+const currentDate = new Date()
+const stopRenderingDate = new Date('2024-04-01')
+
+const shouldRenderComponents = currentDate < stopRenderingDate
+
 const Navbar = (): React.JSX.Element => {
   const { waitTransaction } = useSelector(state => state.waitTransaction)
   const { status } = useWaitForTransaction({
@@ -56,14 +61,15 @@ const Navbar = (): React.JSX.Element => {
                     {networks.map((network) => (
                       <NavigationMenuItem key={network.id}>
                         <Link href={network.url} target='_blank'>
-                          <Image src={network.image} alt={network.title} width={35} height={35}></Image>
+                          <Image className='hover:scale-110' src={network.image} alt={network.title} width={35} height={35}></Image>
                         </Link>
                       </NavigationMenuItem>
                     ))}
+                    { shouldRenderComponents &&
                         <ConnectButton label='Connect wallet' accountStatus={{
                           smallScreen: 'avatar',
                           largeScreen: 'full'
-                        }} showBalance={{ smallScreen: true, largeScreen: true }}></ConnectButton>
+                        }} showBalance={{ smallScreen: true, largeScreen: true }}></ConnectButton>}
                     </NavigationMenuList>
                 </NavigationMenuList>
             </NavigationMenu>

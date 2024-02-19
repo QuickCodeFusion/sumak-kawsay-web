@@ -1,4 +1,5 @@
 'use client'
+'use client'
 import { ButtonUI } from './ui/button'
 import {
   Dialog,
@@ -54,6 +55,8 @@ export const ButtonModal = (): React.JSX.Element => {
         </div>
         <DialogHeader className='z-10 uppercase'>
           <DialogTitle >be an investor</DialogTitle>
+          <DialogDescription className='text-white font-semibold flex gap-2'>
+            balance: <BalanceOf />
           <DialogDescription className='text-white font-semibold flex gap-2'>
             balance: <BalanceOf />
           </DialogDescription>
