@@ -1,4 +1,7 @@
 import { ButtonModal } from './ButtonModal'
+import NameToken from '../utils/functionsToken/NameToken'
+import SymbolToken from '@/utils/functionsToken/SymbolToken'
+import CurrentPrice from '@/utils/functionsContract/CurrentPrice'
 
 const BuyInfo = (): JSX.Element => {
   return (
@@ -8,19 +11,15 @@ const BuyInfo = (): JSX.Element => {
             '>
                 <li>
                     <p>Token Name</p>
-                    <p>GITTU TOKEN</p>
+                    <p><NameToken/></p>
                 </li>
                 <li>
                     <p>Token Symbol</p>
-                    <p>GITTU</p>
+                    <p><SymbolToken/></p>
                 </li>
                 <li>
                     <p>Current Price</p>
-                    <p>0.001 ETH</p>
-                </li>
-                <li>
-                    <p>Next Stage Price</p>
-                    <p>0.002 ETH</p>
+                    <p><CurrentPrice/></p>
                 </li>
             </ul>
             <ButtonModal/>
