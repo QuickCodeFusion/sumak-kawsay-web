@@ -1,7 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react'
 import { useContractWrite, useAccount } from 'wagmi'
-import { parseEther } from 'viem'
 import { AbyContractAddress } from '@/configWagmi/AbyContrat'
 import { ButtonUI } from '@/components/ui/button'
 import Loading from '@/components/Loading'
@@ -9,21 +8,21 @@ import { toast } from 'sonner'
 import { useDispatch } from '@/lib/redux/hooks'
 import { setWaitTransaction } from '@/lib/redux/feature/waitTransaction'
 
-const BuyWrite = ({ send, amount }: { send: number, amount: number }): JSX.Element => {
+const BuyWrite = ({ amount, reset }: { amount: number, reset: () => void }): JSX.Element => {
   const dispatch = useDispatch()
   const { address } = useAccount()
   const [Shown, setShown] = useState(false)
   const [error, setError] = useState(false)
 
   const { isLoading, isSuccess, isError, writeAsync, data: hash } = useContractWrite({
-    address: '0x8533C3C16163cCddEB23F21746c9EdA6bfa7BE5B',
+    address: '0x3B0d1D48F046CBF197a9b4A88fa91c6a233691bA',
     abi: AbyContractAddress,
     account: address,
     functionName: 'buy'
   })
   useEffect(() => {
     if (isSuccess && hash?.hash !== undefined) {
-      toast(
+      toast.loading(
         'Procesando', {
           style: { background: 'yellow', color: '#000' }
         }
@@ -39,7 +38,7 @@ const BuyWrite = ({ send, amount }: { send: number, amount: number }): JSX.Eleme
       setShown(false)
       setError(false)
     }
-  }, [isError, Shown, isSuccess, status, error])
+  }, [isError, Shown, isSuccess, error])
 
   return (
     <div className='flex justify-center w-full flex-col items-center gap-4'>
@@ -49,7 +48,6 @@ const BuyWrite = ({ send, amount }: { send: number, amount: number }): JSX.Eleme
         onClick={() => {
           if (amount > 0) {
             writeAsync({
-              value: parseEther(send.toString()),
               args: [amount]
             }).then(() => {
               setShown(true)
@@ -57,6 +55,7 @@ const BuyWrite = ({ send, amount }: { send: number, amount: number }): JSX.Eleme
               setShown(true)
               console.log(error)
             })
+            reset()
           } else setError(true)
         }
         }

@@ -16,7 +16,7 @@ export const TimeData: React.FC<props> = ({ stage, progress, goal, value }): Rea
     }
   }, [progress])
   const calculatorBonus = useMemo(() => {
-    if (typeof value === 'number') return (0.000100 - value) / 0.000100
+    if (typeof value === 'number') return (2.38 - (value)) / 2.38
   }, [value])
   return (
     <div className='grid place-items-center gap-4 '>

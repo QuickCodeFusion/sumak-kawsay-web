@@ -5,7 +5,7 @@ import { ButtonUI } from '@/components/ui/button'
 const ClaimTokens = ({ boolean }: { boolean: boolean }): JSX.Element => {
   const { address } = useAccount()
   const { data, isLoading, isSuccess, write, isError } = useContractWrite({
-    address: '0x8533C3C16163cCddEB23F21746c9EdA6bfa7BE5B',
+    address: '0x3B0d1D48F046CBF197a9b4A88fa91c6a233691bA',
     abi: AbyContractAddress,
     account: address,
     functionName: 'claimTokens'

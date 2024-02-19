@@ -1,10 +1,12 @@
 'use client'
 import { ButtonModal } from './ButtonModal'
-import NameToken from '../utils/functionsToken/NameToken'
-import SymbolToken from '@/utils/functionsToken/SymbolToken'
-import CurrentPrice from '@/utils/functionsContract/CurrentPrice'
+import NameToken from './functionsToken/NameToken'
+import SymbolToken from './functionsToken/SymbolToken'
+import BalanceOf from '@/components/functionsContract/BalanceOf'
+import { useSelector } from '@/lib/redux/hooks'
 
 const BuyInfo = (): JSX.Element => {
+  const { currentPrice } = useSelector((state) => state.currentPrice)
   return (
         <div className='flex flex-col text-center justify-center items-center my-6 gap-4'>
             <ul className='[&>li]:border-b-2 [&>li]:flex [&>li]:justify-between w-full
@@ -20,7 +22,11 @@ const BuyInfo = (): JSX.Element => {
                 </li>
                 <li>
                     <p>Current Price</p>
-                    <CurrentPrice/>
+                    {currentPrice}
+                </li>
+                <li>
+                    <p>Your Balance</p>
+                    <BalanceOf/>
                 </li>
             </ul>
             <ButtonModal/>
