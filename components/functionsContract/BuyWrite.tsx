@@ -2,13 +2,14 @@
 import React, { useState, useEffect } from 'react'
 import { useContractWrite, useAccount } from 'wagmi'
 import { AbyContractAddress } from '@/configWagmi/AbyContrat'
+// import { parseEther } from 'viem'
 import { ButtonUI } from '@/components/ui/button'
 import Loading from '@/components/Loading'
 import { toast } from 'sonner'
 import { useDispatch } from '@/lib/redux/hooks'
 import { setWaitTransaction } from '@/lib/redux/feature/waitTransaction'
 
-const BuyWrite = ({ amount, reset }: { amount: number, reset: () => void }): JSX.Element => {
+const BuyWrite = ({ send, amount, reset }: { send: number, amount: number, reset: () => void }): JSX.Element => {
   const dispatch = useDispatch()
   const { address } = useAccount()
   const [Shown, setShown] = useState(false)
@@ -39,7 +40,7 @@ const BuyWrite = ({ amount, reset }: { amount: number, reset: () => void }): JSX
       setError(false)
     }
   }, [isError, Shown, isSuccess, error])
-
+  console.log(hash)
   return (
     <div className='flex justify-center w-full flex-col items-center gap-4'>
       <ButtonUI
@@ -48,7 +49,7 @@ const BuyWrite = ({ amount, reset }: { amount: number, reset: () => void }): JSX
         onClick={() => {
           if (amount > 0) {
             writeAsync({
-              args: [amount]
+              args: [1]
             }).then(() => {
               setShown(true)
             }).catch(error => {
@@ -63,6 +64,7 @@ const BuyWrite = ({ amount, reset }: { amount: number, reset: () => void }): JSX
         Aprovar
       </ButtonUI>
       {isLoading && <Loading />}
+      {isError && <div>Transaction: {JSON.stringify(hash)}</div>}
     </div>
   )
 }

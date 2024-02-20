@@ -1,9 +1,9 @@
 'use client'
 import { useAccount } from 'wagmi'
 import { useSelector } from '@/lib/redux/hooks'
-import BalanceOf from '@/utils/functionsContract/BalanceOf'
+import BalanceOf from './functionsContract/BalanceOf'
 import Image from 'next/image'
-import ClaimTokens from '@/utils/functionsContract/ClaimFunction'
+import ClaimTokens from './functionsContract/ClaimFunction'
 import CheckboxWithLine from './CheckboxWithLine'
 import { ConnectButton } from '@rainbow-me/rainbowkit'
 
@@ -19,7 +19,7 @@ const ClaimSteps = (): JSX.Element => {
       <div className='py-4'>
         <div className="flex gap-2 place-items-center">
           <div className='flex flex-row gap-1 pt-2'>
-            <CheckboxWithLine isConnected={isConnected} balanceOf={balanceOf} />
+            <CheckboxWithLine isConnected={isConnected} balanceOf={balanceOf ?? 0 } />
             <div className='flex h-full flex-col gap-10  pt-2'>
               <div className='flex flex-col gap-2'>
                 <p className='text-md text-blue-500 font-bold'>Connect Wallet</p>
@@ -38,7 +38,7 @@ const ClaimSteps = (): JSX.Element => {
                     <p className='text-md text-blue-500 font-bold'>Claim</p>
                     <p className='text-gray-500 text-xs'>Claim your tokens</p>
                     <div className='flex flex-row items-start p-3  w-full '>
-                        <ClaimTokens boolean={balanceOf > 0}/>
+                    <ClaimTokens boolean={balanceOf !== null && balanceOf > 0}/>
                     </div>
                 </div>
             </div>

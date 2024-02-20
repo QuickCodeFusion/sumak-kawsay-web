@@ -10,10 +10,11 @@ const ClaimTokens = ({ boolean }: { boolean: boolean }): JSX.Element => {
     account: address,
     functionName: 'claimTokens'
   })
+
   return (
-      <div className='flex justify-center w-full'>
+      <div className='flex w-full'>
         <ButtonUI
-          className='min-w-[280px] max-w-[500px] uppercase rounded-2xl bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 border-none text-white'
+          className='uppercase w-3/4 bg-sky-500 rounded-2xl border-none text-white'
           variant={'outline'}
           disabled={!boolean}
           onClick={() => {

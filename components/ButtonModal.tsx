@@ -57,8 +57,6 @@ export const ButtonModal = (): React.JSX.Element => {
           <DialogTitle >be an investor</DialogTitle>
           <DialogDescription className='text-white font-semibold flex gap-2'>
             balance: <BalanceOf />
-          <DialogDescription className='text-white font-semibold flex gap-2'>
-            balance: <BalanceOf />
           </DialogDescription>
         </DialogHeader>
         <div className="grid gap-4 py-4 z-10">
@@ -77,7 +75,7 @@ export const ButtonModal = (): React.JSX.Element => {
           </div>
         </div>
         <DialogFooter >
-          <BuyWrite amount={value.amount} reset={handleReset} />
+          <BuyWrite send={value.send} amount={value.amount} reset={handleReset} />
         </DialogFooter>
       </DialogContent>
     </Dialog>
