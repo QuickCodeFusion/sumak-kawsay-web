@@ -50,7 +50,6 @@ const Navbar = (): React.JSX.Element => {
           style: { background: 'green', color: '#FFF' }
         }
       )
-      location.reload()
     }
   }, [status])
   return (

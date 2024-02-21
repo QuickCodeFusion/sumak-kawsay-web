@@ -7,7 +7,7 @@ import BuyInfo from './BuyInfo'
 const PreView = (): React.JSX.Element => {
   return (
         <main className='flex flex-col md:flex-row gap-4 pt-8 justify-center w-screen'>
-        <section className='md:w-1/2 flex justify-center ml-10'>
+        <section className='md:w-1/2 flex justify-center p-10'>
         <div className='flex flex-col text-center text-white justify-center gap-5 md:gap-1 items-center'>
           <h1 className='text-xl md:text-3xl font-bold text-justify'>
           Embracing the Renaissance of Prosperity in the Sumak Kawsay.
