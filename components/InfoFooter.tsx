@@ -5,8 +5,8 @@ import IconSocial from './IconSocial'
 const InfoFooter = (): JSX.Element => {
   const year = new Date().getFullYear()
   return (
-    <div className='w-full flex items-center justify-around'>
-        <div className='w-1/3' >
+    <div className='w-full flex items-center justify-around flex-col md:flex-row gap-4 p-4'>
+        <div className='md:w-1/3' >
           <div className='flex gap-4 items-center'>
             <Image src={Logo} alt='logo' width={50} height={50}/>
             <p className='font-bold text-2xl'>Sumak Kawsay</p>

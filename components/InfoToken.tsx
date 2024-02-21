@@ -4,7 +4,7 @@ import DecimalToken from './functionsToken/DecimalToken'
 
 const InfonToken = (): JSX.Element => {
   return (
-        <div className='flex justify-center items-center flex-col w-auto md:w-10/12 md:h-[150px] bg-black rounded-xl gap-2 p-2 top-8 md:top-4 absolute left-1/2 -translate-x-1/2 -translate-y-1/2'>
+        <div className='mb-12 flex justify-center items-center flex-col w-auto md:w-10/12 md:h-[150px] bg-orange-900 rounded-xl gap-2 p-2 top-8 md:top-4 absolute left-1/2 -translate-x-1/2 -translate-y-1/2'>
           <div className='flex flex-col items-center'>
             <p>Contract Address</p>
             <div className='flex items-center'>
