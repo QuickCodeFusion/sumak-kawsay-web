@@ -3,13 +3,12 @@ import { CardWithIcon } from './CardWithIcon'
 
 export const InfoItemsList = (): JSX.Element => {
   const info = [
-    { title: 'Title', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. ', icon: '/binance.png' },
-    { title: 'Title', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. ', icon: '/binance.png' },
-    { title: 'Title', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. ', icon: '/binance.png' },
-    { title: 'Title', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. ', icon: '/binance.png' }
+    { title: 'Sovereignty', description: 'Decentralized Governance, Asset tokenization, Dedicated Blockchain, Universal ID Passport, Enhanced Privacy and Security, Global Crisis Response, Regenerative Output, High Yield, Quality.', icon: '/sov.jpg' },
+    { title: 'Living and Virtual Platform', description: 'Smart Habitats, Global Marketplace, Advanced NFT & Metaverse, Biosphere 3.0, AI and Blockchain.', icon: '/liv.jpg' },
+    { title: 'Global Interdependence', description: 'Collective Treasure, Value Chains, Dividends, Articulation Interaction & Exchange, Financial System Transformation, Unified Actions for Life and Earth', icon: '/glo.jpg' }
   ]
   return (
-    <CardList>
+    <CardList >
 
       {info.map((item, index) => (
         <CardWithIcon key={index} item={item}/>

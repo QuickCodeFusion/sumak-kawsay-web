@@ -55,7 +55,7 @@ const Item = [
 
 const InfoContent = (): React.JSX.Element => {
   return (
-    <Accordion type="single" collapsible className="w-10/12">
+    <Accordion type="single" collapsible className="p-4">
       {Item.map((item, index) => (
          <AccordionItem key={index} value={item.id}>
          <AccordionTrigger>{item.title}</AccordionTrigger>
