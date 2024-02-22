@@ -2,6 +2,7 @@ import ClaimSteps from './ClaimSteps'
 import Footer from './Footer'
 import InfoPresale from './InfoPresale'
 import BgVideo from './BgVideo'
+import InfoContent from './InfoConten'
 const FinalView = (): React.JSX.Element => {
   return (
         <main className='flex flex-col gap-4 pt-8 justify-center w-screen'>
@@ -12,6 +13,7 @@ const FinalView = (): React.JSX.Element => {
                   <ClaimSteps/>
                   </div>
             </section>
+            <InfoContent></InfoContent>
             <Footer/>
         </main>
   )
