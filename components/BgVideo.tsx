@@ -1,6 +1,6 @@
 const BgVideo = (): JSX.Element => {
   return (
-    <div className="absolute inset-0 h-[180vh] md:h-full w-full overflow-hidden z-[-1]">
+    <div className="absolute inset-0 h-[180vh] md:h-full w-full overflow-hidden -z-10">
         <video
             autoPlay
             loop
