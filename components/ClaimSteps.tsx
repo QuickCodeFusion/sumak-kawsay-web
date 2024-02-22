@@ -1,14 +1,14 @@
 'use client'
 import { useAccount } from 'wagmi'
-import { useSelector } from '@/lib/redux/hooks'
 import BalanceOf from './functionsContract/BalanceOf'
 import Image from 'next/image'
 import ClaimTokens from './functionsContract/ClaimFunction'
 import CheckboxWithLine from './CheckboxWithLine'
 import { ConnectButton } from '@rainbow-me/rainbowkit'
+import { useState } from 'react'
 
 const ClaimSteps = (): JSX.Element => {
-  const { balanceOf } = useSelector((state) => state.balanceOf)
+  const [balanceOf, setBalanceOf] = useState(0)
   const { isConnected } = useAccount()
 
   return (
@@ -31,15 +31,13 @@ const ClaimSteps = (): JSX.Element => {
                   <p className='text-gray-500 text-xs'>Check your current balance</p>
                   <div className='border flex border-sky-500 h-[35px] rounded-2xl pl-3 items-center gap-2'>
                       <Image className='flex' src='/logo.png' alt='logo' width={30} height={30}></Image>
-                      <p className='text-black font-bold'><BalanceOf/></p>
+                      <BalanceOf setBalanceOf={setBalanceOf}/>
                   </div>
               </div>
               <div className='w-full'>
                     <p className='text-md text-blue-500 font-bold'>Claim</p>
                     <p className='text-gray-500 text-xs'>Claim your tokens</p>
-                    <div className='flex flex-row items-start p-3  w-full '>
                     <ClaimTokens boolean={balanceOf !== null && balanceOf > 0}/>
-                    </div>
                 </div>
             </div>
           </div>

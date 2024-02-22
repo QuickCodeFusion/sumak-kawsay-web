@@ -12,7 +12,7 @@ const ClaimTokens = ({ boolean }: { boolean: boolean }): JSX.Element => {
   })
 
   return (
-      <div className='flex w-full'>
+      <div className='flex flex-row items-start p-3  w-full'>
         <ButtonUI
           className='uppercase w-3/4 bg-sky-500 rounded-2xl border-none text-white'
           variant={'outline'}
