@@ -68,7 +68,7 @@ const Navbar = (): React.JSX.Element => {
                     <Image className='ring-8 bg-white rounded-full' src='/logo.png' alt='logo' width={50} height={50}></Image>
                     <NavigationMenuList className='flex justify-between gap-7 py-4 px-4'>
                     {networks.map((network) => (
-                      <NavigationMenuItem key={network.id}>
+                      <NavigationMenuItem className='hidden md:block' key={network.id}>
                         <Link href={network.url} target='_blank'>
                           <div className='hover:scale-110'>{network.image}</div>
                         </Link>

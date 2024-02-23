@@ -8,12 +8,16 @@ export const InfoItemsList = (): JSX.Element => {
     { title: 'Global Interdependence', description: 'Collective Treasure, Value Chains, Dividends, Articulation Interaction & Exchange, Financial System Transformation, Unified Actions for Life and Earth', icon: '/glo.jpg' }
   ]
   return (
-    <CardList >
+    <div>
+      <h2 className='w-full mb-5 text-3xl text-center font-semibold text-white z-10'> Three core attributes characterize the Ecosystem cryptocurrencies.</h2>
+      <CardList >
 
-      {info.map((item, index) => (
-        <CardWithIcon key={index} item={item}/>
-      ))}
-    </CardList>
+        {info.map((item, index) => (
+          <CardWithIcon key={index} item={item}/>
+        ))}
+      </CardList>
+
+    </div>
 
   )
 }

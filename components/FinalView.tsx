@@ -5,16 +5,18 @@ import BgVideo from './BgVideo'
 import InfoContent from './InfoConten'
 import { Card } from './ui/card'
 import { InfoItemsList } from './InfoItemsList'
+import ItemCarousel from './ItemCarousel'
 const FinalView = (): React.JSX.Element => {
   return (
-        <main className='flex flex-col gap-4 pt-8 justify-center items-center w-screen bg-slate-300 -z-10'>
+        <main className='flex flex-col gap-20 pt-8 justify-center items-center w-screen bg-slate-300 -z-10'>
             <BgVideo></BgVideo>
-            <section className='p-4 z-10'>
+            <section className='p-4 z-10 mb-10'>
                   <div className='flex lg:flex-row flex-col gap-4 justify-around w-full'>
                   <InfoPresale></InfoPresale>
                   <ClaimSteps/>
                   </div>
             </section>
+            <ItemCarousel/>
             <InfoItemsList/>
             <Card className='border-none z-10 w-10/12 bg-amber-700/50  backdrop-filter backdrop-blur-lg'>
                   <InfoContent></InfoContent>
