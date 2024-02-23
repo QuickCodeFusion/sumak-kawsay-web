@@ -8,7 +8,7 @@ const InfoFooter = (): JSX.Element => {
     <div className='w-full flex items-center justify-around flex-col md:flex-row gap-4 p-4'>
         <div className='md:w-1/3' >
           <div className='flex gap-4 items-center ring-offset-2'>
-            <Image className='ring-8 bg-white rounded-full' src={Logo} alt='logo' width={50} height={50}/>
+            <Image className='ring-2 bg-white rounded-full' src={Logo} alt='logo' width={50} height={50}/>
             <p className='font-bold text-2xl'>Sumak Kawsay</p>
           </div>
           <p className='mt-4 self-end'>The Sumak Kawsay Ecosystem blends asset tokenization, artificial intelligence, decentralized governance, and privacy, fostering a legal and political framework for global articulation, collective prosperity, and sovereignty. This approach ensures ethical financial systems and unified actions for the well-being of Earth.</p>

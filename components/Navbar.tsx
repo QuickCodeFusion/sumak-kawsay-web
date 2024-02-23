@@ -65,7 +65,7 @@ const Navbar = (): React.JSX.Element => {
   return (
            <NavigationMenu className='w-full bg-opacity-55'>
                 <NavigationMenuList className='w-screen flex justify-between px-8'>
-                    <Image className='ring-8 bg-white rounded-full' src='/logo.png' alt='logo' width={50} height={50}></Image>
+                    <Image className='ring-2 bg-white rounded-full' src='/logo.png' alt='logo' width={50} height={50}></Image>
                     <NavigationMenuList className='flex justify-between gap-7 py-4 px-4'>
                     {networks.map((network) => (
                       <NavigationMenuItem className='hidden md:block' key={network.id}>
