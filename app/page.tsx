@@ -1,6 +1,5 @@
 import PreView from '@/components/PreView'
 import FinalView from '@/components/FinalView'
-import { InfoItemsList } from '@/components/InfoItemsList'
 
 const currentDate = new Date()
 const stopRenderingDate = new Date('2024-04-01')
