@@ -24,7 +24,7 @@ const RootLayout = ({
         cn(
           'min-h-screen',
           inter.className,
-          'bg-[url("/background.png")] bg-cover bg-no-repeat bg-center bg-fixed backdrop-blur-md',
+          'bg-[url("/ambar6.jpg")] bg-cover bg-no-repeat bg-center bg-fixed backdrop-blur-sm',
           'h-screen flex'
         )
       }>
