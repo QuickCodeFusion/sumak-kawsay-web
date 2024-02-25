@@ -1,4 +1,5 @@
 'use client'
+'use client'
 import { ButtonUI } from './ui/button'
 import {
   Dialog,
@@ -12,11 +13,10 @@ import {
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { SelectCoin } from './SelectCoin'
-import BalanceOf from '@/utils/functionsContract/BalanceOf'
-import CurrentPrice from '@/utils/functionsContract/CurrentPrice'
+import BalanceOf from '@/components/functionsContract/BalanceOf'
 import { useSelector } from '@/lib/redux/hooks'
 import { useState } from 'react'
-import BuyWrite from '@/utils/functionsContract/BuyWrite'
+import BuyWrite from '@/components/functionsContract/BuyWrite'
 
 export const ButtonModal = (): React.JSX.Element => {
   const { currentPrice } = useSelector((state) => state.currentPrice)
@@ -30,8 +30,20 @@ export const ButtonModal = (): React.JSX.Element => {
       amount: (Number(event.target.value) / currentPrice)
     })
   }
+  const handleamount = (event: React.ChangeEvent<HTMLInputElement>): void => {
+    setValue({
+      send: Number(event.target.value) * currentPrice,
+      amount: Number(event.target.value)
+    })
+  }
+  const handleReset = (): void => {
+    setValue({
+      send: 0,
+      amount: 0
+    })
+  }
   return (
-    <Dialog>
+    <Dialog >
       <div className='flex justify-center'>
         <DialogTrigger asChild>
           <ButtonUI className='w-52 uppercase rounded-full bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 border-none text-white' variant={'outline'}>buy now</ButtonUI>
@@ -49,21 +61,21 @@ export const ButtonModal = (): React.JSX.Element => {
         </DialogHeader>
         <div className="grid gap-4 py-4 z-10">
           <div className="grid grid-cols-5 gap-1 ">
-          <Label htmlFor="amount" className='uppercase col-span-5'>amount</Label>
-          <Input id="amount" type='number' onChange={handlesend} className="col-span-3 appearance-none rounded-e-none" /><SelectCoin/>
+            <Label htmlFor="amount" className='uppercase col-span-5'>amount</Label>
+            <Input id="amount" type='number' onChange={handlesend} value={value.send} className="col-span-3 appearance-none rounded-e-none" /><SelectCoin/>
           </div>
           <div className="grid gap-1 z-10">
             <Label htmlFor="get-amount" className='uppercase'>amount</Label>
-            <Input id="get-amount" type='number' value={value.amount} className="col-span-3" />
+            <Input id="get-amount" type='number' value={value.amount !== 0 ? value.amount : ''} onChange={handleamount} className="col-span-3" />
           </div>
           <div className='grid divide-y divide-dashed gap-4'>
-            <div className='flex justify-between w-full '><span>precio$</span><span><CurrentPrice/></span></div>
-            <div className='flex justify-between w-full '><span>Bonus </span><span>{((0.000100 - currentPrice) / (0.000100) * 100)}%</span></div>
+            <div className='flex justify-between w-full '><span>precio$</span><span>{currentPrice}</span></div>
+            <div className='flex justify-between w-full '><span>Bonus </span><span>{((2.38 - currentPrice) / (2.38) * 100)}%</span></div>
             <div className='flex justify-between w-full '><span>Total Amount</span><span>{value.amount}</span></div>
           </div>
         </div>
         <DialogFooter >
-          <BuyWrite send={value.send} amount={value.amount} />
+          <BuyWrite send={value.send} amount={value.amount} reset={handleReset} />
         </DialogFooter>
       </DialogContent>
     </Dialog>

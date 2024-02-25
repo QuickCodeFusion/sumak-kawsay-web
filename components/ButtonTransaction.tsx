@@ -1,3 +1,4 @@
+'use client'
 import { useAddRecentTransaction } from '@rainbow-me/rainbowkit'
 const ButtonTransaction = ({ hash, description }: { hash: string, description: string }): React.JSX.Element => {
   const addRecentTransaction = useAddRecentTransaction()

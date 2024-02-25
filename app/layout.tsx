@@ -3,7 +3,6 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import { cn } from '@/lib/utils'
 import { Providers } from './providers'
-import Footer from '@/components/Footer'
 import Navbar from '@/components/Navbar'
 import { ThemeProvider } from './themeDark'
 
@@ -25,7 +24,7 @@ const RootLayout = ({
         cn(
           'min-h-screen',
           inter.className,
-          'bg-[url("/background.png")] bg-cover bg-no-repeat bg-center bg-fixed backdrop-blur-md',
+          'bg-[url("/ambar6.jpg")] bg-cover bg-no-repeat bg-center bg-fixed backdrop-blur-sm',
           'h-screen flex'
         )
       }>
@@ -38,7 +37,6 @@ const RootLayout = ({
           >
           <Navbar/>
           {children}
-          <Footer/>
           </ThemeProvider>
         </Providers>
       </body>

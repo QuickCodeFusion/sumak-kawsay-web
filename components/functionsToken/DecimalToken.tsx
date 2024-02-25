@@ -2,13 +2,13 @@
 import { useContractRead } from 'wagmi'
 import { AbyToken } from '@/configWagmi/AbyContrat'
 
-const NameToken = (): JSX.Element => {
+const DecimalToken = (): JSX.Element => {
   const { data, isLoading } = useContractRead({
-    address: '0x4e27Fd1f1Ae3Cf0E6f6Ec73F4Af5bc5449006ccd',
+    address: '0xA58501cC8bc605B498Cb6AD15DcB835902e0CA54',
     abi: AbyToken,
-    functionName: 'name'
+    functionName: 'decimals'
   })
   return (<div>{isLoading ? 'loading...' : data?.toString()}</div>)
 }
 
-export default NameToken
+export default DecimalToken
