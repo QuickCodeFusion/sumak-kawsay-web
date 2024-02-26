@@ -9,6 +9,7 @@ import { useState } from 'react'
 
 const ClaimSteps = (): JSX.Element => {
   const [balanceOf, setBalanceOf] = useState(0)
+  const [balanceOf, setBalanceOf] = useState(0)
   const { isConnected } = useAccount()
 
   return (
