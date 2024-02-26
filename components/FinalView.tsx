@@ -8,7 +8,7 @@ import { InfoItemsList } from './InfoItemsList'
 import ItemCarousel from './ItemCarousel'
 const FinalView = (): React.JSX.Element => {
   return (
-        <main className='flex flex-col gap-20 pt-8 justify-center items-center w-screen bg-slate-300 -z-10'>
+        <main className='flex flex-col gap-20 pt-8 justify-center items-center w-screen bg-[#FFF3DD] -z-10'>
             <BgVideo></BgVideo>
             <section className='p-4 z-10 mb-10'>
                   <div className='flex lg:flex-row flex-col gap-4 justify-around w-full'>

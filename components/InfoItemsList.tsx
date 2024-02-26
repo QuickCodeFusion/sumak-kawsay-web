@@ -9,7 +9,7 @@ export const InfoItemsList = (): JSX.Element => {
   ]
   return (
     <div>
-      <h2 className='w-full mb-5 text-3xl text-center font-semibold text-white z-10'> Three core attributes characterize the Ecosystem cryptocurrencies.</h2>
+      <h2 className='w-full mb-5 text-3xl text-center font-semibold text-amber-800 z-10'> Three core attributes characterize the Ecosystem cryptocurrencies.</h2>
       <CardList >
 
         {info.map((item, index) => (
