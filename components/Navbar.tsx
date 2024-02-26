@@ -60,6 +60,7 @@ const Navbar = (): React.JSX.Element => {
           style: { background: 'green', color: '#FFF' }
         }
       )
+      window.location.reload()
     }
   }, [status])
   return (

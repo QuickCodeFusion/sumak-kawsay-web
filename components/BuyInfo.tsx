@@ -22,7 +22,7 @@ const BuyInfo = (): JSX.Element => {
                 </li>
                 <li>
                     <p>Current Price</p>
-                    {currentPrice}
+                    {currentPrice} USDT
                 </li>
                 <li>
                     <p>Your Balance</p>
