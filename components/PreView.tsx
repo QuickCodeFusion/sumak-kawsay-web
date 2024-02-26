@@ -1,5 +1,4 @@
 'use client'
-import { ButtonUI } from './ui/button'
 import PresaleCountdown from './PresaleCountdown'
 import InfoPhase from './functionsContract/InfoPhase'
 import BuyInfo from './BuyInfo'
@@ -7,18 +6,9 @@ import Modal from './Modal'
 import WhitePaper from './WhitePaper'
 import { useState } from 'react'
 import BinanceWidget from './BinanceWidget'
+import ButtonWhitePaper from './ButtonWhiterPaper'
 
 const PreView = (): React.JSX.Element => {
-  const [open, setOpen] = useState(false)
-
-  const handleButtonClick = (): void => {
-    if (window.screen.width < 768) {
-      window.open('/whitepaper.pdf', '_blank')
-    } else {
-      setOpen(true)
-    }
-  }
-
   return (
         <main className='grid grid-cols-1 lg:grid-cols-2 place-items-center gap-4 pt-8 px-4 justify-center w-screen'>
         <section>
