@@ -12,7 +12,7 @@ const BalanceOf = ({ setBalanceOf }: BalanceOfProps): JSX.Element => {
   const dispatch = useDispatch()
   const { address } = useAccount()
   const { data, isLoading } = useContractRead({
-    address: '0x07fca38aD27bD9d0BFBef03011e6E92B16C6065a',
+    address: '0xfb7c08B23888255C6598AfF239121c10da2d148D',
     abi: AbyContractAddress,
     functionName: 'balanceOf',
     args: [address]
@@ -23,7 +23,7 @@ const BalanceOf = ({ setBalanceOf }: BalanceOfProps): JSX.Element => {
       const balance = parseFloat(data)
       setBalanceOf(balance)
     }
-    dispatch(setContract('0xA58501cC8bc605B498Cb6AD15DcB835902e0CA54'))
+    dispatch(setContract('0xfb7c08B23888255C6598AfF239121c10da2d148D'))
   }, [data, setBalanceOf])
 
   return (

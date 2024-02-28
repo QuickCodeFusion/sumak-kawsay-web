@@ -62,11 +62,11 @@ export const ButtonModal = (): React.JSX.Element => {
         <div className="grid gap-4 py-4 z-10">
           <div className="grid grid-cols-5 gap-1 ">
             <Label htmlFor="amount" className='uppercase col-span-5 '>amount</Label>
-            <Input id="amount" type='number' onChange={handlesend} value={value.send} className="col-span-3 appearance-none rounded-e-none bg-[#FFF3DD]" /><SelectCoin/>
+            <Input id="amount" type='number' onChange={handlesend} value={value.send} className="col-span-3 appearance-none rounded-e-none text-black font-semibold bg-[#FFF3DD]" /><SelectCoin/>
           </div>
           <div className="grid gap-1 z-10">
             <Label htmlFor="get-amount" className='uppercase'>amount</Label>
-            <Input id="get-amount" type='number' value={value.amount !== 0 ? value.amount : ''} onChange={handleamount} className="col-span-3 bg-[#FFF3DD]" />
+            <Input id="get-amount" type='number' value={value.amount !== 0 ? value.amount : ''} onChange={handleamount} className="col-span-3 text-black font-semibold bg-[#FFF3DD]" />
           </div>
           <div className='grid divide-y divide-dashed gap-4'>
             <div className='flex justify-between w-full '><span>precio$</span><span>{currentPrice}</span></div>
@@ -75,7 +75,7 @@ export const ButtonModal = (): React.JSX.Element => {
           </div>
         </div>
         <DialogFooter >
-          <BuyWrite send={value.send} amount={value.amount} reset={handleReset} />
+          <BuyWrite amount={value.amount} reset={handleReset} />
         </DialogFooter>
       </DialogContent>
     </Dialog>

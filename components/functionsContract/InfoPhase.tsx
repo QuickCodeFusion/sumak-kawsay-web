@@ -8,7 +8,7 @@ import { useDispatch } from '@/lib/redux/hooks'
 const InfoPhase = (): JSX.Element => {
   const dispatch = useDispatch()
   const { data } = useContractRead({
-    address: '0x07fca38aD27bD9d0BFBef03011e6E92B16C6065a',
+    address: '0xfb7c08B23888255C6598AfF239121c10da2d148D',
     abi: AbyContractAddress,
     functionName: 'currentPhase'
   })

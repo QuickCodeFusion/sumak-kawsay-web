@@ -4,6 +4,7 @@ import NameToken from './functionsToken/NameToken'
 import SymbolToken from './functionsToken/SymbolToken'
 import BalanceOf from '@/components/functionsContract/BalanceOf'
 import { useSelector } from '@/lib/redux/hooks'
+import EnableToken from './functionsToken/EnableToken'
 
 const BuyInfo = (): JSX.Element => {
   const { currentPrice } = useSelector((state) => state.currentPrice)
@@ -29,6 +30,7 @@ const BuyInfo = (): JSX.Element => {
                     <BalanceOf/>
                 </li>
             </ul>
+            <EnableToken/>
             <ButtonModal/>
         </div>
   )
