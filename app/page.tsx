@@ -9,6 +9,7 @@ import InfoContent from '@/components/InfoConten'
 import { Card } from '@/components/ui/card'
 import { InfoItemsList } from '@/components/InfoItemsList'
 import ItemCarousel from '@/components/ItemCarousel'
+import { InfoCard } from '@/components/InfonCard'
 
 // import PresaleCountdown from '@/components/PresaleCountdown'
 // import InfoPhase from '@/components/functionsContract/InfoPhase'
@@ -44,6 +45,7 @@ const Home = (): React.JSX.Element => {
                     </section>}
                   </div>
             </section>
+            <InfoCard/>
             <ItemCarousel/>
             <InfoItemsList/>
             <Card className='border-none z-10 w-10/12 bg-amber-700/50  backdrop-filter backdrop-blur-lg'>
