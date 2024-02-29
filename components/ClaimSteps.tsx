@@ -9,7 +9,7 @@ import { useState } from 'react'
 
 const ClaimSteps = (): JSX.Element => {
   const [balanceOf, setBalanceOf] = useState(0)
-  const { isConnected } = useAccount()
+  const { isConnected, isDisconnected } = useAccount()
 
   return (
     <div className="flex flex-col bg-[#FFF3DD] rounded-3xl lg:w-1/3 w-full">
@@ -31,7 +31,7 @@ const ClaimSteps = (): JSX.Element => {
                   <p className='text-gray-500 text-xs'>Check your current balance</p>
                   <div className='border flex border-sky-500 h-[35px] rounded-2xl pl-3 items-center gap-2'>
                       <Image className='flex' src='/logo.png' alt='logo' width={30} height={30}></Image>
-                      <BalanceOf setBalanceOf={setBalanceOf}/>
+                      <BalanceOf isDisconnected={isDisconnected} balance={balanceOf} setBalanceOf={setBalanceOf}/>
                   </div>
               </div>
               <div className='w-full'>
