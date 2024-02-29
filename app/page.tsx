@@ -32,8 +32,7 @@ const shouldRenderProgressBar = currentDate < stopRenderingDate
 
 const Home = (): React.JSX.Element => {
   return (
-        <main className='flex flex-col gap-20 pt-8 justify-center items-center w-screen -z-10'>
-            <BgVideo></BgVideo>
+        <main className='flex flex-col gap-20 pt-8 justify-center items-center w-screen'>
             <section className='p-4 z-10 mb-10'>
                   <div className='flex lg:flex-row flex-col gap-4 justify-around w-full'>
                     <InfoPresale/>

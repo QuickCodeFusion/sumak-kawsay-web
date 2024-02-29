@@ -5,6 +5,7 @@ import { cn } from '@/lib/utils'
 import { Providers } from './providers'
 import Navbar from '@/components/Navbar'
 import { ThemeProvider } from './themeDark'
+import BgVideo from '@/components/BgVideo'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -29,14 +30,15 @@ const RootLayout = ({
         )
       }>
         <Providers>
-        <ThemeProvider
-            attribute="class"
-            defaultTheme="dark"
-            enableSystem
-            disableTransitionOnChange
-          >
-          <Navbar/>
-          {children}
+          <ThemeProvider
+              attribute="class"
+              defaultTheme="dark"
+              enableSystem
+              disableTransitionOnChange
+            >
+            <Navbar/>
+            {children}
+            <BgVideo/>
           </ThemeProvider>
         </Providers>
       </body>
