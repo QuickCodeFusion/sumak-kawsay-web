@@ -4,31 +4,42 @@ import NameToken from './functionsToken/NameToken'
 import SymbolToken from './functionsToken/SymbolToken'
 import BalanceOf from '@/components/functionsContract/BalanceOf'
 import { useSelector } from '@/lib/redux/hooks'
+import { ListCard, ListCardContent, ListItem } from './ui/list'
+import { useState } from 'react'
+import { useAccount } from 'wagmi'
 
 const BuyInfo = (): JSX.Element => {
   const { currentPrice } = useSelector((state) => state.currentPrice)
+  const [balance, setBalanceOf] = useState(0)
+  const { isDisconnected } = useAccount()
   return (
         <div className='flex flex-col text-center justify-center items-center my-6 gap-4'>
-            <ul className='[&>li]:border-b-2 [&>li]:flex [&>li]:justify-between w-full
-            flex flex-col gap-4
-            '>
-                <li>
-                    <p>Token Name</p>
-                    <NameToken/>
-                </li>
-                <li>
-                    <p>Token Symbol</p>
-                    <SymbolToken/>
-                </li>
-                <li>
-                    <p>Current Price</p>
-                    {currentPrice} USDT
-                </li>
-                <li>
-                    <p>Your Balance</p>
-                    <BalanceOf/>
-                </li>
-            </ul>
+            <ListCard>
+                <ListItem>
+                    <h1 className='text-lg font-medium'>Token Name:</h1>
+                    <ListCardContent>
+                    <NameToken />
+                    </ListCardContent>
+                </ListItem>
+                <ListItem>
+                <h1 className='text-lg font-medium'>Token Symbol:</h1>
+                    <ListCardContent>
+                    <SymbolToken />
+                    </ListCardContent>
+                </ListItem>
+                <ListItem>
+                <h1 className='text-lg font-medium'>Current Price:</h1>
+                    <ListCardContent>
+                    {currentPrice}
+                    </ListCardContent>
+                </ListItem>
+                <ListItem>
+                <h1 className='text-lg font-medium'>Your Balance:</h1>
+                    <ListCardContent>
+                    <BalanceOf isDisconnected={isDisconnected} setBalanceOf={setBalanceOf} balance={balance}/>
+                    </ListCardContent>
+                </ListItem>
+            </ListCard>
             <ButtonModal/>
         </div>
   )

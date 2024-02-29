@@ -6,9 +6,11 @@ import { useDispatch } from '@/lib/redux/hooks'
 
 interface BalanceOfProps {
   setBalanceOf?: (balance: number) => void
+  balance?: number
+  isDisconnected?: boolean
 }
 
-const BalanceOf = ({ setBalanceOf }: BalanceOfProps): JSX.Element => {
+const BalanceOf = ({ setBalanceOf, balance, isDisconnected }: BalanceOfProps): JSX.Element => {
   const dispatch = useDispatch()
   const { address } = useAccount()
   const { data, isLoading } = useContractRead({
@@ -20,15 +22,19 @@ const BalanceOf = ({ setBalanceOf }: BalanceOfProps): JSX.Element => {
 
   useEffect(() => {
     if (typeof data === 'string' && setBalanceOf !== undefined) {
-      const balance = parseFloat(data)
-      setBalanceOf(balance)
+      const newBalance = parseFloat(data)
+      setBalanceOf(newBalance)
     }
     dispatch(setContract('0xA58501cC8bc605B498Cb6AD15DcB835902e0CA54'))
   }, [data, setBalanceOf])
 
   return (
     <div className='text-white font-bold'>
-      {isLoading ? 'Loading...' : (data?.toString() ?? '')} UNITY
+      {isLoading
+        ? 'Loading...'
+        : isDisconnected
+          ? 'Connect your wallet to see your balance'
+          : `${balance} UNITY`}
     </div>
   )
 }
