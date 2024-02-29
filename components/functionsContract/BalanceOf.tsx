@@ -29,7 +29,7 @@ const BalanceOf = ({ setBalanceOf, balance, isDisconnected }: BalanceOfProps): J
   }, [data, setBalanceOf])
 
   return (
-    <div className='text-white font-bold'>
+    <div className='text-gray-400 font-bold'>
       {isLoading
         ? 'Loading...'
         : isDisconnected

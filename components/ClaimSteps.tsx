@@ -29,7 +29,7 @@ const ClaimSteps = (): JSX.Element => {
               <div className='flex flex-col gap-1'>
                   <p className='text-md text-blue-500 font-bold'>Check Balance</p>
                   <p className='text-gray-500 text-xs'>Check your current balance</p>
-                  <div className='border flex border-sky-500 h-[35px] rounded-2xl pl-3 items-center gap-2'>
+                  <div className='border flex border-sky-500 rounded-2xl pl-3 items-center gap-2'>
                       <Image className='flex' src='/logo.png' alt='logo' width={30} height={30}></Image>
                       <BalanceOf isDisconnected={isDisconnected} balance={balanceOf} setBalanceOf={setBalanceOf}/>
                   </div>
