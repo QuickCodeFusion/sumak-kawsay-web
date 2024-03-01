@@ -4,6 +4,8 @@ import {
   AccordionItem,
   AccordionTrigger
 } from '@/components/ui/accordion'
+import { Card } from './ui/card'
+import { Element } from 'react-scroll'
 
 const Item = [
   {
@@ -55,16 +57,20 @@ const Item = [
 
 const InfoContent = (): React.JSX.Element => {
   return (
-    <Accordion type="single" collapsible className="p-4">
-      {Item.map((item, index) => (
-         <AccordionItem key={index} value={item.id}>
-         <AccordionTrigger>{item.title}</AccordionTrigger>
-         <AccordionContent>
-           {item.content}
-         </AccordionContent>
-       </AccordionItem>
-      ))}
-    </Accordion>
+    <Element name='faq' className='w-full flex justify-center'>
+      <Card className='border-none z-10 w-10/12 bg-amber-700/50  backdrop-filter backdrop-blur-lg'>
+        <Accordion type="single" collapsible className="p-4">
+          {Item.map((item, index) => (
+            <AccordionItem key={index} value={item.id}>
+            <AccordionTrigger>{item.title}</AccordionTrigger>
+            <AccordionContent>
+              {item.content}
+            </AccordionContent>
+          </AccordionItem>
+          ))}
+        </Accordion>
+      </Card>
+    </Element>
   )
 }
 

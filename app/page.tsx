@@ -4,12 +4,13 @@ import dynamic from 'next/dynamic'
 import ClaimSteps from '@/components/ClaimSteps'
 import Footer from '@/components/Footer'
 import InfoPresale from '@/components/InfoPresale'
-import BgVideo from '@/components/BgVideo'
 import InfoContent from '@/components/InfoConten'
-import { Card } from '@/components/ui/card'
-import { InfoItemsList } from '@/components/InfoItemsList'
+import { Ecosystem } from '@/components/Ecosystem'
 import ItemCarousel from '@/components/ItemCarousel'
 import { InfoCard } from '@/components/InfonCard'
+import CardTeamWorkList from '@/components/CardTeamWorkList'
+import { Roadmap } from '@/components/Roadmap'
+import { Tokenomics } from '@/components/Tokenomics'
 
 // import PresaleCountdown from '@/components/PresaleCountdown'
 // import InfoPhase from '@/components/functionsContract/InfoPhase'
@@ -46,10 +47,11 @@ const Home = (): React.JSX.Element => {
             </section>
             <InfoCard/>
             <ItemCarousel/>
-            <InfoItemsList/>
-            <Card className='border-none z-10 w-10/12 bg-amber-700/50  backdrop-filter backdrop-blur-lg'>
-                  <InfoContent></InfoContent>
-            </Card>
+            <Ecosystem/>
+            <Tokenomics/>
+              <Roadmap/>
+              <CardTeamWorkList />
+                <InfoContent/>
             <Footer/>
         </main>
   )
