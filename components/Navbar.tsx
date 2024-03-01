@@ -15,6 +15,8 @@ import IconFaceBook from './Icons/IconFaceBook'
 import IconBinance from './Icons/IconBinance'
 import IconInstagram from './Icons/IconInstagram'
 import IconTelegram from './Icons/IconTelegram'
+import { Link as ScrollLink } from 'react-scroll'
+import { ButtonUI } from './ui/button'
 
 const networks = [
   {
@@ -43,6 +45,34 @@ const networks = [
   }
 ]
 
+const items = [
+  {
+    id: 1,
+    title: 'Tokenomics',
+    url: 'tokenomics'
+  },
+  {
+    id: 2,
+    title: 'Roadmap',
+    url: 'roadMap'
+  },
+  {
+    id: 3,
+    title: 'Team Work',
+    url: 'teamWork'
+  },
+  {
+    id: 4,
+    title: 'FAQ',
+    url: 'faq'
+  },
+  {
+    id: 5,
+    title: 'Ecosystem',
+    url: 'ecosystem'
+  }
+]
+
 const currentDate = new Date()
 const stopRenderingDate = new Date('2024-04-01')
 
@@ -67,6 +97,19 @@ const Navbar = (): React.JSX.Element => {
            <NavigationMenu className='w-full bg-opacity-55'>
                 <NavigationMenuList className='w-screen flex justify-between px-8'>
                     <Image className='ring-2 bg-white rounded-full' src='/logo.png' alt='logo' width={50} height={50}></Image>
+                    <NavigationMenuList>
+                    <div className='flex gap-4 items-center justify-center'>
+                      {
+                        items.map((item) => (
+                          <ScrollLink activeClass='active' to={item.url} spy smooth={true} duration={600} key={item.id}>
+                            <ButtonUI>
+                              {item.title}
+                            </ButtonUI>
+                          </ScrollLink>
+                        ))
+                      }
+                    </div>
+                    </NavigationMenuList>
                     <NavigationMenuList className='flex justify-between gap-7 py-4 px-4'>
                     {networks.map((network) => (
                       <NavigationMenuItem className='hidden md:block' key={network.id}>
