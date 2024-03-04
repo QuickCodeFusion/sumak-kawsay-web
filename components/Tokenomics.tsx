@@ -1,3 +1,4 @@
+import { Element } from 'react-scroll'
 import { Card } from './ui/card'
 import { ListCard, ListCardContent, ListItem } from './ui/list'
 
@@ -36,7 +37,7 @@ export const Tokenomics = (): JSX.Element => {
     }
   ]
   return (
-        <section className='text-center px-4'>
+        <Element name='tokenomics' className='text-center px-4'>
             <h1 className='text-3xl font-bold'>Tokenomics</h1>
             <h3 className='text-xl font-semibold mb-2'>Token Distribution and Unity Halving Schedule:</h3>
             <Card className='bg-background/40 backdrop-blur p-6 border-none'>
@@ -64,6 +65,6 @@ export const Tokenomics = (): JSX.Element => {
                 </ListCard>
             </Card>
 
-        </section>
+        </Element>
   )
 }

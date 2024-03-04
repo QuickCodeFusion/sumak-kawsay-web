@@ -1,3 +1,4 @@
+import { Element } from 'react-scroll'
 import CardTeamWork from './CardTeamWork'
 
 const CardTeamWorkList = (): React.JSX.Element => {
@@ -22,7 +23,7 @@ const CardTeamWorkList = (): React.JSX.Element => {
     }
   ]
   return (
-        <div>
+        <Element name='teamWork'>
           <h1 className='text-3xl font-bold text-amber-500'>Team Work</h1>
           <div className='grid grid-cols-1 md:grid-cols-3 p-4 md:p-0 gap-20 mt-4'>
             {
@@ -31,7 +32,7 @@ const CardTeamWorkList = (): React.JSX.Element => {
               ))
             }
           </div>
-        </div>
+        </Element>
 
   )
 }

@@ -1,3 +1,4 @@
+import { Element } from 'react-scroll'
 import { Card } from './ui/card'
 import { Timeline, TimelineDate, TimelineItem, TimelineTitle } from './ui/timeline'
 
@@ -38,7 +39,7 @@ export const Roadmap = (): React.JSX.Element => {
   ]
   return (
 
-    <section className='p-4 text-center flex flex-col justify-center items-center'>
+    <Element name='roadMap' className='p-4 text-center flex flex-col justify-center items-center'>
       <h1 className='text-3xl font-bold'>Journey Through Time: Our Roadmap</h1>
       <p className='my-4 text-lg'>Explore the milestones that mark our shared path towards
 transformation.</p>
@@ -53,6 +54,6 @@ transformation.</p>
         ))}
       </Timeline>
     </Card>
-    </section>
+    </Element>
   )
 }
