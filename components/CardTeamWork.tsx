@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
 
 const CardTeamWork = ({ user }: { user: { name: string, role: string, img: string, description: string } }): React.JSX.Element => {
   return (
-    <Card className='md:w-96 min-h-96 border-none rounded-3xl bg-background/50 px-10 py-3 flex flex-col justify-start text-center shadow-md shadow-amber-700'>
+    <Card className='md:w-5/6 min-h-96 border-none rounded-3xl bg-background/50 px-10 py-3 flex flex-col justify-start text-center shadow-md shadow-amber-700'>
       <CardHeader className='flex flex-row m-0 p-0'>
         <div className='w-full flex flex-row h-24'>
           <CardTitle className='flex gap-2 flex-col pt-4'>
