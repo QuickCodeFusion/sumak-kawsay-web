@@ -8,6 +8,7 @@ import InfoContent from '@/components/InfoConten'
 import { Ecosystem } from '@/components/Ecosystem'
 import ItemCarousel from '@/components/ItemCarousel'
 import { InfoCard } from '@/components/InfonCard'
+import { Passport } from '@/components/Passport'
 import CardTeamWorkList from '@/components/CardTeamWorkList'
 import { Roadmap } from '@/components/Roadmap'
 import { Tokenomics } from '@/components/Tokenomics'
@@ -52,6 +53,7 @@ const Home = (): React.JSX.Element => {
               <Roadmap/>
               <CardTeamWorkList />
                 <InfoContent/>
+            <Passport/>
             <Footer/>
         </main>
   )
