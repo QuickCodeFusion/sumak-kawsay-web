@@ -1,6 +1,6 @@
 'use client'
 import { useContractRead } from 'wagmi'
-import { AbyToken } from '@/configWagmi/AbyContrat'
+import { AbyToken } from '@/utils/AbyContrat'
 import { useEffect, useState } from 'react'
 
 const DecimalToken = (): JSX.Element => {

@@ -1,4 +1,5 @@
-import { AbyContractAddress } from '@/configWagmi/AbyContrat'
+'use client'
+import { AbyContractAddress, contract } from '@/utils/AbyContrat'
 import { useContractRead, useAccount } from 'wagmi'
 import { useEffect } from 'react'
 import { setContract } from '@/lib/redux/feature/contractSlice'
@@ -14,7 +15,7 @@ const BalanceOf = ({ setBalanceOf, balance, isDisconnected }: BalanceOfProps): J
   const dispatch = useDispatch()
   const { address } = useAccount()
   const { data, isLoading } = useContractRead({
-    address: '0x07fca38aD27bD9d0BFBef03011e6E92B16C6065a',
+    address: contract,
     abi: AbyContractAddress,
     functionName: 'balanceOf',
     args: [address]

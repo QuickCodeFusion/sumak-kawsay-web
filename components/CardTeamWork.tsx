@@ -7,7 +7,7 @@ const CardTeamWork = ({ user }: { user: { name: string, role: string, img: strin
       <CardHeader className='flex flex-row m-0 p-0'>
         <div className='w-full flex flex-row h-24'>
           <CardTitle className='flex gap-2 flex-col pt-4'>
-            <h4 className='font-bold text-md'>{user.name}</h4>
+            <p className='font-bold text-md'>{user.name}</p>
             <p className='text-sm text-violet-500'>{user.role}</p>
           </CardTitle>
           <div className='relative w-32 h-32 shadow-sm shadow-violet-600 rounded-full overflow-hidden bottom-16 left-10'>

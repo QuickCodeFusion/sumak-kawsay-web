@@ -1,6 +1,6 @@
 'use client'
 import { useContractRead } from 'wagmi'
-import { AbyToken } from '@/configWagmi/AbyContrat'
+import { AbyToken } from '@/utils/AbyContrat'
 import { useEffect } from 'react'
 import { setContract } from '@/lib/redux/feature/contractSlice'
 import { useDispatch } from '@/lib/redux/hooks'

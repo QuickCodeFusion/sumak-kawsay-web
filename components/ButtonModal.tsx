@@ -17,6 +17,7 @@ import BalanceOf from '@/components/functionsContract/BalanceOf'
 import { useSelector } from '@/lib/redux/hooks'
 import { useState } from 'react'
 import BuyWrite from '@/components/functionsContract/BuyWrite'
+import VerifyToken from './functionsToken/VerifyToken'
 
 export const ButtonModal = (): React.JSX.Element => {
   const { currentPrice } = useSelector((state) => state.currentPrice)
@@ -55,8 +56,9 @@ export const ButtonModal = (): React.JSX.Element => {
         </div>
         <DialogHeader className='z-10 uppercase'>
           <DialogTitle >be an investor</DialogTitle>
-          <DialogDescription className='text-white font-semibold flex gap-2'>
-            balance: <BalanceOf />
+          <DialogDescription className='text-white font-semibold flex gap-2 justify-between'>
+            <div className='flex'>balance: <BalanceOf /></div>
+            <VerifyToken />
           </DialogDescription>
         </DialogHeader>
         <div className="grid gap-4 py-4 z-10">

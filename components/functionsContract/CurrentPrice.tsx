@@ -1,10 +1,10 @@
 'use client'
-import { AbyContractAddress } from '@/configWagmi/AbyContrat'
+import { AbyContractAddress, contract } from '@/utils/AbyContrat'
 import { useContractRead } from 'wagmi'
 
 const CurrentPrice = (): JSX.Element => {
   const { data, isLoading } = useContractRead({
-    address: '0x07fca38aD27bD9d0BFBef03011e6E92B16C6065a',
+    address: contract,
     abi: AbyContractAddress,
     functionName: '_tokenPrice'
   })

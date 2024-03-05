@@ -7,6 +7,7 @@ import { useSelector } from '@/lib/redux/hooks'
 import { ListCard, ListCardContent, ListItem } from './ui/list'
 import { useState } from 'react'
 import { useAccount } from 'wagmi'
+import EnableToken from './functionsToken/EnableToken'
 
 const BuyInfo = (): JSX.Element => {
   const { currentPrice } = useSelector((state) => state.currentPrice)
@@ -40,7 +41,10 @@ const BuyInfo = (): JSX.Element => {
                     </ListCardContent>
                 </ListItem>
             </ListCard>
-            <ButtonModal/>
+            <div className='flex gap-4'>
+                <EnableToken/>
+                <ButtonModal/>
+            </div>
         </div>
   )
 }
