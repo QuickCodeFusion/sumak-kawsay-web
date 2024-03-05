@@ -8,7 +8,7 @@ import { ConnectButton } from '@rainbow-me/rainbowkit'
 import { useState } from 'react'
 
 const ClaimSteps = (): JSX.Element => {
-  const [balanceOf, setBalanceOf] = useState(0)
+  const [balanceOf, setBalanceOf] = useState(1)
   const { isConnected } = useAccount()
 
   return (
@@ -31,6 +31,7 @@ const ClaimSteps = (): JSX.Element => {
                   <p className='text-gray-500 text-xs'>Check your current balance</p>
                   <div className='border flex border-sky-500 h-[35px] rounded-2xl pl-3 items-center gap-2'>
                       <Image className='flex' src='/logo.png' alt='logo' width={30} height={30}></Image>
+                      <p>{balanceOf}</p>
                       <BalanceOf setBalanceOf={setBalanceOf}/>
                   </div>
               </div>

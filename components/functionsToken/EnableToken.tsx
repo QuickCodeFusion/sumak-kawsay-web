@@ -48,7 +48,7 @@ const EnableToken = ({ amount, reset }: { amount?: number, reset?: () => void })
         variant={'outline'}
         onClick={() => {
           writeAsync({
-            args: ['0xfb7c08B23888255C6598AfF239121c10da2d148D', parseEther('0')]
+            args: ['0x5808476d3ac9F4Bc5eaBc4a2a8bEE91F152C5BD3', parseEther('0')]
           }).then(() => {
             setShown(true)
           }).catch(error => {
