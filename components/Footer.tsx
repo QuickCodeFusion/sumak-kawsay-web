@@ -1,15 +1,15 @@
 'use client'
-import BinanceWidget from './BinanceWidget'
 import InfonToken from './InfoToken'
 import InfoFooter from './InfoFooter'
 
 const Footer = (): JSX.Element => {
   return (
-    <footer className="flex flex-col justify-between mt-5 h-3/6 w-full">
-      <BinanceWidget></BinanceWidget>
-      <div className='w-full h-1/6 backdrop-blur bg-amber-950  pt-28 mt-16'>
-        <InfonToken></InfonToken>
-        <InfoFooter></InfoFooter>
+    <footer className='w-full mt-44 bg-background'>
+      <div className='container pb-8 pt-16 md:pt-24 lg:pt-32'>
+        <div className='relative pt-20'>
+          <InfonToken/>
+          <InfoFooter/>
+        </div>
       </div>
     </footer>
   )

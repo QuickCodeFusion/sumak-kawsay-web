@@ -31,7 +31,7 @@ const networks = [
 ]
 const IconSocial = (): JSX.Element => {
   return (
-        <div className='flex gap-5'>{networks.map((network) => (
+        <div className='container flex justify-center gap-5'>{networks.map((network) => (
             <div key={network.id}>
               <Link href={network.url} target='_blank'>
                 {network.image}

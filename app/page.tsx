@@ -2,7 +2,7 @@
 import dynamic from 'next/dynamic'
 
 import ClaimSteps from '@/components/ClaimSteps'
-import Footer from '@/components/Footer'
+import BinanceWidget from '../components/BinanceWidget'
 import InfoPresale from '@/components/InfoPresale'
 import InfoContent from '@/components/InfoConten'
 import { Ecosystem } from '@/components/Ecosystem'
@@ -46,6 +46,7 @@ const Home = (): React.JSX.Element => {
                       </section>}
                   </div>
             </section>
+            <BinanceWidget/>
             <InfoCard/>
             <ItemCarousel/>
             <Ecosystem/>
@@ -54,7 +55,6 @@ const Home = (): React.JSX.Element => {
               <CardTeamWorkList />
                 <InfoContent/>
             <Passport/>
-            <Footer/>
         </main>
   )
 }
