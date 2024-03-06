@@ -58,7 +58,7 @@ const Item = [
 const InfoContent = (): React.JSX.Element => {
   return (
     <Element name='faq' className='w-full flex justify-center'>
-      <Card className='border-none z-10 w-10/12 bg-amber-700/50  backdrop-filter backdrop-blur-lg'>
+      <Card className='z-10 w-10/12 bg-background/50 border border-vivid-violet-600 shadow-sm shadow-vivid-violet-800 backdrop-filter backdrop-blur-lg'>
         <Accordion type="single" collapsible className="p-4">
           {Item.map((item, index) => (
             <AccordionItem key={index} value={item.id}>
