@@ -12,6 +12,9 @@ import { Passport } from '@/components/Passport'
 import CardTeamWorkList from '@/components/CardTeamWorkList'
 import { Roadmap } from '@/components/Roadmap'
 import { Tokenomics } from '@/components/Tokenomics'
+import { Dividends } from '@/components/Dividends'
+import { Fractional } from '@/components/Fractional'
+import { Marketplace } from '@/components/Marketplace'
 
 // import PresaleCountdown from '@/components/PresaleCountdown'
 // import InfoPhase from '@/components/functionsContract/InfoPhase'
@@ -50,11 +53,14 @@ const Home = (): React.JSX.Element => {
             <InfoCard/>
             <ItemCarousel/>
             <Ecosystem/>
+            <Passport/>
+            <Dividends/>
+            <Fractional/>
+            <Marketplace/>
             <Tokenomics/>
             <Roadmap/>
             <CardTeamWorkList />
             <InfoContent/>
-            <Passport/>
         </main>
   )
 }

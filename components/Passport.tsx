@@ -37,7 +37,7 @@ export const Passport = (): JSX.Element => {
                     </li>
                 </ul>
                 </div>
-                <Image src='/pasaporte.png' alt='passport' width={270} height={300}/>
+                <Image className='rounded-full shadow-violet-500 border-vivid-violet-500 shadow-lg' src='/passport.jpeg' alt='passport' width={300} height={300}/>
             </div>
         </div>
   )
