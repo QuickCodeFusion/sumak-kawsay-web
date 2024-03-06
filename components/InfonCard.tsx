@@ -11,7 +11,7 @@ export const InfoCard = (): JSX.Element => {
   ]
   return (
     <div className='w-full mt-52 gap-10 flex flex-col justify-center items-center'>
-      <div className='bg-background/50 w-fit rounded-3xl backdrop-blur-lg flex flex-col justify-center '>
+      <div className='bg-black/50 w-fit rounded-3xl border border-vivid-violet-600 shadow-sm shadow-vivid-violet-800 pt-6 backdrop-blur-lg flex flex-col justify-center '>
         <h2 className='mb-5 text-3xl text-center font-semibold text-white z-10'> What Is The Sumak Kawsay <em className='bg-gradient-to-r from-orange-600 to-white text-transparent bg-clip-text'>Ecosystem</em>?</h2>
         <p className='w-10/12 text-center mx-auto pb-5'>The Sumak Kawsay Ecosystem is an innovative fusion of technology, ecology, and
           community, providing a forward-thinking solution for contemporary challenges.

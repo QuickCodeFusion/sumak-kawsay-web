@@ -14,6 +14,11 @@ import { ButtonUI } from './ui/button'
 
 const items = [
   {
+    id: 5,
+    title: 'Ecosystem',
+    url: 'ecosystem'
+  },
+  {
     id: 1,
     title: 'Tokenomics',
     url: 'tokenomics'
@@ -32,11 +37,6 @@ const items = [
     id: 4,
     title: 'FAQ',
     url: 'faq'
-  },
-  {
-    id: 5,
-    title: 'Ecosystem',
-    url: 'ecosystem'
   }
 ]
 
@@ -64,15 +64,15 @@ const Navbar = (): React.JSX.Element => {
 
   return (
     <>
-        <NavigationMenu className='w-full bg-opacity-55'>
+        <NavigationMenu className='w-full bg-black bg-opacity-55 fixed backdrop-blur shadow-black shadow-md z-50'>
             <NavigationMenuList className='w-screen flex justify-between px-8'>
-                <Image className='ring-2 bg-white rounded-full' src='/logo.png' alt='logo' width={50} height={50}></Image>
+                <Image className='ring-2 ring-vivid-violet-500 bg-white rounded-full' src='/logo.png' alt='logo' width={50} height={50}></Image>
                 <NavigationMenuList>
                 <div className='sm:flex gap-4 hidden items-center justify-center'>
                   {
                     items.map((item) => (
                       <ScrollLink activeClass='active' to={item.url} spy smooth={true} duration={600} key={item.id}>
-                        <ButtonUI>
+                        <ButtonUI className='bg-gray-900 text-white border border-vivid-violet-600 shadow-sm shadow-vivid-violet-800 hover:bg-transparent'>
                           {item.title}
                         </ButtonUI>
                       </ScrollLink>
