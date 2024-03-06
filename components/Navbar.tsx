@@ -64,7 +64,7 @@ const Navbar = (): React.JSX.Element => {
 
   return (
     <>
-        <NavigationMenu className='w-full bg-opacity-55'>
+        <NavigationMenu className='w-full bg-black bg-opacity-55'>
             <NavigationMenuList className='w-screen flex justify-between px-8'>
                 <Image className='ring-2 bg-white rounded-full' src='/logo.png' alt='logo' width={50} height={50}></Image>
                 <NavigationMenuList>
