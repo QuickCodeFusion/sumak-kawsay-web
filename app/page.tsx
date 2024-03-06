@@ -35,15 +35,15 @@ const shouldRenderProgressBar = currentDate < stopRenderingDate
 const Home = (): React.JSX.Element => {
   return (
         <main className='flex flex-col gap-20 pt-8 justify-center items-center w-screen'>
-            <section className='p-4 z-10 mb-10'>
-                  <div className='flex lg:flex-row flex-col gap-4 justify-around w-full'>
-                    <InfoPresale/>
-                    {!shouldRenderProgressBar && <ClaimSteps/>}
-                    {shouldRenderProgressBar && <section className='backdrop-blur bg-black/50 rounded-3xl p-4 flex flex-col w-full lg:w-1/2 mx-0 '>
-                      <PresaleCountdown/>
-                      <InfoPhase/>
-                      <BuyInfo/>
-                    </section>}
+            <section className='p-2 z-10  w-full'>
+                  <div className='flex md:grid grid-cols-2 lg:flex-row flex-col gap-4 justify-around w-full'>
+                      <InfoPresale/>
+                      {!shouldRenderProgressBar && <ClaimSteps/>}
+                      {shouldRenderProgressBar && <section className='backdrop-blur bg-black/50 rounded-3xl p-4 flex flex-col w-full border border-vivid-violet-600 mx-0'>
+                        <PresaleCountdown/>
+                        <InfoPhase/>
+                        <BuyInfo/>
+                      </section>}
                   </div>
             </section>
             <InfoCard/>
