@@ -12,8 +12,8 @@ const ClaimSteps = (): JSX.Element => {
   const { isConnected, isDisconnected } = useAccount()
 
   return (
-    <div className="flex flex-col bg-[#FFF3DD] rounded-3xl lg:w-1/3 w-full">
-        <div className="h-16 flex items-center justify-center align-top rounded-3xl rounded-b-none w-full bg-amber-700/80 place-items-center">
+    <div className="flex flex-col justify-self-center bg-background/80 border border-vivid-violet-600 shadow-sm shadow-vivid-violet-800 rounded-3xl lg:w-3/4 w-full">
+        <div className="h-16 flex items-center justify-center align-top rounded-3xl rounded-b-none w-full bg-azure-radiance-600 place-items-center">
           <p className="text-2xl font-bold">Claim your Unity tokens</p>
         </div>
       <div className='py-4'>

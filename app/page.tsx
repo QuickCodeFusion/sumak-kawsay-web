@@ -30,12 +30,12 @@ const BuyInfo = dynamic(async () => await import('@/components/BuyInfo'), {
 const currentDate = new Date()
 const stopRenderingDate = new Date('2024-04-01')
 
-const shouldRenderProgressBar = currentDate < stopRenderingDate
+const shouldRenderProgressBar = currentDate > stopRenderingDate
 
 const Home = (): React.JSX.Element => {
   return (
         <main className='flex flex-col gap-20 pt-8 justify-center items-center w-screen'>
-            <section className='p-2 z-10  w-full'>
+            <section className='p-2 mt-8 z-10 w-full'>
                   <div className='flex md:grid grid-cols-2 lg:flex-row flex-col gap-4 justify-around w-full'>
                       <InfoPresale/>
                       {!shouldRenderProgressBar && <ClaimSteps/>}
