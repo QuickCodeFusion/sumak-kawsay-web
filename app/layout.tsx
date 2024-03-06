@@ -6,6 +6,7 @@ import { Providers } from './providers'
 import Navbar from '@/components/Navbar'
 import { ThemeProvider } from './themeDark'
 import BgVideo from '@/components/BgVideo'
+import Footer from '@/components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -38,6 +39,7 @@ const RootLayout = ({
             >
             <Navbar/>
             {children}
+            <Footer/>
             <BgVideo/>
           </ThemeProvider>
         </Providers>
