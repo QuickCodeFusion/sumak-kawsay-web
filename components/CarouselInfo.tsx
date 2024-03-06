@@ -9,12 +9,12 @@ import {
 
 const CarouselInfo = ({ Item }: { Item: any }): JSX.Element => {
   return (
-  <Carousel className="w-7/12 md:w-1/2">
+  <Carousel className="w-7/12 md:w-1/2 ">
     <CarouselContent >
         {Item.map((Item: any) => (
         <CarouselItem key={Item.id}>
             <div className="p-1 h-full flex items-center">
-              <Card className="h-full bg-amber-700/50  backdrop-filter backdrop-blur-lg border-none">
+              <Card className="h-full bg-background border border-vivid-violet-600 shadow-sm shadow-vivid-violet-800 backdrop-filter backdrop-blur-lg">
                   <CardHeader>{Item.title}</CardHeader>
                   <CardContent >
                   {Item.content}
@@ -24,8 +24,8 @@ const CarouselInfo = ({ Item }: { Item: any }): JSX.Element => {
         </CarouselItem>
         ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselPrevious className='border border-vivid-violet-600 shadow-sm shadow-vivid-violet-800'/>
+        <CarouselNext className='border border-vivid-violet-600 shadow-sm shadow-vivid-violet-800'/>
     </Carousel>
   )
 }
