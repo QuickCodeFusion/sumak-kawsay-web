@@ -8,7 +8,9 @@ const BgVideo = (): JSX.Element => {
             playsInline
             className="inset-0 h-full w-full object-center object-cover scale-150 "
         >
-            <source src={'fondo.mp4'}/>
+            <source src="/background2.webp" type="video/webp" />
+            <source src="/background.mp4" type="video/mp4" />
+            Tu navegador no admite la reproducción de videos.
         </video>
     </div>
   )
