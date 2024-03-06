@@ -40,10 +40,10 @@ export const Tokenomics = (): JSX.Element => {
         <Element name='tokenomics' className='text-center px-4'>
             <h1 className='text-3xl font-bold'>Tokenomics</h1>
             <h3 className='text-xl font-semibold mb-2'>Token Distribution and Unity Halving Schedule:</h3>
-            <Card className='bg-background/40 backdrop-blur p-6 border-none'>
+            <Card className='bg-background/40 backdrop-blur p-6 border border-vivid-violet-600 shadow-sm shadow-vivid-violet-800'>
                 <ListCard>
                 {items.map((item, index) => (
-                    <ListItem className='border-egg-800' key={index}>
+                    <ListItem className='border-azure-radiance-500' key={index}>
                         <ListCardContent className='w-full'>
                             <span className='flex md:flex-row flex-col justify-between w-full'>
                                 <p className='text-md font-semibold'>{item.label}</p>
