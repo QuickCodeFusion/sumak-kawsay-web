@@ -34,7 +34,7 @@ const shouldRenderProgressBar = currentDate > stopRenderingDate
 
 const Home = (): React.JSX.Element => {
   return (
-        <main className='flex flex-col gap-20 pt-8 justify-center items-center w-screen'>
+        <main className='flex flex-col gap-20 pt-8 mt-10 justify-center items-center w-screen'>
             <section className='p-2 my-10 z-10 w-full'>
                   <div className='flex md:grid grid-cols-2 lg:flex-row flex-col gap-4 justify-around w-full'>
                       <InfoPresale/>
@@ -51,9 +51,9 @@ const Home = (): React.JSX.Element => {
             <ItemCarousel/>
             <Ecosystem/>
             <Tokenomics/>
-              <Roadmap/>
-              <CardTeamWorkList />
-                <InfoContent/>
+            <Roadmap/>
+            <CardTeamWorkList />
+            <InfoContent/>
             <Passport/>
         </main>
   )

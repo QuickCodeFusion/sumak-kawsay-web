@@ -37,7 +37,7 @@ export const Tokenomics = (): JSX.Element => {
     }
   ]
   return (
-        <Element name='tokenomics' className='text-center px-4'>
+        <Element name='tokenomics' className='text-center px-4 py-20'>
             <h1 className='text-3xl font-bold'>Tokenomics</h1>
             <h3 className='text-xl font-semibold mb-2'>Token Distribution and Unity Halving Schedule:</h3>
             <Card className='bg-background/40 backdrop-blur p-6 border border-vivid-violet-600 shadow-sm shadow-vivid-violet-800'>
