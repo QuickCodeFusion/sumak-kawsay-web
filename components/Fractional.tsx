@@ -1,4 +1,3 @@
-import Image from 'next/image'
 export const Fractional = (): JSX.Element => {
   return (
         <div >
@@ -55,8 +54,17 @@ export const Fractional = (): JSX.Element => {
                         </li>
                     </ul>
                 </div>
-                <div>
-                    <Image className='rounded-full shadow-violet-500 border-vivid-violet-500 shadow-lg' src='/innovation.webp' alt='passport' width={300} height={300} />
+                <div className="sketchfab-embed-wrapper">
+                    <iframe className="h-[300px] rounded-full" title="Galxy Passport" frameBorder="0" allow="autoplay; fullscreen; xr-spatial-tracking" src="https://sketchfab.com/models/878b1c9a2eed4f6d920173be532f784f/embed"> </iframe>
+                    <p className="text-sm text-center text-[#4A4A4A]">
+                        <a href="https://sketchfab.com/SPARKERA?utm_medium=embed&utm_campaign=share-popup&utm_content=e3cf2f1ed20b425b96bc0522cf91bb8c" target="_blank" rel="nofollow noreferrer" className="font-bold text-[#1CAAD9]">
+                        SPARKERA
+                        </a>
+                        on
+                        <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=e3cf2f1ed20b425b96bc0522cf91bb8c" target="_blank" rel="nofollow noreferrer" className="font-bold text-[#1CAAD9]">
+                            Sketchfab
+                        </a>
+                    </p>
                 </div>
             </div>
         </div>
