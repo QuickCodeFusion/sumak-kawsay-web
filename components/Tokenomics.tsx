@@ -49,32 +49,32 @@ export const Tokenomics = (): JSX.Element => {
           <div>
             <h1 className='text-3xl font-bold'>Tokenomics</h1>
             <h3 className='text-xl font-semibold mb-2'>Token Distribution and Unity Halving Schedule:</h3>
-            <Card className='bg-background/40 backdrop-blur p-6 border border-vivid-violet-600 shadow-sm shadow-vivid-violet-800'>
-                <ListCard>
-                {items.map((item, index) => (
-                    <ListItem className='border-azure-radiance-500' key={index}>
-                        <ListCardContent className='w-full'>
-                            <span className='flex md:flex-row flex-col justify-between w-full'>
-                                <p className='text-md font-semibold'>{item.label}</p>
-                                <div className='flex items-center'><p className='text-md font-bold'>{item.value}</p><div className={`w-3 h-3 rounded-full ${item.color}`} ></div></div>
-                            </span>
+            <Card className='bg-background/40 backdrop-blur p-6 border border-vivid-violet-600 shadow-sm shadow-vivid-violet-800 md:grid grid-cols-2 place-items-center'>
+              <ListCard>
+              {items.map((item, index) => (
+                  <ListItem className='border-azure-radiance-500' key={index}>
+                      <ListCardContent className='w-full'>
+                          <span className='flex md:flex-row flex-col justify-between w-full'>
+                              <p className='text-md font-semibold'>{item.label}</p>
+                              <div className='flex items-center'><p className='text-md font-bold'>{item.value}</p><div className={`w-3 h-3 rounded-full ${item.color}`} ></div></div>
+                          </span>
 
-                            {item.children &&
-                            (
-                                <ul className='list-disc ml-5'>
-                                    {item.children.map((child, index) => (
-                                        <li key={index}>{child}</li>
-                                    ))}
-                                </ul>
-                            )
-                                }
-                        </ListCardContent>
-                    </ListItem>
-                ))}
-                </ListCard>
+                          {item.children &&
+                          (
+                              <ul className='list-disc ml-5'>
+                                  {item.children.map((child, index) => (
+                                      <li key={index}>{child}</li>
+                                  ))}
+                              </ul>
+                          )
+                              }
+                      </ListCardContent>
+                  </ListItem>
+              ))}
+              </ListCard>
+              <Image className='w-[410px] h-[390px] mt-7 rounded-full' src='/grafica.png' width={400} height={400} alt='graph' />
             </Card>
           </div>
-            <Image className='w-[410px] h-[390px] mt-7 rounded-full' src='/grafica.png' width={400} height={400} alt='graph' />
         </Element>
   )
 }

@@ -10,13 +10,11 @@ export const InfoCard = (): JSX.Element => {
     { title: 'Inclusive Economic Model', description: 'Our initiatives and technologies are designed with the Earth in mind. From renewable energy projects to regenerative agriculture, we aim to reverse environmental degradation and promote biodiversity.', icon: '/icon5.jpeg' }
   ]
   return (
-    <div className='w-full mt-52 gap-10 flex flex-col justify-center items-center'>
-      <div className='bg-black/50 w-fit rounded-3xl border border-vivid-violet-600 shadow-sm shadow-vivid-violet-800 pt-6 backdrop-blur-lg flex flex-col justify-center '>
-        <h2 className='mb-5 text-3xl text-center font-semibold text-white z-10'> What Is The Sumak Kawsay <em className='bg-gradient-to-r from-orange-600 to-white text-transparent bg-clip-text'>Ecosystem</em>?</h2>
+    <div className='w-full mt-52 pt-12 gap-10 flex flex-col justify-center items-center'>
+        <h2 className='text-3xl text-center font-semibold text-white z-10'> What Is The Sumak Kawsay <em className='bg-gradient-to-r from-orange-600 to-white text-transparent bg-clip-text'>Ecosystem</em>?</h2>
         <p className='w-10/12 text-center mx-auto pb-5'>The Sumak Kawsay Ecosystem is an innovative fusion of technology, ecology, and
           community, providing a forward-thinking solution for contemporary challenges.
         </p>
-      </div>
       <CardList >
 
         {info.map((item, index) => (
