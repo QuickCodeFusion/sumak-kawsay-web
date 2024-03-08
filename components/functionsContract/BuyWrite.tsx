@@ -40,7 +40,6 @@ const BuyWrite = ({ send, amount, reset }: { send: number, amount: number, reset
       setError(false)
     }
   }, [isError, Shown, isSuccess, error])
-  console.log(hash)
   return (
     <div className='flex justify-center w-full flex-col items-center gap-4'>
       <ButtonUI
