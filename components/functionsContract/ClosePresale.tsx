@@ -1,19 +1,18 @@
 'use client'
-import { useContractRead, useAccount, useContractWrite, useWaitForTransaction } from 'wagmi'
+import { useAccount, useContractWrite, useWaitForTransaction } from 'wagmi'
 import { AbyContractAddress, contract } from '@/utils/AbyContrat'
 import { ButtonUI } from '../ui/button'
 import { useEffect, useState } from 'react'
 import { toast } from 'sonner'
 import { CloseIcon } from '../Icons/CloseIcon'
+import { useOwner } from '@/utils/useOwner'
 
 const ClosePresale = (): JSX.Element => {
   const [Shown, setShown] = useState(false)
   const { address } = useAccount()
-  const { data: owner } = useContractRead({
-    address: contract,
-    abi: AbyContractAddress,
-    functionName: 'owner'
-  })
+  const owner = useOwner()
+  console.log(owner)
+
   const { writeAsync, isLoading, data } = useContractWrite({
     address: contract,
     abi: AbyContractAddress,
