@@ -2,44 +2,41 @@
 import Image from 'next/image'
 import {
   NavigationMenu,
-  NavigationMenuItem,
   NavigationMenuList
 } from './ui/navigation-menu'
 import { ConnectButton } from '@rainbow-me/rainbowkit'
-import Link from 'next/link'
 import { useSelector } from '@/lib/redux/hooks'
 import { useEffect } from 'react'
 import { toast } from 'sonner'
 import { useWaitForTransaction } from 'wagmi'
-import IconFaceBook from './Icons/IconFaceBook'
-import IconBinance from './Icons/IconBinance'
-import IconInstagram from './Icons/IconInstagram'
-import IconTelegram from './Icons/IconTelegram'
+import { Link as ScrollLink } from 'react-scroll'
+import { ButtonUI } from './ui/button'
 
-const networks = [
+const items = [
+  {
+    id: 5,
+    title: 'Ecosystem',
+    url: 'ecosystem'
+  },
   {
     id: 1,
-    title: 'Facebook',
-    url: 'https://www.facebook.com/TransformationalFestivals',
-    image: <IconFaceBook/>
+    title: 'Tokenomics',
+    url: 'tokenomics'
   },
   {
     id: 2,
-    title: 'Instagram',
-    url: 'https://www.instagram.com/transformationalfestivals/?utm_source=qr&igsh=d29iY3Rld3kzc25u',
-    image: <IconInstagram/>
+    title: 'Roadmap',
+    url: 'roadMap'
   },
   {
     id: 3,
-    title: 'Binance',
-    url: 'https://www.binance.com/es/nft/item/82689062?unverified=1&fbclid=IwAR2yoQgi_fva_e3uw4bT5_UgJxgoq1sbv_fDuDXgO1B2weDMpBE-RXvwrfo',
-    image: <IconBinance/>
+    title: 'Team Work',
+    url: 'teamWork'
   },
   {
     id: 4,
-    title: 'Telegram',
-    url: 'https://t.me/UnitySeedICO',
-    image: <IconTelegram />
+    title: 'FAQ',
+    url: 'faq'
   }
 ]
 
@@ -53,6 +50,7 @@ const Navbar = (): React.JSX.Element => {
   const { status } = useWaitForTransaction({
     hash: waitTransaction
   })
+
   useEffect(() => {
     if (status === 'success') {
       toast.success(
@@ -60,28 +58,38 @@ const Navbar = (): React.JSX.Element => {
           style: { background: 'green', color: '#FFF' }
         }
       )
+      window.location.reload()
     }
   }, [status])
+
   return (
-           <NavigationMenu className='w-full bg-opacity-55'>
-                <NavigationMenuList className='w-screen flex justify-between px-8'>
-                    <Image className='ring-2 bg-white rounded-full' src='/logo.png' alt='logo' width={50} height={50}></Image>
-                    <NavigationMenuList className='flex justify-between gap-7 py-4 px-4'>
-                    {networks.map((network) => (
-                      <NavigationMenuItem className='hidden md:block' key={network.id}>
-                        <Link href={network.url} target='_blank'>
-                          <div className='hover:scale-110'>{network.image}</div>
-                        </Link>
-                      </NavigationMenuItem>
-                    ))}
-                    { shouldRenderComponents &&
-                        <ConnectButton label='Connect wallet' accountStatus={{
-                          smallScreen: 'avatar',
-                          largeScreen: 'full'
-                        }} showBalance={{ smallScreen: true, largeScreen: true }}></ConnectButton>}
-                    </NavigationMenuList>
+    <>
+        <NavigationMenu className='w-full bg-black bg-opacity-55 fixed backdrop-blur shadow-black shadow-md z-50'>
+            <NavigationMenuList className='w-screen flex justify-between px-8'>
+                <Image className='ring-2 ring-vivid-violet-500 bg-white rounded-full' src='/logo.png' alt='logo' width={50} height={50}></Image>
+                <NavigationMenuList>
+                <div className='sm:flex gap-4 hidden items-center justify-center'>
+                  {
+                    items.map((item) => (
+                      <ScrollLink activeClass='active' to={item.url} spy smooth={true} duration={600} key={item.id}>
+                        <ButtonUI className='bg-gray-900 text-white border border-vivid-violet-600 shadow-sm shadow-vivid-violet-800 hover:bg-transparent'>
+                          {item.title}
+                        </ButtonUI>
+                      </ScrollLink>
+                    ))
+                  }
+                </div>
                 </NavigationMenuList>
-            </NavigationMenu>
+                <NavigationMenuList className='flex justify-between gap-7 py-4 px-4'>
+                { shouldRenderComponents &&
+                    <ConnectButton label='Connect wallet' accountStatus={{
+                      smallScreen: 'avatar',
+                      largeScreen: 'full'
+                    }} showBalance={{ smallScreen: true, largeScreen: true }}></ConnectButton>}
+                </NavigationMenuList>
+            </NavigationMenuList>
+        </NavigationMenu>
+    </>
   )
 }
 

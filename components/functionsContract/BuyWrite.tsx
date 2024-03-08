@@ -1,7 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react'
 import { useContractWrite, useAccount } from 'wagmi'
-import { AbyContractAddress } from '@/configWagmi/AbyContrat'
+import { AbyContractAddress, contract } from '@/utils/AbyContrat'
 // import { parseEther } from 'viem'
 import { ButtonUI } from '@/components/ui/button'
 import Loading from '@/components/Loading'
@@ -16,7 +16,7 @@ const BuyWrite = ({ send, amount, reset }: { send: number, amount: number, reset
   const [error, setError] = useState(false)
 
   const { isLoading, isSuccess, isError, writeAsync, data: hash } = useContractWrite({
-    address: '0x3B0d1D48F046CBF197a9b4A88fa91c6a233691bA',
+    address: contract,
     abi: AbyContractAddress,
     account: address,
     functionName: 'buy'
@@ -49,7 +49,7 @@ const BuyWrite = ({ send, amount, reset }: { send: number, amount: number, reset
         onClick={() => {
           if (amount > 0) {
             writeAsync({
-              args: [1]
+              args: [amount]
             }).then(() => {
               setShown(true)
             }).catch(error => {

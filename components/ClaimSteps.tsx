@@ -9,11 +9,11 @@ import { useState } from 'react'
 
 const ClaimSteps = (): JSX.Element => {
   const [balanceOf, setBalanceOf] = useState(0)
-  const { isConnected } = useAccount()
+  const { isConnected, isDisconnected } = useAccount()
 
   return (
-    <div className="flex flex-col bg-white rounded-3xl lg:w-1/3 w-full">
-        <div className="h-16 flex items-center justify-center align-top rounded-3xl rounded-b-none w-full bg-amber-700/50 place-items-center">
+    <div className="flex flex-col backdrop-blur justify-self-center bg-background/80 border border-vivid-violet-600 shadow-sm shadow-vivid-violet-800 rounded-3xl lg:w-3/4 w-full">
+        <div className="h-16 flex items-center justify-center align-top rounded-3xl rounded-b-none w-full bg-azure-radiance-600 place-items-center">
           <p className="text-2xl font-bold">Claim your Unity tokens</p>
         </div>
       <div className='py-4'>
@@ -24,14 +24,14 @@ const ClaimSteps = (): JSX.Element => {
               <div className='flex flex-col gap-2'>
                 <p className='text-md text-blue-500 font-bold'>Connect Wallet</p>
                 <p className='text-gray-500 text-xs'>Connect the wallet you have purchased with</p>
-                <ConnectButton label='Connect wallet'showBalance={false} accountStatus="address"></ConnectButton>
+                <ConnectButton label='Connect wallet' showBalance={false} accountStatus="address"></ConnectButton>
               </div>
               <div className='flex flex-col gap-1'>
                   <p className='text-md text-blue-500 font-bold'>Check Balance</p>
                   <p className='text-gray-500 text-xs'>Check your current balance</p>
-                  <div className='border flex border-sky-500 h-[35px] rounded-2xl pl-3 items-center gap-2'>
+                  <div className='border flex border-sky-500 rounded-2xl pl-3 items-center gap-2'>
                       <Image className='flex' src='/logo.png' alt='logo' width={30} height={30}></Image>
-                      <BalanceOf setBalanceOf={setBalanceOf}/>
+                      <BalanceOf isDisconnected={isDisconnected} balance={balanceOf} setBalanceOf={setBalanceOf}/>
                   </div>
               </div>
               <div className='w-full'>

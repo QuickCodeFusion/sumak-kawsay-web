@@ -1,11 +1,11 @@
 'use client'
 import { useContractWrite, useAccount } from 'wagmi'
-import { AbyContractAddress } from '@/configWagmi/AbyContrat'
+import { AbyContractAddress, contract } from '@/utils/AbyContrat'
 import { ButtonUI } from '@/components/ui/button'
 const ClaimTokens = ({ boolean }: { boolean: boolean }): JSX.Element => {
   const { address } = useAccount()
-  const { data, isLoading, isSuccess, write, isError } = useContractWrite({
-    address: '0x3B0d1D48F046CBF197a9b4A88fa91c6a233691bA',
+  const { write } = useContractWrite({
+    address: contract,
     abi: AbyContractAddress,
     account: address,
     functionName: 'claimTokens'
@@ -24,9 +24,6 @@ const ClaimTokens = ({ boolean }: { boolean: boolean }): JSX.Element => {
         >
           Claim
         </ButtonUI>
-        {isLoading && <div>Check Wallet...</div>}
-        {isSuccess && <div>Transaction: {JSON.stringify(data)}</div>}
-        {isError && <div>Error: {JSON.stringify(isError)}</div>}
       </div>
   )
 }

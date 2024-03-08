@@ -17,6 +17,7 @@ import BalanceOf from '@/components/functionsContract/BalanceOf'
 import { useSelector } from '@/lib/redux/hooks'
 import { useState } from 'react'
 import BuyWrite from '@/components/functionsContract/BuyWrite'
+import VerifyToken from './functionsToken/VerifyToken'
 
 export const ButtonModal = (): React.JSX.Element => {
   const { currentPrice } = useSelector((state) => state.currentPrice)
@@ -46,27 +47,28 @@ export const ButtonModal = (): React.JSX.Element => {
     <Dialog >
       <div className='flex justify-center'>
         <DialogTrigger asChild>
-          <ButtonUI className='w-52 uppercase rounded-full bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 border-none text-white' variant={'outline'}>buy now</ButtonUI>
+          <ButtonUI className='w-52 uppercase rounded-full border-none'>buy now</ButtonUI>
         </DialogTrigger>
       </div>
-      <DialogContent className="sm:max-w-[500px] overflow-hidden">
+      <DialogContent className="sm:max-w-[500px] overflow-hidden bg-amber-700/50 backdrop-blur">
         <div className="absolute top-0 left-0 w-full h-52 z-0">
-            <div className="m-auto h-full w-96 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-b-full filter blur-3xl"></div>
+            <div className="m-auto h-full w-96 "></div>
         </div>
         <DialogHeader className='z-10 uppercase'>
           <DialogTitle >be an investor</DialogTitle>
-          <DialogDescription className='text-white font-semibold flex gap-2'>
-            balance: <BalanceOf />
+          <DialogDescription className='text-white font-semibold flex gap-2 justify-between'>
+            <div className='flex'>balance: <BalanceOf /></div>
+            <VerifyToken />
           </DialogDescription>
         </DialogHeader>
         <div className="grid gap-4 py-4 z-10">
           <div className="grid grid-cols-5 gap-1 ">
-            <Label htmlFor="amount" className='uppercase col-span-5'>amount</Label>
-            <Input id="amount" type='number' onChange={handlesend} value={value.send} className="col-span-3 appearance-none rounded-e-none" /><SelectCoin/>
+            <Label htmlFor="amount" className='uppercase col-span-5 '>amount</Label>
+            <Input id="amount" type='number' onChange={handlesend} value={value.send} className="col-span-3 appearance-none rounded-e-none bg-[#FFF3DD]" /><SelectCoin/>
           </div>
           <div className="grid gap-1 z-10">
             <Label htmlFor="get-amount" className='uppercase'>amount</Label>
-            <Input id="get-amount" type='number' value={value.amount !== 0 ? value.amount : ''} onChange={handleamount} className="col-span-3" />
+            <Input id="get-amount" type='number' value={value.amount !== 0 ? value.amount : ''} onChange={handleamount} className="col-span-3 bg-[#FFF3DD]" />
           </div>
           <div className='grid divide-y divide-dashed gap-4'>
             <div className='flex justify-between w-full '><span>precio$</span><span>{currentPrice}</span></div>
