@@ -5,7 +5,6 @@ import { ButtonUI } from '../ui/button'
 import { useEffect, useState } from 'react'
 import { toast } from 'sonner'
 import { CloseIcon } from '../Icons/CloseIcon'
-import { Divide } from 'lucide-react'
 
 const ClosePresale = (): JSX.Element => {
   const [Shown, setShown] = useState(false)
