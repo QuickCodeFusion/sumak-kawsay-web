@@ -1,6 +1,5 @@
 import ButtonWhitePaper from './ButtonWhiterPaper'
 import IconSocial from './IconSocial'
-import { Card } from './ui/card'
 const InfoPresale = (): JSX.Element => {
   return (
           <div className='flex justify-center items-center flex-col md:gap-4'>
