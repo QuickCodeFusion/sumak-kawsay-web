@@ -12,6 +12,8 @@ import { useWaitForTransaction } from 'wagmi'
 import { Link as ScrollLink } from 'react-scroll'
 import { ButtonUI } from './ui/button'
 import { ModeToggle } from './ToggleTheme'
+import ReclaimUsdt from './functionsContract/ReclaimUsdt'
+import ClosePresale from './functionsContract/ClosePresale'
 
 const items = [
   {
@@ -83,6 +85,8 @@ const Navbar = (): React.JSX.Element => {
                 <ModeToggle></ModeToggle>
                 </NavigationMenuList>
                 <NavigationMenuList className='flex justify-between gap-7 py-4 px-4'>
+                  <ReclaimUsdt />
+                  <ClosePresale />
                 { shouldRenderComponents &&
                     <ConnectButton label='Connect wallet' accountStatus={{
                       smallScreen: 'avatar',
