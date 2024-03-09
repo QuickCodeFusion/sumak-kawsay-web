@@ -50,7 +50,7 @@ export const ButtonModal = (): React.JSX.Element => {
           <ButtonUI className='w-52 uppercase rounded-full border-none'>buy now</ButtonUI>
         </DialogTrigger>
       </div>
-      <DialogContent className="sm:max-w-[500px] overflow-hidden bg-black/50 backdrop-blur">
+      <DialogContent className="sm:max-w-[500px] overflow-hidden bg-background/50 backdrop-blur">
         <div className="absolute top-0 left-0 w-full h-52 z-0">
             <div className="m-auto h-full w-96 "></div>
         </div>
