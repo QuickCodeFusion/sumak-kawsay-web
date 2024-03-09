@@ -49,7 +49,7 @@ export const Tokenomics = (): JSX.Element => {
           <div>
             <h1 className='text-3xl font-bold'>Tokenomics</h1>
             <h3 className='text-xl font-semibold mb-2'>Token Distribution and Unity Halving Schedule:</h3>
-            <Card className='bg-background/40 backdrop-blur p-6 border border-vivid-violet-600 shadow-sm shadow-vivid-violet-800 md:grid grid-cols-2 place-items-center'>
+            <Card className='bg-background/40 backdrop-blur p-6 border shadow-sm md:grid grid-cols-2 place-items-center'>
               <ListCard>
               {items.map((item, index) => (
                   <ListItem className='border-azure-radiance-500' key={index}>
