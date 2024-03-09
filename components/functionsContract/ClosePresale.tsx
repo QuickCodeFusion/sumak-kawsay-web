@@ -41,7 +41,7 @@ const ClosePresale = (): JSX.Element => {
     }
   }, [isLoading, Shown, status])
 
-  if (owner !== address) {
+  if (owner !== address || !owner) {
     return <></>
   }
 
