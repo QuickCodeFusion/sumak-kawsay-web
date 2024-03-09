@@ -47,7 +47,7 @@ const ClosePresale = (): JSX.Element => {
 
   return (
       <ButtonUI
-        className='rounded-full text-white shadow-sm shadow-vivid-violet-800 '
+        className='border-b bg-transparent hover:bg-background rounded-none text-foreground'
         variant='ghost'
         onClick={() => {
           writeAsync({
