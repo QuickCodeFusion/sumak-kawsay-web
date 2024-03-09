@@ -51,7 +51,7 @@ export const ButtonModal = (): React.JSX.Element => {
           <ButtonUI className='w-52 uppercase rounded-full border-none'>buy now</ButtonUI>
         </DialogTrigger>
       </div>
-      <DialogContent className="sm:max-w-[500px] overflow-hidden backdrop-blur">
+      <DialogContent className="sm:max-w-[500px] overflow-hidden bg-background/50 backdrop-blur">
         <div className="absolute top-0 left-0 w-full h-52 z-0">
             <div className="m-auto h-full w-96 "></div>
         </div>
@@ -66,10 +66,11 @@ export const ButtonModal = (): React.JSX.Element => {
           <div className="grid grid-cols-5 gap-1 ">
             <Label htmlFor="amount" className='uppercase col-span-5 '>amount</Label>
             <Input id="amount" type='number' onChange={handlesend} value={value.send} className="col-span-3 appearance-none rounded-e-none" /><SelectCoin/>
+            <Input id="amount" type='number' onChange={handlesend} value={value.send} className="col-span-3 appearance-none rounded-e-none" /><SelectCoin/>
           </div>
           <div className="grid gap-1 z-10">
             <Label htmlFor="get-amount" className='uppercase'>amount</Label>
-            <Input id="get-amount" type='number' value={value.amount !== 0 ? value.amount : ''} onChange={handleamount} className="col-span-3" />
+            <Input id="get-amount" type='number' value={value.amount !== 0 ? value.amount : ''} onChange={handleamount} className="col-span-3 appearance-none         " />
           </div>
           <div className='grid divide-y divide-dashed gap-4'>
             <div className='flex justify-between w-full '><span>precio$</span><span>{currentPrice}</span></div>

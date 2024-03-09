@@ -75,18 +75,17 @@ const Navbar = (): React.JSX.Element => {
                   {
                     items.map((item) => (
                       <ScrollLink activeClass='active' to={item.url} spy smooth={true} duration={600} key={item.id}>
-                        <ButtonUI className='text bg-transparent hover:bg-background'>
+                        <ButtonUI className='bg-gray-900 text-white border shadow-sm shadow-vivid-violet-800 hover:bg-transparent'>
                           {item.title}
                         </ButtonUI>
                       </ScrollLink>
                     ))
                   }
                 </div>
-                <ModeToggle></ModeToggle>
                 </NavigationMenuList>
-                <NavigationMenuList className='flex justify-between gap-7 py-4 px-4'>
-                  <ReclaimUsdt />
-                  <ClosePresale />
+                <NavigationMenuList className='flex justify-between gap-2 py-4 px-4'>
+                    <ReclaimUsdt />
+                    <ClosePresale />
                 { shouldRenderComponents &&
                     <ConnectButton label='Connect wallet' accountStatus={{
                       smallScreen: 'avatar',

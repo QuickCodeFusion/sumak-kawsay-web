@@ -46,8 +46,8 @@ const ReclaimUsdt = (): JSX.Element => {
 
   return (
       <ButtonUI
-        className={'uppercase bg-sky-500 rounded-full border-none text-white'}
-        variant={'outline'}
+        className='rounded-full text-white shadow-sm shadow-vivid-violet-800 '
+        variant='ghost'
         onClick={() => {
           writeAsync({
           }).then(() => {
