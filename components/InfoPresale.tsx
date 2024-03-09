@@ -1,8 +1,23 @@
+import Link from 'next/link'
 import ButtonWhitePaper from './ButtonWhiterPaper'
 import IconSocial from './IconSocial'
+import { ButtonUI } from './ui/button'
 const InfoPresale = (): JSX.Element => {
+  const items = [
+    {
+      id: 1,
+      title: 'Hub',
+      link: 'http://transformationalfestivals.net/'
+    },
+    {
+      id: 2,
+      title: 'Marketplace',
+      link: 'https://www.binance.com/es/nft/my-nfts/collected/symbiosls-0319e09553f7b3842d72b6435a287e3c'
+    }
+  ]
   return (
           <div className='flex justify-center items-center flex-col md:gap-4'>
+                <IconSocial/>
               <h1 className='text-xl md:text-3xl font-bold text-center'>
                 Embracing the Renaissance of Prosperity in the Sumak Kawsay.
                 Co-creating a World of Harmony and Abundance
@@ -12,7 +27,15 @@ const InfoPresale = (): JSX.Element => {
               <p className='text-center md:p-4'>The Sumak Kawsay Ecosystem blends asset tokenization, artificial intelligence, decentralized governance, and privacy, fostering a legal and political framework for global articulation, collective prosperity, and sovereignty. This approach ensures ethical financial systems and unified actions for the well-being of Earth.</p>
               </div>
               <span className='w-full flex flex-col md:flex-row justify-center items-center gap-4'>
-                <IconSocial/>
+                {items.map((item) => {
+                  return (
+                    <ButtonUI className='rounded-full border-2' key={item.id}>
+                      <Link href={item.link} target='_blank' rel='noreferrer'>
+                        {item.title}
+                      </Link>
+                    </ButtonUI>
+                  )
+                })}
                 <ButtonWhitePaper/>
               </span>
           </div>
