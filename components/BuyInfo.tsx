@@ -8,6 +8,8 @@ import { ListCard, ListCardContent, ListItem } from './ui/list'
 import { useState } from 'react'
 import { useAccount } from 'wagmi'
 import EnableToken from './functionsToken/EnableToken'
+import { ButtonUI } from './ui/button'
+import Link from 'next/link'
 
 const BuyInfo = (): JSX.Element => {
   const { currentPrice } = useSelector((state) => state.currentPrice)
@@ -44,6 +46,9 @@ const BuyInfo = (): JSX.Element => {
             <div className='flex flex-col md:flex-row gap-4'>
                 <EnableToken/>
                 <ButtonModal/>
+                <Link href='https://www.pinksale.finance/launchpad/0x3C419fC6E8a1e4ed49Ca4530758fc4a37d658fC6?chain=Matic'>
+                    <ButtonUI className='uppercase rounded-full'>Buy with card</ButtonUI>
+                </Link>
             </div>
         </div>
   )
