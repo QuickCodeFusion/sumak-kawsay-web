@@ -20,11 +20,9 @@ const InfoPhase = (): JSX.Element => {
     functionName: 'currentPhase'
   })
   if (!data) {
-    // Handle case when data is undefined
     return <div>Loading...</div>
   }
   const [newData] = data as Data
-  console.log(data)
   const phase = String(data !== undefined && (newData.phase))
   const price = Number(data !== undefined && (newData.price)) / 10 ** 18
   const total = Number(data !== undefined && (newData.total))

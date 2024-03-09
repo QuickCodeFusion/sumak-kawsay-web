@@ -19,7 +19,7 @@ export const SelectCoin = (): JSX.Element => {
           variant="outline"
           role="combobox"
           aria-expanded={open}
-          className="col-span-2 justify-center gap-2 rounded-s-none bg-[#FFF3DD] text-black"
+          className="col-span-2 justify-center gap-2 rounded-s-none"
         >
           <Image src={USDTicon} width={25} alt="USDT" /> USDT
         </ButtonUI>

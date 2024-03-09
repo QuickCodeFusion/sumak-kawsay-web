@@ -33,7 +33,7 @@ const BuyInfo = dynamic(async () => await import('@/components/BuyInfo'), {
 const currentDate = new Date()
 const stopRenderingDate = new Date('2024-04-01')
 
-const shouldRenderProgressBar = currentDate > stopRenderingDate
+const shouldRenderProgressBar = currentDate < stopRenderingDate
 
 const Home = (): React.JSX.Element => {
   return (
