@@ -46,7 +46,6 @@ const Home = (): React.JSX.Element => {
                         <PresaleCountdown/>
                         <InfoPhase/>
                         <BuyInfo/>
-                        {/* <ButtonUI className='w-fit self-end bg-transparent border-b'>How to buy guide</ButtonUI> */}
                       </section>}
                   </div>
             </section>
