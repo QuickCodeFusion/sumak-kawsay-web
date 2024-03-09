@@ -5,7 +5,7 @@ import IconSocial from './IconSocial'
 const InfoFooter = (): JSX.Element => {
   const year = new Date().getFullYear()
   return (
-    <div className='container flex items-center justify-around flex-col lg:grid grid-cols-3 gap-4 p-4'>
+    <div className='container flex items-center justify-around flex-col lg:grid grid-cols-3 gap-4 p-4 text-white'>
         <span>
           <div className='flex gap-4 items-center ring-offset-2'>
             <Image className='ring-2 ring-vivid-violet-500 bg-white rounded-full' src={Logo} alt='logo' width={50} height={50}/>

@@ -75,7 +75,7 @@ const Navbar = (): React.JSX.Element => {
                   {
                     items.map((item) => (
                       <ScrollLink activeClass='active' to={item.url} spy smooth={true} duration={600} key={item.id}>
-                        <ButtonUI className='bg-gray-900 text-white border border-vivid-violet-600 shadow-sm shadow-vivid-violet-800 hover:bg-transparent'>
+                        <ButtonUI className='text bg-transparent hover:bg-background'>
                           {item.title}
                         </ButtonUI>
                       </ScrollLink>
