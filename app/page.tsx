@@ -42,7 +42,7 @@ const Home = (): React.JSX.Element => {
                   <div className='flex md:grid grid-cols-2 lg:flex-row flex-col gap-4 justify-around w-full'>
                       <InfoPresale/>
                       {!shouldRenderProgressBar && <ClaimSteps/>}
-                      {shouldRenderProgressBar && <section className='backdrop-blur bg-background border rounded-3xl p-4 flex flex-col w-full mx-0'>
+                      {shouldRenderProgressBar && <section className='bg-background/50 border rounded-3xl p-4 flex flex-col w-full mx-0'>
                         <PresaleCountdown/>
                         <InfoPhase/>
                         <BuyInfo/>

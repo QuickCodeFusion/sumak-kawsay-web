@@ -66,7 +66,6 @@ export const ButtonModal = (): React.JSX.Element => {
           <div className="grid grid-cols-5 gap-1 ">
             <Label htmlFor="amount" className='uppercase col-span-5 '>amount</Label>
             <Input id="amount" type='number' onChange={handlesend} value={value.send} className="col-span-3 appearance-none rounded-e-none" /><SelectCoin/>
-            <Input id="amount" type='number' onChange={handlesend} value={value.send} className="col-span-3 appearance-none rounded-e-none" /><SelectCoin/>
           </div>
           <div className="grid gap-1 z-10">
             <Label htmlFor="get-amount" className='uppercase'>amount</Label>
