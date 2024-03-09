@@ -11,7 +11,6 @@ const ClosePresale = (): JSX.Element => {
   const [Shown, setShown] = useState(false)
   const { address } = useAccount()
   const owner = useOwner()
-  console.log(owner)
 
   const { writeAsync, isLoading, data } = useContractWrite({
     address: contract,
@@ -41,15 +40,14 @@ const ClosePresale = (): JSX.Element => {
       window.location.reload()
     }
   }, [isLoading, Shown, status])
-  if (!owner) {
-    return (
-    <></>
-    )
+
+  if (owner !== address) {
+    return <></>
   }
+
   return (
-    <>
       <ButtonUI
-        className={owner === address ? 'uppercase bg-sky-500 rounded-full border-none text-white' : 'invisible'}
+        className='uppercase bg-sky-500 rounded-full border-none text-white'
         variant={'outline'}
         onClick={() => {
           writeAsync({
@@ -64,7 +62,6 @@ const ClosePresale = (): JSX.Element => {
       >
         <CloseIcon />
       </ButtonUI>
-    </>
   )
 }
 

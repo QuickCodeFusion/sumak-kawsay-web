@@ -39,15 +39,14 @@ const ReclaimUsdt = (): JSX.Element => {
       window.location.reload()
     }
   }, [isLoading, Shown, status])
-  if (!owner) {
-    return (
-    <></>
-    )
+
+  if (owner !== address) {
+    return <></>
   }
+
   return (
-    <>
       <ButtonUI
-        className={owner === address ? 'uppercase bg-sky-500 rounded-full border-none text-white' : 'invisible'}
+        className={'uppercase bg-sky-500 rounded-full border-none text-white'}
         variant={'outline'}
         onClick={() => {
           writeAsync({
@@ -62,7 +61,6 @@ const ReclaimUsdt = (): JSX.Element => {
       >
         <DollarIcon />
       </ButtonUI>
-    </>
   )
 }
 
