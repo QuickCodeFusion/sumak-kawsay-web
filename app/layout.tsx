@@ -5,8 +5,8 @@ import { cn } from '@/lib/utils'
 import { Providers } from './providers'
 import Navbar from '@/components/Navbar'
 import { ThemeProvider } from './themeDark'
-import BgVideo from '@/components/BgVideo'
 import Footer from '@/components/Footer'
+import BgVideo from '@/components/BgVideo'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -26,7 +26,7 @@ const RootLayout = ({
         cn(
           'min-h-screen',
           inter.className,
-          'bg-black/50 bg-cover bg-no-repeat bg-center bg-fixed',
+          'bg-background bg-cover bg-no-repeat bg-center bg-fixed',
           'h-screen flex'
         )
       }>

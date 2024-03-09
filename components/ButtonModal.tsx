@@ -56,7 +56,7 @@ export const ButtonModal = (): React.JSX.Element => {
         </div>
         <DialogHeader className='z-10 uppercase'>
           <DialogTitle >be an investor</DialogTitle>
-          <DialogDescription className='text-white font-semibold flex gap-2 justify-between'>
+          <DialogDescription className='font-semibold flex gap-2 justify-between'>
             <div className='flex'>balance: <BalanceOf /></div>
             <VerifyToken />
           </DialogDescription>
@@ -64,6 +64,7 @@ export const ButtonModal = (): React.JSX.Element => {
         <div className="grid gap-4 py-4 z-10">
           <div className="grid grid-cols-5 gap-1 ">
             <Label htmlFor="amount" className='uppercase col-span-5 '>amount</Label>
+            <Input id="amount" type='number' onChange={handlesend} value={value.send} className="col-span-3 appearance-none rounded-e-none" /><SelectCoin/>
             <Input id="amount" type='number' onChange={handlesend} value={value.send} className="col-span-3 appearance-none rounded-e-none" /><SelectCoin/>
           </div>
           <div className="grid gap-1 z-10">

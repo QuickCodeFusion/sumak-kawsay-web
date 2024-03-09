@@ -20,7 +20,7 @@ export const TimeData: React.FC<props> = ({ stage, progress, goal, value }): Rea
   }, [value])
   return (
     <div className='grid place-items-center gap-4 '>
-        <div className='w-3/4 flex justify-between  font-bold text-white'>
+        <div className='w-3/4 flex justify-between font-bold'>
           <p className='text-sm uppercase md:text-lg'>
             stage {stage} : {typeof calculatorBonus === 'number' ? Math.round(calculatorBonus * 100) : 0 }% bonus !
           </p>
