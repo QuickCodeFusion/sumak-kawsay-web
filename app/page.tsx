@@ -46,6 +46,7 @@ const Home = (): React.JSX.Element => {
                         <PresaleCountdown/>
                         <InfoPhase/>
                         <BuyInfo/>
+
                       </section>}
                   </div>
             </section>

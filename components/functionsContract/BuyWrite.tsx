@@ -43,7 +43,7 @@ const BuyWrite = ({ send, amount, reset }: { send: number, amount: number, reset
   return (
     <div className='flex justify-center w-full flex-col items-center gap-4'>
       <ButtonUI
-        className='w-52 uppercase rounded-full bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 border-none text-white'
+        className='w-52 uppercase rounded-full bg-gradient-to-r bg-azure-radiance-700 text-white'
         variant={'outline'}
         onClick={() => {
           if (amount > 0) {

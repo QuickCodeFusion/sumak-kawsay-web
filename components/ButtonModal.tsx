@@ -18,6 +18,7 @@ import { useSelector } from '@/lib/redux/hooks'
 import { useState } from 'react'
 import BuyWrite from '@/components/functionsContract/BuyWrite'
 import VerifyToken from './functionsToken/VerifyToken'
+import Link from 'next/link'
 
 export const ButtonModal = (): React.JSX.Element => {
   const { currentPrice } = useSelector((state) => state.currentPrice)
@@ -79,6 +80,9 @@ export const ButtonModal = (): React.JSX.Element => {
         </div>
         <DialogFooter >
           <BuyWrite send={value.send} amount={value.amount} reset={handleReset} />
+          <Link href='https://www.pinksale.finance/launchpad/0x3C419fC6E8a1e4ed49Ca4530758fc4a37d658fC6?chain=Matic'>
+            <ButtonUI className='uppercase rounded-full bg-azure-radiance-700'>Buy with card</ButtonUI>
+          </Link>
         </DialogFooter>
       </DialogContent>
     </Dialog>

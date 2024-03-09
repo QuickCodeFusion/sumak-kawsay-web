@@ -44,7 +44,7 @@ const EnableToken = ({ amount, reset }: { amount?: number, reset?: () => void })
   return (
     <div className='flex justify-center w-full flex-col items-center gap-4'>
       <ButtonUI
-        className='w-52 uppercase rounded-full bg-white text-black'
+        className='w-52 uppercase rounded-full'
         variant={'outline'}
         onClick={() => {
           writeAsync({
@@ -55,7 +55,6 @@ const EnableToken = ({ amount, reset }: { amount?: number, reset?: () => void })
             setShown(true)
             console.log(error)
           })
-          // reset()
         }
         }
       >
