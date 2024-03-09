@@ -75,16 +75,16 @@ const Navbar = (): React.JSX.Element => {
                   {
                     items.map((item) => (
                       <ScrollLink activeClass='active' to={item.url} spy smooth={true} duration={600} key={item.id}>
-                        <ButtonUI className='text bg-transparent hover:bg-background'>
+                        <ButtonUI className='border-b-background border-b rounded-none text-foreground bg-transparent hover:bg-background'>
                           {item.title}
                         </ButtonUI>
                       </ScrollLink>
                     ))
                   }
                 </div>
-                <ModeToggle></ModeToggle>
                 </NavigationMenuList>
                 <NavigationMenuList className='flex justify-between gap-7 py-4 px-4'>
+                <ModeToggle></ModeToggle>
                   <ReclaimUsdt />
                   <ClosePresale />
                 { shouldRenderComponents &&
