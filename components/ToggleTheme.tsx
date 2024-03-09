@@ -31,9 +31,6 @@ export const ModeToggle = (): React.JSX.Element => {
         <DropdownMenuItem onClick={() => { setTheme('dark') }}>
           Dark
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => { setTheme('system') }}>
-          System
-        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   )

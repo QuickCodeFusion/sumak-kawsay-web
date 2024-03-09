@@ -82,7 +82,6 @@ const Navbar = (): React.JSX.Element => {
                     ))
                   }
                 </div>
-                <ModeToggle></ModeToggle>
                 </NavigationMenuList>
                 <NavigationMenuList className='flex justify-between gap-2 py-4 px-4'>
                     <ReclaimUsdt />
