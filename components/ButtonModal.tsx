@@ -65,11 +65,11 @@ export const ButtonModal = (): React.JSX.Element => {
         <div className="grid gap-4 py-4 z-10">
           <div className="grid grid-cols-5 gap-1 ">
             <Label htmlFor="amount" className='uppercase col-span-5 '>USDT Pay</Label>
-            <Input id="amount" type='number' onChange={handlesend} value={value.send} className="col-span-3 appearance-none rounded-e-none" /><SelectCoin/>
+            <Input onChange={handlesend} value={value.send >= 0 ? value.send : 0} className="col-span-3 appearance-none rounded-e-none" /><SelectCoin/>
           </div>
           <div className="grid gap-1 z-10">
             <Label htmlFor="get-amount" className='uppercase'>UNITY To receive </Label>
-            <Input id="get-amount" type='number' value={value.amount !== 0 ? value.amount : ''} onChange={handleamount} className="col-span-3 appearance-none         " />
+            <Input value={value.amount !== 0 ? value.amount : ''} onChange={handleamount} className="col-span-3 appearance-none         " />
           </div>
           <div className='grid divide-y divide-dashed gap-4'>
             <div className='flex justify-between w-full '><span>precio$</span><span>{currentPrice}</span></div>
