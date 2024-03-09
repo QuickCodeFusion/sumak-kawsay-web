@@ -67,15 +67,15 @@ const Navbar = (): React.JSX.Element => {
 
   return (
     <>
-        <NavigationMenu className='w-full bg-black bg-opacity-55 fixed backdrop-blur shadow-black shadow-md z-50'>
+        <NavigationMenu className='w-full bg-withe fixed backdrop-blur bg-background/50 shadow-md z-50'>
             <NavigationMenuList className='w-screen flex justify-between px-8'>
-                <Image className='ring-2 ring-vivid-violet-500 bg-white rounded-full' src='/logo.png' alt='logo' width={50} height={50}></Image>
+                <Image className='rounded-full' src='/logo.png' alt='logo' width={50} height={50}></Image>
                 <NavigationMenuList>
                 <div className='sm:flex gap-4 hidden items-center justify-center'>
                   {
                     items.map((item) => (
                       <ScrollLink activeClass='active' to={item.url} spy smooth={true} duration={600} key={item.id}>
-                        <ButtonUI className='border-b bg-transparent hover:bg-background rounded-none text-foreground'>
+                        <ButtonUI className='bg-transparent hover:bg-background rounded-none text-foreground'>
                           {item.title}
                         </ButtonUI>
                       </ScrollLink>
