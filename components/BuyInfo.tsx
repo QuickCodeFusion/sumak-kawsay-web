@@ -8,7 +8,6 @@ import { ListCard, ListCardContent, ListItem } from './ui/list'
 import { useState } from 'react'
 import { useAccount } from 'wagmi'
 import EnableToken from './functionsToken/EnableToken'
-import { ButtonUI } from './ui/button'
 import Link from 'next/link'
 
 const BuyInfo = (): JSX.Element => {
@@ -43,12 +42,10 @@ const BuyInfo = (): JSX.Element => {
                     </ListCardContent>
                 </ListItem>
             </ListCard>
-            <div className='flex flex-col md:flex-row gap-4 justify-center items-start'>
+            <div className='flex flex-col md:grid grid-cols-2 gap-4 justify-center items-center'>
                     <EnableToken/>
-                    <div>
-                        <ButtonModal/>
-                        <Link href={'#'} className='w-fit self-end text-azure-radiance-500 bg-transparent border-b hover:bg-transparent'>How to buy</Link>
-                    </div>
+                    <ButtonModal/>
+                    <Link href={'#'} className='w-fit text-azure-radiance-500 bg-transparent underline hover:bg-transparent'>How to buy</Link>
             </div>
         </div>
   )
