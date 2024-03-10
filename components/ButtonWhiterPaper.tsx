@@ -16,7 +16,7 @@ const ButtonWhitePaper = (): JSX.Element => {
   }
   return (
     <>
-        <ButtonUI onClick={handleButtonClick} className='rounded-full border-2'>
+        <ButtonUI onClick={handleButtonClick} className='w-full rounded-full border-2'>
           Whitepaper
         </ButtonUI>
         <Modal open={open} setOpen={setOpen} className='w-screen p-2 md:p-0'>
