@@ -8,7 +8,7 @@ export const Passport = (): JSX.Element => {
                 resources, unifying community members in our shared vision for a sustainable
                 future
             </p>
-            <div className='flex flex-col lg:flex-row w-3/4 self-center place-items-center p-5'>
+            <div className='flex flex-col lg:flex-row md:w-3/4 self-center place-items-center p-5'>
                 <div className='p-5 flex flex-col items-center gap-6'>
                 <p>Benefits and Security</p>
                 <ul className='flex  flex-col gap-5 list-disc pl-5'>
@@ -37,7 +37,7 @@ export const Passport = (): JSX.Element => {
                     </li>
                 </ul>
                 </div>
-                <Image className='rounded-full' src='/passport.jpeg' alt='passport' width={300} height={300}/>
+                <Image className='drop-shadow-2xl shadow-shadow' src='/passport 2.png' alt='passport' width={300} height={300}/>
             </div>
         </div>
   )
