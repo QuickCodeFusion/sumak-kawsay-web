@@ -33,7 +33,7 @@ const items = [
   },
   {
     id: 3,
-    title: 'Team Work',
+    title: 'Team',
     url: 'teamWork'
   },
   {

@@ -24,7 +24,7 @@ const InfoPresale = (): JSX.Element => {
               </h1>
               <div className='my-9'>
               <p className='text-md md:text-xl text-center font-semibold'>A transformation that begins with you and resonates across the globe</p>
-              <p className='text-center md:p-4'>The Sumak Kawsay Ecosystem blends asset tokenization, artificial intelligence, decentralized governance, and privacy, fostering a legal and political framework for global articulation, collective prosperity, and sovereignty. This approach ensures ethical financial systems and unified actions for the well-being of Earth.</p>
+              <p className='text-center md:p-4'>The Sumak Kawsay Ecosystem blends asset tokenization, artificial intelligence, decentralized governance, and privacy, fostering a legal and political framework for global articulation, collective prosperity, and sovereignty.</p>
               </div>
               <span className='w-full flex flex-col md:flex-row justify-center items-center gap-4'>
                 {items.map((item) => {

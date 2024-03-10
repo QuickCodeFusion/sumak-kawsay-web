@@ -4,7 +4,7 @@ import InfoFooter from './InfoFooter'
 
 const Footer = (): JSX.Element => {
   return (
-    <footer className='w-full mt-44 bg-slate-950 dark:bg-black'>
+    <footer className='w-full mt-44 bg-azure-radiance-300 dark:bg-black'>
       <div className='container pb-8 pt-16 md:pt-24 lg:pt-32'>
         <div className='relative pt-20'>
           <InfonToken/>

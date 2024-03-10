@@ -8,7 +8,6 @@ import { ListCard, ListCardContent, ListItem } from './ui/list'
 import { useState } from 'react'
 import { useAccount } from 'wagmi'
 import EnableToken from './functionsToken/EnableToken'
-import { ButtonUI } from './ui/button'
 import Link from 'next/link'
 
 const BuyInfo = (): JSX.Element => {
