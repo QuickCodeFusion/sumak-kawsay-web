@@ -33,7 +33,7 @@ const items = [
   },
   {
     id: 3,
-    title: 'Team Work',
+    title: 'Team',
     url: 'teamWork'
   },
   {
@@ -75,7 +75,7 @@ const Navbar = (): React.JSX.Element => {
                   {
                     items.map((item) => (
                       <ScrollLink activeClass='active' to={item.url} spy smooth={true} duration={600} key={item.id}>
-                        <ButtonUI className='bg-transparent hover:bg-background rounded-none text-foreground'>
+                        <ButtonUI className='bg-transparent hover:bg-background rounded-3xl text-foreground'>
                           {item.title}
                         </ButtonUI>
                       </ScrollLink>
