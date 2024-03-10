@@ -1,7 +1,7 @@
 export const Dividends = (): JSX.Element => {
   return (
         <div >
-            <h3 className="text-3xl text-center font-semibold text-white">Dividends and Staking: A Path to Universal Income</h3>
+            <h3 className="text-3xl text-center font-semibold">Dividends and Staking: A Path to Universal Income</h3>
             <p className="w-10/12 mx-auto text-center ">Experience the joy of giving and receiving. Engage with our ecosystem, stake your
                 tokens, and earn dividends.
             </p>

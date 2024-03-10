@@ -46,15 +46,10 @@ export const ButtonModal = (): React.JSX.Element => {
   }
   return (
     <Dialog >
-      <div className='flex justify-center'>
         <DialogTrigger asChild>
           <ButtonUI className='w-full uppercase rounded-full bg-azure-radiance-700 border-none hover:bg-azure-radiance-400'>buy now</ButtonUI>
         </DialogTrigger>
-      </div>
       <DialogContent className="sm:max-w-[500px] overflow-hidden bg-background/50 backdrop-blur">
-        <div className="absolute top-0 left-0 w-full h-52 z-0">
-            <div className="m-auto h-full w-96 "></div>
-        </div>
         <DialogHeader className='z-10 uppercase'>
           <DialogTitle >be an investor</DialogTitle>
           <DialogDescription className='font-semibold flex gap-2 justify-between'>

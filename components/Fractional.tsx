@@ -1,7 +1,7 @@
 export const Fractional = (): JSX.Element => {
   return (
         <div >
-            <h3 className="text-3xl text-center font-semibold text-white">Explore Shambhala Bio-habitats: A New Dimension of
+            <h3 className="text-3xl text-center font-semibold">Explore Shambhala Bio-habitats: A New Dimension of
                 Living
             </h3>
             <p className="w-10/12 mx-auto text-center ">Pioneering sustainable living solutions,
