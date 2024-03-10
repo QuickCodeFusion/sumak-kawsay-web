@@ -13,7 +13,7 @@ const CarouselInfo = ({ Item }: { Item: any }): JSX.Element => {
       <CarouselContent>
         {Item.map((Item: any) => (
         <CarouselItem className='rounded-3xl' key={Item.id}>
-              <Card className="h-full bg-background border rounded-3xl shadow-sm backdrop-filter backdrop-blur-lg">
+              <Card className="h-full bg-background/50 border rounded-3xl shadow-sm backdrop-filter backdrop-blur-lg">
                   <CardHeader>{Item.title}</CardHeader>
                   <CardContent >
                   {Item.content}
