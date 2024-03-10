@@ -9,6 +9,7 @@ import { useState } from 'react'
 import { useAccount } from 'wagmi'
 import EnableToken from './functionsToken/EnableToken'
 import { ButtonUI } from './ui/button'
+import Link from 'next/link'
 
 const BuyInfo = (): JSX.Element => {
   const { currentPrice } = useSelector((state) => state.currentPrice)
@@ -46,7 +47,7 @@ const BuyInfo = (): JSX.Element => {
                     <EnableToken/>
                     <div>
                         <ButtonModal/>
-                        <ButtonUI className='w-fit self-end text-azure-radiance-500 bg-transparent border-b hover:bg-transparent'>How to buy</ButtonUI>
+                        <Link href={'#'} className='w-fit self-end text-azure-radiance-500 bg-transparent border-b hover:bg-transparent'>How to buy</Link>
                     </div>
             </div>
         </div>
