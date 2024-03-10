@@ -46,7 +46,7 @@ const BuyInfo = (): JSX.Element => {
                     <EnableToken/>
                     <div>
                         <ButtonModal/>
-                        <ButtonUI className='w-fit self-end bg-transparent border-b hover:bg-transparent'>How to buy guide</ButtonUI>
+                        <ButtonUI className='w-fit self-end text-azure-radiance-500 bg-transparent border-b hover:bg-transparent'>How to buy</ButtonUI>
                     </div>
             </div>
         </div>
