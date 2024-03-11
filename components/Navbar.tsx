@@ -68,7 +68,7 @@ const Navbar = (): React.JSX.Element => {
   return (
     <>
         <NavigationMenu className='w-full bg-withe fixed backdrop-blur bg-background/50 shadow-md z-50'>
-            <NavigationMenuList className='w-screen flex justify-between px-8'>
+            <NavigationMenuList className='w-screen grid grid-cols-3 justify-between px-8'>
                 <Image className='rounded-full' src='/logo.png' alt='logo' width={50} height={50}></Image>
                 <NavigationMenuList>
                 <div className='sm:flex gap-4 hidden items-center justify-center'>
@@ -83,10 +83,10 @@ const Navbar = (): React.JSX.Element => {
                   }
                 </div>
                 </NavigationMenuList>
-                <NavigationMenuList className='flex justify-between gap-2 py-4 px-4'>
-                  <ModeToggle/>
+                <NavigationMenuList className='flex justify-end gap-2 py-4 px-4'>
                     <ReclaimUsdt />
                     <ClosePresale />
+                  <ModeToggle/>
                 { shouldRenderComponents &&
                     <ConnectButton label='Connect wallet' accountStatus={{
                       smallScreen: 'avatar',

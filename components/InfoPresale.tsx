@@ -16,14 +16,13 @@ const InfoPresale = (): JSX.Element => {
     }
   ]
   return (
-          <div className='flex place-self-start text-white justify-center items-start flex-col md:gap-4 col-span-2'>
+          <div className='flex place-self-start text-white  justify-center items-start flex-col gap-4 col-span-2 md:px-36 mb-12'>
                 <IconSocial/>
-              <h1 className='text-xl md:text-3xl font-bold text-start'>
+              <h1 className='text-2xl md:text-6xl font-bold text-start'>
               The Ultimate Living and Virtual Ecosystem
               </h1>
-              <p className='text-md md:text-xl text-start font-semibold'>Experience a new era of community-driven wealth, where every participant has the power to shape the future.</p>
-              <p className='underline'>100% audited</p>
-              <span className='w-full flex flex-col md:grid grid-cols-3 md:w-1/2 justify-center items-center gap-4'>
+              <p className='text-md md:text-2xl text-start font-semibold'>Experience a new era of community-driven wealth, where every participant has the power to shape the future.</p>
+              <span className='w-full grid grid-cols-3 md:w-1/2 justify-center items-center gap-4'>
                 <ButtonWhitePaper/>
                 {items.map((item) => {
                   return (
@@ -35,6 +34,7 @@ const InfoPresale = (): JSX.Element => {
                   )
                 })}
               </span>
+              <p className='underline'>audited & KYC | 100% secure and verified</p>
           </div>
   )
 }

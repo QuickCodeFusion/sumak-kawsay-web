@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Cinzel } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 import './globals.css'
 import { cn } from '@/lib/utils'
 import { Providers } from './providers'
@@ -8,8 +8,10 @@ import { ThemeProvider } from './themeDark'
 import Footer from '@/components/Footer'
 import BgVideo from '@/components/BgVideo'
 
-const cinzel = Cinzel({
-  subsets: ['latin']
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  variable: '--font-poppins'
 })
 
 export const metadata: Metadata = {
@@ -27,7 +29,7 @@ const RootLayout = ({
       <body className={
         cn(
           'min-h-screen',
-          cinzel.className,
+          poppins.className,
           'bg-[url(/345.jpeg)] dark:bg-[url(/45519.jpeg)] bg-cover bg-no-repeat bg-center bg-fixed',
           'h-screen flex'
         )
