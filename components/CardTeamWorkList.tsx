@@ -2,38 +2,24 @@ import { Element } from 'react-scroll'
 import CardTeamWork from './CardTeamWork'
 
 const CardTeamWorkList = (): React.JSX.Element => {
-  const user = [
+  const team =
     {
-      name: 'Diego Alvarado',
-      role: 'founder',
+      name: 'Meet the Team Behind the ICO',
+      role: '',
       img: '/logo.png',
-      description: 'A global entrepreneur and advocate for planetary well-being. His journey through diverse cultures and partnerships with indigenous tribes has ignited the Sumak Kawsay Ecosystem—a blend of blockchain innovation and ancient wisdom. With a powerful mission at heart, to inspire global communities to forge a more balanced and thriving world.'
-    },
-    {
-      name: 'Maya Singh',
-      role: 'Chief Sustainability Officer',
-      img: '/logo.png',
-      description: 'Maya Singh is a renowned environmental scientist and policy advocate with overa decade of experience in sustainable development and renewable energy solutions.Her work with international NGOs and her contributions to groundbreaking researchin sustainable practices have positioned her as a leading voice in ecologicalpreservation. Maya brings a wealth of knowledge in integrating environmental sciencewith local wisdom to create scalable, sustainable ecosystems. Her passion forempowering communities aligns with the Sumak Kawsay mission, driving innovativesolutions for a balanced relationship between humanity and the natural world.'
-    },
-    {
-      name: 'Alex Rivera',
-      role: 'Chief Technology Officer',
-      img: '/logo.png',
-      description: 'Alex Rivera is a visionary in the field of blockchain technology and artificialintelligence. With a background in software engineering and a deep commitment tousing technology for social good, Alex has led several successful tech startupsfocused on environmental and social impact. His expertise lies in developingscalable, secure, and transparent systems that leverage technology to enhancecommunity governance, resource management, and global connectivity. Alex’sinnovative approach to technological solutions forms the backbone of the SumakKawsay Ecosystem’s infrastructure, ensuring it is resilient, inclusive, andforward-thinking.'
+      description: 'The NGO Hummingbirds, Guardians of the Earth, is the driving force behind the Sumak Kawsay Ecosystem, The non profit organization is registered in the Sierra Nevada de Santa Marta in Colombia, a UNESCO-recognized biosphere reserve and the ancestral home of the Tayrona people. This inspiring region, known as the Heart of the World, forms the foundation of our commitment to serve as humanity\'s blueprint for a sustainable furture, promoting a balance between nature and culture. Our work in biodiversity, food sovereignty, and sustainable land management is a living testament to this profound legacy.'
     }
-  ]
+
   return (
-    <Element name='teamWork' className='w-full my-20 py-20'>
-      <div className='flex flex-col gap-20 text-center'>
-        <h1 className='text-3xl font-bold'>Our Team</h1>
-        <div className='grid grid-cols-1 lg:grid-cols-3 gap-20 p-4 md:p-0'>
-          {user.map((user) => (
-            <div key={user.name} className="flex justify-center">
-              <CardTeamWork user={user} />
+    <Element name="teamWork" className="w-full my-20 py-20">
+      <div className="flex flex-col gap-20 text-center">
+          <h1 className="text-3xl font-bold">Our Team</h1>
+          <div className="p-4 md:p-0 flex justify-center">
+            <div className="lg:w-1/3">
+              <CardTeamWork user={team} />
             </div>
-          ))}
+          </div>
         </div>
-      </div>
     </Element>
 
   )

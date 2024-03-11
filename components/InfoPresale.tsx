@@ -2,7 +2,6 @@ import Link from 'next/link'
 import ButtonWhitePaper from './ButtonWhiterPaper'
 import IconSocial from './IconSocial'
 import { ButtonUI } from './ui/button'
-import Image from 'next/image'
 const InfoPresale = (): JSX.Element => {
   const items = [
     {
@@ -23,7 +22,7 @@ const InfoPresale = (): JSX.Element => {
               The Ultimate Living and Virtual Ecosystem
               </h1>
               <p className='text-md md:text-xl text-start font-semibold'>Experience a new era of community-driven wealth, where every participant has the power to shape the future.</p>
-              <Image src={'/ctk.png'} className='h-fit' alt='logo' width={200} height={500}></Image>
+              <p className='underline'>100% audited</p>
               <span className='w-full flex flex-col md:grid grid-cols-3 md:w-1/2 justify-center items-center gap-4'>
                 <ButtonWhitePaper/>
                 {items.map((item) => {
