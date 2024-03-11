@@ -1,26 +1,16 @@
 import CarouselInfo from './CarouselInfo'
-const items = [
-  {
-    id: '1',
-    title: 'Common Treasure and Asset Tokenization',
-    content: 'The currencies are backed by a collective treasury, strategically reinvesting in land and value chains. This foundation ensures that our currency is not just financially robust, but purpose-driven, echoing our commitment to sustainable prosperity'
-  },
-  {
-    id: '2',
-    title: 'Ethics',
-    content: 'Ethics lie at the heart of our ecosystem, guiding every transaction to uphold principles of fairness, transparency, and sustainability. This approach fosters an environment of economic integrity, ensuring that our collective actions contribute positively to the greater good.'
-  }
-  /* {
-    id: '3',
-    title: 'Benefits & Returns',
-    content: "Our currency extends beyond mere financial gain, offering dividends to token holders. This system incentivizes long-term investment, allowing participants to share in the prosperity and success cultivated by the ecosystem's growth, reinforcing a culture of mutual benefit and collective success."
-  } */
+const info = [
+  { title: 'Sovereignty', description: 'Decentralized Governance, Asset tokenization, Dedicated Blockchain, Universal ID Passport, Enhanced Privacy and Security, Global Crisis Response, Regenerative Output, High Yield, Quality.', icon: '/Ecosystem1.png' },
+  { title: 'Living and Virtual Platform', description: 'Smart Habitats, Global Marketplace, Advanced NFT & Metaverse, Biosphere 3.0, AI and Blockchain.', icon: '/Ecosystem2.png' },
+  { title: 'Global Interdependence', description: 'Collective Treasure, Value Chains, Dividends, Articulation Interaction & Exchange, Financial System Transformation, Unified Actions for Life and Earth', icon: '/Ecosystem3.png' }
 ]
 
 const ItemCarousel = (): JSX.Element => {
   return (
         <div className='w-full flex flex-col items-center'>
-            <CarouselInfo Item={items}></CarouselInfo>
+          <h2 className='w-full mb-5 text-3xl text-center font-semibold z-10'> The 3 pillars of our strong ecosystem.</h2>
+          <p className='text-center text-xl pb-6'>The ecosystem</p>
+          <CarouselInfo Item={info}></CarouselInfo>
         </div>
   )
 }
