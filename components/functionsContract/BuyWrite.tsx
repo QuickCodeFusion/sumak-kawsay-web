@@ -60,10 +60,9 @@ const BuyWrite = ({ send, amount, reset }: { send: number, amount: number, reset
         }
         }
       >
-        Aprovar
+        buy token
       </ButtonUI>
       {isLoading && <Loading />}
-      {isError && <div>Transaction: {JSON.stringify(hash)}</div>}
     </div>
   )
 }

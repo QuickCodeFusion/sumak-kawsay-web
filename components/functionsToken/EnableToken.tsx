@@ -9,7 +9,7 @@ import { toast } from 'sonner'
 import { useDispatch } from '@/lib/redux/hooks'
 import { setWaitTransaction } from '@/lib/redux/feature/waitTransaction'
 
-const EnableToken = ({ amount, reset }: { amount?: number, reset?: () => void }): JSX.Element => {
+const EnableToken = (): JSX.Element => {
   const dispatch = useDispatch()
   const { address } = useAccount()
   const [Shown, setShown] = useState(false)
@@ -40,7 +40,6 @@ const EnableToken = ({ amount, reset }: { amount?: number, reset?: () => void })
       setError(false)
     }
   }, [isError, Shown, isSuccess, error])
-  console.log(data)
   return (
     <div className='flex justify-center w-full flex-col items-center gap-4'>
       <ButtonUI
