@@ -12,7 +12,7 @@ export const Fractional = (): JSX.Element => {
                 evolving interests and needs of the community, supporting diverse lifestyles and
                 sustainable productive systems.
             </p>
-            <div className='md:flex place-items-center md:w-3/4 m-auto'>
+            <div className='md:flex place-items-center lg:w-3/4 m-auto'>
                 <div className='p-5'>
                     <ul className='flex flex-col w-full p-5 gap-5'>
                         <li>

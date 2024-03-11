@@ -23,10 +23,10 @@ const CardTeamWorkList = (): React.JSX.Element => {
     }
   ]
   return (
-    <Element name='teamWork' className='w-full flex justify-center my-20 py-20'>
+    <Element name='teamWork' className='w-full my-20 py-20'>
       <div className='flex flex-col gap-20 text-center'>
         <h1 className='text-3xl font-bold'>Our Team</h1>
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-10 p-4 md:p-0'>
+        <div className='grid grid-cols-1 lg:grid-cols-3 gap-20 p-4 md:p-0'>
           {user.map((user) => (
             <div key={user.name} className="flex justify-center">
               <CardTeamWork user={user} />

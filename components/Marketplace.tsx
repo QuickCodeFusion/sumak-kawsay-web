@@ -7,9 +7,9 @@ export const Marketplace = (): JSX.Element => {
                 revolution. Here, participants can interact using Ayni Coin to buy, sell services, and
                 products, creating a vibrant marketplace. Our approach centers on:
             </p>
-            <div className='md:flex items-center justify-center md:w-3/4 m-auto'>
+            <div className='lg:flex items-center justify-center lg:w-3/4 m-auto'>
                 <Image className='mx-auto' src='/Ecosystem-BLANK.png' alt='Ecosystem-BLANK' width={500} height={500}/>
-                <div className='w-full p-5 md:w-3/4'>
+                <div className='w-full p-5 lg:w-3/4'>
                     <ul className='flex flex-col w-full p-5 gap-5 list-decimal'>
                         <li>
                             <p className='text-xl font-medium'>Asset Tokenization:</p>

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 export const Dividends = (): JSX.Element => {
   return (
         <div >
@@ -7,20 +8,9 @@ export const Dividends = (): JSX.Element => {
             </p>
             <p className="text-center font-semibold text-2xl mb-5">Empowerment Tiers of Engagement:</p>
             <div className='md:flex items-center justify-center flex-col md:w-3/4 m-auto gap-10'>
-                <div className="flex items-center justify-center gap-5 flex-wrap">
-                    <div className="sketchfab-embed-wrapper">
-                        <iframe className="h-[200px] w-[200px]  rounded-full" title="Galxy Passport" frameBorder="0" allow="autoplay; fullscreen; xr-spatial-tracking" src="https://sketchfab.com/models/e3cf2f1ed20b425b96bc0522cf91bb8c/embed"> </iframe>
-                        <p className="text-sm text-center text-[#4A4A4A]">
-                            <a href="https://sketchfab.com/SPARKERA?utm_medium=embed&utm_campaign=share-popup&utm_content=e3cf2f1ed20b425b96bc0522cf91bb8c" target="_blank" rel="nofollow noreferrer" className="font-bold text-[#1CAAD9]">
-                            SPARKERA
-                            </a>
-                            on
-                            <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=e3cf2f1ed20b425b96bc0522cf91bb8c" target="_blank" rel="nofollow noreferrer" className="font-bold text-[#1CAAD9]">
-                            Sketchfab
-                            </a>
-                        </p>
-                    </div>
-                    <div className="md:w-1/2">
+                <div className="flex items-center justify-center gap-5 flex-wrap flex-col lg:flex-row">
+                    <Image src="/level1.png" alt="unity" width={250} height={250}/>
+                    <div className="lg:w-1/2 ">
                         <p className='text-xl font-medium'>Unity Tier:</p>
                         This is yourstarting point
                         within the Sumak Kawsay collective,
@@ -33,8 +23,8 @@ export const Dividends = (): JSX.Element => {
 
                     </div>
                 </div>
-                <div className="flex items-center justify-center gap-5 flex-wrap flex-col-reverse md:flex-row">
-                    <div className="md:w-1/2">
+                <div className="flex items-center justify-center gap-5 flex-wrap flex-col-reverse lg:flex-row">
+                    <div className="lg:w-1/2">
                     <p className='text-xl font-medium'>Growth Tier:</p>
                     For members increasing their
                     involvement, this tier provides
@@ -46,33 +36,11 @@ export const Dividends = (): JSX.Element => {
                     expansion.
 
                     </div>
-                <div className="sketchfab-embed-wrapper">
-                    <iframe className="h-[200px] w-[200px] rounded-full" title="Galxy Passport" frameBorder="0" allow="autoplay; fullscreen; xr-spatial-tracking" src="https://sketchfab.com/models/878b1c9a2eed4f6d920173be532f784f/embed"> </iframe>
-                    <p className="text-sm text-center text-[#4A4A4A]">
-                        <a href="https://sketchfab.com/SPARKERA?utm_medium=embed&utm_campaign=share-popup&utm_content=e3cf2f1ed20b425b96bc0522cf91bb8c" target="_blank" rel="nofollow noreferrer" className="font-bold text-[#1CAAD9]">
-                        SPARKERA
-                        </a>
-                        on
-                        <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=e3cf2f1ed20b425b96bc0522cf91bb8c" target="_blank" rel="nofollow noreferrer" className="font-bold text-[#1CAAD9]">
-                            Sketchfab
-                        </a>
-                    </p>
+                    <Image src="/level2.png" alt="unity" width={250} height={250}/>
                 </div>
-                </div>
-                <div className="flex items-center justify-center gap-5 flex-wrap">
-                    <div className="sketchfab-embed-wrapper">
-                        <iframe className="h-[200px] w-[200px]  rounded-full" title="Galxy Passport" frameBorder="0" allow="autoplay; fullscreen; xr-spatial-tracking" src="https://sketchfab.com/models/1b4123c147954bd6922b605cd664b57a/embed?ui_theme=dark"> </iframe>
-                        <p className="text-sm text-center text-[#4A4A4A]">
-                            <a href="https://sketchfab.com/SPARKERA?utm_medium=embed&utm_campaign=share-popup&utm_content=e3cf2f1ed20b425b96bc0522cf91bb8c" target="_blank" rel="nofollow noreferrer" className="font-bold text-[#1CAAD9]">
-                            SPARKERA
-                            </a>
-                            on
-                            <a href="https://sketchfab.com?utm_medium=embed&utm_campaign=share-popup&utm_content=e3cf2f1ed20b425b96bc0522cf91bb8c" target="_blank" rel="nofollow noreferrer" className="font-bold text-[#1CAAD9]">
-                            Sketchfab
-                            </a>
-                        </p>
-                    </div>
-                    <div className="md:w-1/2">
+                <div className="flex items-center justify-center gap-5 flex-wrap flex-col lg:flex-row">
+                    <Image src="/level3.png" alt="unity" width={150} height={150}/>
+                    <div className="lg:w-1/2">
                     <div>
                     <p className='text-xl font-medium'>Heritage Tier:</p>
                     The highest level, rewarding
