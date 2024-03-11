@@ -22,7 +22,7 @@ const InfoPresale = (): JSX.Element => {
               The Ultimate Living and Virtual Ecosystem
               </h1>
               <p className='text-md md:text-2xl text-start font-semibold'>Experience a new era of community-driven wealth, where every participant has the power to shape the future.</p>
-              <span className='w-full grid grid-cols-3 md:w-1/2 justify-center items-center gap-4'>
+              <span className='w-full grid grid-cols-3 md:max-w-[400px] justify-center items-center gap-4'>
                 <ButtonWhitePaper/>
                 {items.map((item) => {
                   return (
