@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Cinzel } from 'next/font/google'
 import './globals.css'
 import { cn } from '@/lib/utils'
 import { Providers } from './providers'
@@ -8,7 +8,9 @@ import { ThemeProvider } from './themeDark'
 import Footer from '@/components/Footer'
 import BgVideo from '@/components/BgVideo'
 
-const inter = Inter({ subsets: ['latin'] })
+const cinzel = Cinzel({
+  subsets: ['latin']
+})
 
 export const metadata: Metadata = {
   title: 'UNITY Official Presale',
@@ -25,7 +27,7 @@ const RootLayout = ({
       <body className={
         cn(
           'min-h-screen',
-          inter.className,
+          cinzel.className,
           'bg-[url(/345.jpeg)] dark:bg-[url(/45519.jpeg)] bg-cover bg-no-repeat bg-center bg-fixed',
           'h-screen flex'
         )
