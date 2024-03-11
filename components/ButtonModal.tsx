@@ -17,8 +17,9 @@ import BalanceOf from '@/components/functionsContract/BalanceOf'
 import { useSelector } from '@/lib/redux/hooks'
 import { useState } from 'react'
 import BuyWrite from '@/components/functionsContract/BuyWrite'
-import VerifyToken from './functionsToken/VerifyToken'
 import Link from 'next/link'
+import { VerifyToken } from '@/utils/verifyToken'
+import { validateBuy } from '@/utils/validation'
 
 export const ButtonModal = (): React.JSX.Element => {
   const { currentPrice } = useSelector((state) => state.currentPrice)
@@ -54,7 +55,7 @@ export const ButtonModal = (): React.JSX.Element => {
           <DialogTitle >be an investor</DialogTitle>
           <DialogDescription className='font-semibold flex gap-2 justify-between'>
             <div className='flex'>balance: <BalanceOf /></div>
-            <VerifyToken />
+            {VerifyToken()} USDT
           </DialogDescription>
         </DialogHeader>
         <div className="grid gap-4 py-4 z-10">
@@ -62,9 +63,10 @@ export const ButtonModal = (): React.JSX.Element => {
             <Label htmlFor="amount" className='uppercase col-span-5 '>USDT Pay</Label>
             <Input onChange={handlesend} value={value.send >= 0 ? value.send : 0} className="col-span-3 appearance-none rounded-e-none" /><SelectCoin/>
           </div>
-          <div className="grid gap-1 z-10">
+          <div className="grid gap-1 z-10 h-15">
             <Label htmlFor="get-amount" className='uppercase'>UNITY To receive </Label>
-            <Input value={value.amount !== 0 ? value.amount : ''} onChange={handleamount} className="col-span-3 appearance-none         " />
+            <Input value={value.amount !== 0 ? value.amount : ''} onChange={handleamount} className="col-span-3 appearance-none"/>
+            <p className='h-5 text-red-700'>{validateBuy(VerifyToken(), value.amount)}</p>
           </div>
           <div className='grid divide-y divide-dashed gap-4'>
             <div className='flex justify-between w-full '><span>precio$</span><span>{currentPrice}</span></div>

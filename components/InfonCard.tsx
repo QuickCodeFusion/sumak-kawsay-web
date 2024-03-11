@@ -3,11 +3,11 @@ import { CardIconLeft } from './CardIconLeft'
 
 export const InfoCard = (): JSX.Element => {
   const info = [
-    { title: 'Holistic Integration', description: 'We merge cutting-edge blockchain and AI technologies with ancient wisdom and sustainable practices to create a self-sufficient ecosystem that nurtures the planet and its inhabitants', icon: '/icon2.jpeg' },
-    { title: 'Community-Centric', description: 'At the heart of Sumak Kawsay is our global community. Participation, governance, and shared prosperity are fundamental Each member contributes to and benefits from the ecosystem is growth and sustainability.', icon: '/icon3.jpeg' },
-    { title: 'Environmental Regeneration', description: 'Our initiatives and technologies are designed with the Earth in mind. From renewable energy projects to regenerative agriculture, we aim to reverse environmental degradation and promote biodiversity.', icon: '/icon4.jpeg' },
-    { title: 'Technological Innovation', description: 'Leveraging blockchain and AI to ensure transparency, security, and efficiency. Our ecosystem empowers individuals and communities with tools and knowledge to foster technological advancements while maintaining ecological balance.', icon: '/icon1.jpeg' },
-    { title: 'Inclusive Economic Model', description: 'Our initiatives and technologies are designed with the Earth in mind. From renewable energy projects to regenerative agriculture, we aim to reverse environmental degradation and promote biodiversity.', icon: '/icon5.jpeg' }
+    { title: 'Holistic Integration', description: 'We merge cutting-edge blockchain and AI technologies with ancient wisdom and sustainable practices to create a self-sufficient ecosystem that nurtures the planet and its inhabitants', icon: '/sumak.png' },
+    { title: 'Community-Centric', description: 'At the heart of Sumak Kawsay is our global community. Participation, governance, and shared prosperity are fundamental Each member contributes to and benefits from the ecosystem is growth and sustainability.', icon: '/sumak2.png' },
+    { title: 'Environmental Regeneration', description: 'Our initiatives and technologies are designed with the Earth in mind. From renewable energy projects to regenerative agriculture, we aim to reverse environmental degradation and promote biodiversity.', icon: '/sumak3.png' },
+    { title: 'Technological Innovation', description: 'Leveraging blockchain and AI to ensure transparency, security, and efficiency. Our ecosystem empowers individuals and communities with tools and knowledge to foster technological advancements while maintaining ecological balance.', icon: '/sumak4.png' }
+    /* { title: 'Inclusive Economic Model', description: 'Our initiatives and technologies are designed with the Earth in mind. From renewable energy projects to regenerative agriculture, we aim to reverse environmental degradation and promote biodiversity.', icon: '/sumak5.png' } */
   ]
   return (
     <div className='w-full mt-52 pt-12 gap-10 flex flex-col justify-center items-center'>
