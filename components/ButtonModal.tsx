@@ -20,8 +20,11 @@ import BuyWrite from '@/components/functionsContract/BuyWrite'
 import Link from 'next/link'
 import { VerifyToken } from '@/utils/verifyToken'
 import { validateBuy } from '@/utils/validation'
+import { useAccount } from 'wagmi'
 
 export const ButtonModal = (): React.JSX.Element => {
+  const [balance, setBalanceOf] = useState(0)
+  const { isDisconnected } = useAccount()
   const { currentPrice } = useSelector((state) => state.currentPrice)
   const [value, setValue] = useState({
     send: 0,
@@ -54,7 +57,7 @@ export const ButtonModal = (): React.JSX.Element => {
         <DialogHeader className='z-10 uppercase'>
           <DialogTitle >be an investor</DialogTitle>
           <DialogDescription className='font-semibold flex gap-2 justify-between'>
-            <div className='flex'>balance: <BalanceOf /></div>
+            <div className='flex'>balance: <BalanceOf isDisconnected={isDisconnected} setBalanceOf={setBalanceOf} balance={balance} /></div>
             {VerifyToken()} USDT
           </DialogDescription>
         </DialogHeader>

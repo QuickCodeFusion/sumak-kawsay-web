@@ -1,8 +1,8 @@
 import CarouselInfo from './CarouselInfo'
 const info = [
-  { title: 'Sovereignty', description: 'Decentralized Governance, Asset tokenization, Dedicated Blockchain, Universal ID Passport, Enhanced Privacy and Security, Global Crisis Response, Regenerative Output, High Yield, Quality.', icon: '/Ecosystem1.png' },
-  { title: 'Living and Virtual Platform', description: 'Smart Habitats, Global Marketplace, Advanced NFT & Metaverse, Biosphere 3.0, AI and Blockchain.', icon: '/Ecosystem2.png' },
-  { title: 'Global Interdependence', description: 'Collective Treasure, Value Chains, Dividends, Articulation Interaction & Exchange, Financial System Transformation, Unified Actions for Life and Earth', icon: '/Ecosystem3.png' }
+  { title: 'Sovereignty', description: 'Decentralized Governance, Asset tokenization, Dedicated Blockchain, Universal ID Passport, Enhanced Privacy and Security, Global Crisis Response, Regenerative Output, High Yield, Quality.', icon: '/Ecosystem1.png', id: 1 },
+  { title: 'Living and Virtual Platform', description: 'Smart Habitats, Global Marketplace, Advanced NFT & Metaverse, Biosphere 3.0, AI and Blockchain.', icon: '/Ecosystem2.png', id: 2 },
+  { title: 'Global Interdependence', description: 'Collective Treasure, Value Chains, Dividends, Articulation Interaction & Exchange, Financial System Transformation, Unified Actions for Life and Earth', icon: '/Ecosystem3.png', id: 3 }
 ]
 
 const ItemCarousel = (): JSX.Element => {
