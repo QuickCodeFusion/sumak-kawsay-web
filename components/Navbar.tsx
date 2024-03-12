@@ -14,6 +14,7 @@ import { ButtonUI } from './ui/button'
 import { ModeToggle } from './ToggleTheme'
 import ReclaimUsdt from './functionsContract/ReclaimUsdt'
 import ClosePresale from './functionsContract/ClosePresale'
+import SwitchPhase from './functionsContract/SwitchPhase'
 
 const items = [
   {
@@ -85,6 +86,7 @@ const Navbar = (): React.JSX.Element => {
                 </NavigationMenuList>
                 <NavigationMenuList className='flex justify-end gap-2 py-4 px-4'>
                     <ReclaimUsdt />
+                    <SwitchPhase />
                     <ClosePresale />
                   <ModeToggle/>
                 { shouldRenderComponents &&
