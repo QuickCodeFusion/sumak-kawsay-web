@@ -1,4 +1,5 @@
-import { Card, CardContent, CardHeader } from '@/components/ui/card'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import Image from 'next/image'
 import {
   Carousel,
   CarouselContent,
@@ -14,10 +15,11 @@ const CarouselInfo = ({ Item }: { Item: any }): JSX.Element => {
         {Item.map((Item: any) => (
         <CarouselItem className='rounded-3xl' key={Item.id}>
               <Card className="h-full bg-background/50 border rounded-3xl shadow-sm backdrop-filter backdrop-blur-lg">
-                  <CardHeader>{Item.title}</CardHeader>
-                  <CardContent >
-                  {Item.content}
-                  </CardContent>
+                  <CardHeader className='flex flex-col items-center' >
+                  <Image className=' my-4 ring-offset-2 rounded-full' src={Item.icon} alt={Item.title} width={100} height={100}></Image>
+                  <CardTitle className=''>{Item.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className='w-full text-center text-xl'>{Item.description}</CardContent>
               </Card>
         </CarouselItem>
         ))}

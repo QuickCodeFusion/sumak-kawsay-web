@@ -63,7 +63,7 @@ export const Tokenomics = (): JSX.Element => {
                   <ListItem className={`border-b-2 ${item.border}`} key={index}>
                       <ListCardContent className='w-full text-start'>
                           <span className='flex md:flex-row flex-col justify-start w-full items-end gap-1'>
-                              <div className='flex items-center'><p className='text-md font-bold'>{item.value}</p><div className={`w-3 h-3 rounded-full ${item.color}`} ></div></div>
+                              <div className='flex items-center gap-1'><div className={`w-3 h-3 rounded-full ${item.color}`} ></div><p className='text-md font-bold'>{item.value}</p></div>
                               <p className='text-md font-semibold'>{item.label}</p>
                           </span>
                           {item.children &&

@@ -5,7 +5,7 @@ export const Fractional = (): JSX.Element => {
             <h3 className="text-3xl text-center font-semibold">Explore Shambhala Bio-habitats: A New Dimension of
                 Living
             </h3>
-            <p className="w-10/12 mx-auto text-center ">Pioneering sustainable living solutions,
+            <p className="w-10/12 mx-auto text-center text-lg">Pioneering sustainable living solutions,
                 Sumak Kawsay introduces Shambhala Smart
                 Habitats and Fractional Real Estate to foster fractional ownership opportunities in
                 dynamic, adaptable living environments. These spaces are designed to meet the

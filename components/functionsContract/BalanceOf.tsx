@@ -22,12 +22,12 @@ const BalanceOf = ({ setBalanceOf, balance, isDisconnected }: BalanceOfProps): J
   })
 
   useEffect(() => {
-    if (typeof data === 'string' && setBalanceOf !== undefined) {
-      const newBalance = parseFloat(data)
+    if (typeof data?.toString() === 'string' && setBalanceOf !== undefined) {
+      const newBalance = Number(data)
       setBalanceOf(newBalance)
     }
     dispatch(setContract('0xA58501cC8bc605B498Cb6AD15DcB835902e0CA54'))
-  }, [data, setBalanceOf])
+  }, [data?.toString(), setBalanceOf, isDisconnected])
 
   return (
     <div className='text-gray-400 font-bold'>
