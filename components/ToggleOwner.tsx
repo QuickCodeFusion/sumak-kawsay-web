@@ -20,30 +20,31 @@ import {
 
 export const ToggleOwner = (): React.JSX.Element => {
   const [open, setOpen] = useState(false)
-  const owner = useOwner()
+  const [shown, setIsShown] = useState(false)
+  const ownerAddress = useOwner()
   const { address } = useAccount()
-  if (owner !== address || !owner) {
-    return <></>
+  if (ownerAddress === address) {
+    return (
+      <DropdownMenu>
+        <ModalConfirmation open={open} setOpen={setOpen} setShown={setIsShown}/>
+        <DropdownMenuTrigger asChild>
+          <ButtonUI variant="outline" size="icon" className='min-w-[2.5rem] bg-background/65 border-none'>
+            <BoltIcon />
+          </ButtonUI>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent className='flex'>
+          <DropdownMenuItem >
+              <ReclaimUsdt/>
+          </DropdownMenuItem>
+          <DropdownMenuItem >
+              <SwitchPhase/>
+          </DropdownMenuItem>
+          <DropdownMenuItem >
+              <ClosePresale shown={shown} open={open} setOpen={setOpen}/>
+          </DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
+    )
   }
-  return (
-    <DropdownMenu>
-      <ModalConfirmation open={open} setOpen={setOpen} writeAsync={ReclaimUsdt} setShown={setOpen}/>
-      <DropdownMenuTrigger asChild>
-        <ButtonUI variant="outline" size="icon" className='min-w-[2.5rem] bg-background/65 border-none'>
-          <BoltIcon />
-        </ButtonUI>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent className='flex'>
-        <DropdownMenuItem >
-            <ReclaimUsdt/>
-        </DropdownMenuItem>
-        <DropdownMenuItem >
-            <SwitchPhase/>
-        </DropdownMenuItem>
-        <DropdownMenuItem >
-            <ClosePresale />
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
-  )
+  return <></>
 }
