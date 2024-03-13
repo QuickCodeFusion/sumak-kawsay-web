@@ -1,30 +1,21 @@
 'use client'
-import { useAccount, useContractWrite, useWaitForTransaction } from 'wagmi'
-import { AbyContractAddress, contract } from '@/utils/AbyContrat'
+import { useAccount } from 'wagmi'
 import { ButtonUI } from '../ui/button'
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { toast } from 'sonner'
 import { CloseIcon } from '../Icons/CloseIcon'
 import { useOwner } from '@/utils/useOwner'
+import { useWriteEndSale } from '@/utils/useWriteEndSale'
 
-const ClosePresale = ({ open, setOpen }: { open: boolean, setOpen: React.Dispatch<React.SetStateAction<boolean>>}): JSX.Element => {
+const ClosePresale = ({ open, setOpen, shown }: { open: boolean, setOpen: React.Dispatch<React.SetStateAction<boolean>>, shown: boolean }): JSX.Element => {
   // const [open, setOpen] = useState(false)
-  const [Shown, setShown] = useState(false)
   const { address } = useAccount()
   const owner = useOwner()
 
-  const { writeAsync, isLoading, data } = useContractWrite({
-    address: contract,
-    abi: AbyContractAddress,
-    account: address,
-    functionName: 'endSale'
-  })
-  const { status } = useWaitForTransaction({
-    hash: data?.hash
-  })
+  const { isLoading, status } = useWriteEndSale(address ?? '0x')
 
   useEffect(() => {
-    if (isLoading && Shown) {
+    if (isLoading && shown) {
       toast.loading(
         'Processing', {
           style: { background: 'yellow', color: '#000' },
@@ -40,7 +31,7 @@ const ClosePresale = ({ open, setOpen }: { open: boolean, setOpen: React.Dispatc
       )
       window.location.reload()
     }
-  }, [isLoading, Shown, status])
+  }, [isLoading, shown, status])
 
   if (owner !== address || !owner) {
     return <></>
@@ -49,7 +40,7 @@ const ClosePresale = ({ open, setOpen }: { open: boolean, setOpen: React.Dispatc
   return (
     <>
       <ButtonUI
-        className='border-b bg-transparent hover:bg-background rounded-none text-foreground'
+        className='border-b bg-red-600/60 hover:bg-background rounded-none'
         variant='ghost'
         onClick={() => { setOpen(true) } }
       >
