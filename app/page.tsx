@@ -38,11 +38,11 @@ const shouldRenderProgressBar = currentDate < stopRenderingDate
 const Home = (): React.JSX.Element => {
   return (
         <main className='flex flex-col gap-20 pt-8 mt-10 px-8 backdrop-blur-md justify-center items-center w-screen'>
-            <section className='p-2 my-10 z-10 w-full'>
-                  <div className='flex md:grid grid-cols-3 flex-col place-items-start items-center gap-4 w-full'>
+            <section className='p-2 my-10 z-10 w-full '>
+                  <div className='flex xl:grid grid-cols-3 flex-col place-items-start items-center gap-4 w-full '>
                       <InfoPresale/>
                       {!shouldRenderProgressBar && <ClaimSteps/>}
-                      {shouldRenderProgressBar && <section className='bg-background/50 border rounded-3xl py-4 flex flex-col mx-0'>
+                      {shouldRenderProgressBar && <section className='bg-background/50 border rounded-3xl py-4 flex flex-col mx-0 w-full md:w-[500px] xl:w-10/12'>
                         <PresaleCountdown/>
                         <InfoPhase/>
                         <BuyInfo/>

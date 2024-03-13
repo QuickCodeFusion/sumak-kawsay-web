@@ -8,7 +8,7 @@ const PresaleCountdown = (): React.JSX.Element => {
   const { data } = useContractRead({
     address: contract,
     abi: AbyContractAddress,
-    functionName: 'checkAndUpdatePhase'
+    functionName: 'checkTimePhase'
   })
   const time = Number(data)
   return (
