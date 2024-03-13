@@ -23,7 +23,7 @@ export const ToggleOwner = (): React.JSX.Element => {
   const [shown, setIsShown] = useState(false)
   const ownerAddress = useOwner()
   const { address } = useAccount()
-  if (ownerAddress !== address) {
+  if (ownerAddress === address) {
     return (
       <DropdownMenu>
         <ModalConfirmation open={open} setOpen={setOpen} setShown={setIsShown}/>
