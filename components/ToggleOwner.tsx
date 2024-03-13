@@ -41,7 +41,7 @@ export const ToggleOwner = (): React.JSX.Element => {
             <SwitchPhase/>
         </DropdownMenuItem>
         <DropdownMenuItem >
-            <ClosePresale open={open} setOpen={setOpen}/>
+            <ClosePresale />
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
