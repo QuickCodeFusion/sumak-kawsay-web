@@ -19,7 +19,9 @@ import {
 export const ToggleOwner = (): React.JSX.Element => {
   const owner = useOwner()
   const { address } = useAccount()
-  if (owner !== address) return <></>
+  if (owner !== address || !owner) {
+    return <></>
+  }
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>

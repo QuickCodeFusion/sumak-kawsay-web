@@ -6,7 +6,7 @@ export const saleEnded = (): boolean => {
   const { data } = useContractRead({
     address: contract,
     abi: AbyContractAddress,
-    functionName: ' saleEnded '
+    functionName: 'saleEnded'
   })
 
   return data as boolean

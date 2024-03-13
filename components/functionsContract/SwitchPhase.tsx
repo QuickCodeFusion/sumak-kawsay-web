@@ -39,7 +39,7 @@ const SwitchPhase = (): JSX.Element => {
     }
     if (status === 'success') {
       toast.success(
-        'USDT transferred', {
+        'Switch Phase', {
           style: { background: 'green', color: '#FFF' }
         }
       )
