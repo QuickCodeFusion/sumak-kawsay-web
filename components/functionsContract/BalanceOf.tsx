@@ -34,7 +34,7 @@ const BalanceOf = ({ setBalanceOf, balance, isDisconnected }: BalanceOfProps): J
       {isLoading
         ? 'Loading...'
         : isDisconnected
-          ? 'Connect your wallet to see your balance'
+          ? 'Connect your wallet'
           : `${balance} UNITY`}
     </div>
   )
