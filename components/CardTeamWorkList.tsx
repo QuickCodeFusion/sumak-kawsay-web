@@ -14,7 +14,7 @@ const CardTeamWorkList = (): React.JSX.Element => {
     <Element name="teamWork" className="w-full my-20 ">
       <div className="flex flex-col gap-10 justify-center items-center text-center">
           <h1 className="text-3xl font-bold">Our Team</h1>
-          <div className="p-4 md:p-0 flex items-center justify-center">
+          <div className="flex items-center justify-center">
             <div className="lg:w-1/2">
               <CardTeamWork user={team} />
             </div>

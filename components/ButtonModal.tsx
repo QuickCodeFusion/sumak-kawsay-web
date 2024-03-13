@@ -51,7 +51,7 @@ export const ButtonModal = (): React.JSX.Element => {
   return (
     <Dialog >
         <DialogTrigger asChild>
-          <ButtonUI className='w-full uppercase rounded-full bg-azure-radiance-700 border-none hover:bg-azure-radiance-400'>buy now</ButtonUI>
+          <ButtonUI className='w-full uppercase rounded-full bg-azure-radiance-500 border-none hover:bg-azure-radiance-400'>buy now</ButtonUI>
         </DialogTrigger>
       <DialogContent className="sm:max-w-[500px] overflow-hidden bg-background/50 backdrop-blur">
         <DialogHeader className='z-10 uppercase'>
