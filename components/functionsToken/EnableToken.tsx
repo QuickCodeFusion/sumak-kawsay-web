@@ -41,9 +41,9 @@ const EnableToken = (): JSX.Element => {
     }
   }, [isError, Shown, isSuccess, error])
   return (
-    <div className='flex justify-center w-full flex-col items-center gap-4'>
+    <>
       <ButtonUI
-        className='uppercase rounded-full'
+        className='uppercase rounded-full w-full'
         onClick={() => {
           writeAsync({
             args: [contract, parseEther('0')]
@@ -59,7 +59,7 @@ const EnableToken = (): JSX.Element => {
         Enable USDT
       </ButtonUI>
       {isLoading && <Loading />}
-    </div>
+    </>
   )
 }
 
