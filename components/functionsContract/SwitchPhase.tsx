@@ -20,8 +20,8 @@ const SwitchPhase = (): JSX.Element => {
   const { status } = useWaitForTransaction({
     hash: data?.hash
   })
-
   useEffect(() => {
+    console.log(status)
     if (isLoading && Shown) {
       toast.loading(
         'Processing', {

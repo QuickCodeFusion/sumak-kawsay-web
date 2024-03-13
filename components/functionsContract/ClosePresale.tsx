@@ -7,7 +7,8 @@ import { toast } from 'sonner'
 import { CloseIcon } from '../Icons/CloseIcon'
 import { useOwner } from '@/utils/useOwner'
 
-const ClosePresale = (): JSX.Element => {
+const ClosePresale = ({ open, setOpen }: { open: boolean, setOpen: React.Dispatch<React.SetStateAction<boolean>>}): JSX.Element => {
+  // const [open, setOpen] = useState(false)
   const [Shown, setShown] = useState(false)
   const { address } = useAccount()
   const owner = useOwner()
@@ -46,22 +47,15 @@ const ClosePresale = (): JSX.Element => {
   }
 
   return (
+    <>
       <ButtonUI
         className='border-b bg-transparent hover:bg-background rounded-none text-foreground'
         variant='ghost'
-        onClick={() => {
-          writeAsync({
-          }).then(() => {
-            setShown(true)
-          }).catch(error => {
-            setShown(true)
-            console.log(error)
-          })
-        }
-        }
+        onClick={() => { setOpen(true) } }
       >
         <CloseIcon />
       </ButtonUI>
+    </>
   )
 }
 
