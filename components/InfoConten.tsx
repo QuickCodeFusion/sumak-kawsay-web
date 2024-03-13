@@ -34,7 +34,7 @@ const Item = [
     id: '5'
   },
   {
-    title: 'What are Bio-Towns, and how can I get involved?',
+    title: 'Shambhala Bio-habitats, and how can I get involved?',
     content: 'Bio-Towns are sustainable living models within the ecosystem, offering various lifestyle preferences and productive systems. Participants can engage through investment, residency, or contributing to the development and growth of these eco-friendly communities.',
     id: '6'
   },
