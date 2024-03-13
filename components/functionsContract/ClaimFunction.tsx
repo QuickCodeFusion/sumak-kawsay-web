@@ -17,7 +17,7 @@ const ClaimTokens = ({ boolean }: { boolean: boolean }): JSX.Element => {
   })
   console.log(status)
   useEffect(() => {
-    if (status) {
+    if (status === 'success') {
       toast.success('UNITY transferred', {
         style: { background: 'green', color: '#FFF' }
       })
