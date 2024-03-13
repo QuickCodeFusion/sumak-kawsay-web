@@ -1,12 +1,12 @@
 import Image from 'next/image'
 export const Dividends = (): JSX.Element => {
   return (
-        <div >
-            <h3 className="text-3xl text-center font-semibold">Dividends and Staking: A Path to Universal Income</h3>
-            <p className="w-10/12 mx-auto text-center text-xl">Experience the joy of giving and receiving. Engage with our ecosystem, stake your
+        <div className='my-20'>
+            <h3 className="text-3xl text-center mb-4 font-semibold">Dividends and Staking: A Path to Universal Income</h3>
+            <p className="w-10/12 mx-auto text-center mb-4 text-xl">Experience the joy of giving and receiving. Engage with our ecosystem, stake your
                 tokens, and earn dividends.
             </p>
-            <p className="text-center font-semibold text-2xl mb-5">Empowerment Tiers of Engagement:</p>
+            <p className="text-center font-semibold text-2xl mb-5">Empowerment Tiers of Engagement</p>
             <div className='md:flex items-center justify-center flex-col md:w-3/4 m-auto gap-10'>
                 <div className="flex items-center justify-center gap-5 flex-wrap flex-col lg:flex-row">
                     <Image src="/level1.png" alt="unity" width={250} height={250}/>

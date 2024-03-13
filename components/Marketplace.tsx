@@ -1,8 +1,8 @@
 import Image from 'next/image'
 export const Marketplace = (): JSX.Element => {
   return (
-        <div >
-            <h3 className="text-3xl text-center font-semibold">STELLAR MARKETPLACE</h3>
+        <div className='my-12'>
+            <h3 className="text-3xl mb-4 text-center font-semibold">STELLAR MARKETPLACE</h3>
             <p className="w-10/12 mx-auto text-center text-xl">An innovative platform where community engagement meets economic
                 revolution. Here, participants can interact using Ayni Coin to buy, sell services, and
                 products, creating a vibrant marketplace. Our approach centers on:

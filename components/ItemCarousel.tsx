@@ -7,7 +7,7 @@ const info = [
 
 const ItemCarousel = (): JSX.Element => {
   return (
-        <div className='w-full flex flex-col items-center'>
+        <div className='w-full my-16 flex flex-col items-center'>
           <h2 className='w-full mb-5 text-3xl text-center font-semibold z-10'> The 3 pillars of our strong ecosystem.</h2>
           <p className='text-center text-xl pb-6'>The ecosystem</p>
           <CarouselInfo Item={info}></CarouselInfo>

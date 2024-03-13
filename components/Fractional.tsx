@@ -1,8 +1,8 @@
 import Image from 'next/image'
 export const Fractional = (): JSX.Element => {
   return (
-        <div >
-            <h3 className="text-3xl text-center font-semibold">Explore Shambhala Bio-habitats: A New Dimension of
+        <div className='my-12'>
+            <h3 className="text-3xl mb-4 text-center font-semibold">Explore Shambhala Bio-habitats: A New Dimension of
                 Living
             </h3>
             <p className="w-10/12 mx-auto text-center text-lg">Pioneering sustainable living solutions,
@@ -16,7 +16,7 @@ export const Fractional = (): JSX.Element => {
                 <div className='p-5'>
                     <ul className='flex flex-col w-full p-5 gap-5'>
                         <li>
-                            <p className='text-xl font-medium'>Virtual Reality Tors:</p>
+                            <p className='text-xl font-medium'>Virtual Reality Tours:</p>
                             Step into the
                             future with VR
                             tours of our
@@ -48,7 +48,7 @@ export const Fractional = (): JSX.Element => {
                             every investment,
                             gain the power to
                             shape the future of
-                            your Bio-Town
+                            your habitats
                             through direct
                             voting and
                             proposals.

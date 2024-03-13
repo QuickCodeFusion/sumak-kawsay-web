@@ -16,7 +16,7 @@ const InfoPresale = (): JSX.Element => {
     }
   ]
   return (
-          <div className='flex place-self-start text-white  justify-center items-start flex-col gap-4 col-span-2 md:px-36 mb-12'>
+          <div className='flex place-self-start text-white justify-center items-start flex-col gap-4 col-span-2 md:px-36 mb-12'>
                 <IconSocial/>
               <h1 className='text-2xl md:text-6xl font-bold text-start'>
               The Ultimate Living and Virtual Ecosystem
