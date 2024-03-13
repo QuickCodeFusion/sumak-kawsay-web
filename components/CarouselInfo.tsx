@@ -17,7 +17,7 @@ const CarouselInfo = ({ Item }: { Item: any }): JSX.Element => {
               <Card className="h-full bg-background/50 border rounded-3xl shadow-sm backdrop-filter backdrop-blur-lg">
                   <CardHeader className='flex flex-col items-center' >
                   <Image className=' my-4 ring-offset-2 rounded-full' src={Item.icon} alt={Item.title} width={100} height={100}></Image>
-                  <CardTitle className=''>{Item.title}</CardTitle>
+                  <CardTitle className='text-center'>{Item.title}</CardTitle>
                   </CardHeader>
                   <CardContent className='w-full text-center text-xl'>{Item.description}</CardContent>
               </Card>

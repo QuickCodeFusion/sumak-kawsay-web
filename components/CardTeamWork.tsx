@@ -10,9 +10,9 @@ const CardTeamWork = ({ user }: { user: { name: string, role: string, img: strin
               {user.name}
           </CardTitle>
       </CardHeader>
-      <CardContent className='flex pt-5 font-sans'>
+      <CardContent className='flex flex-col md:flex-row pt-5 font-sans'>
         {user.description}
-      <Image src="/colibrie.png" alt="logo" width={300} height={300}/>
+        <Image src="/colibrie.png" alt="logo" width={300} height={300}/>
       </CardContent>
     </Card>
   )
