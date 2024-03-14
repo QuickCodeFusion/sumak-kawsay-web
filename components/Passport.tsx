@@ -2,9 +2,9 @@ import Image from 'next/image'
 export const Passport = (): JSX.Element => {
   return (
         <div className='w-full flex flex-col justify-center'>
-            <h3 className="text-3xl text-center font-semibold">Universal Passport Framework</h3>
+            <h3 className="text-3xl text-center font-semibold pb-2">Universal Passport Framework</h3>
             <p className="text-center font-semibold text-2xl pb-4">Your Key to a Global Community</p>
-            <p className="w-10/12 mx-auto text-center text-xl">This pioneering initiative offers you unparalleled access to our ecosystem is
+            <p className="w-10/12 mx-auto text-center text-xl">This pioneering initiative offers you unparalleled access to our ecosystem&apos;s
                 resources, unifying community members in our shared vision for a sustainable
                 future
             </p>

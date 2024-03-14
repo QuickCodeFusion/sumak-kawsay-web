@@ -20,8 +20,9 @@ const SwitchPhase = (): JSX.Element => {
   const { status } = useWaitForTransaction({
     hash: data?.hash
   })
-
+  console.log(status)
   useEffect(() => {
+    console.log(status)
     if (isLoading && Shown) {
       toast.loading(
         'Processing', {
@@ -39,7 +40,7 @@ const SwitchPhase = (): JSX.Element => {
     }
     if (status === 'success') {
       toast.success(
-        'USDT transferred', {
+        'Switch Phase', {
           style: { background: 'green', color: '#FFF' }
         }
       )

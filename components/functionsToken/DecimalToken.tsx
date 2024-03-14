@@ -1,12 +1,12 @@
 'use client'
 import { useContractRead } from 'wagmi'
-import { AbyToken } from '@/utils/AbyContrat'
+import { AbyToken, contractToken } from '@/utils/AbyContrat'
 import { useEffect, useState } from 'react'
 
 const DecimalToken = (): JSX.Element => {
   const [decimals, setDecimals] = useState(0)
   const { data, isLoading } = useContractRead({
-    address: '0xA58501cC8bc605B498Cb6AD15DcB835902e0CA54',
+    address: contractToken,
     abi: AbyToken,
     functionName: 'decimals'
   })

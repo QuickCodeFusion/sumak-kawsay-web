@@ -13,7 +13,12 @@ const InfoFooter = (): JSX.Element => {
           </div>
         </span>
         <IconSocial/>
-        <p>© {year} Sumak Kawsay | All rights reserved</p>
+        <div className='flex  flex-col'>
+          <p>© {year} Sumak Kawsay | All rights reserved</p>
+          <div className='flex gap-2'>
+            <a href="https://drive.google.com/file/d/1K8rGq0ahHfrr1SnNTm9l9FonBW3_dOqc/view?usp=sharing">terms and conditions</a>|<a href="https://drive.google.com/file/d/1SYo4OIxyJjzHigEmfR2X8KXrD-S62qgp/view?usp=sharing">privacy policy</a>
+          </div>
+        </div>
     </div>
   )
 }

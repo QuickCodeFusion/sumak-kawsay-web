@@ -42,10 +42,10 @@ const BuyInfo = (): JSX.Element => {
                     </ListCardContent>
                 </ListItem>
             </ListCard>
-            <div className='flex flex-col md:grid grid-cols-2 gap-4 justify-center items-center place-items-center'>
+            <div className='flex flex-col md:grid grid-cols-2 gap-4 justify-center items-center place-items-center w-full px-4'>
                     <EnableToken/>
                     <ButtonModal/>
-                    <Link href={'#'} className='w-fit text-azure-radiance-500 bg-transparent col-start-2 underline hover:bg-transparent'>How to buy</Link>
+                    <Link href={'#'} className='w-fit self-end text-azure-radiance-500 bg-transparent underline col-start-2 relative md:left-8 top-6 hover:bg-transparent'>How to buy</Link>
             </div>
         </div>
   )
