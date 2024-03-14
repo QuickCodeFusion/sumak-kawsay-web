@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-import colors from 'tailwindcss/colors'
+
 module.exports = {
   darkMode: ['class'],
   content: [
@@ -20,9 +20,10 @@ module.exports = {
     extend: {
       colors: {
         border: 'hsl(var(--border))',
+        shadow: 'hsl(var(--shadow))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
-        background: colors.black,
+        background: 'hsl(var(--background)) ',
         foreground: 'hsl(var(--foreground))',
         primary: {
           DEFAULT: 'hsl(var(--primary))',

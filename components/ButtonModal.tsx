@@ -17,9 +17,14 @@ import BalanceOf from '@/components/functionsContract/BalanceOf'
 import { useSelector } from '@/lib/redux/hooks'
 import { useState } from 'react'
 import BuyWrite from '@/components/functionsContract/BuyWrite'
-import VerifyToken from './functionsToken/VerifyToken'
+import Link from 'next/link'
+import { VerifyToken } from '@/utils/verifyToken'
+import { validateBuy } from '@/utils/validation'
+import { useAccount } from 'wagmi'
 
 export const ButtonModal = (): React.JSX.Element => {
+  const [balance, setBalanceOf] = useState(0)
+  const { isDisconnected } = useAccount()
   const { currentPrice } = useSelector((state) => state.currentPrice)
   const [value, setValue] = useState({
     send: 0,
@@ -45,39 +50,40 @@ export const ButtonModal = (): React.JSX.Element => {
   }
   return (
     <Dialog >
-      <div className='flex justify-center'>
         <DialogTrigger asChild>
-          <ButtonUI className='w-52 uppercase rounded-full border-none'>buy now</ButtonUI>
+          <ButtonUI className='w-full uppercase rounded-full bg-azure-radiance-500 border-none hover:bg-azure-radiance-400'>buy now</ButtonUI>
         </DialogTrigger>
-      </div>
-      <DialogContent className="sm:max-w-[500px] overflow-hidden bg-amber-700/50 backdrop-blur">
-        <div className="absolute top-0 left-0 w-full h-52 z-0">
-            <div className="m-auto h-full w-96 "></div>
-        </div>
+      <DialogContent className="sm:max-w-[500px] overflow-hidden bg-background/50 backdrop-blur">
         <DialogHeader className='z-10 uppercase'>
           <DialogTitle >be an investor</DialogTitle>
-          <DialogDescription className='text-white font-semibold flex gap-2 justify-between'>
-            <div className='flex'>balance: <BalanceOf /></div>
-            <VerifyToken />
+          <DialogDescription className='font-semibold flex gap-2 justify-between'>
+            <div className='flex'>balance: <BalanceOf isDisconnected={isDisconnected} setBalanceOf={setBalanceOf} balance={balance} /></div>
+            {VerifyToken()} USDT
           </DialogDescription>
         </DialogHeader>
         <div className="grid gap-4 py-4 z-10">
           <div className="grid grid-cols-5 gap-1 ">
-            <Label htmlFor="amount" className='uppercase col-span-5 '>amount</Label>
-            <Input id="amount" type='number' onChange={handlesend} value={value.send} className="col-span-3 appearance-none rounded-e-none bg-[#FFF3DD]" /><SelectCoin/>
+            <Label htmlFor="amount" className='uppercase col-span-5 '>USDT Pay</Label>
+            <Input onChange={handlesend} value={value.send >= 0 ? value.send : 0} className="col-span-3 appearance-none rounded-e-none" /><SelectCoin/>
           </div>
-          <div className="grid gap-1 z-10">
-            <Label htmlFor="get-amount" className='uppercase'>amount</Label>
-            <Input id="get-amount" type='number' value={value.amount !== 0 ? value.amount : ''} onChange={handleamount} className="col-span-3 bg-[#FFF3DD]" />
+          <div className="grid gap-1 z-10 h-15">
+            <Label htmlFor="get-amount" className='uppercase'>UNITY To receive </Label>
+            <Input value={value.amount !== 0 ? value.amount : ''} onChange={handleamount} className="col-span-3 appearance-none"/>
+            <p className='h-5 text-red-700'>{validateBuy(VerifyToken(), value.amount, value.send)}</p>
           </div>
           <div className='grid divide-y divide-dashed gap-4'>
             <div className='flex justify-between w-full '><span>precio$</span><span>{currentPrice}</span></div>
-            <div className='flex justify-between w-full '><span>Bonus </span><span>{((2.38 - currentPrice) / (2.38) * 100)}%</span></div>
+            <div className='flex justify-between w-full '><span>Bonus </span><span>70%</span></div>
             <div className='flex justify-between w-full '><span>Total Amount</span><span>{value.amount}</span></div>
           </div>
         </div>
-        <DialogFooter >
+        <DialogFooter className='relative' >
           <BuyWrite send={value.send} amount={value.amount} reset={handleReset} />
+          <div>
+          <Link className='absolute right-0 -bottom-5 text-azure-radiance-500 bg-transparent underline  hover:bg-transparent' href='https://www.transformationalfestivals.net/product-page/unityicopresale'>
+            Buy with card
+          </Link>
+          </div>
         </DialogFooter>
       </DialogContent>
     </Dialog>

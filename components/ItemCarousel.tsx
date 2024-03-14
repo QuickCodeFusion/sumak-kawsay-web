@@ -1,26 +1,16 @@
 import CarouselInfo from './CarouselInfo'
-const items = [
-  {
-    id: '1',
-    title: 'Common Treasure and Asset Tokenization',
-    content: 'The currencies are backed by a collective treasury, strategically reinvesting in land and value chains. This foundation ensures that our currency is not just financially robust, but purpose-driven, echoing our commitment to sustainable prosperity'
-  },
-  {
-    id: '2',
-    title: 'Ethics',
-    content: 'Ethics lie at the heart of our ecosystem, guiding every transaction to uphold principles of fairness, transparency, and sustainability. This approach fosters an environment of economic integrity, ensuring that our collective actions contribute positively to the greater good.'
-  },
-  {
-    id: '3',
-    title: 'Benefits & Returns',
-    content: "Our currency extends beyond mere financial gain, offering dividends to token holders. This system incentivizes long-term investment, allowing participants to share in the prosperity and success cultivated by the ecosystem's growth, reinforcing a culture of mutual benefit and collective success."
-  }
+const info = [
+  { title: 'Sovereignty', description: 'Our ecosystem embraces decentralized governance and asset tokenization to promote inclusive growth and equity. We prioritize stewardship of natural resources and the creation of a global career gateway, leveraging our collective infrastructure. Our model includes a fractional real estate portfolio and a dedicated blockchain to ensure universal identification, enhanced privacy, and security. We are committed to a global framework that leads to regenerative outcomes, high performance, and quality standards.', icon: '/Ecosystem1.png', id: 1 },
+  { title: 'Living and Virtual Platform', description: 'We are developing a new kind of navigation in Extended Reality (XR) settings, combining Web 3.0 and decentralized finance (DeFi) to create an all-encompassing global marketplace. Our ecosystem features smart bio-habitats, customized tokens, and state-of-the-art wearable NFTs, all underpinned by blockchain and IoT technologies for superior automation. Driven by artificial intelligence, our platform sets a standard for efficiency and innovative progress.', icon: '/Ecosystem2.png', id: 2 },
+  { title: 'Global Interdependence', description: 'We advocate for a globally interdependent framework, utilizing a collective treasure system to refine value chains and enhance productivity, thereby fostering dividends. Our model is built on strong articulation, interaction, and exchange, aimed at revolutionizing the financial landscape. Backed by a solid legal structure and supported by advanced big data analytics, our initiatives promote unified efforts towards the preservation of life and nature\'s rights, ensuring a harmonious and interconnected existence.', icon: '/Ecosystem3.png', id: 3 }
 ]
 
 const ItemCarousel = (): JSX.Element => {
   return (
-        <div className='w-full flex flex-col items-center'>
-            <CarouselInfo Item={items}></CarouselInfo>
+        <div className='w-full my-16 flex flex-col items-center'>
+          <h2 className='w-full mb-5 text-3xl text-center font-semibold z-10'> The 3 pillars of our strong ecosystem.</h2>
+          <p className='text-center text-xl pb-6'>The ecosystem</p>
+          <CarouselInfo Item={info}></CarouselInfo>
         </div>
   )
 }

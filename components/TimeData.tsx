@@ -1,5 +1,5 @@
 'use client'
-import { useEffect, useState, useMemo } from 'react'
+import { useEffect, useState } from 'react'
 import { Progress } from './ui/progress-bar'
 
 interface props {
@@ -15,17 +15,14 @@ export const TimeData: React.FC<props> = ({ stage, progress, goal, value }): Rea
       setPercentage((progress / goal) * 100)
     }
   }, [progress])
-  const calculatorBonus = useMemo(() => {
-    if (typeof value === 'number') return (2.38 - (value)) / 2.38
-  }, [value])
   return (
     <div className='grid place-items-center gap-4 '>
-        <div className='w-3/4 flex justify-between  font-bold text-white'>
+        <div className='w-3/4 flex flex-col items-center font-bold'>
           <p className='text-sm uppercase md:text-lg'>
-            stage {stage} : {typeof calculatorBonus === 'number' ? Math.round(calculatorBonus * 100) : 0 }% bonus !
+            Presale exclusive: 70% extra tokens
           </p>
           <p className='text-sm uppercase md:text-lg'>
-            {progress} / {goal} Unity
+            token sold: {progress} / {goal} Unity
           </p>
         </div>
         <Progress value={percentage ?? 0} className='w-3/4 h-3 md:h-5 outline-dashed outline-1 outline-white'/>

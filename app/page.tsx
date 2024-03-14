@@ -5,7 +5,7 @@ import ClaimSteps from '@/components/ClaimSteps'
 import BinanceWidget from '../components/BinanceWidget'
 import InfoPresale from '@/components/InfoPresale'
 import InfoContent from '@/components/InfoConten'
-import { Ecosystem } from '@/components/Ecosystem'
+// import { Ecosystem } from '@/components/Ecosystem'
 import ItemCarousel from '@/components/ItemCarousel'
 import { InfoCard } from '@/components/InfonCard'
 import { Passport } from '@/components/Passport'
@@ -15,6 +15,7 @@ import { Tokenomics } from '@/components/Tokenomics'
 import { Dividends } from '@/components/Dividends'
 import { Fractional } from '@/components/Fractional'
 import { Marketplace } from '@/components/Marketplace'
+import { saleEnded } from '@/utils/endSale'
 
 // import PresaleCountdown from '@/components/PresaleCountdown'
 // import InfoPhase from '@/components/functionsContract/InfoPhase'
@@ -30,19 +31,21 @@ const BuyInfo = dynamic(async () => await import('@/components/BuyInfo'), {
   ssr: false
 })
 
-const currentDate = new Date()
-const stopRenderingDate = new Date('2024-04-01')
+// const currentDate = new Date()
+// const stopRenderingDate = new Date('2024-04-01')
 
-const shouldRenderProgressBar = currentDate > stopRenderingDate
+// const shouldRenderProgressBar = currentDate < stopRenderingDate
 
 const Home = (): React.JSX.Element => {
+  const endsale = saleEnded()
+  console.log(endsale)
   return (
-        <main className='flex flex-col gap-20 pt-8 mt-10 justify-center items-center w-screen'>
-            <section className='p-2 my-10 z-10 w-full'>
-                  <div className='flex md:grid grid-cols-2 lg:flex-row flex-col gap-4 justify-around w-full'>
+        <main className='flex flex-col gap-20 pt-8 mt-10 px-8 backdrop--md justify-center items-center w-screen'>
+            <section className='p-2 my-10 z-10 w-full '>
+                  <div className='flex xl:grid grid-cols-3 flex-col place-items-start items-center gap-4 w-full'>
                       <InfoPresale/>
-                      {!shouldRenderProgressBar && <ClaimSteps/>}
-                      {shouldRenderProgressBar && <section className='backdrop-blur bg-black/50 rounded-3xl p-4 flex flex-col w-full border border-vivid-violet-600 mx-0'>
+                      {endsale && <ClaimSteps/>}
+                      {!endsale && <section className='bg-background/50 border rounded-3xl md:-ml-20 py-4 flex flex-col mx-0 w-full md:w-[500px] xl:w-11/12'>
                         <PresaleCountdown/>
                         <InfoPhase/>
                         <BuyInfo/>
@@ -52,7 +55,7 @@ const Home = (): React.JSX.Element => {
             <BinanceWidget/>
             <InfoCard/>
             <ItemCarousel/>
-            <Ecosystem/>
+            {/* <Ecosystem/> */}
             <Passport/>
             <Dividends/>
             <Fractional/>

@@ -8,6 +8,7 @@ import { ListCard, ListCardContent, ListItem } from './ui/list'
 import { useState } from 'react'
 import { useAccount } from 'wagmi'
 import EnableToken from './functionsToken/EnableToken'
+import Link from 'next/link'
 
 const BuyInfo = (): JSX.Element => {
   const { currentPrice } = useSelector((state) => state.currentPrice)
@@ -15,13 +16,7 @@ const BuyInfo = (): JSX.Element => {
   const { isDisconnected } = useAccount()
   return (
         <div className='flex flex-col text-center justify-center items-center my-6 gap-4'>
-            <ListCard>
-                <ListItem>
-                    <h1 className='text-lg font-medium'>Token Name:</h1>
-                    <ListCardContent>
-                    <NameToken />
-                    </ListCardContent>
-                </ListItem>
+            <ListCard className='p-4'>
                 <ListItem>
                 <h1 className='text-lg font-medium'>Token Symbol:</h1>
                     <ListCardContent>
@@ -31,7 +26,13 @@ const BuyInfo = (): JSX.Element => {
                 <ListItem>
                 <h1 className='text-lg font-medium'>Current Price:</h1>
                     <ListCardContent>
-                    {currentPrice}
+                    {currentPrice}$
+                    </ListCardContent>
+                </ListItem>
+                <ListItem>
+                    <h1 className='text-lg font-medium'>Listing price</h1>
+                    <ListCardContent>
+                    <NameToken />
                     </ListCardContent>
                 </ListItem>
                 <ListItem>
@@ -41,9 +42,10 @@ const BuyInfo = (): JSX.Element => {
                     </ListCardContent>
                 </ListItem>
             </ListCard>
-            <div className='flex flex-col md:flex-row gap-4'>
-                <EnableToken/>
-                <ButtonModal/>
+            <div className='flex flex-col md:grid grid-cols-2 gap-4 justify-center items-center place-items-center w-full px-4'>
+                    <EnableToken/>
+                    <ButtonModal/>
+                    <Link href={'#'} className='w-fit self-end text-azure-radiance-500 bg-transparent underline col-start-2 relative md:left-8 top-6 hover:bg-transparent'>How to buy</Link>
             </div>
         </div>
   )

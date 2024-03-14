@@ -1,4 +1,5 @@
-import { Card, CardContent, CardHeader } from '@/components/ui/card'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import Image from 'next/image'
 import {
   Carousel,
   CarouselContent,
@@ -13,17 +14,18 @@ const CarouselInfo = ({ Item }: { Item: any }): JSX.Element => {
       <CarouselContent>
         {Item.map((Item: any) => (
         <CarouselItem className='rounded-3xl' key={Item.id}>
-              <Card className="h-full bg-background border rounded-3xl border-vivid-violet-600 shadow-sm shadow-vivid-violet-800 backdrop-filter backdrop-blur-lg">
-                  <CardHeader>{Item.title}</CardHeader>
-                  <CardContent >
-                  {Item.content}
-                  </CardContent>
+              <Card className="h-full bg-background/50 border rounded-3xl shadow-sm backdrop-filter backdrop-blur-lg">
+                  <CardHeader className='flex flex-col items-center' >
+                  <Image className=' my-4 ring-offset-2 rounded-full' src={Item.icon} alt={Item.title} width={100} height={100}></Image>
+                  <CardTitle className='text-center'>{Item.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent className='w-full text-center text-xl'>{Item.description}</CardContent>
               </Card>
         </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className='border border-vivid-violet-600 shadow-sm shadow-vivid-violet-800 hidden md:flex'/>
-      <CarouselNext className='border border-vivid-violet-600 shadow-sm shadow-vivid-violet-800 hidden md:flex'/>
+      <CarouselPrevious className='border shadow-s hidden md:flex'/>
+      <CarouselNext className='borde shadow-sm hidden md:flex'/>
     </Carousel>
   )
 }

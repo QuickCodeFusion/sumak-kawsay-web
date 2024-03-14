@@ -11,12 +11,14 @@ import { toast } from 'sonner'
 import { useWaitForTransaction } from 'wagmi'
 import { Link as ScrollLink } from 'react-scroll'
 import { ButtonUI } from './ui/button'
+import { ModeToggle } from './ToggleTheme'
+import { ToggleOwner } from './ToggleOwner'
 
 const items = [
   {
-    id: 5,
+    id: 0,
     title: 'Ecosystem',
-    url: 'ecosystem'
+    url: 'Ecosystem'
   },
   {
     id: 1,
@@ -30,7 +32,7 @@ const items = [
   },
   {
     id: 3,
-    title: 'Team Work',
+    title: 'Team',
     url: 'teamWork'
   },
   {
@@ -64,15 +66,15 @@ const Navbar = (): React.JSX.Element => {
 
   return (
     <>
-        <NavigationMenu className='w-full bg-black bg-opacity-55 fixed backdrop-blur shadow-black shadow-md z-50'>
-            <NavigationMenuList className='w-screen flex justify-between px-8'>
-                <Image className='ring-2 ring-vivid-violet-500 bg-white rounded-full' src='/logo.png' alt='logo' width={50} height={50}></Image>
+        <NavigationMenu className='w-full bg-withe fixed backdrop-blur bg-background/50 shadow-md z-50'>
+            <NavigationMenuList className='w-screen grid grid-cols-3 justify-between px-8'>
+                <Image className='rounded-full' src='/logo.png' alt='logo' width={50} height={50}></Image>
                 <NavigationMenuList>
                 <div className='sm:flex gap-4 hidden items-center justify-center'>
                   {
                     items.map((item) => (
                       <ScrollLink activeClass='active' to={item.url} spy smooth={true} duration={600} key={item.id}>
-                        <ButtonUI className='bg-gray-900 text-white border border-vivid-violet-600 shadow-sm shadow-vivid-violet-800 hover:bg-transparent'>
+                        <ButtonUI className='bg-transparent hover:bg-background rounded-3xl text-foreground'>
                           {item.title}
                         </ButtonUI>
                       </ScrollLink>
@@ -80,7 +82,9 @@ const Navbar = (): React.JSX.Element => {
                   }
                 </div>
                 </NavigationMenuList>
-                <NavigationMenuList className='flex justify-between gap-7 py-4 px-4'>
+                <NavigationMenuList className='flex justify-end gap-2 py-4 px-4'>
+                  <ToggleOwner/>
+                  <ModeToggle/>
                 { shouldRenderComponents &&
                     <ConnectButton label='Connect wallet' accountStatus={{
                       smallScreen: 'avatar',

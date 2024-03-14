@@ -1,20 +1,40 @@
+import Link from 'next/link'
 import ButtonWhitePaper from './ButtonWhiterPaper'
 import IconSocial from './IconSocial'
+import { ButtonUI } from './ui/button'
 const InfoPresale = (): JSX.Element => {
+  const items = [
+    {
+      id: 2,
+      title: 'Marketplace',
+      link: 'https://www.binance.com/es/nft/my-nfts/collected/symbiosls-0319e09553f7b3842d72b6435a287e3c'
+    },
+    {
+      id: 1,
+      title: 'Hub',
+      link: 'http://transformationalfestivals.net/'
+    }
+  ]
   return (
-          <div className='flex justify-center items-center flex-col md:gap-4'>
-              <h1 className='text-xl md:text-3xl font-bold text-center'>
-                Embracing the Renaissance of Prosperity in the Sumak Kawsay.
-                Co-creating a World of Harmony and Abundance
-              </h1>
-              <div className='my-9'>
-              <p className='text-md md:text-xl text-center font-semibold'>A transformation that begins with you and resonates across the globe</p>
-              <p className='text-center md:p-4'>The Sumak Kawsay Ecosystem blends asset tokenization, artificial intelligence, decentralized governance, and privacy, fostering a legal and political framework for global articulation, collective prosperity, and sovereignty. This approach ensures ethical financial systems and unified actions for the well-being of Earth.</p>
-              </div>
-              <span className='w-full flex flex-col md:flex-row justify-center items-center gap-4'>
+          <div className='flex place-self-start text-white justify-center items-start flex-col gap-4 col-span-2 md:px-36 mb-12'>
                 <IconSocial/>
+              <h1 className='text-2xl md:text-6xl font-bold text-start'>
+              The Ultimate Living and Virtual Ecosystem
+              </h1>
+              <p className='text-md md:text-2xl text-start font-semibold'>Experience a new era of community-driven wealth, where every participant has the power to shape the future.</p>
+              <span className='w-full grid grid-cols-3 gap-1 md:gap-4 md:max-w-[400px] justify-center items-center'>
                 <ButtonWhitePaper/>
+                {items.map((item) => {
+                  return (
+                    <ButtonUI className='w-full rounded-full border-2' key={item.id}>
+                      <Link href={item.link} target='_blank' rel='noreferrer'>
+                        {item.title}
+                      </Link>
+                    </ButtonUI>
+                  )
+                })}
               </span>
+              <p className='underline'>Audited & KYC | 100% secure and verified</p>
           </div>
   )
 }

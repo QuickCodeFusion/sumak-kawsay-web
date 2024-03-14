@@ -19,7 +19,7 @@ interface TimelineIconProps {
 }
 
 const TimelineIcon: React.FC<TimelineIconProps> = ({ children, className }) => (
-  <span className={cn('absolute flex items-center justify-center w-6 h-6 bg-egg-100 rounded-full -start-3 ring-1 ring-egg-50', className)}>{children}</span>
+  <span className={cn('absolute flex items-center justify-center w-6 h-6 bg-accent-foreground rounded-full -start-3 ring-1 ring-egg-50', className)}>{children}</span>
 )
 TimelineIcon.displayName = 'TimelineIcon'
 
@@ -60,7 +60,7 @@ const Timeline: React.FC<TimelineProps> = ({ children }) => {
   const timelineItems = React.Children.toArray(children)
 
   return (
-    <div className={cn('relative mt-6 ml-6 border-s border-egg-50')}>
+    <div className={cn('relative mt-6 ml-6 border-s border-accent-foreground')}>
       {timelineItems.map((child, index) => (
         <React.Fragment key={index}>
           {child}

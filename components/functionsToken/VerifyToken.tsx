@@ -1,11 +1,11 @@
 'use client'
 import { useContractRead, useAccount } from 'wagmi'
-import { AbyUsdt, contract } from '@/utils/AbyContrat'
+import { AbyUsdt, contract, contractUSDT } from '@/utils/AbyContrat'
 
 const VerifyToken = (): JSX.Element => {
   const { address } = useAccount()
   const { data } = useContractRead({
-    address: '0xbc13c88A984d5B023E6EB4D6BA7547792a0e4ceC',
+    address: contractUSDT,
     abi: AbyUsdt,
     functionName: 'allowance',
     args: [address, contract]

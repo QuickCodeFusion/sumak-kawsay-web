@@ -1,14 +1,18 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Poppins } from 'next/font/google'
 import './globals.css'
 import { cn } from '@/lib/utils'
 import { Providers } from './providers'
 import Navbar from '@/components/Navbar'
 import { ThemeProvider } from './themeDark'
-import BgVideo from '@/components/BgVideo'
 import Footer from '@/components/Footer'
+import BgVideo from '@/components/BgVideo'
 
-const inter = Inter({ subsets: ['latin'] })
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  variable: '--font-poppins'
+})
 
 export const metadata: Metadata = {
   title: 'UNITY Official Presale',
@@ -25,15 +29,15 @@ const RootLayout = ({
       <body className={
         cn(
           'min-h-screen',
-          inter.className,
-          'bg-black/50 bg-cover bg-no-repeat bg-center bg-fixed',
+          poppins.className,
+          'bg-[url(/345.jpeg)] dark:bg-[url(/45519.jpeg)] bg-cover bg-no-repeat bg-center bg-fixed',
           'h-screen flex'
         )
       }>
         <Providers>
           <ThemeProvider
               attribute="class"
-              defaultTheme="dark"
+              defaultTheme="system"
               enableSystem
               disableTransitionOnChange
             >

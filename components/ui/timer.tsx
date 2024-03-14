@@ -4,7 +4,7 @@ import { cn } from '@/lib/utils'
 import Countdown from 'react-countdown'
 
 const timerVariants = cva(
-  'flex items-center justify-center rounded-full bg-transparent text-white px-4 py-1.5 text-sm font-semibold',
+  'flex items-center justify-center rounded-full bg-transparent px-4 py-1.5 text-sm font-semibold',
   {
     variants: {
       size: {
@@ -30,7 +30,7 @@ export function Timer ({ time, exactDate, size, className, ...props }: TimerProp
             date={exactDate ?? new Date(Date.now() + time * 1000)}
             renderer={({ days, hours, minutes, seconds, completed }) => {
               if (completed) {
-                return <></>
+                return <div className={cn(timerVariants({ size, className }))}> 00 : 00 : 00 : 00</div>
               } else {
                 return (
                         <div
