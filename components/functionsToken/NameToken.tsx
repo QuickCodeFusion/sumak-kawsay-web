@@ -16,7 +16,7 @@ const NameToken = (): JSX.Element => {
     dispatch(setContract(contractToken))
   }, [data])
 
-  return (<div>{isLoading ? 'loading...' : data?.toString()}</div>)
+  return (<div>{isLoading ? 'loading...' : '13.86$'}</div>)
 }
 
 export default NameToken

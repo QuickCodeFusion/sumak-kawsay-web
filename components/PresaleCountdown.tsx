@@ -32,7 +32,7 @@ const PresaleCountdown = (): React.JSX.Element => {
 
   return (
         <div className='flex flex-col text-center justify-center items-center my-5'>
-            <h5 className='text-lg uppercase font-semibold'>Pre-sale ends in</h5>
+            <h5 className='text-xl uppercase font-semibold'>countdown to next round</h5>
             <Timer time={time} size={'lg'} />
         </div>
   )

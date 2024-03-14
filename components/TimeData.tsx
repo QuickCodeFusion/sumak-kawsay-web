@@ -17,12 +17,12 @@ export const TimeData: React.FC<props> = ({ stage, progress, goal, value }): Rea
   }, [progress])
   return (
     <div className='grid place-items-center gap-4 '>
-        <div className='w-3/4 flex justify-between font-bold'>
+        <div className='w-3/4 flex flex-col items-center font-bold'>
           <p className='text-sm uppercase md:text-lg'>
-            {stage} % bonus !
+            Presale exclusive: 70% extra tokens
           </p>
           <p className='text-sm uppercase md:text-lg'>
-            {progress} / {goal} Unity
+            token sold: {progress} / {goal} Unity
           </p>
         </div>
         <Progress value={percentage ?? 0} className='w-3/4 h-3 md:h-5 outline-dashed outline-1 outline-white'/>

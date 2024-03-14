@@ -18,12 +18,6 @@ const BuyInfo = (): JSX.Element => {
         <div className='flex flex-col text-center justify-center items-center my-6 gap-4'>
             <ListCard className='p-4'>
                 <ListItem>
-                    <h1 className='text-lg font-medium'>Token Name:</h1>
-                    <ListCardContent>
-                    <NameToken />
-                    </ListCardContent>
-                </ListItem>
-                <ListItem>
                 <h1 className='text-lg font-medium'>Token Symbol:</h1>
                     <ListCardContent>
                     <SymbolToken />
@@ -32,7 +26,13 @@ const BuyInfo = (): JSX.Element => {
                 <ListItem>
                 <h1 className='text-lg font-medium'>Current Price:</h1>
                     <ListCardContent>
-                    {currentPrice}
+                    {currentPrice}$
+                    </ListCardContent>
+                </ListItem>
+                <ListItem>
+                    <h1 className='text-lg font-medium'>Listing price</h1>
+                    <ListCardContent>
+                    <NameToken />
                     </ListCardContent>
                 </ListItem>
                 <ListItem>
