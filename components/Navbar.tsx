@@ -18,11 +18,6 @@ import SwitchPhase from './functionsContract/SwitchPhase'
 
 const items = [
   {
-    id: 5,
-    title: 'Ecosystem',
-    url: 'ecosystem'
-  },
-  {
     id: 1,
     title: 'Tokenomics',
     url: 'tokenomics'
