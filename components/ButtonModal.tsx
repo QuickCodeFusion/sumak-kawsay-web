@@ -77,11 +77,13 @@ export const ButtonModal = (): React.JSX.Element => {
             <div className='flex justify-between w-full '><span>Total Amount</span><span>{value.amount}</span></div>
           </div>
         </div>
-        <DialogFooter >
+        <DialogFooter className='relative' >
           <BuyWrite send={value.send} amount={value.amount} reset={handleReset} />
-          <Link href='https://www.pinksale.finance/launchpad/0x3C419fC6E8a1e4ed49Ca4530758fc4a37d658fC6?chain=Matic'>
-            <ButtonUI className='uppercase rounded-full bg-azure-radiance-700'>Buy with card</ButtonUI>
+          <div>
+          <Link className='absolute right-0 -bottom-5 text-azure-radiance-500 bg-transparent underline  hover:bg-transparent' href='https://www.transformationalfestivals.net/product-page/unityicopresale'>
+            Buy with card
           </Link>
+          </div>
         </DialogFooter>
       </DialogContent>
     </Dialog>

@@ -16,6 +16,11 @@ import { ToggleOwner } from './ToggleOwner'
 
 const items = [
   {
+    id: 0,
+    title: 'Ecosystem',
+    url: 'Ecosystem'
+  },
+  {
     id: 1,
     title: 'Tokenomics',
     url: 'tokenomics'
