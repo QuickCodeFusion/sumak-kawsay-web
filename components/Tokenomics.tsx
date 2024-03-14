@@ -54,7 +54,7 @@ export const Tokenomics = (): JSX.Element => {
   return (
         <Element name='tokenomics' className='flex flex-wrap justify-around items-center w-full text-center px-4 py-20'>
           <div>
-            <h1 className='text-3xl font-bold'>Tokenomics</h1>
+            <h1 className='text-3xl font-bold mb-4'>Tokenomics</h1>
             <h3 className='text-xl font-semibold mb-4'>Token Distribution and Unity Halving Schedule</h3>
             <Card className='bg-background/40 backdrop-blur p-6 border shadow-sm md:grid grid-cols-2 place-content-center place-items-center'>
               <Image className='w-[410px] md:h-[390px] mt-7 rounded-full' src='/grafica.png' width={400} height={400} alt='graph' />

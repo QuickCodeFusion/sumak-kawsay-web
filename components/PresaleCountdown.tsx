@@ -2,10 +2,10 @@
 import { useContractRead } from 'wagmi'
 import { AbyContractAddress, contract } from '@/utils/AbyContrat'
 import { Timer } from './ui/timer'
-import { useEffect, useState } from 'react'
+// import { useEffect, useState } from 'react'
 
 const PresaleCountdown = (): React.JSX.Element => {
-  const [timer, setTimer] = useState(false)
+  // const [timer, setTimer] = useState(false)
   const { data } = useContractRead({
     address: contract,
     abi: AbyContractAddress,
@@ -13,7 +13,7 @@ const PresaleCountdown = (): React.JSX.Element => {
   })
   const time = Number(data)
   console.log(time)
-  useEffect(() => {
+  /* useEffect(() => {
     if (timer) {
       setTimer(false)
       window.location.reload()
@@ -28,7 +28,7 @@ const PresaleCountdown = (): React.JSX.Element => {
     setTimeout(() => {
       setTimer(true)
     }, time * 1000)
-  }
+  } */
 
   return (
         <div className='flex flex-col text-center justify-center items-center my-5'>

@@ -35,7 +35,7 @@ const Item = [
   },
   {
     title: 'Shambhala Bio-habitats, and how can I get involved?',
-    content: 'Bio-Towns are sustainable living models within the ecosystem, offering various lifestyle preferences and productive systems. Participants can engage through investment, residency, or contributing to the development and growth of these eco-friendly communities.',
+    content: 'The Shambhala Bio-habitats are sustainable living models within the ecosystem, offering various lifestyle preferences and productive systems. Participants can engage through investment, residency, or contributing to the development and growth of these eco-friendly communities.',
     id: '6'
   },
   {
@@ -45,7 +45,7 @@ const Item = [
   },
   {
     title: 'What is the role of technology in the ecosystem?',
-    content: 'echnology, particularly blockchain and AI, underpins the ecosystem, ensuring transparency, security, and efficiency. It supports sustainable resource management, ecological balance, and facilitates community engagement and education.',
+    content: 'Technology, particularly blockchain and AI, underpins the ecosystem, ensuring transparency, security, and efficiency. It supports sustainable resource management, ecological balance, and facilitates community engagement and education.',
     id: '8'
   },
   {
