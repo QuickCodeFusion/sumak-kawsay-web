@@ -2,7 +2,6 @@
 
 import * as React from 'react'
 import ReclaimUsdt from './functionsContract/ReclaimUsdt'
-import SwitchPhase from './functionsContract/SwitchPhase'
 import ClosePresale from './functionsContract/ClosePresale'
 import { BoltIcon } from 'lucide-react'
 import { useAccount } from 'wagmi'
@@ -35,9 +34,6 @@ export const ToggleOwner = (): React.JSX.Element => {
         <DropdownMenuContent className='flex'>
           <DropdownMenuItem >
               <ReclaimUsdt/>
-          </DropdownMenuItem>
-          <DropdownMenuItem >
-              <SwitchPhase/>
           </DropdownMenuItem>
           <DropdownMenuItem >
               <ClosePresale shown={shown} open={open} setOpen={setOpen}/>

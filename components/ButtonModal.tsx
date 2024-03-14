@@ -73,7 +73,7 @@ export const ButtonModal = (): React.JSX.Element => {
           </div>
           <div className='grid divide-y divide-dashed gap-4'>
             <div className='flex justify-between w-full '><span>precio$</span><span>{currentPrice}</span></div>
-            <div className='flex justify-between w-full '><span>Bonus </span><span>{((2.38 - currentPrice) / (2.38) * 100)}%</span></div>
+            <div className='flex justify-between w-full '><span>Bonus </span><span>70%</span></div>
             <div className='flex justify-between w-full '><span>Total Amount</span><span>{value.amount}</span></div>
           </div>
         </div>
