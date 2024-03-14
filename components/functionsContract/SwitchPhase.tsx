@@ -20,6 +20,7 @@ const SwitchPhase = (): JSX.Element => {
   const { status } = useWaitForTransaction({
     hash: data?.hash
   })
+  console.log(status)
   useEffect(() => {
     console.log(status)
     if (isLoading && Shown) {
