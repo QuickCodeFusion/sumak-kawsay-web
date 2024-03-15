@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import ButtonWhitePaper from './ButtonWhiterPaper'
 import IconSocial from './IconSocial'
 import { ButtonUI } from './ui/button'
 const InfoPresale = (): JSX.Element => {
