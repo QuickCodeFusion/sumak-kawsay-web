@@ -13,6 +13,11 @@ const InfoPresale = (): JSX.Element => {
       id: 1,
       title: 'Hub',
       link: 'http://transformationalfestivals.net/'
+    },
+    {
+      id: 3,
+      title: 'WhitePaper',
+      link: 'https://www.transformationalfestivals.net/whitepaper'
     }
   ]
   return (
@@ -23,7 +28,6 @@ const InfoPresale = (): JSX.Element => {
               </h1>
               <p className='text-md md:text-2xl text-start font-semibold'>Experience a new era of community-driven wealth, where every participant has the power to shape the future.</p>
               <span className='w-full grid grid-cols-1 place-items-center sm:grid-cols-3 gap-1 md:gap-4 md:max-w-[400px] justify-center items-center'>
-                <ButtonWhitePaper/>
                 {items.map((item) => {
                   return (
                     <ButtonUI className='w-48 md:w-full rounded-full border-2' key={item.id}>
