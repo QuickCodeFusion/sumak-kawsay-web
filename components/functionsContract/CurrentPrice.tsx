@@ -6,10 +6,10 @@ const CurrentPrice = (): JSX.Element => {
   const { data, isLoading } = useContractRead({
     address: contract,
     abi: AbyContractAddress,
-    functionName: '_tokenPrice'
+    functionName: 'checkTimePhase'
   })
-  const price = Number(data) / 10 ** 18
-  return (<div className='flex '>{isLoading ? 'loading...' : price}ETH</div>)
+  const price = String(data)
+  return (<div className='flex '>{isLoading ? 'loading...' : price}</div>)
 }
 
 export default CurrentPrice
