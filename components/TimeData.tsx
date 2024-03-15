@@ -18,10 +18,10 @@ export const TimeData: React.FC<props> = ({ stage, progress, goal, value }): Rea
   return (
     <div className='grid place-items-center gap-4 '>
         <div className='w-3/4 flex flex-col items-center font-bold'>
-          <p className='text-sm uppercase md:text-lg'>
+          <p className='text-sm uppercase md:text-base'>
             Presale exclusive: 70% extra tokens
           </p>
-          <p className='text-sm uppercase md:text-lg'>
+          <p className='text-sm uppercase md:text-base'>
             token sold: {progress} / {goal} Unity
           </p>
         </div>

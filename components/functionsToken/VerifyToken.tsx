@@ -11,7 +11,7 @@ const VerifyToken = (): JSX.Element => {
     args: [address, contract]
   })
   const amount = Number(data) / 10 ** 18
-  return <div>{amount} USDT</div>
+  return <div>{amount} </div>
 }
 
 export default VerifyToken

@@ -4,7 +4,7 @@ const CardTeamWork = ({ user }: { user: { name: string, role: string, img: strin
   return (
     <Card className='rounded-3xl shadow-sm bg-background/50 px-4 text-center py-3 flex flex-col justify-start text-cente'>
       <CardHeader className='flex justify-center flex-row m-0 p-4'>
-          <CardTitle className='flex ml-4 item-center'>
+          <CardTitle className='flex ml-4 text-center'>
               {user.name}
           </CardTitle>
       </CardHeader>

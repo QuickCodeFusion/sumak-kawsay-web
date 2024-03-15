@@ -24,7 +24,7 @@ const InfoPhase = (): JSX.Element => {
   }
   const [newData] = data as Data
   const phase = String(data !== undefined && (newData.phase))
-  const price = Number(data !== undefined && (newData.price)) / 10 ** 18
+  const price = Number(data !== undefined && (newData.price)) / 10 ** 6
   const total = Number(data !== undefined && (newData.total))
   const sold = Number(data !== undefined && (data as unknown[])[1])
   dispatch(setCurrentPrice(price))

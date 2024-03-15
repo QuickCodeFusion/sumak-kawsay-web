@@ -15,7 +15,7 @@ import { Label } from '@/components/ui/label'
 import { SelectCoin } from './SelectCoin'
 import BalanceOf from '@/components/functionsContract/BalanceOf'
 import { useSelector } from '@/lib/redux/hooks'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import BuyWrite from '@/components/functionsContract/BuyWrite'
 import Link from 'next/link'
 import { VerifyToken } from '@/utils/verifyToken'
@@ -30,6 +30,7 @@ export const ButtonModal = (): React.JSX.Element => {
     send: 0,
     amount: 0
   })
+  const test = VerifyToken()
   const handlesend = (event: React.ChangeEvent<HTMLInputElement>): void => {
     setValue({
       send: Number(event.target.value),
@@ -48,6 +49,9 @@ export const ButtonModal = (): React.JSX.Element => {
       amount: 0
     })
   }
+  useEffect(() => {
+    console.log(value, test)
+  }, [balance, currentPrice, value.send])
   return (
     <Dialog >
         <DialogTrigger asChild>
@@ -72,7 +76,7 @@ export const ButtonModal = (): React.JSX.Element => {
             <p className='h-5 text-red-700'>{validateBuy(VerifyToken(), value.amount, value.send)}</p>
           </div>
           <div className='grid divide-y divide-dashed gap-4'>
-            <div className='flex justify-between w-full '><span>precio$</span><span>{currentPrice}</span></div>
+            <div className='flex justify-between w-full '><span>price $</span><span>{currentPrice}</span></div>
             <div className='flex justify-between w-full '><span>Bonus </span><span>70%</span></div>
             <div className='flex justify-between w-full '><span>Total Amount</span><span>{value.amount}</span></div>
           </div>

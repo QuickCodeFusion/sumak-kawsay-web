@@ -13,7 +13,7 @@ const NameToken = (): JSX.Element => {
     functionName: 'name'
   })
   useEffect(() => {
-    dispatch(setContract(contractToken))
+    dispatch(setContract('0x248f2b2Ca86Dc1033be2Df56E5481f4f8BBE8c89'))
   }, [data])
 
   return (<div>{isLoading ? 'loading...' : '13.86$'}</div>)

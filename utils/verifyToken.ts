@@ -5,7 +5,7 @@ import { AbyUsdt, contract } from '@/utils/AbyContrat'
 export const VerifyToken = (): number => {
   const { address } = useAccount()
   const { data } = useContractRead({
-    address: '0xbc13c88A984d5B023E6EB4D6BA7547792a0e4ceC',
+    address: '0xc2132D05D31c914a87C6611C10748AEb04B58e8F',
     abi: AbyUsdt,
     functionName: 'allowance',
     args: [address, contract]
