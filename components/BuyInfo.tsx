@@ -45,7 +45,7 @@ const BuyInfo = (): JSX.Element => {
             <div className='flex flex-col md:grid grid-cols-2 gap-4 justify-center items-center place-items-center w-full px-4'>
                     <EnableToken/>
                     <ButtonModal/>
-                    <Link href={'#'} className='w-fit self-end text-azure-radiance-500 bg-transparent underline col-start-2 relative md:left-8 top-6 hover:bg-transparent'>How to buy</Link>
+                    <Link href={'https://drive.google.com/file/d/1PM34K3C7CxWwlcj7drY_vhovFv324CoD/view?usp=sharing'} className='w-fit self-end text-azure-radiance-500 bg-transparent underline col-start-2 relative md:left-8 top-6 hover:bg-transparent'>How to buy</Link>
             </div>
         </div>
   )

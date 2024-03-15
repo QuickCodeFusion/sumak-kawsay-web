@@ -45,6 +45,7 @@ const BuyWrite = ({ send, amount, reset }: { send: number, amount: number, reset
       <ButtonUI
         className='w-52 uppercase rounded-full bg-gradient-to-r bg-azure-radiance-700 text-white'
         variant={'outline'}
+        disabled={!send}
         onClick={() => {
           if (amount > 0) {
             writeAsync({

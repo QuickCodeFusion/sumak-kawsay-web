@@ -10,7 +10,7 @@ import {
 
 const CarouselInfo = ({ Item }: { Item: any }): JSX.Element => {
   return (
-  <Carousel className="container  w-full md:w-1/2 ">
+  <Carousel className="container  md:w-10/12 lg:w-1/2 ">
       <CarouselContent>
         {Item.map((Item: any) => (
         <CarouselItem className='rounded-3xl' key={Item.id}>
@@ -19,7 +19,7 @@ const CarouselInfo = ({ Item }: { Item: any }): JSX.Element => {
                   <Image className=' my-4 ring-offset-2 rounded-full' src={Item.icon} alt={Item.title} width={100} height={100}></Image>
                   <CardTitle className='text-center'>{Item.title}</CardTitle>
                   </CardHeader>
-                  <CardContent className='w-full text-center text-xl'>{Item.description}</CardContent>
+                  <CardContent className='w-full text-center text-sm md:text-xl'>{Item.description}</CardContent>
               </Card>
         </CarouselItem>
         ))}

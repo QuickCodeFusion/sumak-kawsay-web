@@ -72,7 +72,7 @@ export const ButtonModal = (): React.JSX.Element => {
             <p className='h-5 text-red-700'>{validateBuy(VerifyToken(), value.amount, value.send)}</p>
           </div>
           <div className='grid divide-y divide-dashed gap-4'>
-            <div className='flex justify-between w-full '><span>precio$</span><span>{currentPrice}</span></div>
+            <div className='flex justify-between w-full '><span>Price $</span><span>{currentPrice}</span></div>
             <div className='flex justify-between w-full '><span>Bonus </span><span>70%</span></div>
             <div className='flex justify-between w-full '><span>Total Amount</span><span>{value.amount}</span></div>
           </div>

@@ -7,12 +7,12 @@ import {
 } from '@rainbow-me/rainbowkit'
 import { configureChains, createConfig, WagmiConfig } from 'wagmi'
 import {
-  polygonMumbai
+  polygon
 } from 'wagmi/chains'
 import { publicProvider } from 'wagmi/providers/public'
 
 const { chains, publicClient } = configureChains(
-  [polygonMumbai],
+  [polygon],
   [
     publicProvider()
   ]
