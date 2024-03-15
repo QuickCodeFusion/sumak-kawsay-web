@@ -4,6 +4,11 @@ import { ButtonUI } from './ui/button'
 const InfoPresale = (): JSX.Element => {
   const items = [
     {
+      id: 3,
+      title: 'WhitePaper',
+      link: 'https://www.transformationalfestivals.net/whitepaper'
+    },
+    {
       id: 2,
       title: 'Marketplace',
       link: 'https://www.binance.com/es/nft/my-nfts/collected/symbiosls-0319e09553f7b3842d72b6435a287e3c'
@@ -12,11 +17,6 @@ const InfoPresale = (): JSX.Element => {
       id: 1,
       title: 'Hub',
       link: 'http://transformationalfestivals.net/'
-    },
-    {
-      id: 3,
-      title: 'WhitePaper',
-      link: 'https://www.transformationalfestivals.net/whitepaper'
     }
   ]
   return (
