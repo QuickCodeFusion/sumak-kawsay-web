@@ -47,7 +47,9 @@ const BuyInfo = (): JSX.Element => {
             </ListCard>
             <div className='flex flex-col md:grid grid-cols-2 gap-4 justify-center items-center place-items-center w-full px-4'>
                     <ButtonUI className='text-black w-full uppercase rounded-full bg-white border-none hover:bg-stone-400' onClick={() => { setIsOpen(true) }}>Enable Usdt</ButtonUI>
-                    <Modal setOpen={setIsOpen} open={isOpen}>
+
+                    <Modal className='bg-background/50 backdrop-blur' setOpen={setIsOpen} open={isOpen}>
+
                       <ValidateUsdt setIsOpen={setIsOpen}/>
                     </Modal>
                     <ButtonModal/>
