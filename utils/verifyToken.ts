@@ -10,6 +10,6 @@ export const VerifyToken = (): number => {
     functionName: 'allowance',
     args: [address, contract]
   })
-  const amount = Number(data) / 10 ** 18
+  const amount = Number(data) / 10 ** 6
   return amount
 }
