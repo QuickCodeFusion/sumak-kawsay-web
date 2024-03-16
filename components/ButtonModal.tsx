@@ -57,8 +57,8 @@ export const ButtonModal = (): React.JSX.Element => {
         <DialogHeader className='z-10 uppercase'>
           <DialogTitle >be an investor</DialogTitle>
           <DialogDescription className='font-semibold flex gap-2 justify-between'>
-            <div className='flex'>balance: <BalanceOf isDisconnected={isDisconnected} setBalanceOf={setBalanceOf} balance={balance} /></div>
-            {VerifyToken()} USDT
+            <div className='flex dark:text-gray-400 text-black'>balance: <BalanceOf isDisconnected={isDisconnected} setBalanceOf={setBalanceOf} balance={balance} /></div>
+            <p className='dark:text-gray-400 text-gray-800'>{VerifyToken()} USDT</p>
           </DialogDescription>
         </DialogHeader>
         <div className="grid gap-4 py-4 z-10">
