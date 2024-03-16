@@ -10,7 +10,7 @@ const networks = [
   {
     id: 3,
     title: 'Binance',
-    url: 'https://www.binance.com/es/nft/item/82689062?unverified=1&fbclid=IwAR2yoQgi_fva_e3uw4bT5_UgJxgoq1sbv_fDuDXgO1B2weDMpBE-RXvwrfo',
+    url: 'https://www.binance.com/es/nft/profile/symbiosls-0319e09553f7b3842d72b6435a287e3c',
     image: <IconBinance />
   },
   {

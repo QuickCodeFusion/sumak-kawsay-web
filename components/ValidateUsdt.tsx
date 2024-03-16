@@ -14,9 +14,9 @@ const ValidateUsdt = ({ setIsOpen }: { setIsOpen: (value: boolean) => void }): J
   console.log(value)
   return (
         <div className=' h-44'>
-        <p className='font-bold uppercase text-xl mb-4'>What is the amount of USDT you wish to authorize?</p>
-                        <Input className='mb-4' value={value} onChange={handlevalue}/>
-                        <div className='grid md:grid-cols-2 gap-4 mt'>
+        <p className='font-bold uppercase text-sm md:text-xl mb-1 md:mb-4'>What is the amount of USDT you wish to authorize?</p>
+                        <Input className='mb-2 md:mb-4' value={value} onChange={handlevalue}/>
+                        <div className='grid md:grid-cols-2 gap-4 '>
                             <ButtonUI className='w-full uppercase rounded-full bg-red-700 border-none hover:bg-red-400' onClick={() => { setIsOpen(false) }}>Cancel</ButtonUI>
                             <EnableToken value={value}/>
                         </div>
