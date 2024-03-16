@@ -25,7 +25,7 @@ const ClosePresale = ({ open, setOpen, shown }: { open: boolean, setOpen: React.
     }
     if (status === 'success') {
       toast.success(
-        'USDT transferred', {
+        'Presale closed', {
           style: { background: 'green', color: '#FFF' }
         }
       )

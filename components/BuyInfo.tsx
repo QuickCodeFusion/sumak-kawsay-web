@@ -7,12 +7,15 @@ import { useSelector } from '@/lib/redux/hooks'
 import { ListCard, ListCardContent, ListItem } from './ui/list'
 import { useState } from 'react'
 import { useAccount } from 'wagmi'
-import EnableToken from './functionsToken/EnableToken'
+import Modal from './Modal'
 import Link from 'next/link'
+import { ButtonUI } from './ui/button'
+import ValidateUsdt from './ValidateUsdt'
 
 const BuyInfo = (): JSX.Element => {
   const { currentPrice } = useSelector((state) => state.currentPrice)
   const [balance, setBalanceOf] = useState(0)
+  const [isOpen, setIsOpen] = useState(false)
   const { isDisconnected } = useAccount()
   return (
         <div className='flex flex-col text-center justify-center items-center my-6 gap-4'>
@@ -43,7 +46,10 @@ const BuyInfo = (): JSX.Element => {
                 </ListItem>
             </ListCard>
             <div className='flex flex-col md:grid grid-cols-2 gap-4 justify-center items-center place-items-center w-full px-4'>
-                    <EnableToken/>
+                    <ButtonUI className='text-black w-full uppercase rounded-full bg-white border-none hover:bg-stone-400' onClick={() => { setIsOpen(true) }}>Enable Usdt</ButtonUI>
+                    <Modal setOpen={setIsOpen} open={isOpen}>
+                      <ValidateUsdt setIsOpen={setIsOpen}/>
+                    </Modal>
                     <ButtonModal/>
                     <Link href={'https://drive.google.com/file/d/1PM34K3C7CxWwlcj7drY_vhovFv324CoD/view?usp=sharing'} className='w-fit self-end text-azure-radiance-500 bg-transparent underline col-start-2 relative md:left-8 top-6 hover:bg-transparent'>How to buy</Link>
             </div>

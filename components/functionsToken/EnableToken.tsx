@@ -2,14 +2,14 @@
 import React, { useState, useEffect } from 'react'
 import { useContractWrite, useAccount } from 'wagmi'
 import { AbyUsdt, contract, contractUSDT } from '@/utils/AbyContrat'
-import { parseEther } from 'viem'
 import { ButtonUI } from '@/components/ui/button'
 import Loading from '@/components/Loading'
 import { toast } from 'sonner'
 import { useDispatch } from '@/lib/redux/hooks'
 import { setWaitTransaction } from '@/lib/redux/feature/waitTransaction'
 
-const EnableToken = (): JSX.Element => {
+const EnableToken = ({ value }: { value: string }): JSX.Element => {
+  const tokeusdt = Number(value) * 10 ** 6
   const dispatch = useDispatch()
   const { address } = useAccount()
   const [Shown, setShown] = useState(false)
@@ -46,7 +46,7 @@ const EnableToken = (): JSX.Element => {
         className='uppercase rounded-full w-full'
         onClick={() => {
           writeAsync({
-            args: [contract, parseEther('0')]
+            args: [contract, tokeusdt]
           }).then(() => {
             setShown(true)
           }).catch(error => {
@@ -56,7 +56,7 @@ const EnableToken = (): JSX.Element => {
         }
         }
       >
-        Enable USDT
+        approve
       </ButtonUI>
       {isLoading && <Loading />}
     </>
