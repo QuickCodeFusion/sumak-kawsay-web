@@ -11,8 +11,8 @@ const InfonToken = (): JSX.Element => {
             <div className='flex flex-col items-center'>
             <p>Contract Address</p>
             <div className='flex items-center pb-2'>
-              <p className='font-bold truncate sm:text-xl md:w-full w-52'>{contract}</p>
-              <ButtonCopy text={contract} ><CopyIcon /></ButtonCopy>
+              <p className='font-bold truncate sm:text-xl md:w-full w-52'>{'0x248f2b2Ca86Dc1033be2Df56E5481f4f8BBE8c89'}</p>
+              <ButtonCopy text={'0x248f2b2Ca86Dc1033be2Df56E5481f4f8BBE8c89'} ><CopyIcon /></ButtonCopy>
             </div>
             </div>
             <div className='grid grid-cols-2 md:gap-16'>
