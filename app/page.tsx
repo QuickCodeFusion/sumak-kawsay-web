@@ -38,7 +38,6 @@ const BuyInfo = dynamic(async () => await import('@/components/BuyInfo'), {
 
 const Home = (): React.JSX.Element => {
   const endsale = saleEnded()
-  console.log(endsale)
   return (
         <main className='flex flex-col gap-20 pt-8 mt-10 px-8 backdrop--md justify-center items-center w-screen'>
             <section className='p-2 my-10 z-10 w-full '>
