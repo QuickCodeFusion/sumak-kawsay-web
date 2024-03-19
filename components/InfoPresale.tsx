@@ -16,7 +16,7 @@ const InfoPresale = (): JSX.Element => {
     {
       id: 1,
       title: 'Hub',
-      link: 'http://transformationalfestivals.net/'
+      link: 'https://www.transformationalfestivals.net/member/account'
     }
   ]
   return (
@@ -30,7 +30,7 @@ const InfoPresale = (): JSX.Element => {
                 {items.map((item) => {
                   return (
                     <ButtonUI className='w-48 md:w-full rounded-full border-2' key={item.id}>
-                      <Link href={item.link} target='_blank' rel='noreferrer'>
+                      <Link href={item.link} rel='noreferrer'>
                         {item.title}
                       </Link>
                     </ButtonUI>
