@@ -20,7 +20,7 @@ export const Fractional = (): JSX.Element => {
                             Step into the
                             future with VR
                             tours of our
-                            Bio-Towns.
+                            Bio-Habitats.
                             Experience the
                             serene landscapes,
                             innovative living
