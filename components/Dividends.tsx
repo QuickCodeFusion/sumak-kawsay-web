@@ -45,7 +45,7 @@ export const Dividends = (): JSX.Element => {
                     <p className='text-xl font-medium'>Heritage Tier:</p>
                     The highest level, rewarding
                     our most committed members,
-                    symbolizing a significant ontribution to
+                    symbolizing a significant contribution to
                     our vision and goals. This tier is
                     for those aiming to create a
                     meaningful, lasting impact, ensuring a

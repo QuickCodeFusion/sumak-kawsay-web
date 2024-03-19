@@ -41,7 +41,7 @@ export const Roadmap = (): React.JSX.Element => {
 
     <Element name='roadMap' className='p-4 py-20 text-center flex flex-col justify-center items-center'>
       <h1 className='text-3xl font-bold'>Journey Through Time: Our Roadmap</h1>
-      <p className='my-4 text-lg'>Explore the milestones that mark our shared path towards transformation.</p>
+      <p className='my-4 text-lg'>Explore the milestones that mark our shared path towards transformation</p>
          <Card className='mx-2 md:w-2/3 pr-6 text-start bg-background/50 border shadow-sm'>
       <Timeline>
         {timelineItems.map((item, index) => (

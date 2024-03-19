@@ -53,7 +53,7 @@ const BuyInfo = (): JSX.Element => {
                       <ValidateUsdt setIsOpen={setIsOpen}/>
                     </Modal>
                     <ButtonModal/>
-                    <Link href={'https://drive.google.com/file/d/1PM34K3C7CxWwlcj7drY_vhovFv324CoD/view?usp=sharing'} className='w-fit self-end text-azure-radiance-500 bg-transparent underline col-start-2 relative md:left-8 top-6 hover:bg-transparent'>How to buy</Link>
+                    <Link target='_blank' href={'https://drive.google.com/file/d/1PM34K3C7CxWwlcj7drY_vhovFv324CoD/view?usp=sharing'} className='w-fit self-end text-azure-radiance-500 bg-transparent underline col-start-2 relative md:left-8 top-6 hover:bg-transparent'>How to buy</Link>
             </div>
         </div>
   )
