@@ -12,7 +12,7 @@ export const InfoCard = (): JSX.Element => {
   return (
     <Element name='Ecosystem' className='w-full md:mt-48 pt-12 gap-10 flex flex-col justify-center items-center'>
         <h2 className='text-3xl text-center font-semibold z-10'> What Is The Sumak Kawsay <em className='bg-gradient-to-r from-azure-radiance-600 to-white text-transparent bg-clip-text'>Ecosystem</em>?</h2>
-        <p className='w-10/12 text-center text-xl mx-auto pb-5'>The Sumak Kawsay Ecosystem&apos;s an innovative fusion of technology, ecology, and
+        <p className='w-10/12 text-center text-xl mx-auto pb-5'>The Sumak Kawsay Ecosystem is an innovative fusion of technology, ecology, and
           community, providing a forward-thinking solution for contemporary challenges.
         </p>
       <CardList >
