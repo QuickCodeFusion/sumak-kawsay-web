@@ -6,14 +6,14 @@ import Image from 'next/image'
 export const Tokenomics = (): JSX.Element => {
   const items = [
     {
-      label: 'Official Presale: Available for three months on Unifying.Earth, aimed at initial ecosystem scaling.',
+      label: ' Official Presale: Available for three months at Unifying.Earth, aimed at initial ecosystem scaling.',
       value: '30%',
       color: 'bg-teal-400',
       border: 'border-teal-400'
     },
     {
-      label: '12 Moons Presale: Locked over twelve months, providing opportunities for late investors to join at a favorable rate.',
-      value: '20%',
+      label: ' CEX & DEX: Intended to guarantee liquidity in centralized and decentralized exchanges.',
+      value: '30%',
       color: 'bg-cyan-600',
       border: 'border-cyan-600'
     },
@@ -27,28 +27,16 @@ export const Tokenomics = (): JSX.Element => {
       border: 'border-sky-600'
     },
     {
-      label: 'Community Incentives',
+      label: 'Community Incentives & Airdrops: Token reserve intended to reward community members for various actions that contribute to the growth and success of the project.',
       value: '5%',
       color: 'bg-blue-800',
       border: 'border-blue-800'
     },
     {
       label: 'Foundation NGO',
-      value: '4%',
+      value: '5%',
       color: 'bg-purple-900',
       border: 'border-purple-900'
-    },
-    {
-      label: 'Treasury',
-      value: '5%',
-      color: 'bg-fuchsia-900',
-      border: 'border-fuchsia-900'
-    },
-    {
-      label: 'Airdrops',
-      value: '1%',
-      color: 'bg-pink-600',
-      border: 'border-pink-600'
     }
   ]
   return (
