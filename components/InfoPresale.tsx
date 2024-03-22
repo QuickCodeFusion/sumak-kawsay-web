@@ -37,7 +37,7 @@ const InfoPresale = (): JSX.Element => {
                   )
                 })}
               </span>
-              <p className='underline'>Audited & KYC | 100% secure and verified</p>
+              <Link href='https://www.dx.app/dxlock/view/token-locker?address=0x7f9c87a16ce7d357b958a69ded86bfe18a0804db&chain=137' target='_blank' className='underline'>Audited & KYC | 100% secure and verified</Link>
           </div>
   )
 }
