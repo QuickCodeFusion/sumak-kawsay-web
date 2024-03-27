@@ -1,3 +1,4 @@
+import { LanguageProvider } from './languageProvider'
 import RainbowKitApp from './rainbowKitApp'
 import ReduxProvider from './reduxProvider'
 import { Toaster } from '@/components/ui/sonner'
@@ -6,8 +7,10 @@ export const Providers = ({ children }: { children: React.ReactNode }): React.JS
   return (
         <RainbowKitApp>
             <ReduxProvider>
-            <Toaster position="top-center"/>
-            {children}
+              <LanguageProvider>
+                <Toaster position="top-center"/>
+                {children}
+              </LanguageProvider>
             </ReduxProvider>
         </RainbowKitApp>
   )
