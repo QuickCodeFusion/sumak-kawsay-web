@@ -1,22 +1,49 @@
 import { Element } from 'react-scroll'
 import CardTeamWork from './CardTeamWork'
+import { useLanguage } from '@/app/languageProvider'
 
 const CardTeamWorkList = (): React.JSX.Element => {
-  const team =
+  const team: {
+    name: Record<string, string>
+    role: string
+    img: string
+    description: Record<string, string>
+  } =
     {
-      name: 'Meet the Team Behind the ICO',
+      name: {
+        en: 'Meet the Team Behind the ICO',
+        es: 'Conoce al Equipo Detrás de la ICO',
+        pt: 'Conheça a Equipe por Trás da ICO'
+      },
       role: '',
       img: '/logo.png',
-      description: 'The NGO Hummingbirds, Guardians of the Earth, is the driving force behind the Sumak Kawsay Ecosystem, The non profit organization is registered in the Sierra Nevada de Santa Marta in Colombia, a UNESCO-recognized biosphere reserve and the ancestral home of the Tayrona people. This inspiring region, known as the Heart of the World, forms the foundation of our commitment to serve as humanity\'s blueprint for a sustainable furture, promoting a balance between nature and culture. Our work in biodiversity, food sovereignty, and sustainable land management is a living testament to this profound legacy.'
+      description: {
+        en: 'The NGO Hummingbirds, Guardians of the Earth, is the driving force behind the Sumak Kawsay Ecosystem.',
+        es: 'La ONG Colibríes, Guardianes de la Tierra, es la fuerza impulsora detrás del Ecosistema Sumak Kawsay.',
+        pt: 'A ONG Beija-flores, Guardiães da Terra, é a força motriz por trás do Ecossistema Sumak Kawsay.'
+      }
     }
+
+  const { language } = useLanguage()
+
+  const title: Record<string, string> = {
+    en: 'Our Team',
+    es: 'Nuestro equipo',
+    pt: 'Nossa equipe'
+  }
 
   return (
     <Element name="teamWork" className="w-full ">
       <div className="flex flex-col gap-10 justify-center items-center text-center">
-          <h1 className="text-3xl font-bold">Our Team</h1>
+          <h1 className="text-3xl font-bold">{title[language]}</h1>
           <div className="flex items-center justify-center">
             <div className="md:w-4/5">
-              <CardTeamWork user={team} />
+              <CardTeamWork user={{
+                name: team.name[language],
+                role: team.role,
+                img: team.img,
+                description: team.description[language]
+              }} />
             </div>
           </div>
         </div>
