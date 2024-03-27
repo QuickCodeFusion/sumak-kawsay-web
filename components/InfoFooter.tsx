@@ -20,7 +20,7 @@ const InfoFooter = (): JSX.Element => {
     3: {
       en: 'Legal Compliance',
       es: 'Cumplimiento Legal',
-      pt: 'Cumprimento Legal'
+      pt: 'Conformidade Legal'
     },
     4: {
       en: 'Privacy policy',
