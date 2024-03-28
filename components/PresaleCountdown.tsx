@@ -2,9 +2,11 @@
 import { useContractRead } from 'wagmi'
 import { AbyContractAddress, contract } from '@/utils/AbyContrat'
 import { Timer } from './ui/timer'
+import { useLanguage } from '@/app/languageProvider'
 // import { useEffect, useState } from 'react'
 
 const PresaleCountdown = (): React.JSX.Element => {
+  const { language } = useLanguage()
   // const [timer, setTimer] = useState(false)
   const { data } = useContractRead({
     address: contract,
@@ -13,6 +15,14 @@ const PresaleCountdown = (): React.JSX.Element => {
   })
   const time = Number(data)
   console.log(time)
+
+  const text: Record<number, Record<string, string>> = {
+    1: {
+      en: 'Countdown to next round',
+      es: 'Siguiente ronda',
+      pt: 'Próxima rodada'
+    }
+  }
   /* useEffect(() => {
     if (timer) {
       setTimer(false)
@@ -32,7 +42,7 @@ const PresaleCountdown = (): React.JSX.Element => {
 
   return (
         <div className='flex flex-col text-center justify-center items-center my-5'>
-            <h5 className='text-xl uppercase font-semibold'>countdown to next round</h5>
+            <h5 className='text-xl uppercase font-semibold'>{text[1][language]}</h5>
             <Timer time={time} size={'lg'} />
         </div>
   )
