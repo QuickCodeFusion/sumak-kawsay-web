@@ -1,8 +1,14 @@
 'use client'
-import { createContext, useContext, useState } from 'react'
+import { createContext, useContext, useEffect, useState } from 'react'
 
 export const LanguageProvider = ({ children }: { children: React.ReactNode }): React.JSX.Element => {
   const [language, setLanguage] = useState('en')
+
+  useEffect(() => {
+    if (window) {
+      setLanguage(window.navigator.language)
+    }
+  }, [])
 
   return (
         <LanguageContext.Provider value={{ language, setLanguage }}>
