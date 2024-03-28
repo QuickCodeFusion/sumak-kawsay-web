@@ -14,31 +14,56 @@ import { ButtonUI } from './ui/button'
 import { ModeToggle } from './ToggleTheme'
 import { ToggleOwner } from './ToggleOwner'
 import LanguageButton from './LanguageButton'
+import { useLanguage } from '@/app/languageProvider'
 
-const items = [
+const items: Array<{
+  id: number
+  title: Record<string, string>
+  url: string
+}> = [
   {
     id: 0,
-    title: 'Ecosystem',
+    title: {
+      en: 'Ecosystem',
+      es: 'Ecosistema',
+      pt: 'Ecossistema'
+    },
     url: 'Ecosystem'
   },
   {
     id: 1,
-    title: 'Tokenomics',
+    title: {
+      en: 'Tokenomics',
+      es: 'Tokenomics',
+      pt: 'Tokenomics'
+    },
     url: 'tokenomics'
   },
   {
     id: 2,
-    title: 'Roadmap',
+    title: {
+      en: 'Tokenomics',
+      es: 'Hoja de ruta',
+      pt: 'Roteiro'
+    },
     url: 'roadMap'
   },
   {
     id: 3,
-    title: 'Team',
+    title: {
+      en: 'Team',
+      es: 'Equipo',
+      pt: 'Equipe'
+    },
     url: 'teamWork'
   },
   {
     id: 4,
-    title: 'FAQ',
+    title: {
+      en: 'FAQ',
+      es: 'FAQ',
+      pt: 'FAQ'
+    },
     url: 'faq'
   }
 ]
@@ -50,9 +75,12 @@ const shouldRenderComponents = currentDate < stopRenderingDate
 
 const Navbar = (): React.JSX.Element => {
   const { waitTransaction } = useSelector(state => state.waitTransaction)
+
   const { status } = useWaitForTransaction({
     hash: waitTransaction
   })
+
+  const { language } = useLanguage()
 
   useEffect(() => {
     if (status === 'success') {
@@ -76,7 +104,7 @@ const Navbar = (): React.JSX.Element => {
                     items.map((item) => (
                       <ScrollLink activeClass='active' to={item.url} spy smooth={true} duration={600} key={item.id}>
                         <ButtonUI className='bg-transparent hover:bg-background rounded-3xl text-foreground'>
-                          {item.title}
+                          {item.title[language]}
                         </ButtonUI>
                       </ScrollLink>
                     ))
@@ -88,7 +116,7 @@ const Navbar = (): React.JSX.Element => {
                   <ToggleOwner/>
                   <ModeToggle/>
                   { shouldRenderComponents &&
-                    <ConnectButton label='Connect wallet' accountStatus={{
+                    <ConnectButton label={language === 'es' ? 'Conectar billetera' : language === 'en' ? 'Connect wallet' : 'Conectar carteira' } accountStatus={{
                       smallScreen: 'avatar',
                       largeScreen: 'full'
                     }} showBalance={{ smallScreen: true, largeScreen: true }}></ConnectButton>
