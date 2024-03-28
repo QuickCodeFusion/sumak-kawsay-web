@@ -2,14 +2,9 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { ButtonUI } from './ui/button'
 import Image from 'next/image'
 import { useLanguage } from '@/app/languageProvider'
-import { useEffect } from 'react'
 
 const LanguageButton = (): React.JSX.Element => {
   const { language, setLanguage } = useLanguage()
-
-  useEffect(() => {
-    console.log(language)
-  }, [language])
 
   return (
     <DropdownMenu>

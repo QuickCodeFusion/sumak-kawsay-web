@@ -6,7 +6,8 @@ export const LanguageProvider = ({ children }: { children: React.ReactNode }): R
 
   useEffect(() => {
     if (window) {
-      setLanguage(window.navigator.language)
+      const lang = window.navigator.language
+      setLanguage(lang.split('-')[0])
     }
   }, [])
 
