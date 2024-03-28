@@ -13,6 +13,7 @@ import { Link as ScrollLink } from 'react-scroll'
 import { ButtonUI } from './ui/button'
 import { ModeToggle } from './ToggleTheme'
 import { ToggleOwner } from './ToggleOwner'
+import LanguageButton from './LanguageButton'
 
 const items = [
   {
@@ -83,13 +84,15 @@ const Navbar = (): React.JSX.Element => {
                 </div>
                 </NavigationMenuList>
                 <NavigationMenuList className='flex justify-end gap-2 py-4 px-4'>
+                  <LanguageButton/>
                   <ToggleOwner/>
                   <ModeToggle/>
-                { shouldRenderComponents &&
+                  { shouldRenderComponents &&
                     <ConnectButton label='Connect wallet' accountStatus={{
                       smallScreen: 'avatar',
                       largeScreen: 'full'
-                    }} showBalance={{ smallScreen: true, largeScreen: true }}></ConnectButton>}
+                    }} showBalance={{ smallScreen: true, largeScreen: true }}></ConnectButton>
+                  }
                 </NavigationMenuList>
             </NavigationMenuList>
         </NavigationMenu>
