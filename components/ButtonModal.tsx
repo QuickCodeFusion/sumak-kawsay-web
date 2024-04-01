@@ -36,9 +36,9 @@ export const ButtonModal = (): React.JSX.Element => {
       pt: 'seja um investidor'
     },
     3: {
-      en: 'balance:',
-      es: 'balance:',
-      pt: 'saldo:'
+      en: 'balance',
+      es: 'balance',
+      pt: 'saldo'
     },
     4: {
       en: 'USDT payment',
@@ -51,9 +51,9 @@ export const ButtonModal = (): React.JSX.Element => {
       pt: 'UNITY a receber'
     },
     6: {
-      en: 'price:',
-      es: 'precio:',
-      pt: 'preço:'
+      en: 'Price:',
+      es: 'Precio:',
+      pt: 'Preço:'
     },
     7: {
       en: 'Total Amount:',
