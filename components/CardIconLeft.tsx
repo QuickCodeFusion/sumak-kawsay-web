@@ -1,7 +1,17 @@
 import Image from 'next/image'
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
 
-export const CardIconLeft = ({ item }: { item: { title: string, description: string, icon: any } }): JSX.Element => {
+interface Item {
+  title: string
+  description: string
+  icon: string
+}
+
+interface ItemProps {
+  item: Item
+}
+
+export const CardIconLeft = ({ item }: ItemProps): JSX.Element => {
   return (
         <Card className='w-80 bg-background/50 rounded-3xl border shadow-sm flex flex-col '>
           <CardHeader className='flex flex-row gap-5 items-center'>
