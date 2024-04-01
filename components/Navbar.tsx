@@ -68,11 +68,6 @@ const items: Array<{
   }
 ]
 
-const currentDate = new Date()
-const stopRenderingDate = new Date('2024-04-01')
-
-const shouldRenderComponents = currentDate < stopRenderingDate
-
 const Navbar = (): React.JSX.Element => {
   const { waitTransaction } = useSelector(state => state.waitTransaction)
 
@@ -115,12 +110,10 @@ const Navbar = (): React.JSX.Element => {
                   <LanguageButton/>
                   <ToggleOwner/>
                   <ModeToggle/>
-                  { shouldRenderComponents &&
                     <ConnectButton label={language === 'es' ? 'Conectar billetera' : language === 'en' ? 'Connect wallet' : 'Conectar carteira' } accountStatus={{
                       smallScreen: 'avatar',
                       largeScreen: 'full'
                     }} showBalance={{ smallScreen: true, largeScreen: true }}></ConnectButton>
-                  }
                 </NavigationMenuList>
             </NavigationMenuList>
         </NavigationMenu>
