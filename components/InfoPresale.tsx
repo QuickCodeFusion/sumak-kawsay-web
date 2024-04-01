@@ -45,8 +45,8 @@ const InfoPresale = (): JSX.Element => {
     },
     2: {
       en: 'Experience a new era of community-driven wealth, where every participant has the power to shape the future.',
-      es: 'Experimenta una nueva era de riqueza impulsada por la comunidad',
-      pt: 'Experimente uma nova era de riqueza impulsionada pela comunidade'
+      es: 'Experimenta una nueva era de riqueza impulsada por la comunidad, donde cada participante tiene el poder de dar forma al futuro',
+      pt: 'Experimente uma nova era de riqueza impulsionada pela comunidade, onde cada participante tem o poder de moldar o futuro.'
     },
     3: {
       en: 'Audited & KYC | 100% secure and verified',
