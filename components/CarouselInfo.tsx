@@ -8,18 +8,29 @@ import {
   CarouselPrevious
 } from '@/components/ui/carousel'
 
-const CarouselInfo = ({ Item }: { Item: any }): JSX.Element => {
+interface Item {
+  id: number
+  title: string
+  description: string
+  icon: string
+}
+
+interface CarouselInfoProps {
+  items: Item[]
+}
+
+const CarouselInfo = ({ items }: CarouselInfoProps): JSX.Element => {
   return (
   <Carousel className="container  md:w-10/12 lg:w-1/2 ">
       <CarouselContent>
-        {Item.map((Item: any) => (
-        <CarouselItem className='rounded-3xl' key={Item.id}>
+        {items.map((item: Item) => (
+        <CarouselItem className='rounded-3xl' key={item.id}>
               <Card className="h-full bg-background/50 border rounded-3xl shadow-sm backdrop-filter backdrop-blur-lg">
                   <CardHeader className='flex flex-col items-center' >
-                  <Image className=' my-4 ring-offset-2 rounded-full' src={Item.icon} alt={Item.title} width={100} height={100}></Image>
-                  <CardTitle className='text-center'>{Item.title}</CardTitle>
+                  <Image className=' my-4 ring-offset-2 rounded-full' src={item.icon} alt={item.title} width={100} height={100}></Image>
+                  <CardTitle className='text-center'>{item.title}</CardTitle>
                   </CardHeader>
-                  <CardContent className='w-full text-center text-sm md:text-xl'>{Item.description}</CardContent>
+                  <CardContent className='w-full text-center text-sm md:text-xl'>{item.description}</CardContent>
               </Card>
         </CarouselItem>
         ))}
