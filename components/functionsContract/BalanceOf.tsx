@@ -4,6 +4,7 @@ import { useContractRead, useAccount } from 'wagmi'
 import { useEffect } from 'react'
 import { setContract } from '@/lib/redux/feature/contractSlice'
 import { useDispatch } from '@/lib/redux/hooks'
+import { useLanguage } from '@/app/languageProvider'
 
 interface BalanceOfProps {
   setBalanceOf?: (balance: number) => void
@@ -13,6 +14,7 @@ interface BalanceOfProps {
 
 const BalanceOf = ({ setBalanceOf, balance, isDisconnected }: BalanceOfProps): JSX.Element => {
   const dispatch = useDispatch()
+  const { language } = useLanguage()
   const { address } = useAccount()
   const { data, isLoading } = useContractRead({
     address: contract,
@@ -20,6 +22,14 @@ const BalanceOf = ({ setBalanceOf, balance, isDisconnected }: BalanceOfProps): J
     functionName: 'balanceOf',
     args: [address]
   })
+
+  const text: Record<number, Record<string, string>> = {
+    1: {
+      en: 'Connect your wallet',
+      es: 'Conecta tu billetera',
+      pt: 'Conecte sua carteira'
+    }
+  }
 
   useEffect(() => {
     if (typeof data?.toString() === 'string' && setBalanceOf !== undefined) {
@@ -34,7 +44,7 @@ const BalanceOf = ({ setBalanceOf, balance, isDisconnected }: BalanceOfProps): J
       {isLoading
         ? 'Loading...'
         : isDisconnected
-          ? 'Connect your wallet'
+          ? `${text[1][language]}`
           : `${balance} UNITY`}
     </div>
   )

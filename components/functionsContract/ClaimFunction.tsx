@@ -4,8 +4,10 @@ import { AbyContractAddress, contract } from '@/utils/AbyContrat'
 import { ButtonUI } from '@/components/ui/button'
 import { toast } from 'sonner'
 import { useEffect } from 'react'
+import { useLanguage } from '@/app/languageProvider'
 const ClaimTokens = ({ boolean }: { boolean: boolean }): JSX.Element => {
   const { address } = useAccount()
+  const { language } = useLanguage()
   const { write, data } = useContractWrite({
     address: contract,
     abi: AbyContractAddress,
@@ -25,6 +27,14 @@ const ClaimTokens = ({ boolean }: { boolean: boolean }): JSX.Element => {
     }
   }, [status])
 
+  const text: Record<number, Record<string, string>> = {
+    1: {
+      en: 'Claim',
+      es: 'Reclamar',
+      pt: 'Reivindicar'
+    }
+  }
+
   return (
       <div className='flex flex-row items-start p-3  w-full'>
         <ButtonUI
@@ -36,7 +46,7 @@ const ClaimTokens = ({ boolean }: { boolean: boolean }): JSX.Element => {
           }
           }
         >
-          Claim
+          {text[1][language]}
         </ButtonUI>
       </div>
   )
