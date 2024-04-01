@@ -1,6 +1,7 @@
+import { useLanguage } from '@/app/languageProvider'
 import Image from 'next/image'
 
-const text = {
+const text: Record<number, Record<string, string>> = {
   1: {
     en: 'Dividends and Staking: A Path to Universal Income',
     es: 'Dividendos y Staking: Un Camino hacia el Ingreso Universal',
@@ -48,41 +49,27 @@ const text = {
   }
 }
 export const Dividends = (): JSX.Element => {
+  const { language } = useLanguage()
+
   return (
         <div className='my-20'>
-            <h3 className="text-3xl text-center mb-4 font-semibold">Dividends and Staking: A Path to Universal Income</h3>
-            <p className="w-10/12 mx-auto text-center mb-4 text-xl">Experience the joy of giving and receiving. Engage with our ecosystem, stake your
-                tokens, and earn dividends.
+            <h3 className="text-3xl text-center mb-4 font-semibold">{text[1][language]}</h3>
+            <p className="w-10/12 mx-auto text-center mb-4 text-xl">
+                {text[2][language]}
             </p>
-            <p className="text-center font-semibold text-2xl mb-5 pt-3">Empowerment Tiers of Engagement</p>
+            <p className="text-center font-semibold text-2xl mb-5 pt-3">{text[3][language]}</p>
             <div className='md:flex items-center justify-center flex-col md:w-3/4 m-auto gap-10'>
                 <div className="flex items-center justify-center gap-5 flex-wrap flex-col lg:flex-row">
                     <Image src="/level1.png" alt="unity" width={250} height={250}/>
                     <div className="lg:w-1/2 ">
-                        <p className='text-xl font-medium'>Unity Tier:</p>
-                        This is yours tarting point
-                        within the Sumak Kawsay collective,
-                        offering an introduction to
-                        our values and initial dividends.
-                        It represents the foundational
-                        step towards inclusivity and
-                        shared purpose, aligning with our
-                        ethos and community spirit
-
+                        <p className='text-xl font-medium'>{text[4][language]}</p>
+                        {text[5][language]}
                     </div>
                 </div>
                 <div className="flex items-center justify-center gap-5 flex-wrap flex-col-reverse lg:flex-row">
                     <div className="lg:w-1/2">
-                    <p className='text-xl font-medium'>Growth Tier:</p>
-                    For members increasing their
-                    involvement, this tier provides
-                    greater dividends and signifies a
-                    deeper commitment to our collective
-                    future. It represents a middle ground
-                    for those actively contributing to
-                    and engaging with our ecosystem&apos;s
-                    expansion.
-
+                    <p className='text-xl font-medium'>{text[6][language]}</p>
+                    {text[7][language]}
                     </div>
                     <Image src="/level2.png" alt="unity" width={250} height={250}/>
                 </div>
@@ -90,17 +77,9 @@ export const Dividends = (): JSX.Element => {
                     <Image src="/level3.png" alt="unity" width={150} height={150}/>
                     <div className="lg:w-1/2">
                     <div>
-                    <p className='text-xl font-medium'>Heritage Tier:</p>
-                    The highest level, rewarding
-                    our most committed members,
-                    symbolizing a significant contribution to
-                    our vision and goals. This tier is
-                    for those aiming to create a
-                    meaningful, lasting impact, ensuring a
-                    legacy of prosperity, sustainability,
-                    and community well-being.
+                    <p className='text-xl font-medium'>{text[8][language]}</p>
+                    {text[9][language]}
                 </div>
-
                     </div>
                 </div>
             </div>
