@@ -30,7 +30,7 @@ const InfoPresale = (): JSX.Element => {
       id: 1,
       title: {
         en: 'Hub',
-        es: 'Centro',
+        es: 'Hub',
         pt: 'Hub'
       },
       link: 'https://www.transformationalfestivals.net/member/account'
