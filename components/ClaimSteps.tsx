@@ -51,7 +51,7 @@ const ClaimSteps = (): JSX.Element => {
     }
   }
   return (
-    <div className="flex flex-col backdrop-blur justify-self-center bg-background/80 border border-vivid-violet-600 shadow-sm shadow-vivid-violet-800 rounded-3xl lg:w-3/4 w-full">
+    <div className="flex flex-col backdrop-blur justify-self-center bg-background/80 border shadow-sm rounded-3xl lg:w-3/4 w-full">
         <div className="h-16 flex items-center justify-center align-top rounded-3xl rounded-b-none w-full bg-azure-radiance-600 place-items-center">
           <p className="text-xl sm:text-2xl font-bold">{text[1][language]}</p>
         </div>
