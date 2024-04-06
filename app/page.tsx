@@ -40,7 +40,7 @@ const Home = (): React.JSX.Element => {
   const endsale = saleEnded()
   return (
         <main className='flex flex-col gap-20 pt-8 mt-10 px-8 justify-center items-center w-screen'>
-            <section className='p-2 my-10 z-10 w-full '>
+            <section className='p-2 my-10 z-10 w-full'>
                   <div className='flex xl:grid grid-cols-3 flex-col place-items-start items-center gap-4 w-full'>
                       <InfoPresale/>
                       {endsale && <ClaimSteps/>}
