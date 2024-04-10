@@ -13,7 +13,7 @@ interface ItemProps {
 
 export const CardIconLeft = ({ item }: ItemProps): JSX.Element => {
   return (
-        <Card className='w-80 bg-background rounded-3xl border shadow-sm flex flex-col '>
+        <Card className='w-80 rounded-3xl border shadow-sm flex flex-col '>
           <CardHeader className='flex flex-row gap-5 items-center'>
             <Image className=' rounded-full' src={item.icon} alt={item.title} width={70} height={70}></Image>
             <CardTitle className='font-normal text-lg'>{item.title}</CardTitle>

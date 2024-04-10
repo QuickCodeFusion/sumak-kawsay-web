@@ -170,7 +170,7 @@ const InfoContent = (): React.JSX.Element => {
   return (
     <Element name='faq' className='w-full flex md:flex-col items-center py-20 flex-wrap justify-center'>
       <h1 className='text-3xl font-bold text-center mb-5'>{text[1][language]}</h1>
-      <Card className='z-10 w-10/12 bg-background/50 border shadow-sm backdrop-filter backdrop-blur-lg'>
+      <Card className='z-10 w-10/12 border shadow-sm backdrop-filter backdrop-blur-lg'>
         <Accordion type="single" collapsible className="p-4">
           {Item.map((item, index) => (
             <AccordionItem key={index} value={item.id}>
