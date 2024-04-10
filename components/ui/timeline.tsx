@@ -41,7 +41,7 @@ interface TimelineTitleProps {
   className?: string
 }
 
-const TimelineTitle: React.FC<TimelineTitleProps> = ({ children, className }) => <h3 className={cn('flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white', className)}>{children}</h3>
+const TimelineTitle: React.FC<TimelineTitleProps> = ({ children, className }) => <h3 className={cn('flex items-center mb-1 text-lg font-semibold text-secondary-foreground', className)}>{children}</h3>
 TimelineTitle.displayName = 'TimelineTitle'
 
 interface TimelineDateProps {
@@ -49,7 +49,7 @@ interface TimelineDateProps {
   className?: string
 }
 
-const TimelineDate: React.FC<TimelineDateProps> = ({ children, className }) => <time className={cn('text-sm font-normal leading-none text-gray-400 dark:text-gray-500', className)}>{children}</time>
+const TimelineDate: React.FC<TimelineDateProps> = ({ children, className }) => <time className={cn('text-sm font-normal leading-none text-muted-foreground', className)}>{children}</time>
 TimelineDate.displayName = 'TimelineDate'
 
 interface TimelineProps {
