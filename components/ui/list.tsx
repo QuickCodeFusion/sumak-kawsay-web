@@ -17,7 +17,7 @@ ListCard.displayName = 'ListCard'
 
 const ListItem = React.forwardRef<HTMLLIElement, React.HTMLAttributes<HTMLLIElement>>(
   ({ className, ...props }, ref) => (
-    <li ref={ref} className={cn('border-b-2 flex justify-between w-full', className)} {...props} />
+    <li ref={ref} className={cn('border-b-2 border-border-secondary flex justify-between w-full', className)} {...props} />
   )
 )
 ListItem.displayName = 'ListItem'
