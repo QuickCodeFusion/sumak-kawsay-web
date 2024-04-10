@@ -30,7 +30,7 @@ const RootLayout = ({
         cn(
           'min-h-screen',
           poppins.className,
-          ' dark:bg-[url(/estrellas.jpg)] bg-cover bg-no-repeat bg-center bg-fixed',
+          'bg-cover bg-no-repeat bg-center bg-fixed',
           'h-screen flex'
         )
       }>
