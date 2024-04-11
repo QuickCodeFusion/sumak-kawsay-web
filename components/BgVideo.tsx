@@ -6,7 +6,7 @@ const BgVideo = (): JSX.Element => {
             loop
             muted
             playsInline
-            className="inset-0 h-full w-full object-center object-cover scale-150 lg:h-[120hv]  "
+            className="inset-0 h-full w-full object-center object-cover scale-150 lg:h-[120hv] hidden md:block"
         >
             <source src="/bgVideo.mp4" />
             Tu navegador no admite la reproducción de videos.
