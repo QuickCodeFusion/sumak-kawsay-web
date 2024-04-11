@@ -16,6 +16,7 @@ import { Dividends } from '@/components/Dividends'
 import { Fractional } from '@/components/Fractional'
 import { Marketplace } from '@/components/Marketplace'
 import { saleEnded } from '@/utils/endSale'
+import { Separator } from '@/components/ui/separator'
 
 // import PresaleCountdown from '@/components/PresaleCountdown'
 // import InfoPhase from '@/components/functionsContract/InfoPhase'
@@ -55,13 +56,21 @@ const Home = (): React.JSX.Element => {
             <InfoCard/>
             <ItemCarousel/>
             {/* <Ecosystem/> */}
+            <Separator/>
             <Passport/>
+            <Separator/>
             <Dividends/>
+            <Separator/>
             <Fractional/>
+            <Separator/>
             <Marketplace/>
+            <Separator/>
             <Tokenomics/>
+            <Separator/>
             <Roadmap/>
+            <Separator/>
             <CardTeamWorkList />
+            <Separator/>
             <InfoContent/>
         </main>
   )
