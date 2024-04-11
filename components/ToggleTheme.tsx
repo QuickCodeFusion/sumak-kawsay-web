@@ -11,9 +11,11 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger
 } from '@/components/ui/dropdown-menu'
+import { useLanguage } from '@/app/languageProvider'
 
 export const ModeToggle = (): React.JSX.Element => {
   const { setTheme } = useTheme()
+  const { language } = useLanguage()
 
   return (
     <DropdownMenu>
@@ -26,10 +28,10 @@ export const ModeToggle = (): React.JSX.Element => {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuItem onClick={() => { setTheme('light') }}>
-          Light
+          {language === 'es' ? 'Modo Claro' : language === 'pt' ? 'Modo Claro' : 'Light Mode'}
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => { setTheme('dark') }}>
-          Dark
+          {language === 'es' ? 'Modo Oscuro' : language === 'pt' ? 'Modo Oscuro' : 'Dark Mode'}
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
