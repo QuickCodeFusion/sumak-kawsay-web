@@ -40,8 +40,8 @@ const InfoPresale = (): JSX.Element => {
   const text: Record<number, Record<string, string>> = {
     1: {
       en: 'The Ultimate Living and Virtual Ecosystem',
-      es: 'El Ecosistema virtual y viviente definitivo',
-      pt: 'O Ecosistema virtual e vivente definitivo'
+      es: 'El Ecosistema virtual y vivo definitivo',
+      pt: 'O Ecosistema virtual e vivo definitivo'
     },
     2: {
       en: 'Experience a new era of community-driven wealth, where every participant has the power to shape the future.',
@@ -67,8 +67,8 @@ const InfoPresale = (): JSX.Element => {
               <span className='w-full grid grid-cols-1 place-items-center sm:grid-cols-3 gap-1 md:gap-4 md:max-w-[400px] justify-center items-center'>
                 {items.map((item) => {
                   return (
-                    <ButtonUI className='w-48 md:w-full rounded-full border-2 border-border-secondary' key={item.id}>
-                      <Link href={item.link} rel='noreferrer'>
+                    <ButtonUI className='w-48 md:w-full rounded-full border-2 border-none' key={item.id}>
+                      <Link href={item.link} rel='noreferrer' target='_blank'>
                         {item.title[language]}
                       </Link>
                     </ButtonUI>

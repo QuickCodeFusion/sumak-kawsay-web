@@ -25,7 +25,7 @@ const CarouselInfo = ({ items }: CarouselInfoProps): JSX.Element => {
       <CarouselContent>
         {items.map((item: Item) => (
         <CarouselItem className='rounded-3xl' key={item.id}>
-              <Card className="h-full border rounded-3xl shadow-sm backdrop-filter backdrop-blur-lg">
+              <Card className="h-full border border-transparent rounded-3xl shadow-sm backdrop-filter backdrop-blur-lg">
                   <CardHeader className='flex flex-col items-center' >
                   <Image className=' my-4 ring-offset-2 rounded-full' src={item.icon} alt={item.title} width={100} height={100}></Image>
                   <CardTitle className='text-center'>{item.title}</CardTitle>

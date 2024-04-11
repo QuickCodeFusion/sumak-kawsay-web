@@ -56,21 +56,13 @@ const Home = (): React.JSX.Element => {
             <InfoCard/>
             <ItemCarousel/>
             {/* <Ecosystem/> */}
-            <Separator/>
             <Passport/>
-            <Separator/>
             <Dividends/>
-            <Separator/>
             <Fractional/>
-            <Separator/>
             <Marketplace/>
-            <Separator/>
             <Tokenomics/>
-            <Separator/>
             <Roadmap/>
-            <Separator/>
             <CardTeamWorkList />
-            <Separator/>
             <InfoContent/>
         </main>
   )

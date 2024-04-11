@@ -5,10 +5,10 @@
 
 @layer base {
   :root {
-    --background-color: 0 0% 100%;
+    --background-color: 45 20% 90%;
     --background: 0 0% 100%;
     --foreground:  0, 100%, 0%;
-    --card: 30, 90%, 35%, 30%;
+    --card: 0, 0%, 80%, 20%;
     --card-foreground: 0, 100%, 0%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 100% 0%;
@@ -34,7 +34,7 @@
     --background-color: 240 50% 3.9%;
     --background: 240 50% 3.9%;
     --foreground: 0 0% 98%;
-    --card: 200, 50%, 5%, 50%;
+    --card: 240, 50%, 30.9%, 10%;
     --card-foreground: 0 0% 98%;
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
@@ -48,7 +48,7 @@
     --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 6 50% 40%;
+    --border: 217.89 64.88% 40.2%;
     --border-secondary: 217.89 64.88% 40.2%;
     --input: 240 3.7% 15.9%;
     --ring: 240 4.9% 83.9%;
