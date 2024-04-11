@@ -67,7 +67,7 @@ const InfoPresale = (): JSX.Element => {
               <span className='w-full grid grid-cols-1 place-items-center sm:grid-cols-3 gap-1 md:gap-4 md:max-w-[400px] justify-center items-center'>
                 {items.map((item) => {
                   return (
-                    <ButtonUI className='w-48 md:w-full rounded-full border-2' key={item.id}>
+                    <ButtonUI className='w-48 md:w-full rounded-full border-2 border-border-secondary' key={item.id}>
                       <Link href={item.link} rel='noreferrer'>
                         {item.title[language]}
                       </Link>
