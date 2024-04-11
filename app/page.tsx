@@ -16,7 +16,6 @@ import { Dividends } from '@/components/Dividends'
 import { Fractional } from '@/components/Fractional'
 import { Marketplace } from '@/components/Marketplace'
 import { saleEnded } from '@/utils/endSale'
-import { Separator } from '@/components/ui/separator'
 
 // import PresaleCountdown from '@/components/PresaleCountdown'
 // import InfoPhase from '@/components/functionsContract/InfoPhase'
