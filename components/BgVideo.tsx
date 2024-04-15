@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 const BgVideo = (): JSX.Element => {
   return (
-    <div className="absolute inset-0 h-[180vh] md:h-full w-full overflow-hidden bg-cover bg-no-repeat bg-center -z-10">
+    <div className="absolute inset-0 h-[180vh] md:h-full w-full overflow-hidden bg-cover bg-no-repeat bg-center md:pb-0 -z-10">
         <video
             autoPlay
             loop
@@ -13,7 +13,7 @@ const BgVideo = (): JSX.Element => {
             <source src="/bgVideo.mp4" />
             Tu navegador no admite la reproducción de videos.
         </video>
-          <Image src="/bgm3.svg" className='h-full w-full object-cover md:hidden' alt="bg" width={400} height={400} />
+          <Image src="/bg6000.jpg" className='w-full object-cover h-full md:hidden' alt="bg" width={400} height={400} />
     </div>
   )
 }

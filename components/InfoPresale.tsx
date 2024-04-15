@@ -60,10 +60,10 @@ const InfoPresale = (): JSX.Element => {
   return (
           <div className='flex place-self-start md:text-white justify-center items-start flex-col gap-4 col-span-2 md:px-36 mb-12'>
                 <IconSocial/>
-              <h1 className='text-2xl md:text-6xl font-bold text-start'>
+              <h1 className='text-2xl text-white md:text-6xl font-bold text-start'>
                 {text[1][language]}
               </h1>
-              <p className='text-md md:text-2xl text-start font-semibold'>{text[2][language]}</p>
+              <p className='text-md md:text-2xl text-white text-start font-semibold'>{text[2][language]}</p>
               <span className='w-full grid grid-cols-1 place-items-center sm:grid-cols-3 gap-1 md:gap-4 md:max-w-[400px] justify-center items-center'>
                 {items.map((item) => {
                   return (
@@ -75,7 +75,7 @@ const InfoPresale = (): JSX.Element => {
                   )
                 })}
               </span>
-              <Link href='https://www.dx.app/dxlock/view/token-locker?address=0x7f9c87a16ce7d357b958a69ded86bfe18a0804db&chain=137' target='_blank' className='underline'>{text[3][language]}</Link>
+              <Link href='https://www.dx.app/dxlock/view/token-locker?address=0x7f9c87a16ce7d357b958a69ded86bfe18a0804db&chain=137' target='_blank' className='underline text-white'>{text[3][language]}</Link>
           </div>
   )
 }
