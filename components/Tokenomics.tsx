@@ -66,7 +66,7 @@ export const Tokenomics = (): JSX.Element => {
         es: 'Incentivos Comunitarios & Airdrops: Reserva de tokens destinada a recompensar a los miembros de la comunidad por diversas acciones que contribuyen al crecimiento y éxito del proyecto.',
         pt: 'Incentivos Comunitários & Airdrops: Reserva de tokens destinada a recompensar membros da comunidade por diversas ações que contribuem para o crescimento e sucesso do projeto.'
       },
-      value: '5%',
+      value: '9%',
       color: 'bg-blue-800',
       border: 'border-blue-800'
     },
@@ -76,7 +76,7 @@ export const Tokenomics = (): JSX.Element => {
         es: 'ONG de la Fundación',
         pt: 'ONG da Fundação'
       },
-      value: '5%',
+      value: '1%',
       color: 'bg-purple-900',
       border: 'border-purple-900'
     }
