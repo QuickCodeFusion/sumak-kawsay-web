@@ -53,7 +53,7 @@ const Home = (): React.JSX.Element => {
             </section>
             <BinanceWidget/>
             <InfoCard/>
-            <ItemCarousel/>
+            {/* <ItemCarousel/> */}
             {/* <Ecosystem/> */}
             <Passport/>
             <Dividends/>
