@@ -42,7 +42,7 @@ const items: Array<{
   {
     id: 2,
     title: {
-      en: 'Tokenomics',
+      en: 'Roadmap',
       es: 'Hoja de ruta',
       pt: 'Roteiro'
     },

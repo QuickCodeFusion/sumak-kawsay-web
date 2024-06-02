@@ -16,6 +16,7 @@ import { Dividends } from '@/components/Dividends'
 import { Fractional } from '@/components/Fractional'
 import { Marketplace } from '@/components/Marketplace'
 import { saleEnded } from '@/utils/endSale'
+import Video from '@/components/Video'
 
 // import PresaleCountdown from '@/components/PresaleCountdown'
 // import InfoPhase from '@/components/functionsContract/InfoPhase'
@@ -61,6 +62,7 @@ const Home = (): React.JSX.Element => {
             <Marketplace/>
             <Tokenomics/>
             <Roadmap/>
+            <Video/>
             <CardTeamWorkList />
             <InfoContent/>
         </main>
