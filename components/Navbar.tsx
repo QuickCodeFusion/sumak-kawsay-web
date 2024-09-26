@@ -48,15 +48,15 @@ const items: Array<{
     },
     url: 'roadMap'
   },
-  {
-    id: 3,
-    title: {
-      en: 'Team',
-      es: 'Equipo',
-      pt: 'Equipe'
-    },
-    url: 'teamWork'
-  },
+  // {
+  //   id: 3,
+  //   title: {
+  //     en: 'Team',
+  //     es: 'Equipo',
+  //     pt: 'Equipe'
+  //   },
+  //   url: 'teamWork'
+  // },
   {
     id: 4,
     title: {
