@@ -33,7 +33,7 @@ const CardTeamWorkList = (): React.JSX.Element => {
   }
 
   return (
-    <Element name="teamWork" className="w-full ">
+    <Element name="teamWork" className="w-full hidden">
       <div className="flex flex-col gap-10 justify-center items-center text-center">
           <h1 className="text-3xl font-bold">{title[language]}</h1>
           <div className="flex items-center justify-center">
