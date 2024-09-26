@@ -6,7 +6,6 @@ import BinanceWidget from '../components/BinanceWidget'
 import InfoPresale from '@/components/InfoPresale'
 import InfoContent from '@/components/InfoConten'
 // import { Ecosystem } from '@/components/Ecosystem'
-import ItemCarousel from '@/components/ItemCarousel'
 import { InfoCard } from '@/components/InfonCard'
 import { Passport } from '@/components/Passport'
 import CardTeamWorkList from '@/components/CardTeamWorkList'
@@ -54,7 +53,7 @@ const Home = (): React.JSX.Element => {
             </section>
             <BinanceWidget/>
             <InfoCard/>
-            <ItemCarousel/>
+            {/* <ItemCarousel/> */}
             {/* <Ecosystem/> */}
             <Passport/>
             <Dividends/>
