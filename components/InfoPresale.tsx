@@ -2,6 +2,7 @@ import Link from 'next/link'
 import IconSocial from './IconSocial'
 import { ButtonUI } from './ui/button'
 import { useLanguage } from '@/app/languageProvider'
+import Quote from './Quote'
 const InfoPresale = (): JSX.Element => {
   const items: Array<{
     id: number
@@ -20,18 +21,18 @@ const InfoPresale = (): JSX.Element => {
     {
       id: 2,
       title: {
-        en: 'Marketplace',
-        es: 'Mercado',
-        pt: 'Mercado'
+        en: 'Portfolio',
+        es: 'Portafolio',
+        pt: 'Portfolio'
       },
       link: 'https://www.binance.com/es/nft/my-nfts/collected/symbiosls-0319e09553f7b3842d72b6435a287e3c'
     },
     {
       id: 1,
       title: {
-        en: 'Hub',
-        es: 'Hub',
-        pt: 'Hub'
+        en: 'App',
+        es: 'App',
+        pt: 'App'
       },
       link: 'https://www.transformationalfestivals.net/member/account'
     }
@@ -39,14 +40,14 @@ const InfoPresale = (): JSX.Element => {
 
   const text: Record<number, Record<string, string>> = {
     1: {
-      en: 'The Ultimate Living and Virtual Ecosystem',
-      es: 'El Ecosistema virtual y vivo definitivo',
-      pt: 'O Ecosistema virtual e vivo definitivo'
+      en: 'A Global Network of Regenerative Capital',
+      es: 'Una Red Global de Capital Regenerativo',
+      pt: 'Uma Rede Global de Capital Regenerativo'
     },
     2: {
-      en: 'Experience a new era of community-driven wealth, where every participant has the power to shape the future.',
-      es: 'Experimenta una nueva era de riqueza impulsada por la comunidad, donde cada participante tiene el poder de dar forma al futuro.',
-      pt: 'Experimente uma nova era de riqueza impulsionada pela comunidade, onde cada participante tem o poder de moldar o futuro.'
+      en: 'Direct, decentralized access to financial opportunities and governance-- empowering you, wherever you are, to cocreate the world you envision.',
+      es: 'Acceso directo y descentralizado a instrumentos de inversión & APY competitivo desde cualquier lugar del mundo',
+      pt: 'Acesso direto e descentralizado aos ativos financeiros & APY competitivo de qualquer lugar do mundo'
     },
     3: {
       en: 'Audited & KYC | 100% secure and verified',
@@ -76,6 +77,7 @@ const InfoPresale = (): JSX.Element => {
                 })}
               </span>
               <Link href='https://www.dx.app/dxlock/view/token-locker?address=0x7f9c87a16ce7d357b958a69ded86bfe18a0804db&chain=137' target='_blank' className='underline text-white'>{text[3][language]}</Link>
+              <Quote/>
           </div>
   )
 }

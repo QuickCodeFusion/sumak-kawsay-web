@@ -16,6 +16,8 @@ import { Fractional } from '@/components/Fractional'
 import { Marketplace } from '@/components/Marketplace'
 import { saleEnded } from '@/utils/endSale'
 import Video from '@/components/Video'
+import Diagram from '@/components/Diagram'
+import Sectors from '@/components/Sectors'
 
 // import PresaleCountdown from '@/components/PresaleCountdown'
 // import InfoPhase from '@/components/functionsContract/InfoPhase'
@@ -52,7 +54,9 @@ const Home = (): React.JSX.Element => {
                   </div>
             </section>
             <BinanceWidget/>
-            <InfoCard/>
+            <Diagram/>
+            <Sectors/>
+            {/* <InfoCard/> */}
             {/* <ItemCarousel/> */}
             {/* <Ecosystem/> */}
             <Passport/>
