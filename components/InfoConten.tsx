@@ -15,147 +15,147 @@ const Item: Array<{
 }> = [
   {
     title: {
-      en: 'What is the Sumak Kawsay Ecosystem?',
-      es: '¿Qué es el Ecosistema Sumak Kawsay?',
-      pt: '¿O que é o Ecossistema Sumak Kawsay??'
+      en: 'What is the Global Peace Regeneration Fund?',
+      es: '¿Qué es el Global Peace Regeneration Fund?',
+      pt: 'O que é o Fundo de Regeneração da Páscoa Global?'
     },
     content: {
-      en: 'Sumak Kawsay is a holistic ecosystem that merges advanced technology with ecological wisdom and social regeneration. It aims to create sustainable, interconnected communities by leveraging blockchain and AI technologies, promoting regenerative practices, and fostering global collaboration.',
-      es: 'Sumak Kawsay es un ecosistema holístico que fusiona tecnología avanzada con sabiduría ecológica y regeneración social. Su objetivo es crear comunidades sostenibles e interconectadas aprovechando las tecnologías de blockchain e IA, promoviendo prácticas regenerativas y fomentando la colaboración global.',
-      pt: 'Sumak Kawsay é um ecossistema holístico que mescla tecnologia avançada com sabedoria ecológica e regeneração social. Visa criar comunidades sustentáveis e interconectadas, alavancando tecnologias blockchain e IA, promovendo práticas regenerativas e incentivando a colaboração global.'
+      en: 'The Global Peace Regeneration Fund is a blockchain-powered, community-driven, tokenized investment platform. It aims to generate positive financial returns while promoting regenerative projects that restore ecosystems, empower communities, and support the transition to a sustainable and resilient world.',
+      es: 'Es una plataforma de inversión tokenizada, impulsada por blockchain y dirigida por la comunidad. Su objetivo es generar retornos financieros positivos mientras promueve proyectos regenerativos que restauran ecosistemas, empoderan comunidades y apoyan la transición hacia un mundo sostenible y resiliente.',
+      pt: 'É uma plataforma de investimento tokenizada, alimentada por blockchain e liderada pela comunidade. O seu objetivo é gerar retornos financeiros positivos ao mesmo tempo que promove projetos regenerativos que restauram ecossistemas, capacitam comunidades e apoiam a transição para um mundo sustentável e resiliente.'
     },
     id: '1'
   },
   {
     title: {
-      en: 'How does the ICO contribute to global sustainability?',
-      es: '¿Cómo contribuye el ICO a la sostenibilidad global?',
-      pt: 'Como contribui o ICO a sustentabilidade global?'
+      en: 'How does the fund use tokenization?',
+      es: '¿Como utiliza el fondo tokenización?',
+      pt: 'Como o fundo utiliza tokenização?'
     },
     content: {
-      en: 'The ICO funds will drive the creation of a decentralized ecosystem focusing on regenerative practices, equitable resource management, and integrating ancestral wisdom with modern technology, fostering a sustainable global community.',
-      es: 'Los fondos del ICO impulsarán la creación de un ecosistema descentralizado centrado en prácticas regenerativas, gestión equitativa de recursos e integración de la sabiduría ancestral con la tecnología moderna, fomentando una comunidad global sostenible.',
-      pt: 'Os fundos do ICO impulsionarão a criação de um ecossistema descentralizado focado em práticas regenerativas, gestão equitativa de recursos e integração da sabedoria ancestral com a tecnologia moderna, promovendo uma comunidade global sustentável.'
+      en: 'The Global Peace Regeneration Fund uses tokenization to create fractional ownership of real-world assets (RWA), providing both large and small investors access to regenerative projects. Investors can stake in superincubators, earn APY, and vote on development priorities through the DAO. Tokenization ensures traceability in value chains, transparency in operations, and creates diverse financial instruments like green and social bonds, making investments accessible, accountable, and impactful.',
+      es: 'El Global Peace Regeneration Fund emplea la tokenización para crear propiedad fraccionada de activos reales (RWA), permitiendo que tanto grandes como pequeños inversores accedan a proyectos regenerativos. Los inversores pueden stakear en superincubadoras, ganar APY y votar sobre prioridades de desarrollo a través de la DAO. La tokenización garantiza trazabilidad en las cadenas de valor, transparencia en las operaciones y crea instrumentos financieros como bonos verdes y sociales, haciendo las inversiones accesibles, responsables e impactantes.',
+      pt: 'O Fundo Global de Regeneração para a Paz emprega a tokenização para criar propriedade fracionada de ativos reais (RWA), permitindo que grandes e pequenos investidores tenham acesso a projetos regenerativos. Os investidores podem apostar em superincubadoras, ganhar APY e votar nas prioridades de desenvolvimento através do DAO. A tokenização garante rastreabilidade nas cadeias de valor, transparência nas operações e cria instrumentos financeiros como títulos verdes e sociais, tornando os investimentos acessíveis, responsáveis ​​e impactantes.'
     },
     id: '2'
   },
   {
     title: {
-      en: 'What are the benefits of investing in the Sumak Kawsay ICO?',
-      es: '¿Cuáles son los beneficios de invertir en el ICO de Sumak Kawsay?',
-      pt: 'Quais os benefícios de investir no ICO do Sumak Kawsay?'
+      en: 'What makes the Sierra Nevada de Santa Marta the first pilot location?',
+      es: '¿Por qué la Sierra Nevada de Santa Marta es la primera ubicación piloto?',
+      pt: 'O que faz a Sierra Nevada de Santa Marta o primeiro local de pilotagem?'
     },
     content: {
-      en: 'Token holders enjoy financial benefits such as value appreciation and revenue sharing, community and ecosystem participation rights, and ecological and social impacts through sustainable project contributions. They also get access to exclusive platforms, events, and opportunities to contribute to community development initiatives.',
-      es: 'Los tenedores de tokens disfrutan de beneficios financieros como la apreciación del valor y el reparto de ingresos, derechos de participación en la comunidad y el ecosistema, e impactos ecológicos y sociales a través de contribuciones a proyectos sostenibles. También obtienen acceso a plataformas exclusivas, eventos y oportunidades para contribuir a iniciativas de desarrollo comunitario.',
-      pt: 'Os detentores de tokens desfrutam de benefícios financeiros como valorização e compartilhamento de receitas, direitos de participação na comunidade e no ecossistema, e impactos ecológicos e sociais através de contribuições para projetos sustentáveis. Eles também ganham acesso a plataformas exclusivas, eventos e oportunidades de contribuir para iniciativas de desenvolvimento comunitário.'
+      en: 'The Sierra Nevada de Santa Marta, considered the Heart of the World, is a sacred region guided by indigenous communities with deep environmental wisdom. It serves as the first superincubator, impacting sectors such as clean energy, agroforestry, and regenerative tourism while drawing from ancestral knowledge to shape sustainable development practices.',
+      es: 'La Sierra Nevada de Santa Marta, considerada el Corazón del Mundo, es una región sagrada guiada por comunidades indígenas con profunda sabiduría ambiental. Es el primer superincubador, impactando sectores como energía limpia, agroforestería y turismo regenerativo, mientras integra conocimiento ancestral en prácticas de desarrollo sostenible.',
+      pt: 'A Serra Nevada de Santa Marta, considerada o Coração do Mundo, é uma região sagrada guiada por comunidades indígenas com profunda sabedoria ambiental. É a primeira superincubadora, impactando setores como energia limpa, agrofloresta e turismo regenerativo, ao mesmo tempo que integra conhecimentos ancestrais em práticas de desenvolvimento sustentável.'
     },
     id: '3'
   },
   {
     title: {
-      en: 'What makes Sumak Kawsay different from other ICOs?',
-      es: '¿Qué hace diferente a Sumak Kawsay de otras ICOs?',
-      pt: 'O que torna o Sumak Kawsay diferente de outros ICOs?'
+      en: "What role do investors play in the fund's governance?",
+      es: '¿Cuál es el papel de los inversores en la gobernanza del fondo?',
+      pt: 'Qual é o papel dos investidores na governança dos fundos?'
     },
     content: {
-      en: "Unlike typical ICOs, Sumak Kawsay is rooted in ecological and social regeneration, merging cutting-edge technology with ancient wisdom. It's an investment in a sustainable future, prioritizing shared prosperity and environmental stewardship.",
-      es: 'A diferencia de los ICOs típicos, Sumak Kawsay se basa en la regeneración ecológica y social, fusionando tecnología de punta con sabiduría ancestral. Es una inversión en un futuro sostenible, priorizando la prosperidad compartida y la administración ambiental.',
-      pt: 'Diferente dos ICOs típicos, o Sumak Kawsay é baseado em regeneração ecológica e social, mesclando tecnologia de ponta com sabedoria antiga. É um investimento em um futuro sustentável, priorizando a prosperidade compartilhada e a administração ambiental.'
+      en: 'Investors actively participate through staking in superincubators. This gives them access to governance mechanisms within the Decentralized Autonomous Organization (DAO), enabling them to vote on project allocations and participate in strategic decision-making.',
+      es: 'Los inversores participan activamente mediante el staking en superincubadoras, obteniendo acceso a mecanismos de gobernanza dentro de la Organización Autónoma Descentralizada (DAO). Esto les permite votar sobre la asignación de proyectos y participar en decisiones estratégicas.',
+      pt: 'Os investidores participam ativamente apostando em superincubadoras, obtendo acesso a mecanismos de governança dentro da Organização Autônoma Descentralizada (DAO). Isso lhes permite votar na alocação de projetos e participar de decisões estratégicas.'
     },
     id: '4'
   },
   {
     title: {
-      en: 'How does the Universal Passport work?',
-      es: '¿Cómo funciona el Pasaporte Universal?',
-      pt: 'Como funciona o Passaporte Universal?'
+      en: 'What is staking, and how does it work?',
+      es: '¿Qué es el staking y cómo funciona?',
+      pt: 'O que é staking e como funciona?'
     },
     content: {
-      en: 'The Universal Passport provides legal recognition and status to ecosystem token holders, facilitating seamless access to shared assets and services, ensuring security in times of global crisis, and fostering a sense of global citizenship and unity.',
-      es: 'El Pasaporte Universal proporciona reconocimiento legal y estatus a los poseedores de tokens del ecosistema, facilitando el acceso sin contratiempos a activos y servicios compartidos, asegurando la seguridad en tiempos de crisis global y fomentando un sentido de ciudadanía global y unidad.',
-      pt: 'O Passaporte Universal fornece reconhecimento legal e status aos detentores de tokens do ecossistema, facilitando o acesso sem obstáculos a ativos e serviços compartilhados, garantindo segurança em tempos de crise global e promovendo um senso de cidadania global e unidade.'
+      en: "Staking involves locking fractions of the Unity Seed Smart contract into the fund's superincubators for specified periods (1 to 5 years). In return, participants earn competitive APYs and exclusive benefits from the fund’s global decentralized ecosystem of projects and services. Staked tokens also grant voting rights in the DAO governance system.",
+      es: 'El staking implica bloquear fracciones del contrato inteligente Unity Seed en las superincubadoras del fondo durante períodos específicos (de 1 a 5 años). A cambio, los participantes obtienen APYs competitivos y beneficios exclusivos del ecosistema global descentralizado de proyectos y servicios. Los tokens stakeados también otorgan derechos de voto en el sistema de gobernanza DAO.',
+      pt: 'O staking envolve o bloqueio de frações do contrato inteligente Unity Seed nas superincubadoras do fundo por períodos específicos (1 a 5 anos). Em troca, os participantes obtêm APYs competitivos e benefícios exclusivos do ecossistema global descentralizado de projetos e serviços. Os tokens apostados também concedem direitos de voto no sistema de governança DAO.'
     },
     id: '5'
   },
   {
     title: {
-      en: 'Shambhala Bio-habitats, and how can I get involved?',
-      es: 'Bio-hábitats de Shambhala, ¿y cómo puedo involucrarme?',
-      pt: 'Bio-habitats de Shambhala, e como posso me envolver?'
+      en: 'What kind of financial returns can investors expect?',
+      es: '¿Qué tipo de retornos financieros pueden esperar los inversores?',
+      pt: 'Que tipo de retorno financeiro os investidores podem esperar?'
     },
     content: {
-      en: 'The Shambhala Bio-habitats are sustainable living models within the ecosystem, offering various lifestyle preferences and productive systems. Participants can engage through investment, residency, or contributing to the development and growth of these eco-friendly communities.',
-      es: 'Los Bio-hábitats de Shambhala son modelos de vida sostenible dentro del ecosistema, ofreciendo diversas preferencias de estilo de vida y sistemas productivos. Los participantes pueden involucrarse mediante inversión, residencia o contribuyendo al desarrollo y crecimiento de estas comunidades ecológicas.',
-      pt: 'Os Bio-habitats de Shambhala são modelos de vida sustentável dentro do ecossistema, oferecendo diversas preferências de estilo de vida e sistemas produtivos. Os participantes podem se engajar por meio de investimento, residência ou contribuindo para o desenvolvimento e crescimento dessas comunidades ecológicas.'
+      en: 'The fund offers diversified financial returns from tokenized assets across multiple sectors. Returns are enhanced through APY from staking, the appreciation of the smart contract value, and access to regenerative services, products, and benefits from the global decentralized catalog.',
+      es: 'El fondo ofrece retornos diversificados a partir de activos tokenizados en múltiples sectores. Los retornos se maximizan a través del APY por staking, la apreciación del valor del contrato inteligente y el acceso a servicios, productos y beneficios regenerativos del catálogo descentralizado global.',
+      pt: 'O fundo oferece retornos diversificados de ativos tokenizados em vários setores. Os retornos são maximizados através da aposta no APY, da valorização do valor do contrato inteligente e do acesso a serviços, produtos e benefícios regenerativos do catálogo global descentralizado.'
     },
     id: '6'
   },
   {
     title: {
-      en: 'How does Sumak Kawsay ensure community engagement and governance?',
-      es: '¿Cómo asegura Sumak Kawsay la participación comunitaria y la gobernanza?',
-      pt: 'Como o Sumak Kawsay garante o engajamento da comunidade e a governança?'
+      en: 'How is the fund aligned with Colombia’s national development goals?',
+      es: '¿Cómo se alinea el fondo con los objetivos de desarrollo nacional de Colombia?',
+      pt: 'Como o fundo se alinha com os objetivos de desenvolvimento nacional da Colômbia?'
     },
     content: {
-      en: 'The ecosystem employs decentralized governance models, allowing token holders to vote on key decisions and participate in community programs. This ensures a transparent decision-making process and fosters a sense of ownership and involvement among community members.',
-      es: 'El ecosistema emplea modelos de gobernanza descentralizados, permitiendo a los poseedores de tokens votar en decisiones clave y participar en programas comunitarios. Esto asegura un proceso de toma de decisiones transparente y fomenta un sentido de propiedad e involucramiento entre los miembros de la comunidad.',
-      pt: 'O ecossistema utiliza modelos de governança descentralizados, permitindo que os detentores de tokens votem em decisões-chave e participem de programas comunitários. Isso assegura um processo de tomada de decisões transparente e promove um senso de propriedade e envolvimento entre os membros da comunidade.'
+      en: 'The fund supports Colombia’s National Development Plan by promoting bioeconomy, clean energy, and circular economies. It aligns with the government’s vision to position Colombia as a global sustainability leader, contributing to environmental restoration, social equity, and economic growth.',
+      es: 'El fondo apoya el Plan Nacional de Desarrollo de Colombia promoviendo la bioeconomía, la energía limpia y las economías circulares. Se alinea con la visión del gobierno de posicionar a Colombia como líder global en sostenibilidad, contribuyendo a la restauración ambiental, equidad social y crecimiento económico.',
+      pt: 'O fundo apoia o Plano Nacional de Desenvolvimento da Colômbia, promovendo a bioeconomia, a energia limpa e as economias circulares. Alinha-se com a visão do governo de posicionar a Colômbia como líder global em sustentabilidade, contribuindo para a restauração ambiental, a equidade social e o crescimento económico.'
     },
     id: '7'
   },
   {
     title: {
-      en: 'What is the role of technology in the ecosystem?',
-      es: '¿Cuál es el papel de la tecnología en el ecosistema?',
-      pt: 'Qual é o papel da tecnologia no ecossistema?'
+      en: 'What environmental and social impact does the fund aim to achieve?',
+      es: '¿Qué impacto social y ambiental busca lograr el fondo?',
+      pt: 'Que impacto social e ambiental o fundo pretende alcançar?'
     },
     content: {
-      en: 'Technology, particularly blockchain and AI, underpins the ecosystem, ensuring transparency, security, and efficiency. It supports sustainable resource management, ecological balance, and facilitates community engagement and education.',
-      es: 'La tecnología, especialmente la blockchain y la IA, sustenta el ecosistema, asegurando transparencia, seguridad y eficiencia. Apoya la gestión sostenible de recursos, el equilibrio ecológico y facilita la participación comunitaria y la educación.',
-      pt: 'A tecnologia, particularmente blockchain e IA, sustenta o ecossistema, garantindo transparência, segurança e eficiência. Apoia a gestão sustentável de recursos, o equilíbrio ecológico e facilita o envolvimento da comunidade e a educação.'
+      en: 'The fund seeks measurable impacts aligned with the United Nations Sustainable Development Goals (SDGs), including: SDG 13 - Climate Action through reforestation and carbon capture, SDG 15 - Life on Land through ecosystem restoration and biodiversity conservation, SDG 10 - Reduced Inequality through community empowerment and inclusive governance.',
+      es: 'El fondo persigue impactos medibles alineados con los Objetivos de Desarrollo Sostenible (ODS), incluyendo: ODS 13: Acción Climática mediante reforestación y captura de carbono ODS 15: Vida en la Tierra a través de restauración de ecosistemas y conservación de la biodiversidad ODS 10: Reducción de las Desigualdades mediante empoderamiento comunitario y gobernanza inclusiva',
+      pt: 'O fundo busca impactos mensuráveis ​​alinhados com os Objetivos de Desenvolvimento Sustentável (ODS), incluindo: ODS 13: Ação climática através do reflorestamento e captura de carbono ODS 15: Vida na Terra através da restauração de ecossistemas e conservação da biodiversidade ODS 10: Redução das desigualdades através do empoderamento comunitário e governança inclusiva'
     },
     id: '8'
   },
   {
     title: {
-      en: 'How will the funds from the ICO be used?',
-      es: '¿Cómo se utilizarán los fondos del ICO?',
-      pt: 'Como os fundos do ICO serão utilizados?'
+      en: 'How does the fund ensure transparency and accountability?',
+      es: '¿Cómo garantiza el fondo la transparencia y la responsabilidad?',
+      pt: 'Como é que o fundo garante a transparência e a responsabilização?'
     },
     content: {
-      en: "Funds will be allocated towards technological development, community engagement, operational costs, legal compliance, and sustainable initiatives, ensuring the ecosystem's growth and impact.",
-      es: 'Los fondos se asignarán al desarrollo tecnológico, compromiso comunitario, costos operativos, cumplimiento legal e iniciativas sostenibles, asegurando el crecimiento e impacto del ecosistema.',
-      pt: 'Os fundos serão alocados para desenvolvimento tecnológico, engajamento da comunidade, custos operacionais, conformidade legal e iniciativas sustentáveis, garantindo o crescimento e o impacto do ecossistema.'
+      en: 'The blockchain-based platform ensures full traceability of investments and project outcomes. The DAO governance structure allows real-time tracking of decisions and fund allocation, ensuring transparency and accountability across all stakeholders.',
+      es: 'La plataforma basada en blockchain garantiza la trazabilidad completa de las inversiones y los resultados de los proyectos. La estructura de gobernanza DAO permite seguimiento en tiempo real de decisiones y asignación de fondos, asegurando transparencia y responsabilidad entre todas las partes interesadas.',
+      pt: 'A plataforma baseada em blockchain garante rastreabilidade completa dos investimentos e resultados dos projetos. A estrutura de governação do DAO permite o acompanhamento em tempo real das decisões e atribuição de fundos, garantindo transparência e responsabilização entre todas as partes interessadas.'
     },
     id: '9'
   },
   {
     title: {
-      en: 'How can I join the ICO presale for Sumak Kawsay?',
-      es: '¿Cómo puedo unirme a la preventa ICO para Sumak Kawsay?',
-      pt: 'Como posso participar da pré-venda ICO para Sumak Kawsay?'
+      en: 'How can individuals and organizations participate in the fund?',
+      es: '¿Cómo pueden participar individuos y organizaciones en el fondo?',
+      pt: 'Como podem indivíduos e organizações participar no fundo?'
     },
     content: {
-      en: 'Use the Official Presale on Unifying.earth: Accessible by using a blockchain wallet or card at unifying.earth.',
-      es: 'Usa la Preventa Oficial en Unifying.earth: Accesible mediante el uso de una billetera blockchain  tarjeta VISA, Google pay o paypal en unifying.earth.',
-      pt: 'Use a pré-venda oficial em Unifying.earth: acessível usando um cartão VISA, Google Pay ou carteira blockchain em unifying.earth.'
+      en: 'Participation is open to everyone, from individual investors to large institutional funds. Investors can stake, join as collaborators or service providers, offer products and services through the marketplace, or engage with events, summits, eco-communities and regenerative projects worldwide.',
+      es: 'La participación está abierta a todos, desde inversores individuales hasta grandes fondos institucionales. Los participantes pueden stakear, colaborar como proveedores de servicios, ofrecer productos a través del mercado, o involucrarse en eventos, ecoaldeas y proyectos regenerativos en todo el mundo.',
+      pt: 'A participação é aberta a todos, desde investidores individuais até grandes fundos institucionais. Os participantes podem apostar, colaborar como prestadores de serviços, oferecer produtos através do mercado ou envolver-se em eventos, ecovilas e projetos regenerativos em todo o mundo.'
     },
     id: '10'
-  },
-  {
-    title: {
-      en: 'What are the risks and how are they mitigated?',
-      es: '¿Cuáles son los riesgos y cómo se mitigan?',
-      pt: 'Quais são os riscos e como são mitigados?'
-    },
-    content: {
-      en: 'While all investments carry risk, Sumak Kawsay is committed to transparency, legal compliance, and implementing strategic risk mitigation. We provide clear communication and adhere to international standards, ensuring a secure investment environment.',
-      es: 'Aunque todas las inversiones conllevan riesgos, Sumak Kawsay se compromete con la transparencia, el cumplimiento legal y la implementación de mitigación de riesgos estratégicos. Proporcionamos una comunicación clara y nos adherimos a los estándares internacionales, asegurando un entorno de inversión seguro.',
-      pt: 'Embora todos os investimentos carreguem riscos, o Sumak Kawsay está comprometido com a transparência, conformidade legal e implementação de mitigação de riscos estratégicos. Fornecemos comunicação clara e aderimos a padrões internacionais, garantindo um ambiente de investimento seguro.'
-    },
-    id: '11'
   }
+  // {
+  //   title: {
+  //     en: 'What are the risks and how are they mitigated?',
+  //     es: '¿Cuáles son los riesgos y cómo se mitigan?',
+  //     pt: 'Quais são os riscos e como são mitigados?'
+  //   },
+  //   content: {
+  //     en: 'While all investments carry risk, Sumak Kawsay is committed to transparency, legal compliance, and implementing strategic risk mitigation. We provide clear communication and adhere to international standards, ensuring a secure investment environment.',
+  //     es: 'Aunque todas las inversiones conllevan riesgos, Sumak Kawsay se compromete con la transparencia, el cumplimiento legal y la implementación de mitigación de riesgos estratégicos. Proporcionamos una comunicación clara y nos adherimos a los estándares internacionales, asegurando un entorno de inversión seguro.',
+  //     pt: 'Embora todos os investimentos carreguem riscos, o Sumak Kawsay está comprometido com a transparência, conformidade legal e implementação de mitigação de riscos estratégicos. Fornecemos comunicação clara e aderimos a padrões internacionais, garantindo um ambiente de investimento seguro.'
+  //   },
+  //   id: '11'
+  // }
 ]
 
 const InfoContent = (): React.JSX.Element => {
