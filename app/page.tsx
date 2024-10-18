@@ -1,27 +1,26 @@
 'use client'
 import dynamic from 'next/dynamic'
 
+// import { Dividends } from '@/components/Dividends'
+// import { Fractional } from '@/components/Fractional'
+// import { Ecosystem } from '@/components/Ecosystem'
+// import { InfoCard } from '@/components/InfonCard'
+// import CardTeamWorkList from '@/components/CardTeamWorkList'
+// import PresaleCountdown from '@/components/PresaleCountdown'
+// import InfoPhase from '@/components/functionsContract/InfoPhase'
+// import BuyInfo from '@/components/BuyInfo'
 import ClaimSteps from '@/components/ClaimSteps'
 import BinanceWidget from '../components/BinanceWidget'
 import InfoPresale from '@/components/InfoPresale'
 import InfoContent from '@/components/InfoConten'
-// import { Ecosystem } from '@/components/Ecosystem'
-import { InfoCard } from '@/components/InfonCard'
 import { Passport } from '@/components/Passport'
-import CardTeamWorkList from '@/components/CardTeamWorkList'
 import { Roadmap } from '@/components/Roadmap'
 import { Tokenomics } from '@/components/Tokenomics'
-import { Dividends } from '@/components/Dividends'
-import { Fractional } from '@/components/Fractional'
 import { Marketplace } from '@/components/Marketplace'
 import { saleEnded } from '@/utils/endSale'
 import Video from '@/components/Video'
 import Diagram from '@/components/Diagram'
 import Sectors from '@/components/Sectors'
-
-// import PresaleCountdown from '@/components/PresaleCountdown'
-// import InfoPhase from '@/components/functionsContract/InfoPhase'
-// import BuyInfo from '@/components/BuyInfo'
 
 const PresaleCountdown = dynamic(async () => await import('@/components/PresaleCountdown'), {
   ssr: false
@@ -59,15 +58,15 @@ const Home = (): React.JSX.Element => {
             {/* <InfoCard/> */}
             {/* <ItemCarousel/> */}
             {/* <Ecosystem/> */}
-            <Passport/>
-            <Dividends/>
-            <Fractional/>
             <Marketplace/>
+            <Passport/>
             <Tokenomics/>
             <Roadmap/>
             <Video/>
-            <CardTeamWorkList />
             <InfoContent/>
+            {/* <Dividends/> */}
+            {/* <Fractional/> */}
+            {/* <CardTeamWorkList /> */}
         </main>
   )
 }
