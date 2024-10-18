@@ -3,11 +3,12 @@ import { Card } from './ui/card'
 import { ListCard, ListCardContent, ListItem } from './ui/list'
 import Image from 'next/image'
 import { useLanguage } from '@/app/languageProvider'
+import PieChartComponent from './ui/piechart'
 
 type NestedText = Array<{
   label: Record<string, string>
   value: string
-  color?: string
+  color: string
   border?: string
   children?: Array<Record<string, string>>
 }>
@@ -19,8 +20,8 @@ export const Tokenomics = (): JSX.Element => {
         es: 'Preventa Oficial: Disponible durante tres meses en Unifying.Earth, destinada a la escala inicial del ecosistema.',
         pt: 'Pré-venda Oficial: Disponível por três meses em Unifying.Earth, visando a escalada inicial do ecossistema.'
       },
-      value: '30%',
-      color: 'bg-teal-400',
+      value: '33%',
+      color: '#2dd4bf',
       border: 'border-teal-400'
     },
     {
@@ -29,8 +30,8 @@ export const Tokenomics = (): JSX.Element => {
         es: 'CEX & DEX: Destinados a garantizar la liquidez en intercambios centralizados y descentralizados.',
         pt: 'CEX & DEX: Destinados a garantir a liquidez em trocas centralizadas e descentralizadas.'
       },
-      value: '30%',
-      color: 'bg-cyan-600',
+      value: '33%',
+      color: '#0891b2',
       border: 'border-cyan-600'
     },
     {
@@ -39,7 +40,7 @@ export const Tokenomics = (): JSX.Element => {
         es: 'Bloqueado para el Calendario de Halving de Unity: Los tokens se liberan en un enfoque por fases inspirado en el halving de Bitcoin:',
         pt: 'Bloqueado para a Agenda de Halving da Unity: Tokens são liberados em uma abordagem faseada inspirada no halving do Bitcoin:'
       },
-      value: '30%',
+      value: '33%',
       children: [
         {
           en: 'Years 1-4: 15% released, with the remaining 15% locked.',
@@ -57,7 +58,7 @@ export const Tokenomics = (): JSX.Element => {
           pt: 'Ciclos Subsequentes: Continuam até todos os tokens serem distribuídos, alinhando-se com marcos do ecossistema.'
         }
       ],
-      color: 'bg-sky-600',
+      color: '#0284c7',
       border: 'border-sky-600'
     },
     {
@@ -66,19 +67,9 @@ export const Tokenomics = (): JSX.Element => {
         es: 'Incentivos Comunitarios & Airdrops: Reserva de tokens destinada a recompensar a los miembros de la comunidad por diversas acciones que contribuyen al crecimiento y éxito del proyecto.',
         pt: 'Incentivos Comunitários & Airdrops: Reserva de tokens destinada a recompensar membros da comunidade por diversas ações que contribuem para o crescimento e sucesso do projeto.'
       },
-      value: '9%',
-      color: 'bg-blue-800',
-      border: 'border-blue-800'
-    },
-    {
-      label: {
-        en: 'Foundation NGO',
-        es: 'ONG de la Fundación',
-        pt: 'ONG da Fundação'
-      },
       value: '1%',
-      color: 'bg-purple-900',
-      border: 'border-purple-900'
+      color: '#1e40af',
+      border: 'border-blue-800'
     }
   ]
 
@@ -102,13 +93,19 @@ export const Tokenomics = (): JSX.Element => {
             <h1 className='text-3xl font-bold mb-4'>{text[1][language]}</h1>
             <h3 className='text-xl font-semibold mb-4'>{text[2][language]}</h3>
             <Card className='backdrop-blur p-6 border shadow-sm md:grid grid-cols-2 place-content-center place-items-center'>
-              <Image className='w-[410px] md:h-[390px] mt-7 mb-8 sm:mb-0 rounded-full' src='/grafica.png' width={400} height={400} alt='graph' />
+              <PieChartComponent
+                data={items.map((item) => ({
+                  title: item.label[language],
+                  value: +item.value.replace('%', ''),
+                  color: item.color
+                }))}
+              />
               <ListCard className=''>
               {items.map((item, index) => (
                   <ListItem className={`border-b-2 ${item.border}`} key={index}>
                       <ListCardContent className='w-full text-start'>
                           <span className='flex md:flex-row flex-col justify-start w-full items-end gap-1'>
-                              <div className='flex items-center gap-1 self-start'><div className={`w-3 h-3 rounded-full ${item.color}`} ></div><p className='text-md font-bold'>{item.value}</p></div>
+                              <div className='flex items-center gap-1 self-start'><div className='w-3 h-3 rounded-full' style={{backgroundColor: item.color}} ></div><p className='text-md font-bold'>{item.value}</p></div>
                               <p className='text-md font-semibold'>{item.label[language]}</p>
                           </span>
                           {item.children &&

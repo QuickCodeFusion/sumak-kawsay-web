@@ -39,6 +39,7 @@
     "react-copy-to-clipboard": "^5.1.0",
     "react-countdown": "^2.3.5",
     "react-dom": "^18",
+    "react-minimal-pie-chart": "^8.4.0",
     "react-pdf": "^7.7.0",
     "react-redux": "^9.0.4",
     "react-scroll": "^1.9.0",
