@@ -37,7 +37,7 @@ const RootLayout = ({
         <Providers>
           <ThemeProvider
               attribute="class"
-              defaultTheme="system"
+              defaultTheme="dark"
               enableSystem
               disableTransitionOnChange
             >
