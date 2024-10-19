@@ -11,89 +11,89 @@ export const Roadmap = (): React.JSX.Element => {
   }> = [
     {
       title: {
-        en: 'Phase 1: Establish the core structure and community foundation of the Sumak Kawsay Ecosystem.',
-        es: 'Fase 1: Establecer la estructura central y la base comunitaria del Ecosistema Sumak Kawsay.',
-        pt: 'Fase 1: Estabelecer a estrutura central e a base comunitária do Ecossistema Sumak Kawsay.'
+        en: 'Phase 1: Pilot in the Sierra Nevada, Colombia.',
+        es: 'Fase 1: Piloto en la Sierra Nevada, Colombia.',
+        pt: 'Fase 1: Piloto na Sierra Nevada, Colombia.'
       },
       content: {
-        en: 'Establish digital and physical infrastructure. Launch the multi-token system and legal frameworks. Host first community Summits, Festivals and Gatherings. Build the first international holistic retreat sanctuary.',
-        es: 'Establecer infraestructura digital y física. Lanzar el sistema multi-token y marcos legales. Organizar los primeros Encuentros, Festivales y Reuniones comunitarias. Construir el primer santuario de retiro holístico internacional.',
-        pt: 'Estabelecer infraestrutura digital e física. Lançar o sistema multi-token e frameworks legais. Hospedar os primeiros Encontros, Festivais e Reuniões da comunidade. Construir o primeiro santuário de retiro holístico internacional.'
+        en: 'Implementation of the first superincubator in the Sierra Nevada, launch of the ERC 1400 contract, and creation of the initial portfolio focused on regeneration, clean energy, and agroforestry.',
+        es: 'Implementación del primer superincubador en la Sierra Nevada, lanzamiento del contrato ERC 1400, y creación del portafolio inicial, enfocado en regeneración, energía limpia y agroforestería.',
+        pt: 'Implementação do primeiro superincubador na Sierra Nevada, lançamento do contrato ERC 1400 e criação do portfólio inicial focado em regeneração, energia limpa e agroflorestação.'
       },
       date: {
-        en: '(Year 1 - 2)',
-        es: '(Año 1 - 2)',
-        pt: '(Ano 1 - 2)'
+        en: '(0-1 years)',
+        es: '(0-1 años)',
+        pt: '(0-1 anos)'
       }
     },
     {
       title: {
-        en: 'Phase 2: Broaden our reach and improve our technological framework.',
-        es: 'Fase 2: Ampliar nuestro alcance y mejorar nuestro marco tecnológico.',
-        pt: 'Fase 2: Ampliar nosso alcance e melhorar nossa estrutura tecnológica.'
+        en: 'Phase 2: Expansion and Partnerships.',
+        es: 'Fase 2: Expansión y Alianzas.',
+        pt: 'Fase 2: Expansão e Parcerias.'
       },
       content: {
-        en: 'Expand the Ecosystem land network and integrate indigenous and private reserves. Advance blockchain and AI integration for enhanced resource management. Open the Ecosystem Marketplace for wider product and service access.',
-        es: 'Expandir la red de terrenos del Ecosistema e integrar reservas indígenas y privadas. Avanzar en la integración de blockchain y IA para una mejor gestión de recursos. Abrir el Mercado del Ecosistema para un acceso más amplio a productos y servicios.',
-        pt: 'Expandir a rede de terras do Ecossistema e integrar reservas indígenas e privadas. Avançar na integração de blockchain e IA para melhor gestão de recursos. Abrir o Mercado do Ecossistema para acesso mais amplo a produtos e serviços.'
+        en: 'Growth into new bioregions through strategic alliances, development of key infrastructure, issuance of new financial instruments, and strengthening of decentralized governance.',
+        es: 'Crecimiento hacia nuevas bioregiones mediante alianzas estratégicas, desarrollo de infraestructura clave, emisión de nuevos instrumentos financieros y fortalecimiento de la gobernanza descentralizada.',
+        pt: 'Crescimento para novas biorregiões por meio de alianças estratégicas, desenvolvimento de infraestrutura essencial, emissão de novos instrumentos financeiros e fortalecimento da governança descentralizada.'
       },
       date: {
-        en: '(Years 2-3)',
-        es: '(Años 2-3)',
-        pt: '(Anos 2-3)'
+        en: '(2-6 years)',
+        es: '(2-6 años)',
+        pt: '(2-6 anos)'
       }
     },
     {
       title: {
-        en: 'Phase 3: Global Network and Political Influence',
-        es: 'Fase 3: Red Global e Influencia Política',
-        pt: 'Fase 3: Rede Global e Influência Política'
+        en: 'Phase 3: Global Market and Ecosystem Connectivity',
+        es: 'Fase 3: Mercado Global y Conexión de Ecosistemas',
+        pt: 'Fase 3: Mercado Global e Conectividade de Ecossistemas'
       },
       content: {
-        en: 'Establishing a global network and gain political recognition. Implement a value-backed currency system and universal passport initiative. Form strategic alliances for broader global collaboration.',
-        es: 'Establecer una red global y ganar reconocimiento político. Implementar un sistema de moneda respaldada por valores y una iniciativa de pasaporte universal. Formar alianzas estratégicas para una colaboración global más amplia.',
-        pt: 'Estabelecer uma rede global e ganhar reconhecimento político. Implementar um sistema de moeda com respaldo de valor e iniciativa de passaporte universal. Formar alianças estratégicas para colaboração global mais ampla.'
+        en: 'Global integration with a decentralized market for regenerative products, technological interconnection of ecosystems, and the consolidation of a positive impact on economic, social, and environmental levels.',
+        es: 'Integración global con un mercado descentralizado para productos regenerativos, interconexión tecnológica de ecosistemas y consolidación de un impacto positivo en lo económico, social y ambiental.verdes.',
+        pt: 'Integração global com um mercado descentralizado para produtos regenerativos, interconexão tecnológica de ecossistemas e consolidação de um impacto positivo nos níveis econômico, social e ambiental.'
       },
       date: {
-        en: '(Years 3-4)',
-        es: '(Años 3-4)',
-        pt: '(Anos 3-4)'
-      }
-    },
-    {
-      title: {
-        en: 'Phase 4: Sustainability and Autonomy.',
-        es: 'Fase 4: Sostenibilidad y Autonomía.',
-        pt: 'Fase 4: Sustentabilidade e Autonomia.'
-      },
-      content: {
-        en: 'Achieving ecosystem self-sufficiency and independence. Attain full functionality. Secure global political approval and expand community reach.',
-        es: 'Lograr la autosuficiencia e independencia del ecosistema. Alcanzar la plena funcionalidad. Obtener aprobación política global y expandir el alcance de la comunidad.',
-        pt: 'Alcançar a auto-suficiência e independência do ecossistema. Atingir a funcionalidade completa. Obter aprovação política global e expandir o alcance da comunidade.'
-      },
-      date: {
-        en: '(Years 4-5)',
-        es: '(Años 4-5)',
-        pt: '(Anos 4-5)'
-      }
-    },
-    {
-      title: {
-        en: 'Phase 5: Pushing the boundaries in ecological conservation and global influence.',
-        es: 'Fase 5: Ampliando los límites en la conservación ecológica y la influencia global.',
-        pt: 'Fase 5: Ultrapassando os limites em conservação ecológica e influência global.'
-      },
-      content: {
-        en: 'Influence global sustainability policies. Expand and implement regenerative practices on a larger scale. Showcase the global environmental and social impact of the ecosystem.',
-        es: 'Influir en las políticas globales de sostenibilidad. Expandir e implementar prácticas regenerativas a mayor escala. Mostrar el impacto ambiental y social global del ecosistema.',
-        pt: 'Influenciar políticas globais de sustentabilidade. Expandir e implementar práticas regenerativas em maior escala. Mostrar o impacto ambiental e social global do ecossistema.'
-      },
-      date: {
-        en: '(Years 5-6)',
-        es: '(Años 5-6)',
-        pt: '(Anos 5-6)'
+        en: '(6-11 years)',
+        es: '(6-11 años)',
+        pt: '(6-11 anos)'
       }
     }
+    // {
+    //   title: {
+    //     en: 'Phase 4: Sustainability and Autonomy.',
+    //     es: 'Fase 4: Sostenibilidad y Autonomía.',
+    //     pt: 'Fase 4: Sustentabilidade e Autonomia.'
+    //   },
+    //   content: {
+    //     en: 'Achieving ecosystem self-sufficiency and independence. Attain full functionality. Secure global political approval and expand community reach.',
+    //     es: 'Lograr la autosuficiencia e independencia del ecosistema. Alcanzar la plena funcionalidad. Obtener aprobación política global y expandir el alcance de la comunidad.',
+    //     pt: 'Alcançar a auto-suficiência e independência do ecossistema. Atingir a funcionalidade completa. Obter aprovação política global e expandir o alcance da comunidade.'
+    //   },
+    //   date: {
+    //     en: '(Years 4-5)',
+    //     es: '(Años 4-5)',
+    //     pt: '(Anos 4-5)'
+    //   }
+    // },
+    // {
+    //   title: {
+    //     en: 'Phase 5: Pushing the boundaries in ecological conservation and global influence.',
+    //     es: 'Fase 5: Ampliando los límites en la conservación ecológica y la influencia global.',
+    //     pt: 'Fase 5: Ultrapassando os limites em conservação ecológica e influência global.'
+    //   },
+    //   content: {
+    //     en: 'Influence global sustainability policies. Expand and implement regenerative practices on a larger scale. Showcase the global environmental and social impact of the ecosystem.',
+    //     es: 'Influir en las políticas globales de sostenibilidad. Expandir e implementar prácticas regenerativas a mayor escala. Mostrar el impacto ambiental y social global del ecosistema.',
+    //     pt: 'Influenciar políticas globais de sustentabilidade. Expandir e implementar práticas regenerativas em maior escala. Mostrar o impacto ambiental e social global do ecossistema.'
+    //   },
+    //   date: {
+    //     en: '(Years 5-6)',
+    //     es: '(Años 5-6)',
+    //     pt: '(Anos 5-6)'
+    //   }
+    // }
   ]
 
   const text: Record<string, Record<string, string>> = {
