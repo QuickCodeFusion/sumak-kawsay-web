@@ -25,11 +25,11 @@ const Quote = (): React.JSX.Element => {
       <div className="flex items-start space-x-4">
         <div className="flex-shrink-0">
           <Image
-            src="/icon1.jpeg"
+            src="/mujer.png"
             alt="Profile picture"
             width={80}
             height={80}
-            className="rounded-full border-4 border-white"
+            className="rounded-full border-4 border-white aspect-square"
           />
         </div>
         <div className="flex-grow">

@@ -54,19 +54,19 @@ export const HexDiagram = (): JSX.Element => {
 
   return (
     <div className="w-full max-w-4xl mx-auto p-4">
-      <div className="relative w-full" style={{ paddingBottom: '100%' }}>
-        <div className="absolute inset-0">
+      <div className="relative w-full backdrop-blur-lg" style={{ paddingBottom: '100%' }}>
+        <div className="absolute inset-0 bg-[url(/flower-of-life-iogcpsdyve6h0ur4-removebg-preview.png)] bg-cover bg-center">
           {items.map((item, index) => (
             <div 
               key={index} 
-              className="absolute w-[28%] h-[28%]"
+              className="absolute w-[35%] h-[35%]"
               style={{
                 top: positions[index].top,
                 left: positions[index].left,
                 transform: 'translate(-50%, -50%)'
               }}
             >
-              <Card className="w-full h-full rounded-full overflow-hidden">
+              <Card className="w-full h-full rounded-full overflow-hidden border border-yellow-500">
                 <CardContent className="h-full flex items-center justify-center p-2 text-center">
                   <p className="line-clamp-3 text-balance @container @[4rem]:text-[0.5rem] @[8rem]:text-xs @[12rem]:text-sm @[16rem]:text-base">
                     {item[language]}
