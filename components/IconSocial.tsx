@@ -22,7 +22,7 @@ const networks = [
   {
     id: 4,
     title: 'Telegram',
-    url: 'https://t.me/UnitySeedICO',
+    url: 'https://t.me/UnifyingEarth',
     image: <IconTelegram />
   },
   {
