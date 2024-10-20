@@ -46,10 +46,10 @@ export const HexDiagram = (): JSX.Element => {
     { top: '50%', left: '50%' },
     { top: '20%', left: '50%' },
     { top: '37.5%', left: '78.65%' },
-    { top: '65%', left: '78.65%' },  
-    { top: '79.5%', left: '50%' },  
-    { top: '65%', left: '21.35%' },  
-    { top: '37.5%', left: '21.35%' },
+    { top: '65%', left: '78.65%' },
+    { top: '79.5%', left: '50%' },
+    { top: '65%', left: '21.35%' },
+    { top: '37.5%', left: '21.35%' }
   ]
 
   return (
@@ -58,10 +58,10 @@ export const HexDiagram = (): JSX.Element => {
         <div className="absolute inset-0 bg-cover bg-center">
           {/* Enclosing circle */}
           <div className="absolute inset-0 scale-110 rounded-full border-2 border-blue-300/50 p-24 bg-blue-500/25 backdrop-blur-sm" style={{ top: '0', left: '0', right: '0', bottom: '0' }} />
-          
+
           {items.map((item, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="absolute w-[35%] h-[35%]"
               style={{
                 top: positions[index].top,

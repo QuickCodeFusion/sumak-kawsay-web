@@ -1,7 +1,6 @@
 import { Element } from 'react-scroll'
 import { Card } from './ui/card'
 import { ListCard, ListCardContent, ListItem } from './ui/list'
-import Image from 'next/image'
 import { useLanguage } from '@/app/languageProvider'
 import PieChartComponent from './ui/piechart'
 
@@ -105,7 +104,7 @@ export const Tokenomics = (): JSX.Element => {
                   <ListItem className={`border-b-2 ${item.border}`} key={index}>
                       <ListCardContent className='w-full text-start'>
                           <span className='flex md:flex-row flex-col justify-start w-full items-end gap-1'>
-                              <div className='flex items-center gap-1 self-start'><div className='w-3 h-3 rounded-full' style={{backgroundColor: item.color}} ></div><p className='text-md font-bold'>{item.value}</p></div>
+                              <div className='flex items-center gap-1 self-start'><div className='w-3 h-3 rounded-full' style={{ backgroundColor: item.color }} ></div><p className='text-md font-bold'>{item.value}</p></div>
                               <p className='text-md font-semibold'>{item.label[language]}</p>
                           </span>
                           {item.children &&

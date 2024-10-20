@@ -1,6 +1,5 @@
 import { useLanguage } from '@/app/languageProvider'
 import Image from 'next/image'
-import Sectors from './Sectors'
 import HexDiagram from './HexDiagram'
 
 const text: Record<string, Record<string, string>> = {
