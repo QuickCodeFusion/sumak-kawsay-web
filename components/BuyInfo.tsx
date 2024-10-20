@@ -22,9 +22,9 @@ const BuyInfo = (): JSX.Element => {
 
   const text: Record<number, Record<string, string>> = {
     1: {
-      en: 'Token Symbol:',
-      es: 'Símbolo del Token:',
-      pt: 'Símbolo do Token:'
+      en: 'Contract Ticket:',
+      es: 'Símbolo del contrato:',
+      pt: 'Símbolo no Contrato:'
     },
     2: {
       en: 'Current Price:',
@@ -32,9 +32,9 @@ const BuyInfo = (): JSX.Element => {
       pt: 'Preço atual:'
     },
     3: {
-      en: 'Listing price',
-      es: 'Lista de precios',
-      pt: 'Preço de listagem'
+      en: 'Final Price:',
+      es: 'Precio de venta final',
+      pt: 'Preço de Venda Final'
     },
     4: {
       en: 'Your Balance:',

@@ -109,7 +109,7 @@ const Navbar = (): React.JSX.Element => {
                 <NavigationMenuList className='flex justify-end gap-2 py-4 px-4'>
                   <LanguageButton/>
                   <ToggleOwner/>
-                  <ModeToggle/>
+                  {/* <ModeToggle/> */}
                     <ConnectButton label={language === 'es' ? 'Conectar billetera' : language === 'en' ? 'Connect wallet' : 'Conectar carteira' } accountStatus={{
                       smallScreen: 'avatar',
                       largeScreen: 'full'

@@ -18,9 +18,9 @@ const PresaleCountdown = (): React.JSX.Element => {
 
   const text: Record<number, Record<string, string>> = {
     1: {
-      en: 'Countdown to next round',
-      es: 'Siguiente ronda',
-      pt: 'Próxima rodada'
+      en: 'Security Token Offering (STO) Live Presale',
+      es: 'Oferta de Tokens de Valor (STO) Preventa en vivo',
+      pt: 'Oferta de Tokens de Valores (STO) Pré-venda Aberta'
     }
   }
   /* useEffect(() => {
