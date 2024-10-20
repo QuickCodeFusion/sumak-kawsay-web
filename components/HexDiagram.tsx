@@ -44,12 +44,12 @@ export const HexDiagram = (): JSX.Element => {
 
   const positions = [
     { top: '50%', left: '50%' },
-    { top: '22%', left: '50%' },
-    { top: '37.5%', left: '81.65%' },
-    { top: '65%', left: '81.65%' },  
-    { top: '77.5%', left: '50%' },  
-    { top: '65%', left: '18.35%' },  
-    { top: '37.5%', left: '18.35%' },
+    { top: '20%', left: '50%' },
+    { top: '37.5%', left: '78.65%' },
+    { top: '65%', left: '78.65%' },  
+    { top: '79.5%', left: '50%' },  
+    { top: '65%', left: '21.35%' },  
+    { top: '37.5%', left: '21.35%' },
   ]
 
   return (
