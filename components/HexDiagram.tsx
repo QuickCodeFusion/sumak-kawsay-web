@@ -43,19 +43,22 @@ export const HexDiagram = (): JSX.Element => {
   ]
 
   const positions = [
-    { top: '14.64%', left: '50%' },
-    { top: '30.82%', left: '85.36%' },
-    { top: '69.18%', left: '85.36%' },
-    { top: '85.36%', left: '50%' },
-    { top: '69.18%', left: '14.64%' },
-    { top: '30.82%', left: '14.64%' },
     { top: '50%', left: '50%' },
+    { top: '22%', left: '50%' },
+    { top: '37.5%', left: '81.65%' },
+    { top: '65%', left: '81.65%' },  
+    { top: '77.5%', left: '50%' },  
+    { top: '65%', left: '18.35%' },  
+    { top: '37.5%', left: '18.35%' },
   ]
 
   return (
     <div className="w-full max-w-4xl mx-auto p-4">
-      <div className="relative w-full backdrop-blur-lg" style={{ paddingBottom: '100%' }}>
-        <div className="absolute inset-0 bg-[url(/flower-of-life-iogcpsdyve6h0ur4-removebg-preview.png)] bg-cover bg-center">
+      <div className="relative w-full" style={{ paddingBottom: '100%' }}>
+        <div className="absolute inset-0 bg-cover bg-center">
+          {/* Enclosing circle */}
+          <div className="absolute inset-0 scale-110 rounded-full border-2 border-blue-300/50 p-24 bg-blue-500/25 backdrop-blur-sm" style={{ top: '0', left: '0', right: '0', bottom: '0' }} />
+          
           {items.map((item, index) => (
             <div 
               key={index} 
@@ -66,9 +69,9 @@ export const HexDiagram = (): JSX.Element => {
                 transform: 'translate(-50%, -50%)'
               }}
             >
-              <Card className="w-full h-full rounded-full overflow-hidden border border-yellow-500">
-                <CardContent className="h-full flex items-center justify-center p-2 text-center">
-                  <p className="line-clamp-3 text-balance @container @[4rem]:text-[0.5rem] @[8rem]:text-xs @[12rem]:text-sm @[16rem]:text-base">
+              <Card className="w-full h-full rounded-full overflow-hidden border border-yellow-500 bg-blue-900/80 backdrop-filter-none">
+                <CardContent className="h-full flex items-center justify-center p-4 text-center">
+                  <p className="line-clamp-4 text-balance text-blue-100 @container @[4rem]:text-[0.5rem] @[8rem]:text-xs @[12rem]:text-sm @[16rem]:text-base">
                     {item[language]}
                   </p>
                 </CardContent>
