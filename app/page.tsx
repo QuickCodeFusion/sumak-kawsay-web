@@ -21,6 +21,7 @@ import { saleEnded } from '@/utils/endSale'
 import Video from '@/components/Video'
 import Diagram from '@/components/Diagram'
 import Sectors from '@/components/Sectors'
+import Partners from '@/components/Partners'
 
 const PresaleCountdown = dynamic(async () => await import('@/components/PresaleCountdown'), {
   ssr: false
@@ -63,6 +64,7 @@ const Home = (): React.JSX.Element => {
             <Tokenomics/>
             <Roadmap/>
             <Video/>
+            <Partners/>
             <InfoContent/>
             {/* <Dividends/> */}
             {/* <Fractional/> */}
