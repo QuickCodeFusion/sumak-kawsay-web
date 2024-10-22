@@ -1,13 +1,7 @@
-import { Card, CardContent } from "@/components/ui/card"
-import Image from "next/image";
+import { Card, CardContent } from '@/components/ui/card'
+import Image from 'next/image'
 
-const ElementIcon = ({ color, symbol }: { color: string; symbol: string }) => (
-  <div className={`w-16 h-16 rounded-full ${color} flex items-center justify-center`}>
-    <span className="text-white text-2xl font-bold">{symbol}</span>
-  </div>
-)
-
-export default function Diagram() {
+export default function Diagram (): React.JSX.Element {
   const elements = [
     { name: 'EARTH', icon: '/level3.png' },
     { name: 'WATER', icon: '/watericon.png' },
