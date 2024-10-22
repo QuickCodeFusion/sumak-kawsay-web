@@ -54,7 +54,7 @@ export const HexDiagram = (): JSX.Element => {
 
   return (
     <div className="w-full max-w-4xl mx-auto p-4">
-      <div className="relative w-full" style={{ paddingBottom: '100%' }}>
+      <div className="relative w-full scale-90" style={{ paddingBottom: '100%' }}>
         <div className="absolute inset-0 bg-cover bg-center">
           {/* Enclosing circle */}
           <div className="absolute inset-0 scale-110 rounded-full border-2 border-blue-300/50 p-24 bg-blue-500/25 backdrop-blur-sm" style={{ top: '0', left: '0', right: '0', bottom: '0' }} />
