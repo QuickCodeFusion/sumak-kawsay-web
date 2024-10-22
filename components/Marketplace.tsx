@@ -1,6 +1,5 @@
 import { useLanguage } from '@/app/languageProvider'
 import Image from 'next/image'
-import HexDiagram from './HexDiagram'
 
 const text: Record<string, Record<string, string>> = {
   1: {
@@ -70,7 +69,6 @@ export const Marketplace = (): JSX.Element => {
                           {text[8][language]}
                       </li>
                   </ul>
-            <HexDiagram></HexDiagram>
                 </div>
             </div>
         </div>

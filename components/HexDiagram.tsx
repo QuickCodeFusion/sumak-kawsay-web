@@ -6,9 +6,9 @@ export const HexDiagram = (): JSX.Element => {
 
   const items: Array<Record<string, string>> = [
     {
-      en: 'Deep sustainability, ecosystem regeneration, and eco-technologies',
-      es: 'Sostenibilidad profunda, regeneración de ecosistemas y eco-tecnologías',
-      pt: 'Sustentabilidade profunda, regeneração de ecosistemas e tecnologias ecoloógicas'
+      en: 'Holistic governance and collective participation technologies',
+      es: 'Gobernanza holística y tecnologías de la participación colectiva',
+      pt: 'Gobernança holística e tecnologias de participação coletiva'
     },
     {
       en: 'Integral human regeneration and universal wellbeing',
@@ -16,9 +16,9 @@ export const HexDiagram = (): JSX.Element => {
       pt: 'Regeneração integral do ser e bem-estar universal'
     },
     {
-      en: 'Ancestral wisdom and creative expression for the future of humanity',
-      es: 'Sabiduria ancestral y expresión creativa para el futuro de la humanidad',
-      pt: 'Sabedoria ancestral e expressão creativa para o futuro da humanidade'
+      en: 'Planetary wisdom education and universal communication',
+      es: 'Educación para la sabiduría planetaria y la comunicación universal',
+      pt: 'Educação para a sabedoria planetária e a comunicação universal'
     },
     {
       en: 'Solidarity economies and ecosystems of shared abundance',
@@ -26,19 +26,19 @@ export const HexDiagram = (): JSX.Element => {
       pt: 'Economias solidarias e ecosistemas de abundaência compartida'
     },
     {
-      en: 'Holistic governance and collective participation technologies',
-      es: 'Gobernanza holística y tecnologías de la participación colectiva',
-      pt: 'Gobernança holística e tecnologias de participação coletiva'
-    },
-    {
-      en: 'Planetary wisdom education and universal communication',
-      es: 'Educación para la sabiduría planetaria y la comunicación universal',
-      pt: 'Educação para a sabedoria planetária e a comunicação universal'
-    },
-    {
       en: 'Collective spirituality and soul regeneration',
       es: 'Espiritualidad colectiva y regeneración del alma',
       pt: 'Espiritualidade coletiva e regeneração do alimento'
+    },
+    {
+      en: 'Ancestral wisdom and creative expression for the future of humanity',
+      es: 'Sabiduria ancestral y expresión creativa para el futuro de la humanidad',
+      pt: 'Sabedoria ancestral e expressão creativa para o futuro da humanidade'
+    },
+    {
+      en: 'Deep sustainability, ecosystem regeneration, and eco-technologies',
+      es: 'Sostenibilidad profunda, regeneración de ecosistemas y eco-tecnologías',
+      pt: 'Sustentabilidade profunda, regeneração de ecosistemas e tecnologias ecoloógicas'
     }
   ]
 

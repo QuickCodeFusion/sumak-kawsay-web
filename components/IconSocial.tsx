@@ -28,7 +28,7 @@ const networks = [
   {
     id: 6,
     title: 'Discord',
-    url: 'https://discord.com/invite/NkB7Amd7Tx',
+    url: 'https://discord.gg/NkB7Amd7Tx',
     image: <IconDiscord />
   },
   {

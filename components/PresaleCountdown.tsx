@@ -18,9 +18,14 @@ const PresaleCountdown = (): React.JSX.Element => {
 
   const text: Record<number, Record<string, string>> = {
     1: {
-      en: 'Security Token Offering (STO) Live Presale',
-      es: 'Oferta de Tokens de Valor (STO) Preventa en vivo',
-      pt: 'Oferta de Tokens de Valores (STO) Pré-venda Aberta'
+      en: 'Security Token Offering (STO)',
+      es: 'Oferta de Tokens de Valor (STO)',
+      pt: 'Oferta de Tokens de Valores (STO)'
+    },
+    2: {
+      en: 'Live Presale',
+      es: 'Preventa en vivo',
+      pt: 'Pré-venda Aberta'
     }
   }
   /* useEffect(() => {
@@ -43,6 +48,7 @@ const PresaleCountdown = (): React.JSX.Element => {
   return (
         <div className='flex flex-col text-center justify-center items-center my-5'>
             <h5 className='text-xl uppercase font-semibold'>{text[1][language]}</h5>
+            <h5 className='text-xl uppercase font-semibold'>{text[2][language]}</h5>
             <Timer time={time} size={'lg'} />
         </div>
   )
