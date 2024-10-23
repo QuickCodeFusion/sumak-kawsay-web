@@ -28,15 +28,15 @@ const Partners = (): JSX.Element => {
     }
   ]
   return (
-        <div className="my-12 uppercase text-center space-y-4 w-full">
+        <div className="my-8 space-y-4 uppercase text-center w-full h-64">
             <h1>{text[1][language]}</h1>
-            <div className="flex justify-center gap-8 w-full flex-wrap ">
+            <div className="flex justify-center gap-24 w-full ">
                 {partners.map(partner => (
-                    <div key={partner.name} className='flex w-auto h-auto items-center justify-center aspect-video'>
+                    <div key={partner.name} className='flex items-center justify-center '>
                     <Image
                     width={100}
                     height={50} key={partner.name} src={partner.image} alt={partner.name}
-                    className='h-1/2 w-auto'/>
+                    className=' '/>
                     </div>
                 ))}
             </div>

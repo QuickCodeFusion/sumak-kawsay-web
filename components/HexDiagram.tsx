@@ -1,5 +1,6 @@
 import { useLanguage } from '@/app/languageProvider'
 import { Card, CardContent } from './ui/card'
+import DashDotLineVertical from './ui/llline'
 
 export const HexDiagram = (): JSX.Element => {
   const { language } = useLanguage()
@@ -53,8 +54,29 @@ export const HexDiagram = (): JSX.Element => {
   ]
 
   return (
-    <div className="w-full max-w-4xl mx-auto p-4">
-      <div className="relative w-full scale-90" style={{ paddingBottom: '100%' }}>
+    <div className="w-full max-w-4xl mx-auto p-4 scale-110 md:scale-100">
+      <div className="relative w-full md:scale-75" style={{ paddingBottom: '100%' }}>
+          <DashDotLineVertical className="absolute z-50 inset-0 -top-72 left-16 hidden md:block"></DashDotLineVertical>
+          <svg
+          xmlns="http://www.w3.org/2000/svg"
+          version="1.1"
+          viewBox="0 0 400 120"
+          className='stroke-current absolute inset-0 -top-28'
+          >
+            <path
+            d="M200,0 V120"
+            fill="none"
+            strokeWidth="1"
+            stroke="hsl(0, 0%, 80%)"
+            strokeDasharray="3 18"
+            ></path>
+            <defs>
+              <linearGradient id="SvgjsLinearGradient1001">
+                <stop offset="0"></stop>
+                <stop offset="1"></stop>
+              </linearGradient>
+            </defs>
+          </svg>
         <div className="absolute inset-0 bg-cover bg-center">
           {/* Enclosing circle */}
           <div className="absolute inset-0 scale-110 rounded-full border-2 border-blue-300/50 p-24 bg-blue-500/25 backdrop-blur-sm" style={{ top: '0', left: '0', right: '0', bottom: '0' }} />
@@ -71,7 +93,7 @@ export const HexDiagram = (): JSX.Element => {
             >
               <Card className="w-full h-full rounded-full overflow-hidden border border-yellow-500 bg-blue-900/80 backdrop-filter-none">
                 <CardContent className="h-full flex items-center justify-center p-4 text-center">
-                  <p className="line-clamp-4 text-balance text-blue-100 @container @[4rem]:text-[0.5rem] @[8rem]:text-xs @[12rem]:text-sm @[16rem]:text-base">
+                  <p className="font-bold text-balance text-blue-100 text-[0.5rem] sm:text-xs md:text-sm lg:text-base">
                     {item[language]}
                   </p>
                 </CardContent>
