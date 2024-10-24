@@ -1,5 +1,6 @@
 import { useLanguage } from '@/app/languageProvider'
 import Image from 'next/image'
+import { Card, CardContent } from './ui/card'
 
 const Quote = (): React.JSX.Element => {
   const { language } = useLanguage()
@@ -21,8 +22,8 @@ const Quote = (): React.JSX.Element => {
     }
   }
   return (
-    <div className="bg-card p-6 rounded-lg shadow-lg max-w-2xl mx-auto">
-      <div className="flex items-start space-x-4">
+    <Card className="bg-card p-6 rounded-lg shadow-lg max-w-2xl mx-auto">
+      <CardContent className="flex flex-col md:flex-row gap-2 items-start space-x-4">
         <div className="flex-shrink-0">
           <Image
             src="/mujer.png"
@@ -33,7 +34,7 @@ const Quote = (): React.JSX.Element => {
           />
         </div>
         <div className="flex-grow">
-          <blockquote className="text-foreground text-xl font-medium mb-2">
+          <blockquote className="text-foreground md:text-xl font-medium mb-2">
           &quot;{text[1][language]}&quot;
           </blockquote>
           <div className="text-right">
@@ -43,8 +44,8 @@ const Quote = (): React.JSX.Element => {
             </span>
           </div>
         </div>
-      </div>
-    </div>
+      </CardContent>
+    </Card>
   )
 }
 
