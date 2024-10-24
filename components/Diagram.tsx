@@ -12,7 +12,7 @@ export default function Diagram (): React.JSX.Element {
   const categories = ['Local', 'Bioregional', 'Continental', 'Global']
 
   return (
-    <div className="w-full max-w-4xl mx-auto p-4 text-white">
+    <div className="w-full max-w-4xl mx-auto p-4 text-white text-center">
       <div className="relative flex flex-col md:space-y-16">
         <div className="flex flex-wrap justify-around gap-8 mb-8">
           {elements.map((element, index) => (
@@ -49,7 +49,7 @@ export default function Diagram (): React.JSX.Element {
           {categories.map((category, index) => (
             <Card key={index} className="bg-blue-900 border-none">
               <CardContent className="p-4">
-                <h3 className="text-lg font-bold text-center">{category}</h3>
+                <h3 className="text-md md:text-lg font-bold text-center">{category}</h3>
               </CardContent>
             </Card>
           ))}

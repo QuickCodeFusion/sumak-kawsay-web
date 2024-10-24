@@ -91,7 +91,7 @@ export const HexDiagram = (): JSX.Element => {
                 transform: 'translate(-50%, -50%)'
               }}
             >
-              <Card className="w-full h-full rounded-full overflow-hidden border border-yellow-500 bg-blue-900/80 backdrop-filter-none">
+              <Card className="w-full h-full rounded-full overflow-hidden border border-blue-300/50 bg-blue-900/80 backdrop-filter-none">
                 <CardContent className="h-full flex items-center justify-center p-4 text-center">
                   <p className="font-bold text-balance text-blue-100 text-[0.5rem] sm:text-xs md:text-sm lg:text-base">
                     {item[language]}

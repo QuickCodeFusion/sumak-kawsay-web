@@ -1,4 +1,4 @@
-// import Image from 'next/image'
+import Image from 'next/image'
 
 const BgVideo = (): JSX.Element => {
   return (
@@ -12,8 +12,8 @@ const BgVideo = (): JSX.Element => {
         >
             <source src="/Planetapaper.mp4" />
             Tu navegador no admite la reproducción de videos.
-        </video>
-          <Image src="/bg6000.jpg" className='w-full object-cover h-full md:hidden' alt="bg" width={400} height={400} /> */}
+        </video> */}
+          <Image src="/bg6000.jpg" className='w-full object-cover h-full md:hidden' alt="bg" width={400} height={400} />
     </div>
   )
 }

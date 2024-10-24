@@ -52,7 +52,7 @@ export const Marketplace = (): JSX.Element => {
             <p className="w-10/12 mx-auto text-center text-xl">
                 {text[2][language]}
             </p>
-            <div className='w-full flex items-center justify-center  flex-col-reverse'>
+            <div className='w-full flex items-center justify-center flex-col'>
                 <Image className='mx-auto' src='/Ecosystem-BLANK.png' alt='Ecosystem-BLANK' width={500} height={500}/>
                 <div className='w-screen p-5 lg:w-3/4 flex'>
                   <ul className='flex flex-col w-full p-5 gap-5 list-decimal'>
