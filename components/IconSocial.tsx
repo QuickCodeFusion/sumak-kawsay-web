@@ -46,7 +46,7 @@ const networks = [
   {
     id: 1,
     title: 'Facebook',
-    url: 'https://www.facebook.com/profile.php?id=100080135048785',
+    url: 'http://facebook.com/globalpeaceregeneration',
     image: <IconFaceBook />
   }
 ]

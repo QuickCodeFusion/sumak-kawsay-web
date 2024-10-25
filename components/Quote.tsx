@@ -30,7 +30,7 @@ const Quote = (): React.JSX.Element => {
             alt="Profile picture"
             width={80}
             height={80}
-            className="rounded-full border-4 border-white aspect-square"
+            className="rounded-full border-2 border-white aspect-square"
           />
         </div>
         <div className="flex-grow">
