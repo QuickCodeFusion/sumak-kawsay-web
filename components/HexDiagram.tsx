@@ -56,12 +56,12 @@ export const HexDiagram = (): JSX.Element => {
   return (
     <div className="w-full max-w-4xl mx-auto p-4 scale-110 md:scale-100">
       <div className="relative w-full md:scale-75" style={{ paddingBottom: '100%' }}>
-          <DashDotLineVertical className="absolute z-50 inset-0 -top-72 left-16 hidden md:block"></DashDotLineVertical>
+          <DashDotLineVertical className="absolute z-50 inset-0 -top-0 left-16 hidden md:block"></DashDotLineVertical>
           <svg
           xmlns="http://www.w3.org/2000/svg"
           version="1.1"
           viewBox="0 0 400 120"
-          className='stroke-current absolute inset-0 -top-28'
+          className='stroke-current absolute inset-0 sm:hidden -top-28'
           >
             <path
             d="M200,0 V120"

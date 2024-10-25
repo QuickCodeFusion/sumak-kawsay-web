@@ -1,3 +1,4 @@
+import { useLanguage } from '@/app/languageProvider'
 import { Card, CardContent } from '@/components/ui/card'
 import Image from 'next/image'
 
@@ -9,10 +10,18 @@ export default function Diagram (): React.JSX.Element {
     { name: 'FIRE', icon: '/level2.png' }
   ]
 
+  const text: Record<string, string> = {
+    en: 'Accelerator-Incubator',
+    es: 'Incubador-Acelerador',
+    pt: 'Incubador-Acelerador'
+  }
+
+  const { language } = useLanguage()
+
   const categories = ['Local', 'Bioregional', 'Continental', 'Global']
 
   return (
-    <div className="w-full max-w-4xl mx-auto p-4 text-white text-center">
+    <div className="w-full max-w-4xl mx-auto p-4 text-white text-center md:scale-125">
       <div className="relative flex flex-col md:space-y-16">
         <div className="flex flex-wrap justify-around gap-8 mb-8">
           {elements.map((element, index) => (
@@ -20,7 +29,7 @@ export default function Diagram (): React.JSX.Element {
               <Image src={element.icon} alt={element.name} width={128} height={128}/>
               <div className="text-center">
                 <div className="font-bold">{element.name}</div>
-                <div className="text-sm">(Super-Incubator)</div>
+                <div className="text-sm">{text[language]}</div>
               </div>
             </div>
           ))}
