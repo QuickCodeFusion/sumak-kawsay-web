@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 const BgVideo = (): JSX.Element => {
   return (
-    <div className="absolute inset-0 h-[180vh] md:h-full w-full overflow-hidden bg-no-repeat bg-center md:pb-0 -z-10">
+    <div className="absolute inset-0 h-[180vh] md:h-full w-full overflow-hidden bg-no-repeat bg-center md:pb-0 -z-50">
         {/* <video
             autoPlay
             loop
