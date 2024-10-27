@@ -2,7 +2,7 @@
 import dynamic from 'next/dynamic'
 
 // import { Dividends } from '@/components/Dividends'
-// import { Fractional } from '@/components/Fractional'
+import { Fractional } from '@/components/Fractional'
 // import { Ecosystem } from '@/components/Ecosystem'
 // import { InfoCard } from '@/components/InfonCard'
 // import CardTeamWorkList from '@/components/CardTeamWorkList'
@@ -43,7 +43,7 @@ const BuyInfo = dynamic(async () => await import('@/components/BuyInfo'), {
 const Home = (): React.JSX.Element => {
   const endsale = saleEnded()
   return (
-        <main className='flex flex-col gap-20 pt-8 mt-10 px-8 justify-center items-center w-screen'>
+        <main className='flex flex-col gap-64 pt-8 mt-10 px-8 justify-center items-center w-screen'>
             <section className='p-2 my-10 z-10 w-full'>
                   <div className='flex xl:grid grid-cols-3 flex-col place-items-start items-center gap-4 w-full'>
                       <InfoPresale/>
@@ -64,6 +64,7 @@ const Home = (): React.JSX.Element => {
             <Projects/>
             <Marketplace/>
             <Sales/>
+            <Fractional/>
             <Passport/>
             <Tokenomics/>
             <Roadmap/>
@@ -71,7 +72,6 @@ const Home = (): React.JSX.Element => {
             <Partners/>
             <InfoContent/>
             {/* <Dividends/> */}
-            {/* <Fractional/> */}
             {/* <CardTeamWorkList /> */}
         </main>
   )

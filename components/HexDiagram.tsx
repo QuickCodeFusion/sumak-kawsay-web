@@ -56,7 +56,7 @@ export const HexDiagram = (): JSX.Element => {
   return (
     <div className="w-full max-w-4xl mx-auto p-4 scale-110 md:scale-100">
       <div className="relative w-full md:scale-75" style={{ paddingBottom: '100%' }}>
-          <DashDotLineVertical className="absolute z-50 inset-0 -top-0 left-16 hidden md:block"></DashDotLineVertical>
+          <DashDotLineVertical className="absolute z-50 inset-0 -top-40 md:-top-72 left-0 "></DashDotLineVertical>
           <svg
           xmlns="http://www.w3.org/2000/svg"
           version="1.1"

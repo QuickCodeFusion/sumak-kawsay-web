@@ -22,7 +22,7 @@ const Quote = (): React.JSX.Element => {
     }
   }
   return (
-    <Card className="bg-card p-6 rounded-lg shadow-lg max-w-2xl mx-auto">
+    <Card className="bg-card p-6 rounded-lg shadow-lg max-w-2xl mx-auto hidden md:block">
       <CardContent className="flex flex-col md:flex-row gap-2 items-start space-x-4">
         <div className="flex-shrink-0">
           <Image
