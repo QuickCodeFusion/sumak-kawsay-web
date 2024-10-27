@@ -93,7 +93,7 @@ export const HexDiagram = (): JSX.Element => {
             >
               <Card className="w-full h-full rounded-full overflow-hidden border border-blue-300/50 bg-blue-900/80 backdrop-filter-none">
                 <CardContent className="h-full flex items-center justify-center p-4 text-center">
-                  <p className="font-bold text-balance text-blue-100 text-[0.5rem] sm:text-xs md:text-sm lg:text-base">
+                  <p className="font-bold text-balance leading-tight md:leading-normal text-blue-100 text-[0.5rem] sm:text-xs md:text-base lg:text-xl">
                     {item[language]}
                   </p>
                 </CardContent>
