@@ -3,9 +3,10 @@ import { useLanguage } from '@/app/languageProvider'
 const Sales = (): JSX.Element => {
   const text: Record<string, Record<string, string>> = {
     1: {
-      en: 'cacao sales 100m',
-      es: 'Ventas de cacao 100m',
-      pt: 'Vendas de cacao 100m'
+      en: 'cacao sales \n 100m',
+      es: `Ventas de cacao
+      100m`,
+      pt: 'Vendas de cacao \n 100m'
     },
     2: {
       en: 'coffee sales 500m',
@@ -25,17 +26,17 @@ const Sales = (): JSX.Element => {
   }
   const { language } = useLanguage()
   return (
-    <div className="my-12 flex flex-col md:grid grid-cols-4 gap-10 w-2/3 text-balance items-center justify-center">
-          <h3 className="text-3xl mb-4 text-center font-semibold uppercase leading-10">
+    <div className="my-12 flex flex-col md:grid grid-cols-4 gap-10 w-full place-items-center px-8 items-center justify-center">
+          <h3 className="text-3xl mb-4 text-center w-[10rem] font-semibold uppercase leading-10">
             {text[1][language]}
           </h3>
-          <h3 className="text-3xl mb-4 text-center font-semibold uppercase leading-10">
+          <h3 className="text-3xl mb-4 text-center font-semibold w-[10rem] uppercase leading-10">
             {text[2][language]}
           </h3>
-          <h3 className="text-3xl mb-4 text-center font-semibold uppercase leading-10">
+          <h3 className="text-3xl mb-4 text-center font-semibold w-[10rem] uppercase leading-10">
             {text[3][language]}
           </h3>
-          <h3 className="text-3xl mb-4 text-center font-semibold uppercase leading-10">
+          <h3 className="text-3xl mb-4 text-center font-semibold w-[10rem] uppercase leading-10">
             {text[4][language]}
           </h3>
     </div>
