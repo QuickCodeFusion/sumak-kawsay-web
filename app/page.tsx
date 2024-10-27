@@ -22,6 +22,8 @@ import Video from '@/components/Video'
 import Diagram from '@/components/Diagram'
 import Sectors from '@/components/Sectors'
 import Partners from '@/components/Partners'
+import Projects from '@/components/Projects'
+import Sales from '@/components/Sales'
 
 const PresaleCountdown = dynamic(async () => await import('@/components/PresaleCountdown'), {
   ssr: false
@@ -59,7 +61,9 @@ const Home = (): React.JSX.Element => {
             {/* <InfoCard/> */}
             {/* <ItemCarousel/> */}
             {/* <Ecosystem/> */}
+            <Projects/>
             <Marketplace/>
+            <Sales/>
             <Passport/>
             <Tokenomics/>
             <Roadmap/>
