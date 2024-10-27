@@ -25,7 +25,7 @@ export default function Diagram (): React.JSX.Element {
       <div className="relative flex flex-col md:space-y-16">
         <div className="flex flex-wrap justify-around gap-8 mb-8">
           {elements.map((element, index) => (
-            <div key={index} className="flex flex-col items-center space-y-2">
+            <div key={index} className="flex flex-col justify-between items-center space-y-2">
               <Image src={element.icon} alt={element.name} width={128} height={128}/>
               <div className="text-center">
                 <div className="font-bold">{element.name}</div>
