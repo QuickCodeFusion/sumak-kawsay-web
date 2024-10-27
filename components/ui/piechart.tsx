@@ -19,7 +19,7 @@ const PieChartComponent: React.FC<PieChartComponentProps> = ({ data }) => {
       label={({ dataEntry }) => `${Math.round(dataEntry.percentage)}%`}
       labelStyle={() => ({
         fill: '#fff',
-        fontSize: '3px'
+        fontSize: 'var(--pie-chart-font-size)'
       })}
       labelPosition={80}
       radius={40}

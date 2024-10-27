@@ -87,11 +87,10 @@ export const Tokenomics = (): JSX.Element => {
 
   const { language } = useLanguage()
   return (
-        <Element name='tokenomics' className='flex flex-wrap justify-around items-center w-full text-center px-4 py-20'>
-          <div>
+        <Element name='tokenomics' className='flex flex-col gap-4 flex-wrap justify-around items-center w-full text-center px-4 py-20'>
             <h1 className='text-3xl font-bold mb-4'>{text[1][language]}</h1>
             <h3 className='text-xl font-semibold mb-4'>{text[2][language]}</h3>
-            <Card className='backdrop-blur p-6 border shadow-sm md:grid grid-cols-2 place-content-center place-items-center'>
+            <Card className='backdrop-blur p-6 border shadow-sm lg:grid grid-cols-2 place-content-center place-items-center md:w-2/3'>
               <PieChartComponent
                 data={items.map((item) => ({
                   title: item.label[language],
@@ -99,7 +98,7 @@ export const Tokenomics = (): JSX.Element => {
                   color: item.color
                 }))}
               />
-              <ListCard className=''>
+              <ListCard className='h-full'>
               {items.map((item, index) => (
                   <ListItem className={`border-b-2 ${item.border}`} key={index}>
                       <ListCardContent className='w-full text-start'>
@@ -121,7 +120,6 @@ export const Tokenomics = (): JSX.Element => {
               ))}
               </ListCard>
             </Card>
-          </div>
         </Element>
   )
 }
