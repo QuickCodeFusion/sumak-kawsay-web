@@ -1,5 +1,4 @@
 import { useLanguage } from '@/app/languageProvider'
-import { Card, CardContent, CardFooter } from './ui/card'
 
 const Sales = (): JSX.Element => {
   const text: Record<string, Record<string, string>> = {
