@@ -18,10 +18,10 @@ const CardProject: React.FC<{ project: Project }> = ({ project }): JSX.Element =
                 <Image src="/logo.png" alt="logo" width={70} height={70}></Image>
                 <h1 className=' flex items-center'>{project.title}</h1>
             </div>
-            <div>
-                <p>{project.description}</p>
-            </div>
                 <ProgressBar progress={project.progress}></ProgressBar>
+            <div className='relative w-full'>
+                <p className='text-start absolute -top-6 left-12'>{project.description}</p>
+            </div>
             <div className='flex flex-row justify-between items-center w-full gap-4'>
                 <ButtonUI variant={'outline'}>Uplift</ButtonUI>
                 <TwoIcons/>
