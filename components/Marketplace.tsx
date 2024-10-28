@@ -47,13 +47,13 @@ export const Marketplace = (): JSX.Element => {
   const { language } = useLanguage()
 
   return (
-        <div className='my-12'>
+        <div className='my-12 md:w-2/3'>
             <h3 className="text-3xl mb-4 text-center font-semibold">{text[1][language]}</h3>
             <p className="w-10/12 mx-auto text-center text-xl">
                 {text[2][language]}
             </p>
             <div className='w-full flex items-center justify-center flex-col md:flex-row'>
-                <Image className='mx-auto hidden md:block' src='/Ecosystem-BLANK.png' alt='Ecosystem-BLANK' width={500} height={500}/>
+                <Image className='mx-auto hidden lg:block' src='/Ecosystem-BLANK.png' alt='Ecosystem-BLANK' width={500} height={500}/>
                 <div className='w-screen p-5 lg:w-3/4 flex'>
                   <ul className='flex flex-col w-full p-5 gap-5 list-decimal'>
                       <li>

@@ -46,7 +46,7 @@ export const Passport = (): JSX.Element => {
             <h3 className="text-3xl text-center font-semibold pb-2">{text[1][language]}</h3>
             <p className="text-center font-semibold text-2xl pb-4">{text[2][language]}</p>
             <p className="w-10/12 mx-auto text-center text-xl">{text[3][language]}</p>
-            <div className='flex flex-col lg:flex-row md:w-3/4 self-center place-items-center p-5'>
+            <div className='flex flex-col-reverse lg:flex-row-reverse md:w-3/4 self-center place-items-center p-5'>
                 <div className='p-5 flex flex-col items-center gap-6'>
                 <p className='text-xl'>{text[4][language]}</p>
                 <ul className='flex  flex-col gap-5 list-disc pl-5'>
