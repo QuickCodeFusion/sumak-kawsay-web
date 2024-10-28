@@ -1,7 +1,7 @@
-import Image from 'next/image'
 import { ButtonUI } from './ui/button'
 import ProgressBar from './ProgressBar'
 import TwoIcons from './TwoIcons'
+import Image from 'next/image'
 
 interface Project {
   title: string
@@ -13,9 +13,9 @@ interface Project {
 
 const CardProject: React.FC<{ project: Project }> = ({ project }): JSX.Element => {
   return (
-        <div className='flex flex-col bg-card justify-center items-center gap-8 p-6 rounded-3xl'>
+        <div className='flex flex-col bg-card justify-between aspect-square items-center  gap-8 p-6 rounded-3xl'>
             <div className='flex flex-row  gap-10'>
-                <Image src="/logo.png" alt="logo" width={70} height={70}></Image>
+                <Image src={project.image} className='object-cover' alt={project.title} width={120} height={120}></Image>
                 <h1 className=' flex items-center'>{project.title}</h1>
             </div>
                 <ProgressBar progress={project.progress}></ProgressBar>

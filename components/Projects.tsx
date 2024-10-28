@@ -7,7 +7,7 @@ const Projects = (): JSX.Element => {
       title: 'Regenerative Tourism',
       description: '0/94,752 UNITY',
       progress: 50,
-      image: '/logo.png',
+      image: '/tourism.jpg',
       link: '/'
     },
     {
@@ -15,7 +15,7 @@ const Projects = (): JSX.Element => {
       title: 'Bioeconomy',
       description: '0/87,074 UNITY',
       progress: 35,
-      image: '/logo.png',
+      image: '/bioeconomy.jpg',
       link: '/'
     },
     {
@@ -23,7 +23,7 @@ const Projects = (): JSX.Element => {
       title: 'Agri-food Value Chains',
       description: '0/532,399 UNITY',
       progress: 75,
-      image: '/logo.png',
+      image: '/agrifood.jpg',
       link: '/'
     }
   ]
