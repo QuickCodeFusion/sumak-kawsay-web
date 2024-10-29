@@ -23,7 +23,7 @@ const CardProject: React.FC<{ project: Project }> = ({ project }): JSX.Element =
                 <p className='text-start absolute -top-6 left-12'>{project.description}</p>
             </div>
             <div className='flex flex-row justify-between items-center w-full gap-4'>
-                <ButtonUI variant={'outline'}>Uplift</ButtonUI>
+                <ButtonUI variant={'outline'}>Vote</ButtonUI>
                 <TwoIcons/>
             </div>
         </div>
