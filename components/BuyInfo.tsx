@@ -47,8 +47,8 @@ const BuyInfo = (): JSX.Element => {
       pt: 'Habilitar Usdt'
     },
     6: {
-      en: 'Meme Army Pump.Fun',
-      es: 'Meme Army Pump.Fun',
+      en: 'Solana Based Fair Launch',
+      es: 'Solana Based Fair Launch',
       pt: 'Solana Based Fair Launch'
     }
   }
