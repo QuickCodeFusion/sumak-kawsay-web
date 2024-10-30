@@ -49,7 +49,7 @@ const BuyInfo = (): JSX.Element => {
     6: {
       en: 'Meme Army Pump.Fun',
       es: 'Meme Army Pump.Fun',
-      pt: 'Meme Army Pump.Fun'
+      pt: 'Solana Based Fair Launch'
     }
   }
 
