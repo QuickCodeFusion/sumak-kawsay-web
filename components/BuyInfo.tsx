@@ -47,9 +47,9 @@ const BuyInfo = (): JSX.Element => {
       pt: 'Habilitar Usdt'
     },
     6: {
-      en: 'How to buy',
-      es: 'Como comprar',
-      pt: 'Como comprar'
+      en: 'Meme Army Pump.Fun',
+      es: 'Meme Army Pump.Fun',
+      pt: 'Meme Army Pump.Fun'
     }
   }
 
@@ -87,7 +87,7 @@ const BuyInfo = (): JSX.Element => {
                         <ValidateUsdt setIsOpen={setIsOpen}/>
                       </Modal>
                     <ButtonModal/>
-                    <Link target='_blank' href={'https://www.transformationalfestivals.net/howtopurchase'} className='w-fit self-end text-azure-radiance-500 bg-transparent underline col-start-2 relative md:left-8 top-6 hover:bg-transparent'>{text[6][language]}</Link>
+                    <Link target='_blank' href={'https://pump.fun/CqtThsnVGuUz5DMeS7DydpsgiVrNjJxLqbvcjD5fpump'} className='w-fit self-end text-azure-radiance-500 bg-transparent underline col-start-2 relative md:left-8 top-6 hover:bg-transparent'>{text[6][language]}</Link>
             </div>
         </div>
   )

@@ -71,7 +71,7 @@ export const Fractional = (): JSX.Element => {
                         </li>
                     </ul>
                 </div>
-                <Image src="/river.jpeg" alt="blueSky" width={300} height={300}/>
+                <Image src="/REALSTATE.gif" alt="blueSky" width={300} height={300}/>
             </div>
         </div>
   )
