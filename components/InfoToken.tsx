@@ -43,35 +43,35 @@ const InfonToken = (): JSX.Element => {
           <p>{text[2][language]}</p>
           <DecimalToken />
         </div>
-        <div className="grid place-items-center">
+        <div className="grid place-items-center truncate text-sm md:text-base">
           <p>{text[3][language]}</p>
-        <Link
-          className="underline underline-offset-2"
-          target="_blank"
-          href={
-            'https://polygonscan.com/token/0x248f2b2ca86dc1033be2df56e5481f4f8bbe8c89'
-          }
-        >
-          Polygon ERC-20
-        </Link>
-        <Link
-          className="underline underline-offset-2"
-          target="_blank"
-          href={
-            'https://sarafu.network/pools/0x4fA1572294d5cf6dbAEAfd2E7AC7deD41595842a'
-          }
-        >
-          CELO Blockchain
-        </Link>
-        <Link
-          className="underline underline-offset-2"
-          target="_blank"
-          href={
-            'https://tools.smithii.io/launch/STO-Genesis-Offering'
-          }
-        >
-          Solana Blockchain
-        </Link>
+          <Link
+            className="underline underline-offset-2"
+            target="_blank"
+            href={
+              'https://polygonscan.com/token/0x248f2b2ca86dc1033be2df56e5481f4f8bbe8c89'
+            }
+          >
+            Polygon ERC-20
+          </Link>
+          <Link
+            className="underline underline-offset-2"
+            target="_blank"
+            href={
+              'https://sarafu.network/pools/0x4fA1572294d5cf6dbAEAfd2E7AC7deD41595842a'
+            }
+          >
+            CELO Blockchain
+          </Link>
+          <Link
+            className="underline underline-offset-2"
+            target="_blank"
+            href={
+              'https://tools.smithii.io/launch/STO-Genesis-Offering'
+            }
+          >
+            Solana Blockchain
+          </Link>
         </div>
       </CardContent>
       <CardFooter className="text-center justify-center"></CardFooter>
