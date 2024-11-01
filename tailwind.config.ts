@@ -115,6 +115,13 @@ module.exports = {
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out'
+      },
+      dropShadow: {
+        'sm-white': '0 6px 6px rgba(255, 255, 255, 0.25)',
+        '4xl-white': [
+          '0 35px 35px rgba(255, 255, 255, 0.25)',
+          '0 45px 65px rgba(0, 0, 0, 0.15)'
+        ]
       }
     }
   },
