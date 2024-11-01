@@ -43,7 +43,7 @@ const BuyInfo = dynamic(async () => await import('@/components/BuyInfo'), {
 const Home = (): React.JSX.Element => {
   const endsale = saleEnded()
   return (
-        <main className='flex flex-col gap-64 pt-8 mt-10 px-8 justify-center items-center w-screen'>
+        <main className='flex flex-col gap-64 pt-8 mt-10 px-8 justify-center items-center w-screen overflow-x-hidden'>
             <section className='p-2 my-10 z-10 w-full'>
                   <div className='flex xl:grid grid-cols-3 flex-col place-items-start items-center gap-4 w-full'>
                       <InfoPresale/>
