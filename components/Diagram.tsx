@@ -1,6 +1,7 @@
 import { useLanguage } from '@/app/languageProvider'
 import { Card, CardContent } from '@/components/ui/card'
 import Image from 'next/image'
+import DashLine from './ui/llline'
 
 export default function Diagram (): React.JSX.Element {
   const elements = [
@@ -58,6 +59,7 @@ export default function Diagram (): React.JSX.Element {
           <path d="M0,200 V120" stroke="white" strokeWidth="1"/>
           <path d="M400,200 V120" stroke="white" strokeWidth="1"/>
         </svg>
+        <DashLine className="absolute z-50 hidden md:inline-block md:top-72 left-0 "></DashLine>
 
         <div className="grid grid-cols-2 md:flex justify-around gap-4 md:pt-8">
           {categories.map((category, index) => (

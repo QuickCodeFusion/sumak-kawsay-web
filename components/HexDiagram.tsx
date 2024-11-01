@@ -1,6 +1,5 @@
 import { useLanguage } from '@/app/languageProvider'
 import { Card, CardContent } from './ui/card'
-import DashDotLineVertical from './ui/llline'
 
 export const HexDiagram = (): JSX.Element => {
   const { language } = useLanguage()
@@ -45,37 +44,30 @@ export const HexDiagram = (): JSX.Element => {
 
   const positions = [
     { top: '50%', left: '50%' },
-    { top: '20%', left: '50%' },
-    { top: '37.5%', left: '78.65%' },
-    { top: '65%', left: '78.65%' },
-    { top: '79.5%', left: '50%' },
-    { top: '65%', left: '21.35%' },
-    { top: '37.5%', left: '21.35%' }
+    { top: '15%', left: '50%' },
+    { top: '32.5%', left: '80%' },
+    { top: '68%', left: '80%' },
+    { top: '85%', left: '50%' },
+    { top: '68%', left: '20%' },
+    { top: '32.5%', left: '20%' }
   ]
 
   return (
     <div className="w-full max-w-4xl mx-auto p-4 scale-110 md:scale-100">
       <div className="relative w-full md:scale-75" style={{ paddingBottom: '100%' }}>
-          <DashDotLineVertical className="absolute z-50 inset-0 -top-40 md:-top-72 left-0 "></DashDotLineVertical>
-          <svg
+      <svg
           xmlns="http://www.w3.org/2000/svg"
           version="1.1"
-          viewBox="0 0 400 120"
-          className='stroke-current absolute inset-0 sm:hidden -top-28'
+          viewBox="0 0 400 400"
+          className='stroke-current md:hidden absolute -top-64'
           >
             <path
-            d="M200,0 V120"
+            d="M200,5 V400"
             fill="none"
             strokeWidth="1"
             stroke="hsl(0, 0%, 80%)"
             strokeDasharray="3 18"
             ></path>
-            <defs>
-              <linearGradient id="SvgjsLinearGradient1001">
-                <stop offset="0"></stop>
-                <stop offset="1"></stop>
-              </linearGradient>
-            </defs>
           </svg>
         <div className="absolute inset-0 bg-cover bg-center">
           {/* Enclosing circle */}

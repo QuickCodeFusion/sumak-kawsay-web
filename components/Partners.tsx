@@ -1,5 +1,6 @@
 import { useLanguage } from '@/app/languageProvider'
 import Image from 'next/image'
+import Link from 'next/link'
 
 const Partners = (): JSX.Element => {
   const { language } = useLanguage()
@@ -14,17 +15,17 @@ const Partners = (): JSX.Element => {
     {
       name: 'bluedot',
       image: '/bluedot.png',
-      link: ''
+      link: 'http://bluedotproject.com'
     },
     {
       name: 'corenexus',
       image: '/corenexus.png',
-      link: ''
+      link: 'https://corenexus.is/'
     },
     {
       name: 'recommon',
       image: '/recommon.png',
-      link: ''
+      link: 'https://www.recommon.land/'
     }
   ]
   return (
@@ -32,12 +33,12 @@ const Partners = (): JSX.Element => {
             <h1>{text[1][language]}</h1>
             <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-24 w-full ">
                 {partners.map(partner => (
-                    <div key={partner.name} className='flex items-center justify-center '>
+                    <Link target='_blank' href={partner.link} key={partner.name} className='flex items-center justify-center'>
                     <Image
                     width={100}
                     height={50} key={partner.name} src={partner.image} alt={partner.name}
                     className=' '/>
-                    </div>
+                    </Link>
                 ))}
             </div>
         </div>
