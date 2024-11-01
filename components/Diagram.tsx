@@ -5,10 +5,10 @@ import DashLine from './ui/llline'
 
 export default function Diagram (): React.JSX.Element {
   const elements = [
-    { name: 'EARTH', icon: '/level3.png' },
-    { name: 'WATER', icon: '/watericon.png' },
-    { name: 'AIR', icon: '/airicon.png' },
-    { name: 'FIRE', icon: '/level2.png' }
+    { name: 'EARTH', icon: '/level3.png', borderColor: 'border-[#00FF00] drop-shadow-[0_0_10px_#00FF00]' },
+    { name: 'WATER', icon: '/watericon.png', borderColor: 'border-[#0000FF] drop-shadow-[0_0_10px_#0000FF]' },
+    { name: 'AIR', icon: '/airicon.png', borderColor: 'border-[#FFFF00] drop-shadow-[0_0_10px_#FFFF00]' },
+    { name: 'FIRE', icon: '/level2.png', borderColor: 'border-[#FF0000] drop-shadow-[0_0_10px_#FF0000]' }
   ]
 
   const text: Record<string, string> = {
@@ -26,7 +26,7 @@ export default function Diagram (): React.JSX.Element {
       <div className="relative flex flex-col md:space-y-16">
         <div className="flex flex-wrap justify-around gap-2 mb-8">
           {elements.map((element, index) => (
-            <Card key={index} className="flex flex-col group justify-between items-center space-y-2 p-4 cursor-pointer">
+            <Card key={index} className={`border ${element.borderColor} flex flex-col group justify-between items-center space-y-2 p-4 cursor-pointer contrast-125`}>
               <Image
               src={element.icon}
               alt={element.name}
