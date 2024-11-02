@@ -6,10 +6,10 @@ import { ButtonUI } from './ui/button'
 
 export default function Diagram (): React.JSX.Element {
   const elements = [
-    { name: 'EARTH', icon: '/level3.png', borderColor: 'border-[#00FF00] drop-shadow-[0_0_10px_#00FF00]', return: '12%', blocking: '12' },
-    { name: 'WATER', icon: '/watericon.png', borderColor: 'border-[#0000FF] drop-shadow-[0_0_10px_#0000FF]', return: '18%', blocking: '24' },
-    { name: 'AIR', icon: '/airicon.png', borderColor: 'border-[#FFFF00] drop-shadow-[0_0_10px_#FFFF00]', return: '24%', blocking: '36' },
-    { name: 'FIRE', icon: '/level2.png', borderColor: 'border-[#FF0000] drop-shadow-[0_0_10px_#FF0000]', return: '30%', blocking: '56' }
+    { name: 'EARTH', icon: '/level3.png', borderColor: 'border-[#00FF00] drop-shadow-[0_0_10px_#00FF00]', return: '12', blocking: '12' },
+    { name: 'WATER', icon: '/watericon.png', borderColor: 'border-[#0000FF] drop-shadow-[0_0_10px_#0000FF]', return: '18', blocking: '24' },
+    { name: 'AIR', icon: '/airicon.png', borderColor: 'border-[#FFFF00] drop-shadow-[0_0_10px_#FFFF00]', return: '24', blocking: '36' },
+    { name: 'FIRE', icon: '/level2.png', borderColor: 'border-[#FF0000] drop-shadow-[0_0_10px_#FF0000]', return: '30', blocking: '56' }
   ]
 
   const text: Record<string, string> = {
