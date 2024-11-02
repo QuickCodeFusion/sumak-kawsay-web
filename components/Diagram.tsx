@@ -55,7 +55,7 @@ export default function Diagram (): React.JSX.Element {
           ))}
         </div>
 
-        <svg className="absolute top-52 left-0 w-full h-64 -z-50 hidden md:block" viewBox="0 0 400 200" preserveAspectRatio="none">
+        <svg className="absolute md:top-52 lg:top-40 left-0 w-full h-64 -z-50 hidden md:block" viewBox="0 0 400 200" preserveAspectRatio="none">
           <path d="M50,0 V40" stroke="white" strokeWidth="1"/>
           <path d="M150,0 V40" stroke="white" strokeWidth="1"/>
           <path d="M250,0 V40" stroke="white" strokeWidth="1"/>
