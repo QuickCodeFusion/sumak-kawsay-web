@@ -8,9 +8,9 @@ const text: Record<number, Record<string, string>> = {
     pt: 'Inversão imobiliária acessível a todos'
   },
   2: {
-    en: 'Anyone access to quality real estate investments starting from $50 USD. We make it possible with our smart contract which represents the rights to the financial benefits of the real world asset.',
-    es: 'Cualquier persona tiene acceso a inversiones inmobiliarias de calidad a partir de 50 USD. Lo hacemos posible, mediante contratos inteligentes que representan los derechos a los beneficios financieros del activo del mundo real.',
-    pt: 'Qualquer pessoa tem acesso ao investimento inmobiliaria de qualidade a partir de 50 USD. Nossa contratação inteligente representa os direitos aos beneficios financieros do activo do mundo real'
+    en: 'Anyone access to quality real estate investments starting from $50 USD. We make it possible with our smart contract which represents the rights to the financial and ecological benefits of the real world asset.',
+    es: 'Cualquier persona tiene acceso a inversiones inmobiliarias de calidad a partir de 50 USD. Lo hacemos posible, mediante contratos inteligentes que representan los derechos a los beneficios financieros y ecológicos del activo del mundo real.',
+    pt: 'Qualquer pessoa tem acesso ao investimento inmobiliaria de qualidade a partir de 50 USD. Nossa contratação inteligente representa os direitos aos beneficios financieros e ecoloógicos do activo do mundo real'
   },
   3: {
     en: 'Ecological Housing and Resilient Community Live:',
