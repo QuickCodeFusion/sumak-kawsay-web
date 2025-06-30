@@ -5,6 +5,7 @@ import { Card, CardContent, CardFooter, CardHeader } from './ui/card'
 import { contractToken } from '@/utils/AbyContrat'
 import { useLanguage } from '@/app/languageProvider'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const InfonToken = (): JSX.Element => {
   const { language } = useLanguage()
@@ -26,7 +27,9 @@ const InfonToken = (): JSX.Element => {
     }
   }
   return (
-    <Card className="relative bg-azure-radiance-500 border-none shadow-azure-radiance-900 shadow-lg -mt-64 md:-mt-72 mb-12 w-full rounded-3xl">
+    <Card className="relative bg-azure-radiance-500 border-none shadow-azure-radiance-900 shadow-lg flex justify-start -mt-64 md:-mt-72 mb-12 w-full rounded-3xl">
+        <Image className='flex-auto' src={'/wiphala.webp'} alt='wiphala' height={20} width={20}/>
+        <div>
       <CardHeader className="flex flex-col items-center">
         <p>{text[1][language]}</p>
         <div className="flex items-center pb-2">
@@ -75,6 +78,7 @@ const InfonToken = (): JSX.Element => {
         </div>
       </CardContent>
       <CardFooter className="text-center justify-center"></CardFooter>
+      </div>
     </Card>
   )
 }

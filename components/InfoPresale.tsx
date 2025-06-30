@@ -16,25 +16,25 @@ const InfoPresale = (): JSX.Element => {
         es: 'Whitepaper',
         pt: 'Whitepaper'
       },
-      link: 'https://www.transformationalfestivals.net/whitepaper'
+      link: 'https://drive.google.com/file/d/1qG_uK1myDLnMZABgFVvGFUuYKseoN70D/view '
     },
     {
       id: 2,
       title: {
-        en: 'Portfolio',
-        es: 'Portafolio',
-        pt: 'Portfolio'
+        en: 'Hub',
+        es: 'Hub',
+        pt: 'Hub'
       },
-      link: 'https://www.binance.com/es/nft/my-nfts/collected/symbiosls-0319e09553f7b3842d72b6435a287e3c'
+      link: 'https://dao.hypha.earth/abya-yala/'
     },
     {
       id: 1,
       title: {
-        en: 'App',
-        es: 'App',
-        pt: 'App'
+        en: 'Ayni',
+        es: 'Ayni',
+        pt: 'Ayni'
       },
-      link: 'https://www.transformationalfestivals.net/member/account'
+      link: 'https://raydium.io/swap/?inputMint=sol&outputMint=GyQjvwvkhSQgaCA5Rwo3cAxNpd5jSgdRQna8QXrtFt27&referrer=5rQra4Wh9tVu6cdmPuFUan9bmGsuAvqNDTp6Z9YD9ipe'
     }
   ]
 
@@ -45,7 +45,7 @@ const InfoPresale = (): JSX.Element => {
       pt: 'Uma Rede Global de Capital Regenerativo'
     },
     2: {
-      en: 'Direct, decentralized access to financial opportunities and governance-- empowering you, wherever you are, to cocreate the world you envision.',
+      en: 'Direct, decentralized access to financial opportunities and governance empowering you, wherever you are, to cocreate the world you envision.',
       es: 'Acceso directo y descentralizado a instrumentos de inversión & APY competitivo desde cualquier lugar del mundo',
       pt: 'Acesso direto e descentralizado aos ativos financeiros & APY competitivo de qualquer lugar do mundo'
     },
@@ -77,7 +77,6 @@ const InfoPresale = (): JSX.Element => {
                 })}
               </span>
               <Link href='https://www.dx.app/dxlock/view/token-locker?address=0x7f9c87a16ce7d357b958a69ded86bfe18a0804db&chain=137' target='_blank' className='underline text-white'>{text[3][language]}</Link>
-              <Quote/>
           </div>
   )
 }

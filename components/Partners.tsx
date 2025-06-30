@@ -26,6 +26,11 @@ const Partners = (): JSX.Element => {
       name: 'recommon',
       image: '/recommon.png',
       link: 'https://www.recommon.land/'
+    },
+    {
+      name: 'indrani',
+      image: '/indrani.png',
+      link: ''
     }
   ]
   return (

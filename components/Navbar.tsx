@@ -93,17 +93,17 @@ const Navbar = (): React.JSX.Element => {
             <NavigationMenuList className='w-screen grid grid-cols-3 justify-between px-8'>
                 <Image className='rounded-full' src='/logo.png' alt='logo' width={50} height={50}></Image>
                 <NavigationMenuList>
-                <div className='sm:flex gap-4 hidden items-center justify-center'>
-                  {
-                    items.map((item) => (
-                      <ScrollLink activeClass='active' to={item.url} spy smooth={true} duration={600} key={item.id}>
-                        <ButtonUI className='bg-transparent hover:bg-background rounded-3xl text-foreground'>
-                          {item.title[language]}
-                        </ButtonUI>
-                      </ScrollLink>
-                    ))
-                  }
-                </div>
+                  <div className='sm:flex gap-4 hidden items-center justify-center'>
+                    {
+                      items.map((item) => (
+                        <ScrollLink activeClass='active' to={item.url} spy smooth={true} duration={600} key={item.id}>
+                          <ButtonUI className='bg-transparent hover:bg-background rounded-3xl text-foreground'>
+                            {item.title[language]}
+                          </ButtonUI>
+                        </ScrollLink>
+                      ))
+                    }
+                  </div>
                 </NavigationMenuList>
                 <NavigationMenuList className='flex justify-end gap-2 py-4 px-4'>
                   <LanguageButton/>

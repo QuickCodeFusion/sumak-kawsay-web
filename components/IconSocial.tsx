@@ -25,12 +25,12 @@ const networks = [
     url: 'https://t.me/UnifyingEarth',
     image: <IconTelegram />
   },
-  {
-    id: 6,
-    title: 'Discord',
-    url: 'https://discord.gg/NkB7Amd7Tx',
-    image: <IconDiscord />
-  },
+  // {
+  //   id: 6,
+  //   title: 'Discord',
+  //   url: 'https://discord.gg/NkB7Amd7Tx',
+  //   image: <IconDiscord />
+  // },
   {
     id: 7,
     title: 'Youtube',
@@ -46,7 +46,7 @@ const networks = [
   {
     id: 1,
     title: 'Facebook',
-    url: 'http://facebook.com/globalpeaceregeneration',
+    url: 'https://www.facebook.com/AbyaYalaDAO/',
     image: <IconFaceBook />
   }
 ]

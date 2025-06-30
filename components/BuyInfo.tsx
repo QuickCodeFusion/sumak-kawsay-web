@@ -87,7 +87,6 @@ const BuyInfo = (): JSX.Element => {
                         <ValidateUsdt setIsOpen={setIsOpen}/>
                       </Modal>
                     <ButtonModal/>
-                    <Link target='_blank' href={'https://pump.fun/CqtThsnVGuUz5DMeS7DydpsgiVrNjJxLqbvcjD5fpump'} className='w-fit self-end text-azure-radiance-500 bg-transparent underline col-start-2 relative md:left-8 top-6 hover:bg-transparent'>{text[6][language]}</Link>
             </div>
         </div>
   )

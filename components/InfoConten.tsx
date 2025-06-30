@@ -15,9 +15,9 @@ const Item: Array<{
 }> = [
   {
     title: {
-      en: 'What is the Global Peace Regeneration Fund?',
-      es: '¿Qué es el Global Peace Regeneration Fund?',
-      pt: 'O que é o Fundo de Regeneração da Páscoa Global?'
+      en: 'What is the Abya Yala Global Resilience Fund?',
+      es: '¿Qué es el Fondo de Resiliencia global Abya Yala?',
+      pt: 'O que é o Abya Yala Global Resilience Fund?'
     },
     content: {
       en: 'The Global Peace Regeneration Fund is a blockchain-powered, community-driven, tokenized investment platform. It aims to generate positive financial returns while promoting regenerative projects that restore ecosystems, empower communities, and support the transition to a sustainable and resilient world.',

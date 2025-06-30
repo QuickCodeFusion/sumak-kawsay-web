@@ -3,6 +3,7 @@ import { Card, CardContent } from '@/components/ui/card'
 import Image from 'next/image'
 import DashLine from './ui/llline'
 import { ButtonUI } from './ui/button'
+import Link from 'next/link'
 
 export default function Diagram (): React.JSX.Element {
   const elements = [
@@ -47,8 +48,12 @@ export default function Diagram (): React.JSX.Element {
                     <p>{element.blocking} Months</p>
                   </span>
                 </div>
-                <ButtonUI>
-                  STAKE
+                <ButtonUI asChild>
+                  <Link
+                  target='_blank'
+                  href={"https://raydium.io/swap/?inputMint=sol&outputMint=GyQjvwvkhSQgaCA5Rwo3cAxNpd5jSgdRQna8QXrtFt27&referrer=5rQra4Wh9tVu6cdmPuFUan9bmGsuAvqNDTp6Z9YD9ipe"}>
+                      STAKE
+                  </Link>
                 </ButtonUI>
               </div>
             </Card>
