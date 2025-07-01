@@ -46,7 +46,7 @@ const PresaleCountdown = (): React.JSX.Element => {
   } */
 
   return (
-        <div className='flex flex-col text-center justify-center items-center my-5'>
+        <div className='flex flex-col text-center justify-center items-center my-3'>
             <h5 className='text-xl uppercase font-semibold'>{text[1][language]}</h5>
             <h5 className='text-xl uppercase font-semibold'>{text[2][language]}</h5>
             <Timer time={time} size={'lg'} />

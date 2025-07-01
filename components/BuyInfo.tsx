@@ -54,7 +54,7 @@ const BuyInfo = (): JSX.Element => {
   }
 
   return (
-        <div className='flex flex-col text-center justify-center items-center my-6 gap-4'>
+        <div className='flex flex-col text-center justify-center items-center my-2 gap-4'>
             <ListCard className='p-4'>
                 <ListItem>
                 <h1 className='text-lg font-medium'>{text[1][language]}</h1>

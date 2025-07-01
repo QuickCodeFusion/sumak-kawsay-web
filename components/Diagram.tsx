@@ -69,14 +69,14 @@ export default function Diagram (): React.JSX.Element {
           <path d="M200,40 V120" strokeWidth="1"/>
           <path d="M40,120 H360" strokeWidth="1"/>
         </svg>
-        <svg className="w-full -z-50 md:hidden" viewBox="0 0 400 200" preserveAspectRatio="none">
-          <path d="M50,0 V40" stroke="white" strokeWidth="1"/>
-          <path d="M350,0 V40" stroke="white" strokeWidth="1"/>
-          <path d="M50,40 H350" stroke="white" strokeWidth="1"/>
-          <path d="M200,40 V120" stroke="white" strokeWidth="1"/>
-          <path d="M0,120 H400" stroke="white" strokeWidth="1"/>
-          <path d="M0,200 V120" stroke="white" strokeWidth="1"/>
-          <path d="M400,200 V120" stroke="white" strokeWidth="1"/>
+        <svg className="w-full -z-50 md:hidden stroke-yellow-500 drop-shadow-[0_0_10px_rgba(214,150,0,1)]" viewBox="0 0 400 200" preserveAspectRatio="none">
+          <path d="M50,0 V40" strokeWidth="1"/>
+          <path d="M350,0 V40" strokeWidth="1"/>
+          <path d="M50,40 H350" strokeWidth="1"/>
+          <path d="M200,40 V120" strokeWidth="1"/>
+          <path d="M0,120 H400" strokeWidth="1"/>
+          <path d="M0,200 V120" strokeWidth="1"/>
+          <path d="M400,200 V120" strokeWidth="1"/>
         </svg>
         <DashLine className="absolute z-50 hidden md:inline-block md:top-96 left-0  stroke-yellow-500 drop-shadow-[0_0_10px_rgba(214,150,0,1)]"></DashLine>
 

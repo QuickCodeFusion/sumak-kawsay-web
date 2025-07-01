@@ -59,14 +59,13 @@ export const HexDiagram = (): JSX.Element => {
           xmlns="http://www.w3.org/2000/svg"
           version="1.1"
           viewBox="0 0 400 400"
-          className='stroke-current md:hidden absolute -top-64'
+          className='stroke-yellow-500 drop-shadow-[0_0_2px_rgba(214,150,0,1)] md:hidden absolute -top-64'
           >
             <path
             d="M200,5 V400"
             fill="none"
             strokeWidth="1"
-            stroke="hsl(0, 0%, 80%)"
-            strokeDasharray="3 18"
+            strokeDasharray="20 18"
             ></path>
           </svg>
         <div className="absolute inset-0 bg-cover bg-center ">

@@ -36,17 +36,17 @@ const InfonToken = (): JSX.Element => {
       pt: 'Decimais'
     },
     3: {
-      en: 'Network',
-      es: 'Red',
-      pt: 'Rede'
+      en: 'Token Lock',
+      es: 'Certificado de Bloqueo',
+      pt: 'Token Lock'
     }
   }
   return (
-    <Card className="relative bg-azure-radiance-500 border-none shadow-azure-radiance-900 shadow-lg flex flex-col md:flex-row justify-around -mt-64 md:-mt-72 mb-12 w-full max-w-64 md:max-w-screen-2xl rounded-3xl">
-        <div className='md:flex-initial md:p-10 flex justify-center bg-cover object-cover'>
+    <Card className="relative bg-azure-radiance-500 border-none shadow-azure-radiance-900 shadow-lg flex flex-col-reverse md:grid md:grid-cols-4 justify-around -mt-64 md:-mt-72 mb-12 w-full md:max-w-screen-2xl rounded-3xl">
+        <div className='md:columns-1 md:p-10 flex justify-center bg-cover object-cover'>
           <Image className='p-5 md:flex-auto' src={'/wiphala.webp'} alt='wiphala' height={270} width={270}/>
         </div>
-        <div>
+        <div className='col-span-2 backdrop-blur-sm'>
       <CardHeader className="flex flex-col items-center">
         <p>{text[1][language]}</p>
         <TokenAddress token={'GyQjvwvkhSQgaCA5Rwo3cAxNpd5jSgdRQna8QXrtFt27'} link={'https://solscan.io/token/GyQjvwvkhSQgaCA5Rwo3cAxNpd5jSgdRQna8QXrtFt27'}/>
@@ -63,28 +63,19 @@ const InfonToken = (): JSX.Element => {
             className="underline underline-offset-2"
             target="_blank"
             href={
-              'https://polygonscan.com/token/0x248f2b2ca86dc1033be2df56e5481f4f8bbe8c89'
-            }
-          >
-            Polygon ERC-20
-          </Link>
-          <Link
-            className="underline underline-offset-2"
-            target="_blank"
-            href={
-              'https://sarafu.network/pools/0x4fA1572294d5cf6dbAEAfd2E7AC7deD41595842a'
-            }
-          >
-            CELO Blockchain
-          </Link>
-          <Link
-            className="underline underline-offset-2"
-            target="_blank"
-            href={
-              'https://tools.smithii.io/launch/STO-Genesis-Offering'
+              'https://app.streamflow.finance/contract/solana/mainnet/DZvuN7RjpQTrZ4RNccQPemN5zPcSQ9NKU4eGqCbRxQZ2'
             }
           >
             Solana Blockchain
+          </Link>
+          <Link
+            className="underline underline-offset-2"
+            target="_blank"
+            href={
+              'https://app.streamflow.finance/contract/solana/mainnet/DZvuN7RjpQTrZ4RNccQPemN5zPcSQ9NKU4eGqCbRxQZ2'
+            }
+          >
+            Polygon ERC-20
           </Link>
         </div>
       </CardContent>
