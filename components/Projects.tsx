@@ -5,7 +5,7 @@ const Projects = (): JSX.Element => {
     {
       id: '1',
       title: 'Regenerative Tourism',
-      description: '0/94,752 UNITY',
+      description: '0/94,752 AYNI',
       progress: 50,
       image: '/tourism.jpg',
       link: '/'
@@ -13,7 +13,7 @@ const Projects = (): JSX.Element => {
     {
       id: '2',
       title: 'Bioeconomy',
-      description: '0/87,074 UNITY',
+      description: '0/87,074 AYNI',
       progress: 35,
       image: '/bioeconomy.jpg',
       link: '/'
@@ -21,7 +21,7 @@ const Projects = (): JSX.Element => {
     {
       id: '3',
       title: 'Agri-food Value Chains',
-      description: '0/532,399 UNITY',
+      description: '0/532,399 AYNI',
       progress: 75,
       image: '/agrifood.jpg',
       link: '/'

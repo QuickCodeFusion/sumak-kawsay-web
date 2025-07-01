@@ -23,9 +23,9 @@ const text: Record<number, Record<string, string>> = {
     pt: 'Nível de Unidade:'
   },
   5: {
-    en: 'This is your starting point within the Sumak Kawsay collective, offering an introduction to our values and initial dividends. It represents the foundational step towards inclusivity and shared purpose, aligning with our ethos and community spirit.',
-    es: 'Este es tu punto de partida dentro del colectivo Sumak Kawsay, ofreciendo una introducción a nuestros valores y dividendos iniciales. Representa el paso fundamental hacia la inclusividad y el propósito compartido, alineándose con nuestro ethos y espíritu comunitario.',
-    pt: 'Este é o seu ponto de partida dentro do coletivo Sumak Kawsay, oferecendo uma introdução aos nossos valores e dividendos iniciais. Representa o passo fundamental em direção à inclusividade e ao propósito compartilhado, alinhando-se com nosso ethos e espírito comunitário.'
+    en: 'This is your starting point within the Abya Yala collective, offering an introduction to our values and initial dividends. It represents the foundational step towards inclusivity and shared purpose, aligning with our ethos and community spirit.',
+    es: 'Este es tu punto de partida dentro del colectivo Abya Yala, ofreciendo una introducción a nuestros valores y dividendos iniciales. Representa el paso fundamental hacia la inclusividad y el propósito compartido, alineándose con nuestro ethos y espíritu comunitario.',
+    pt: 'Este é o seu ponto de partida dentro do coletivo Abya Yala, oferecendo uma introdução aos nossos valores e dividendos iniciais. Representa o passo fundamental em direção à inclusividade e ao propósito compartilhado, alinhando-se com nosso ethos e espírito comunitário.'
   },
   6: {
     en: 'Growth Tier:',

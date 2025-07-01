@@ -45,7 +45,7 @@ const BalanceOf = ({ setBalanceOf, balance, isDisconnected }: BalanceOfProps): J
         ? 'Loading...'
         : isDisconnected
           ? `${text[1][language]}`
-          : `${balance} UNITY`}
+          : `${balance} AYNI`}
     </div>
   )
 }

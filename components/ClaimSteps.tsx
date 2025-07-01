@@ -15,7 +15,7 @@ const ClaimSteps = (): JSX.Element => {
 
   const text: Record<number, Record<string, string>> = {
     1: {
-      en: 'Claim your Unity tokens',
+      en: 'Claim your AYNI tokens',
       es: 'Reclamar Tokens',
       pt: 'Reivindicar Tokens'
     },

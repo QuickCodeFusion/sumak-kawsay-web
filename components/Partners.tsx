@@ -36,7 +36,7 @@ const Partners = (): JSX.Element => {
   return (
         <div className="my-8 space-y-4 uppercase text-center h-64 md:scale-150">
             <h1>{text[1][language]}</h1>
-            <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-24 w-full ">
+            <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-24 w-full bg-card p-4 rounded-md ">
                 {partners.map(partner => (
                     <Link target='_blank' href={partner.link} key={partner.name} className='flex items-center justify-center'>
                     <Image

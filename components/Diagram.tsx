@@ -7,10 +7,10 @@ import Link from 'next/link'
 
 export default function Diagram (): React.JSX.Element {
   const elements = [
-    { name: 'EARTH', icon: '/level3.png', borderColor: 'border-[#00FF00] drop-shadow-[0_0_10px_#00FF00]', return: '12', blocking: '12' },
-    { name: 'WATER', icon: '/watericon.png', borderColor: 'border-[#0000FF] drop-shadow-[0_0_10px_#0000FF]', return: '18', blocking: '24' },
-    { name: 'AIR', icon: '/airicon.png', borderColor: 'border-[#FFFF00] drop-shadow-[0_0_10px_#FFFF00]', return: '24', blocking: '36' },
-    { name: 'FIRE', icon: '/level2.png', borderColor: 'border-[#FF0000] drop-shadow-[0_0_10px_#FF0000]', return: '30', blocking: '56' }
+    { name: 'EARTH', icon: '/level3.png', borderColor: ' drop-shadow-[1px_1px_10px_rgba(0,0,0,0.3)', return: '12', blocking: '12' },
+    { name: 'WATER', icon: '/watericon.png', borderColor: ' drop-shadow-[1px_1px_10px_rgba(0,0,0,0.3)', return: '18', blocking: '24' },
+    { name: 'AIR', icon: '/airicon.png', borderColor: ' drop-shadow-[1px_1px_10px_rgba(0,0,0,0.3)', return: '24', blocking: '36' },
+    { name: 'FIRE', icon: '/level2.png', borderColor: ' drop-shadow-[1px_1px_10px_rgba(0,0,0,0.3)', return: '30', blocking: '56' }
   ]
 
   const text: Record<string, string> = {
@@ -28,17 +28,17 @@ export default function Diagram (): React.JSX.Element {
       <div className="relative flex flex-col md:space-y-40">
         <div className="grid grid-cols-1 md:flex justify-around gap-2">
           {elements.map((element, index) => (
-            <Card key={index} className={`border ${element.borderColor} flex flex-col group justify-between items-center cursor-pointer contrast-125`}>
+            <Card key={index} className={'border-none drop-shadow-[0px_0px_1px_rgba(0,0,0,0.2)] flex flex-col group justify-between items-center cursor-pointer contrast-125 '}>
               <Image
               src={element.icon}
               alt={element.name}
               width={128}
               height={128}
-              className='group-hover:scale-105 group-hover:-translate-y-2 transition duration-300 drop-shadow-sm-white group-hover:drop-shadow-4xl-white'/>
-              <div className="text-center group-hover:scale-105 group-hover:-translate-y-2 transition duration-300 shadow-md rounded-sm space-y-2 p-2">
+              className='group-hover:scale-105 group-hover:-translate-y-2 transition duration-300 drop-shadow-sm-white group-hover:drop-shadow-4xl-white '/>
+              <div className="text-center border-none group-hover:scale-105 group-hover:-translate-y-2 transition duration-300 space-y-2 p-2">
                 <div className="font-bold">{element.name}</div>
                 <div className="text-sm">{text[language]}</div>
-                <div className='grid grid-cols-2 md:text-xs'>
+                <div className='grid grid-cols-2 md:text-xs border-none'>
                   <span>
                     <p>Return</p>
                     <p>APY {element.return}%</p>
@@ -60,14 +60,14 @@ export default function Diagram (): React.JSX.Element {
           ))}
         </div>
 
-        <svg className="absolute md:top-52 lg:top-40 left-0 w-full h-64 -z-50 hidden md:block" viewBox="0 0 400 200" preserveAspectRatio="none">
-          <path d="M50,0 V40" stroke="white" strokeWidth="1"/>
-          <path d="M150,0 V40" stroke="white" strokeWidth="1"/>
-          <path d="M250,0 V40" stroke="white" strokeWidth="1"/>
-          <path d="M350,0 V40" stroke="white" strokeWidth="1"/>
-          <path d="M50,40 H350" stroke="white" strokeWidth="1"/>
-          <path d="M200,40 V120" stroke="white" strokeWidth="1"/>
-          <path d="M40,120 H360" stroke="white" strokeWidth="1"/>
+        <svg className="absolute md:top-52 lg:top-40 left-0 w-full h-64 -z-50 hidden md:block stroke-yellow-500 drop-shadow-[0_0_10px_rgba(214,150,0,1)]" viewBox="0 0 400 200" preserveAspectRatio="none">
+          <path d="M50,0 V40"strokeWidth="1"/>
+          <path d="M150,0 V40" strokeWidth="1"/>
+          <path d="M250,0 V40" strokeWidth="1"/>
+          <path d="M350,0 V40" strokeWidth="1"/>
+          <path d="M50,40 H350" strokeWidth="1"/>
+          <path d="M200,40 V120" strokeWidth="1"/>
+          <path d="M40,120 H360" strokeWidth="1"/>
         </svg>
         <svg className="w-full -z-50 md:hidden" viewBox="0 0 400 200" preserveAspectRatio="none">
           <path d="M50,0 V40" stroke="white" strokeWidth="1"/>
@@ -78,13 +78,13 @@ export default function Diagram (): React.JSX.Element {
           <path d="M0,200 V120" stroke="white" strokeWidth="1"/>
           <path d="M400,200 V120" stroke="white" strokeWidth="1"/>
         </svg>
-        <DashLine className="absolute z-50 hidden md:inline-block md:top-96 left-0 "></DashLine>
+        <DashLine className="absolute z-50 hidden md:inline-block md:top-96 left-0  stroke-yellow-500 drop-shadow-[0_0_10px_rgba(214,150,0,1)]"></DashLine>
 
         <div className="grid grid-cols-2 md:grid-cols-4 justify-around gap-4 ">
           {categories.map((category, index) => (
-            <Card key={index} className="bg-blue-900 border-none cursor-pointer">
-              <CardContent className="p-4">
-                <h3 className="text-md md:text-lg font-bold text-center">{category}</h3>
+            <Card key={index} className="border-none cursor-pointer group contrast-125 hover:scale-105 hover:-translate-y-2 transition duration-300 drop-shadow-sm-white hover:drop-shadow-4xl-white">
+              <CardContent className="p-4 ">
+                <h3 className="text-md md:text-lg font-bold text-center ">{category}</h3>
               </CardContent>
             </Card>
           ))}

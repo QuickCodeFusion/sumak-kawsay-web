@@ -46,9 +46,9 @@ export const ButtonModal = (): React.JSX.Element => {
       pt: 'pagamento de USDT'
     },
     5: {
-      en: 'UNITY to receive',
-      es: 'UNITY a recibir',
-      pt: 'UNITY a receber'
+      en: 'AYNI to receive',
+      es: 'AYNI a recibir',
+      pt: 'AYNI a receber'
     },
     6: {
       en: 'Price:',

@@ -7,6 +7,21 @@ import { useLanguage } from '@/app/languageProvider'
 import Link from 'next/link'
 import Image from 'next/image'
 
+const TokenAddress = ({ token, link }: { token: string, link: string }): JSX.Element => {
+  return (
+  <div className="flex items-center pb-2">
+    <Link href={link}>
+    <p className="font-bold truncate sm:text-xl md:w-full w-52">
+      {token}
+    </p>
+    </Link>
+    <ButtonCopy text={token}>
+      <CopyIcon />
+    </ButtonCopy>
+  </div>
+  )
+}
+
 const InfonToken = (): JSX.Element => {
   const { language } = useLanguage()
   const text: Record<number, Record<string, string>> = {
@@ -27,19 +42,15 @@ const InfonToken = (): JSX.Element => {
     }
   }
   return (
-    <Card className="relative bg-azure-radiance-500 border-none shadow-azure-radiance-900 shadow-lg flex justify-start -mt-64 md:-mt-72 mb-12 w-full rounded-3xl">
-        <Image className='flex-auto' src={'/wiphala.webp'} alt='wiphala' height={20} width={20}/>
+    <Card className="relative bg-azure-radiance-500 border-none shadow-azure-radiance-900 shadow-lg flex flex-col md:flex-row justify-around -mt-64 md:-mt-72 mb-12 w-full max-w-64 md:max-w-screen-2xl rounded-3xl">
+        <div className='md:flex-initial md:p-10 flex justify-center bg-cover object-cover'>
+          <Image className='p-5 md:flex-auto' src={'/wiphala.webp'} alt='wiphala' height={270} width={270}/>
+        </div>
         <div>
       <CardHeader className="flex flex-col items-center">
         <p>{text[1][language]}</p>
-        <div className="flex items-center pb-2">
-          <p className="font-bold truncate sm:text-xl md:w-full w-52">
-            {contractToken}
-          </p>
-          <ButtonCopy text={contractToken}>
-            <CopyIcon />
-          </ButtonCopy>
-        </div>
+        <TokenAddress token={'GyQjvwvkhSQgaCA5Rwo3cAxNpd5jSgdRQna8QXrtFt27'} link={'https://solscan.io/token/GyQjvwvkhSQgaCA5Rwo3cAxNpd5jSgdRQna8QXrtFt27'}/>
+        <TokenAddress token={contractToken} link={'https://polygonscan.com/token/0x248f2b2ca86dc1033be2df56e5481f4f8bbe8c89'}/>
       </CardHeader>
       <CardContent className="grid grid-cols-2 md:gap-16">
         <div className="grid place-items-center">

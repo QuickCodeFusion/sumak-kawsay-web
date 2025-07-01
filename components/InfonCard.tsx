@@ -25,9 +25,9 @@ export const InfoCard = (): JSX.Element => {
         pt: 'Centrado na Comunidade'
       },
       description: {
-        en: 'At the heart of Sumak Kawsay is our global community. Participation, governance, and shared prosperity are fundamental. Each member contributes to and benefits from the ecosystem\'s growth and sustainability.',
-        es: 'En el corazón de Sumak Kawsay está nuestra comunidad global. La participación, gobernanza y prosperidad compartida son fundamentales. Cada miembro contribuye y se beneficia del crecimiento y sostenibilidad del ecosistema.',
-        pt: 'No coração do Sumak Kawsay está nossa comunidade global. Participação, governança e prosperidade compartilhada são fundamentais. Cada membro contribui e beneficia do crescimento e sustentabilidade do ecossistema.'
+        en: 'At the heart of Abya Yala is our global community. Participation, governance, and shared prosperity are fundamental. Each member contributes to and benefits from the ecosystem\'s growth and sustainability.',
+        es: 'En el corazón de Abya Yala está nuestra comunidad global. La participación, gobernanza y prosperidad compartida son fundamentales. Cada miembro contribuye y se beneficia del crecimiento y sostenibilidad del ecosistema.',
+        pt: 'No coração do Abya Yala está nossa comunidade global. Participação, governança e prosperidade compartilhada são fundamentais. Cada membro contribui e beneficia do crescimento e sustentabilidade do ecossistema.'
       },
       icon: '/earth.png'
     },
@@ -63,14 +63,14 @@ export const InfoCard = (): JSX.Element => {
 
   const text: Record<number, Record<string, string>> = {
     1: {
-      en: 'What Is The Sumak Kawsay Ecosystem?',
-      es: '¿Qué es el Ecosistema Sumak Kawsay?',
-      pt: '¿Que é o Ecossistema Sumak Kawsay?'
+      en: 'What Is The Abya Yala Ecosystem?',
+      es: '¿Qué es el Ecosistema Abya Yala?',
+      pt: '¿Que é o Ecossistema Abya Yala?'
     },
     2: {
-      en: 'The Sumak Kawsay Ecosystem is an innovative fusion of technology, ecology, and community, providing a forward-thinking solution for contemporary challenges.',
-      es: 'El Ecosistema Sumak Kawsay es una fusión innovadora de tecnología, ecología y comunidad, que proporciona una solución de vanguardia para los desafíos contemporáneos.',
-      pt: 'O Ecossistema Sumak Kawsay é uma fusão inovadora de tecnologia, ecologia e comunidade, fornecendo uma solução avançada para os desafios contemporâneos.'
+      en: 'The Abya Yala Ecosystem is an innovative fusion of technology, ecology, and community, providing a forward-thinking solution for contemporary challenges.',
+      es: 'El Ecosistema Abya Yala es una fusión innovadora de tecnología, ecología y comunidad, que proporciona una solución de vanguardia para los desafíos contemporáneos.',
+      pt: 'O Ecossistema Abya Yala é uma fusão inovadora de tecnologia, ecologia e comunidade, fornecendo uma solução avançada para os desafios contemporâneos.'
     }
   }
   return (

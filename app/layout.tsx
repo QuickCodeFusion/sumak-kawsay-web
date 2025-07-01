@@ -15,8 +15,8 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: 'UNITY Official Presale',
-  description: 'Unlock the Renaissance of Prosperity with Sumak Kawsay. Join us in co-creating a world of harmony and abundance. Experience a transformative journey that starts within and resonates globally. Embrace a new era of well-being and prosperity today.'
+  title: 'AYNI Official Presale',
+  description: 'Unlock the Renaissance of Prosperity with Abya Yala DAO. Join us in co-creating a world of harmony and abundance. Experience a transformative journey that starts within and resonates globally. Embrace a new era of well-being and prosperity today.'
 }
 
 const RootLayout = ({
@@ -37,7 +37,7 @@ const RootLayout = ({
         <Providers>
           <ThemeProvider
               attribute="class"
-              defaultTheme="dark"
+              defaultTheme="light"
               enableSystem
               disableTransitionOnChange
             >

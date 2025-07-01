@@ -10,7 +10,6 @@ export const DashLine = ({ className }: { className?: string }): JSX.Element => 
         d="M200,0 V200"
         fill="none"
         strokeWidth="1"
-        stroke="hsl(0, 0%, 80%)"
         strokeDasharray="4 20"
       ></path>
     </svg>

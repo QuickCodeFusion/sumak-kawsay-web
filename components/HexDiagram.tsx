@@ -69,9 +69,9 @@ export const HexDiagram = (): JSX.Element => {
             strokeDasharray="3 18"
             ></path>
           </svg>
-        <div className="absolute inset-0 bg-cover bg-center">
+        <div className="absolute inset-0 bg-cover bg-center ">
           {/* Enclosing circle */}
-          <div className="absolute inset-0 scale-110 rounded-full border-2 border-blue-300/50 p-24 bg-blue-500/25 backdrop-blur-sm" style={{ top: '0', left: '0', right: '0', bottom: '0' }} />
+          <div className="absolute inset-0 scale-110 rounded-full ring ring-slate-100 backdrop-blur-sm bg-gradient-to-b from-slate-50/55 to-slate-300/35 shadow-md drop-shadow-[1px_1px_10px_rgba(0,0,0,0.1)]" style={{ top: '0', left: '0', right: '0', bottom: '0' }} />
 
           {items.map((item, index) => (
             <div
@@ -83,9 +83,9 @@ export const HexDiagram = (): JSX.Element => {
                 transform: 'translate(-50%, -50%)'
               }}
             >
-              <Card className="w-full h-full rounded-full overflow-hidden border border-blue-300/50 bg-blue-900/80 backdrop-filter-none">
+              <Card className="w-full h-full rounded-full overflow-hidden contrast-125">
                 <CardContent className="h-full flex items-center justify-center p-4 text-center">
-                  <p className="font-bold text-balance leading-tight md:leading-normal text-blue-100 text-[0.5rem] sm:text-xs md:text-base lg:text-xl">
+                  <p className="font-bold text-balance leading-tight md:leading-normal text-foreground text-[0.5rem] sm:text-xs md:text-base lg:text-xl">
                     {item[language]}
                   </p>
                 </CardContent>

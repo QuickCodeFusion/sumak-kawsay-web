@@ -20,7 +20,7 @@ const ClaimTokens = ({ boolean }: { boolean: boolean }): JSX.Element => {
   console.log(status)
   useEffect(() => {
     if (status === 'success') {
-      toast.success('UNITY transferred', {
+      toast.success('AYNI transferred', {
         style: { background: 'green', color: '#FFF' }
       })
       window.location.reload()

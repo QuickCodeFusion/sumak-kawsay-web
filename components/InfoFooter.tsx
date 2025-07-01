@@ -8,14 +8,14 @@ const InfoFooter = (): JSX.Element => {
   const { language } = useLanguage()
   const text: Record<number, Record<string, string>> = {
     1: {
-      en: 'Sumak Kawsay',
-      es: 'Sumak Kawsay',
-      pt: 'Sumak Kawsay'
+      en: 'Abya Yala DAO',
+      es: 'Abya Yala DAO',
+      pt: 'Abya Yala DAO'
     },
     2: {
-      en: '© 2022 Sumak Kawsay | All rights reserved',
-      es: '© 2022 Sumak Kawsay | Todos los derechos reservados',
-      pt: '© 2022 Sumak Kawsay | Todos os direitos reservados'
+      en: 'Abya Yala DAO | All rights reserved',
+      es: 'Abya Yala DAO | Todos los derechos reservados',
+      pt: 'Abya Yala DAO | Todos os direitos reservados'
     },
     3: {
       en: 'Legal Compliance',
