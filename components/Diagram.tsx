@@ -23,7 +23,7 @@ export default function Diagram (): React.JSX.Element {
   const categories = ['Local', 'Bioregional', 'Continental', 'Global']
 
   return (
-    <div className="w-full max-w-4xl mx-auto p-4 text-white text-center md:scale-125">
+    <div className="w-full mt-24 md:my-0 max-w-4xl mx-auto p-4 text-center md:scale-125">
       <div className="relative flex flex-col md:space-y-40">
         <div className="grid grid-cols-1 md:flex justify-around gap-2">
           {elements.map((element, index) => {
