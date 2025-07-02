@@ -51,7 +51,7 @@ export default function Diagram (): React.JSX.Element {
                 <ButtonUI asChild>
                   <Link
                   target='_blank'
-                  href={"https://raydium.io/swap/?inputMint=sol&outputMint=GyQjvwvkhSQgaCA5Rwo3cAxNpd5jSgdRQna8QXrtFt27&referrer=5rQra4Wh9tVu6cdmPuFUan9bmGsuAvqNDTp6Z9YD9ipe"}>
+                  href={'https://raydium.io/swap/?inputMint=sol&outputMint=GyQjvwvkhSQgaCA5Rwo3cAxNpd5jSgdRQna8QXrtFt27&referrer=5rQra4Wh9tVu6cdmPuFUan9bmGsuAvqNDTp6Z9YD9ipe'}>
                       STAKE
                   </Link>
                 </ButtonUI>

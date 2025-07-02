@@ -2,7 +2,6 @@ import Link from 'next/link'
 import IconSocial from './IconSocial'
 import { ButtonUI } from './ui/button'
 import { useLanguage } from '@/app/languageProvider'
-import Quote from './Quote'
 const InfoPresale = (): JSX.Element => {
   const items: Array<{
     id: number
