@@ -3,7 +3,7 @@ import IconFaceBook from './Icons/IconFaceBook'
 import IconBinance from './Icons/IconBinance'
 import IconInstagram from './Icons/IconInstagram'
 import IconTelegram from './Icons/IconTelegram'
-import { IconDiscord } from './Icons/IconDiscord'
+// import { IconDiscord } from './Icons/IconDiscord'
 import { IconTwiter } from './Icons/IconTwiter'
 import { IconYoutube } from './Icons/IconYoutube'
 const networks = [
@@ -50,9 +50,9 @@ const networks = [
     image: <IconFaceBook />
   }
 ]
-const IconSocial = (): JSX.Element => {
+const IconSocial = ({ className }: { className: string}): JSX.Element => {
   return (
-        <div className='grid grid-cols-7 w-fit gap-6 rounded-full p-2 '>{networks.map((network) => (
+        <div className={'grid grid-cols-7 w-fit gap-6 rounded-full p-2 ' + className}>{networks.map((network) => (
               <Link key={network.id} className='w-6'
                href={network.url} target='_blank'>
                 {network.image}

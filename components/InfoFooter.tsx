@@ -34,15 +34,15 @@ const InfoFooter = (): JSX.Element => {
     }
   }
   return (
-    <div className='container flex items-center justify-around flex-col md:grid grid-cols-3 place-items-center gap-4 p-4 text-white'>
+    <div className='container flex items-center justify-around flex-col md:grid grid-cols-3 place-items-center gap-4 p-4 text-black'>
         <span>
           <div className='flex gap-4 items-center'>
-            <Image className='rounded-full' src={Logo} alt='logo' width={50} height={50}/>
-            <p className='font-bold text-2xl'>{text[1][language]}</p>
+            <Image className='rounded-full drop-shadow-[0px_0px_7px_rgba(255,255,255,0.8)]' src={Logo} alt='logo' width={50} height={50}/>
+            <p className='font-bold text-2xl drop-shadow-[0px_0px_7px_rgba(255,255,255,0.8)]'>{text[1][language]}</p>
           </div>
         </span>
-        <IconSocial/>
-        <div className='flex  flex-col justify-center'>
+        <IconSocial className='[&_svg]:fill-black drop-shadow-[0px_0px_7px_rgba(255,255,255,0.8)]'/>
+        <div className='flex  flex-col justify-center drop-shadow-[0px_0px_7px_rgba(255,255,255,0.8)]'>
           <p>© {year} {text[2][language]}</p>
           <div className='flex gap-2 text-sm'>
             <a

@@ -43,8 +43,8 @@ const InfonToken = (): JSX.Element => {
   }
   return (
     <Card className="relative bg-azure-radiance-500 border-none shadow-azure-radiance-900 shadow-lg flex flex-col-reverse md:grid md:grid-cols-4 justify-around -mt-64 md:-mt-72 mb-12 w-full md:max-w-screen-2xl rounded-3xl">
-        <div className='md:columns-1 md:p-10 flex justify-center bg-cover object-cover'>
-          <Image className='p-5 md:flex-auto' src={'/wiphala.webp'} alt='wiphala' height={270} width={270}/>
+        <div className='md:columns-1 pb-10 md:p-10 flex justify-center items-center bg-cover object-cover'>
+          <Image className=' md:flex-initial size-28' src={'/wiphala.webp'} alt='wiphala' height={200} width={200}/>
         </div>
         <div className='col-span-2 backdrop-blur-sm'>
       <CardHeader className="flex flex-col items-center">

@@ -1,8 +1,8 @@
-import Image from 'next/image'
+// import Image from 'next/image'
 
 const BgVideo = (): JSX.Element => {
   return (
-    <div className="absolute inset-0 inset-y-16 h-[180vh] md:h-full w-full overflow-hidden bg-no-repeat bg-center md:pb-0 -z-50 bg-[url('/fondoMujer.jpeg')] bg-norepeat bg-cover">
+    <div className="absolute inset-0 inset-y-16 h-[180vh] md:h-full w-full overflow-hidden bg-no-repeat bg-[53%_100%] bg-[length:325%] bg-norepeat md:bg-[length:200%] md:pb-0 -z-50 bg-[url('/fondofooter.png')]">
         {/* <video
             autoPlay
             loop
@@ -13,7 +13,7 @@ const BgVideo = (): JSX.Element => {
             <source src="/Planetapaper.mp4" />
             Tu navegador no admite la reproducción de videos.
         </video> */}
-          <Image src="/bg6000.jpg" className='w-full object-cover h-full md:hidden' alt="bg" width={400} height={400} />
+          {/* <Image src="/bg6000.jpg" className='w-full object-cover h-full md:hidden' alt="bg" width={400} height={400} /> */}
     </div>
   )
 }
