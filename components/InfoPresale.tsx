@@ -7,6 +7,7 @@ const InfoPresale = (): JSX.Element => {
     id: number
     title: Record<string, string>
     link: string
+    target?: string
   }> = [
     {
       id: 3,
@@ -15,7 +16,8 @@ const InfoPresale = (): JSX.Element => {
         es: 'Whitepaper',
         pt: 'Whitepaper'
       },
-      link: 'https://drive.google.com/file/d/1qG_uK1myDLnMZABgFVvGFUuYKseoN70D/view '
+      link: 'https://drive.google.com/file/d/1qEfptDZpTYF3-T_2SsJCTLke1HVHCvUK/view?usp=drivesdk',
+      target: '_blank'
     },
     {
       id: 2,
@@ -68,14 +70,14 @@ const InfoPresale = (): JSX.Element => {
                 {items.map((item) => {
                   return (
                     <ButtonUI className='w-48 md:w-full rounded-full border-2 border-none' key={item.id}>
-                      <Link href={item.link} rel='noreferrer' target='_blank'>
+                      <Link href={item.link} rel='noreferrer' target={item.target} >
                         {item.title[language]}
                       </Link>
                     </ButtonUI>
                   )
                 })}
               </span>
-              <Link href='https://www.dx.app/dxlock/view/token-locker?address=0x7f9c87a16ce7d357b958a69ded86bfe18a0804db&chain=137' target='_blank' className='underline text-white'>{text[3][language]}</Link>
+              <Link href='https://app.streamflow.finance/contract/solana/mainnet/DZvuN7RjpQTrZ4RNccQPemN5zPcSQ9NKU4eGqCbRxQZ2' target='_blank' className='underline text-white'>{text[3][language]}</Link>
           </div>
   )
 }

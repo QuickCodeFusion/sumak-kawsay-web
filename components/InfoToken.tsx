@@ -42,22 +42,21 @@ const InfonToken = (): JSX.Element => {
     }
   }
   return (
-    <Card className="relative bg-azure-radiance-500 border-none shadow-azure-radiance-900 shadow-lg flex flex-col-reverse md:grid md:grid-cols-4 justify-around -mt-64 md:-mt-72 mb-12 w-full md:max-w-screen-2xl rounded-3xl">
-        <div className='md:columns-1 pb-10 md:p-10 flex justify-center items-center bg-cover object-cover'>
+    <Card className="relative bg-azure-radiance-500 border-none shadow-azure-radiance-900 shadow-lg flex flex-col-reverse md:grid md:grid-cols-4 md:grid-rows-1 justify-around -mt-64 md:-mt-72 mb-12 w-full md:max-w-screen-2xl rounded-3xl">
+        <div className='md:columns-1 pb-10 md:p-10 flex justify-center items-center bg-cover object-cover order-first'>
           <Image className=' md:flex-initial size-28' src={'/wiphala.webp'} alt='wiphala' height={200} width={200}/>
         </div>
-        <div className='col-span-2 backdrop-blur-sm'>
-      <CardHeader className="flex flex-col items-center">
+      <CardHeader className="flex flex-col items-center col-span-2 backdrop-blur-sm order-last md:-order-2">
         <p>{text[1][language]}</p>
         <TokenAddress token={'GyQjvwvkhSQgaCA5Rwo3cAxNpd5jSgdRQna8QXrtFt27'} link={'https://solscan.io/token/GyQjvwvkhSQgaCA5Rwo3cAxNpd5jSgdRQna8QXrtFt27'}/>
         <TokenAddress token={contractToken} link={'https://polygonscan.com/token/0x248f2b2ca86dc1033be2df56e5481f4f8bbe8c89'}/>
-      </CardHeader>
-      <CardContent className="grid grid-cols-2 md:gap-16">
         <div className="grid place-items-center">
           <p>{text[2][language]}</p>
           <DecimalToken />
         </div>
-        <div className="grid place-items-center truncate text-sm md:text-base">
+      </CardHeader>
+      <CardContent className="flex flex-col md:gap-16 md:py-20 ">
+        <div className="flex flex-col items-center truncate text-sm md:text-base">
           <p>{text[3][language]}</p>
           <Link
             className="underline underline-offset-2"
@@ -80,7 +79,6 @@ const InfonToken = (): JSX.Element => {
         </div>
       </CardContent>
       <CardFooter className="text-center justify-center"></CardFooter>
-      </div>
     </Card>
   )
 }

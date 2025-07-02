@@ -5,7 +5,7 @@ const networks = [
   {
     id: 3,
     title: 'Binance',
-    url: 'https://www.binance.com/es/nft/profile/symbiosls-0319e09553f7b3842d72b6435a287e3c',
+    url: 'https://docs.google.com/presentation/d/1wp1xOCv4lLSnV9syReljiLlK3ZVL3ud-Cy3a9XamkPE/edit?usp=sharing',
     image: <IconBinance />
   },
   {
