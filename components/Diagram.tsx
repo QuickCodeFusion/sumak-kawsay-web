@@ -1,7 +1,6 @@
 import { useLanguage } from '@/app/languageProvider'
 import { Card, CardContent } from '@/components/ui/card'
 import Image from 'next/image'
-import DashLine from './ui/llline'
 import { ButtonUI } from './ui/button'
 import Link from 'next/link'
 
@@ -27,8 +26,13 @@ export default function Diagram (): React.JSX.Element {
     <div className="w-full max-w-4xl mx-auto p-4 text-white text-center md:scale-125">
       <div className="relative flex flex-col md:space-y-40">
         <div className="grid grid-cols-1 md:flex justify-around gap-2">
-          {elements.map((element, index) => (
+          {elements.map((element, index) => {
+            const line = index === elements.length - 1 ? 'h-96 -bottom-96 md:-bottom-40' : ''
+            return (
             <Card key={index} className={'border-none drop-shadow-[0px_0px_1px_rgba(0,0,0,0.2)] flex flex-col group justify-between items-center cursor-pointer contrast-125 '}>
+              {index < elements.length && (
+                  <div className={line + ' absolute left-1/2 -bottom-40 w-0.5 h-40 md:h-40 -z-50 transform -translate-x-1/2 bg-yellow-500 drop-shadow-[0_0_9px_rgba(214,150,0,1)]'}></div>
+              )}
               <Image
               src={element.icon}
               alt={element.name}
@@ -57,10 +61,12 @@ export default function Diagram (): React.JSX.Element {
                 </ButtonUI>
               </div>
             </Card>
-          ))}
+            )
+          }
+          )}
         </div>
 
-        <svg className="absolute md:top-52 lg:top-40 left-0 w-full h-64 -z-50 hidden md:block stroke-yellow-500 drop-shadow-[0_0_10px_rgba(214,150,0,1)]" viewBox="0 0 400 200" preserveAspectRatio="none">
+        {/* <svg className="absolute md:top-52 lg:top-40 left-0 w-full h-64 -z-50 hidden md:block stroke-yellow-500 drop-shadow-[0_0_10px_rgba(214,150,0,1)]" viewBox="0 0 400 200" preserveAspectRatio="none">
           <path d="M50,0 V40"strokeWidth="1"/>
           <path d="M150,0 V40" strokeWidth="1"/>
           <path d="M250,0 V40" strokeWidth="1"/>
@@ -68,8 +74,8 @@ export default function Diagram (): React.JSX.Element {
           <path d="M50,40 H350" strokeWidth="1"/>
           <path d="M200,40 V120" strokeWidth="1"/>
           <path d="M40,120 H360" strokeWidth="1"/>
-        </svg>
-        <svg className="w-full -z-50 md:hidden stroke-yellow-500 drop-shadow-[0_0_10px_rgba(214,150,0,1)]" viewBox="0 0 400 200" preserveAspectRatio="none">
+        </svg> */}
+        {/* <svg className="w-full -z-50 md:hidden stroke-yellow-500 drop-shadow-[0_0_10px_rgba(214,150,0,1)]" viewBox="0 0 400 200" preserveAspectRatio="none">
           <path d="M50,0 V40" strokeWidth="1"/>
           <path d="M350,0 V40" strokeWidth="1"/>
           <path d="M50,40 H350" strokeWidth="1"/>
@@ -77,17 +83,23 @@ export default function Diagram (): React.JSX.Element {
           <path d="M0,120 H400" strokeWidth="1"/>
           <path d="M0,200 V120" strokeWidth="1"/>
           <path d="M400,200 V120" strokeWidth="1"/>
-        </svg>
-        <DashLine className="absolute z-50 hidden md:inline-block md:top-96 left-0  stroke-yellow-500 drop-shadow-[0_0_10px_rgba(214,150,0,1)]"></DashLine>
+        </svg> */}
 
-        <div className="grid grid-cols-2 md:grid-cols-4 justify-around gap-4 ">
-          {categories.map((category, index) => (
-            <Card key={index} className="border-none cursor-pointer group contrast-125 hover:scale-105 hover:-translate-y-2 transition duration-300 drop-shadow-sm-white hover:drop-shadow-4xl-white">
-              <CardContent className="p-4 ">
+        <div className="grid grid-cols-2 md:grid-cols-4 justify-around gap-4 mb-0 mt-24 md:my-0">
+          {categories.map((category, index) => {
+            const evenCard = index % 2 === 0 ? '' : 'hidden md:block'
+            return (
+            <Card key={index} className="border-none cursor-pointer group contrast-125 ">
+              {index < categories.length && index !== categories.length - 1 && (
+                  <div className={evenCard + ' absolute bottom-1/2 left-[100%] h-0.5 w-4 -z-50 bg-yellow-500 drop-shadow-[0_0_5px_rgba(214,150,0,1)]'}></div>
+              )}
+              <CardContent className="p-4 hover:scale-105 hover:-translate-y-2 transition duration-300 drop-shadow-sm-white hover:drop-shadow-4xl-white">
                 <h3 className="text-md md:text-lg font-bold text-center ">{category}</h3>
               </CardContent>
             </Card>
-          ))}
+            )
+          }
+          )}
         </div>
       </div>
     </div>

@@ -54,20 +54,9 @@ export const HexDiagram = (): JSX.Element => {
 
   return (
     <div className="w-full max-w-4xl mx-auto p-4 scale-110 md:scale-100">
+      <div className=' absolute -top-[27.5%] left-1/2 -translate-x-1/2 h-[50%] w-0.5 -z-50 bg-yellow-500 drop-shadow-[0_0_9px_rgb(214,150,0)]'></div>
+      <div className=' absolute -bottom-[75%] left-1/2 -translate-x-1/2 h-[75%] md:-bottom-1/4 w-0.5 -z-50 bg-yellow-500 drop-shadow-[0_0_9px_rgb(214,150,0)]'></div>
       <div className="relative w-full md:scale-75" style={{ paddingBottom: '100%' }}>
-      <svg
-          xmlns="http://www.w3.org/2000/svg"
-          version="1.1"
-          viewBox="0 0 400 400"
-          className='stroke-yellow-500 drop-shadow-[0_0_2px_rgba(214,150,0,1)] md:hidden absolute -top-64'
-          >
-            <path
-            d="M200,5 V400"
-            fill="none"
-            strokeWidth="1"
-            strokeDasharray="20 18"
-            ></path>
-          </svg>
         <div className="absolute inset-0 bg-cover bg-center ">
           {/* Enclosing circle */}
           <div className="absolute inset-0 scale-110 rounded-full ring ring-slate-100 backdrop-blur-sm bg-gradient-to-b from-slate-50/55 to-slate-300/35 shadow-md drop-shadow-[1px_1px_10px_rgba(0,0,0,0.1)]" style={{ top: '0', left: '0', right: '0', bottom: '0' }} />
