@@ -60,7 +60,7 @@ const InfoPresale = (): JSX.Element => {
   const { language } = useLanguage()
 
   return (
-          <div className='flex place-self-start text-foreground md:text-white justify-center items-start flex-col gap-4 col-span-2 md:px-36 mb-12'>
+          <div className='flex place-self-start text-foreground justify-center items-start flex-col gap-4 col-span-2 md:px-36 mb-12 '>
                 <IconSocial className='[&_svg]:fill-background-color'/>
               <h1 className='text-2xl md:text-6xl font-bold text-start'>
                 {text[1][language]}

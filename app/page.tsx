@@ -43,8 +43,8 @@ const BuyInfo = dynamic(async () => await import('@/components/BuyInfo'), {
 const Home = (): React.JSX.Element => {
   const endsale = saleEnded()
   return (
-        <main className='flex flex-col gap-64 pt-8 mt-10 px-8 justify-center items-center w-screen overflow-x-hidden'>
-            <section className='p-2 my-4 z-10 w-full'>
+        <main className='flex flex-col gap-64 pt-8 mt-10 px-8 justify-center items-center w-screen overflow-x-hidden bg-no-repeat bg-[53%_7.5%] md:bg-[53%_3.5%] bg-[length:325%] bg-norepeat md:bg-[length:100%] bg-[url("/fondofooter.png")]'>
+            <section className='p-2 my-4 z-10 w-full '>
                   <div className='flex xl:grid grid-cols-3 flex-col place-items-start items-center gap-4 w-full' >
                       <InfoPresale/>
                       {endsale && <ClaimSteps/>}

@@ -2,7 +2,7 @@
 
 const BgVideo = (): JSX.Element => {
   return (
-    <div className="absolute inset-0 inset-y-16 h-[180vh] md:h-full w-full overflow-hidden bg-no-repeat bg-[53%_100%] bg-[length:325%] bg-norepeat md:bg-[length:200%] md:pb-0 -z-50 bg-[url('/fondofooter.png')]">
+    <div className="absolute inset-0 inset-y-16 h-[180vh] md:h-full w-full  bg-no-repeat ">
         {/* <video
             autoPlay
             loop
