@@ -54,8 +54,8 @@ export const HexDiagram = (): JSX.Element => {
 
   return (
     <div className="w-full max-w-4xl mx-auto p-4 scale-110 md:scale-100">
-      <div className=' absolute -top-[27.5%] left-1/2 -translate-x-1/2 h-[50%] w-0.5 -z-50 bg-blue-500'></div>
-      <div className=' absolute -bottom-[75%] left-1/2 -translate-x-1/2 h-[75%] md:-bottom-1/4 w-0.5 -z-50 bg-blue-500'></div>
+      <div className=' absolute -top-[27.5%] left-1/2 -translate-x-1/2 h-[50%] w-[1px] -z-50 bg-blue-500'></div>
+      <div className=' absolute -bottom-[75%] left-1/2 -translate-x-1/2 h-[75%] md:-bottom-1/4 w-[1px] -z-50 bg-blue-500'></div>
       <div className="relative w-full md:scale-75" style={{ paddingBottom: '100%' }}>
         <div className="absolute inset-0 bg-cover bg-center ">
           {/* Enclosing circle */}

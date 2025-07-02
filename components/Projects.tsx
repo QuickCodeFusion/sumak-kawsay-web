@@ -29,7 +29,7 @@ const Projects = (): JSX.Element => {
   ]
   return (
         <div className='relative flex flex-col md:grid grid-cols-3 gap-4'>
-          <div className='absolute hidden md:block -top-1/3 left-1/2 -translate-x-1/2 h-0.5 w-[67.5%] bg-blue-500'></div>
+          <div className='absolute hidden md:block -top-1/3 left-1/2 -translate-x-1/2 h-[1px] w-[67.5%] bg-blue-500'></div>
             {
                 projects.map((project) => (
                     <CardProject key={project.id} project={project} />

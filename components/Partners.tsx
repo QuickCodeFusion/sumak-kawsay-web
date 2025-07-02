@@ -30,11 +30,11 @@ const Partners = (): JSX.Element => {
     {
       name: 'indrani',
       image: '/indrani.png',
-      link: ''
+      link: 'https://www.indrani.com/'
     }
   ]
   return (
-        <div className="my-8 space-y-4 uppercase text-center h-64 md:scale-150">
+        <div className="my-8 space-y-12 text-3xl text-center font-semibold pb-2 h-64">
             <h1>{text[1][language]}</h1>
             <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-24 w-full p-4 rounded-md ">
                 {partners.map(partner => (

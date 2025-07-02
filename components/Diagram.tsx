@@ -31,15 +31,15 @@ export default function Diagram (): React.JSX.Element {
             return (
             <Card key={index} className={'border-none drop-shadow-[0px_0px_1px_rgba(0,0,0,0.2)] flex flex-col group justify-between items-center cursor-pointer contrast-125 '}>
               {index < elements.length && (
-                  <div className={line + ' absolute left-1/2 -bottom-40 w-0.5 h-40 md:h-40 -z-50 transform -translate-x-1/2 bg-blue-500'}></div>
+                  <div className={line + ' absolute left-1/2 -bottom-40 w-[1px] h-40 md:h-40 -z-50 transform -translate-x-1/2 bg-blue-500'}></div>
               )}
               <Image
               src={element.icon}
               alt={element.name}
               width={128}
               height={128}
-              className='group-hover:scale-105 group-hover:-translate-y-2 transition duration-300 drop-shadow-sm-white group-hover:drop-shadow-4xl-white '/>
-              <div className="text-center border-none group-hover:scale-105 group-hover:-translate-y-2 transition duration-300 space-y-2 p-2">
+              className='drop-shadow-sm-white group-hover:drop-shadow-4xl-white '/>
+              <div className="text-center border-none space-y-2 p-2">
                 <div className="font-bold">{element.name}</div>
                 <div className="text-sm">{text[language]}</div>
                 <div className='grid grid-cols-2 md:text-xs border-none'>
@@ -91,9 +91,9 @@ export default function Diagram (): React.JSX.Element {
             return (
             <Card key={index} className="border-none cursor-pointer group contrast-125 ">
               {index < categories.length && index !== categories.length - 1 && (
-                  <div className={evenCard + ' absolute bottom-1/2 left-[100%] h-0.5 w-4 -z-50 bg-blue-500'}></div>
+                  <div className={evenCard + ' absolute bottom-1/2 left-[100%] h-[1px] w-4 -z-50 bg-blue-500'}></div>
               )}
-              <CardContent className="p-4 hover:scale-105 hover:-translate-y-2 transition duration-300 drop-shadow-sm-white hover:drop-shadow-4xl-white">
+              <CardContent className="p-4 drop-shadow-sm-white hover:drop-shadow-4xl-white">
                 <h3 className="text-md md:text-lg font-bold text-center ">{category}</h3>
               </CardContent>
             </Card>

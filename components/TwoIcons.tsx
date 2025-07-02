@@ -1,12 +1,12 @@
 import Link from 'next/link'
-import IconBinance from './Icons/IconBinance'
 import { IconTwiter } from './Icons/IconTwiter'
+import { FolderClosed } from 'lucide-react'
 const networks = [
   {
     id: 3,
     title: 'Binance',
     url: 'https://docs.google.com/presentation/d/1wp1xOCv4lLSnV9syReljiLlK3ZVL3ud-Cy3a9XamkPE/edit?usp=sharing',
-    image: <IconBinance />
+    image: <FolderClosed/>
   },
   {
     id: 5,

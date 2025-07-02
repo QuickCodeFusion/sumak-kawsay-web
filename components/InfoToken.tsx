@@ -10,7 +10,7 @@ import Image from 'next/image'
 const TokenAddress = ({ token, link }: { token: string, link: string }): JSX.Element => {
   return (
   <div className="flex items-center pb-2">
-    <Link href={link}>
+    <Link href={link} target='_blank'>
     <p className="font-bold truncate sm:text-xl md:w-full w-52">
       {token}
     </p>
@@ -71,7 +71,7 @@ const InfonToken = (): JSX.Element => {
             className="underline underline-offset-2"
             target="_blank"
             href={
-              'https://app.streamflow.finance/contract/solana/mainnet/DZvuN7RjpQTrZ4RNccQPemN5zPcSQ9NKU4eGqCbRxQZ2'
+              'https://www.dx.app/dxlock/view/token-locker?address=0x7f9c87a16ce7d357b958a69ded86bfe18a0804db&chain=137'
             }
           >
             Polygon ERC-20
