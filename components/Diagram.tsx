@@ -27,11 +27,11 @@ export default function Diagram (): React.JSX.Element {
       <div className="relative flex flex-col md:space-y-40">
         <div className="grid grid-cols-1 md:flex justify-around gap-2">
           {elements.map((element, index) => {
-            const line = index === elements.length - 1 ? 'h-96 -bottom-96 md:-bottom-40' : ''
+            const line = index === elements.length - 1 ? 'h-[36rem] -bottom-[36rem] md:-bottom-40' : ''
             return (
             <Card key={index} className={'border-none drop-shadow-[0px_0px_1px_rgba(0,0,0,0.2)] flex flex-col group justify-between items-center cursor-pointer contrast-125 '}>
               {index < elements.length && (
-                  <div className={line + ' absolute left-1/2 -bottom-40 w-[1px] h-40 md:h-40 -z-50 transform -translate-x-1/2 bg-blue-500'}></div>
+                  <div className={line + ' absolute left-1/2 -bottom-40 w-[1px] h-40 md:h-40 -z-50 transform -translate-x-1/2 bg-black'}></div>
               )}
               <Image
               src={element.icon}
@@ -91,7 +91,7 @@ export default function Diagram (): React.JSX.Element {
             return (
             <Card key={index} className="border-none cursor-pointer group contrast-125 ">
               {index < categories.length && index !== categories.length - 1 && (
-                  <div className={evenCard + ' absolute bottom-1/2 left-[100%] h-[1px] w-4 -z-50 bg-blue-500'}></div>
+                  <div className={evenCard + ' absolute bottom-1/2 left-[100%] h-[1px] w-4 -z-50 bg-black'}></div>
               )}
               <CardContent className="p-4 drop-shadow-sm-white hover:drop-shadow-4xl-white">
                 <h3 className="text-md md:text-lg font-bold text-center ">{category}</h3>

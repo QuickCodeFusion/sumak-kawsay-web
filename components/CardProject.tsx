@@ -15,7 +15,7 @@ interface Project {
 const CardProject: React.FC<{ project: Project }> = ({ project }): JSX.Element => {
   return (
         <div className=' drop-shadow-md flex flex-col bg-card justify-between aspect-square items-center  gap-8 p-6 rounded-3xl'>
-            <div className='absolute -top-[4.5%] md:-top-1/3 h-[4.7%] md:h-1/3 w-[1px] bg-blue-500'></div>
+            <div className='absolute -top-[4.5%] md:-top-1/3 h-[4.7%] md:h-1/3 w-[1px] bg-black'></div>
             <div className='flex flex-row  gap-10'>
                 <Image src={project.image} className='object-cover aspect-square rounded-md' alt={project.title} width={80} height={80}></Image>
                 <h1 className=' flex items-center'>{project.title}</h1>

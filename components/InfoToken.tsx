@@ -9,7 +9,7 @@ import Image from 'next/image'
 
 const TokenAddress = ({ token, link }: { token: string, link: string }): JSX.Element => {
   return (
-  <div className="flex items-center pb-2">
+  <div className="flex items-center pb-2 self-end">
     <Link href={link} target='_blank'>
     <p className="font-bold truncate sm:text-xl md:w-full w-52">
       {token}

@@ -34,7 +34,7 @@ const text: Record<string, Record<string, string>> = {
   },
   7: {
     en: 'Rewards and Exclusive access:',
-    es: 'Recompensas and Acceso exclusivo:',
+    es: 'Recompensas y Acceso exclusivo:',
     pt: 'Recompensas e acesso exclusivo:'
   },
   8: {
