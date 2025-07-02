@@ -42,7 +42,7 @@ const Partners = (): JSX.Element => {
                     <Image
                     width={125}
                     height={65} key={partner.name} src={partner.image} alt={partner.name}
-                    className='scale-110 md:scale-100 drop-shadow-[0px_0px_2px_rgba(230,162,0,0.9)] '/>
+                    className='scale-110 md:scale-100 '/>
                     </Link>
                 ))}
             </div>
