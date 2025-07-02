@@ -90,7 +90,7 @@ const Navbar = (): React.JSX.Element => {
   return (
     <>
         <NavigationMenu className='w-full bg-withe fixed backdrop-blur bg-background/50 shadow-md z-50'>
-            <NavigationMenuList className='w-screen grid grid-cols-3 justify-between px-8'>
+            <NavigationMenuList className='w-screen grid grid-cols-3 justify-between px-2 md:px-8'>
                 <Image className='rounded-full' src='/logo.png' alt='logo' width={50} height={50}></Image>
                 <NavigationMenuList>
                   <div className='sm:flex gap-4 hidden items-center justify-center'>
