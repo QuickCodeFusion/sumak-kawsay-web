@@ -3,6 +3,7 @@ import ProgressBar from './ProgressBar'
 import TwoIcons from './TwoIcons'
 import Image from 'next/image'
 import Link from 'next/link'
+import { Card, CardContent, CardFooter } from './ui/card'
 
 interface Project {
   title: string
@@ -14,24 +15,22 @@ interface Project {
 
 const CardProject: React.FC<{ project: Project }> = ({ project }): JSX.Element => {
   return (
-        <div className=' drop-shadow-md flex flex-col bg-card justify-between aspect-square items-center  gap-8 p-12 rounded-3xl'>
-            <div className='flex flex-col items-center gap-10'>
-                <Image src={project.image} className='object-cover aspect-video rounded-md' alt={project.title} width={1600} height={900}></Image>
-                <h1 className=' flex items-center'>{project.title}</h1>
-            </div>
-                <ProgressBar className='text-white' progress={project.progress}></ProgressBar>
-            <div className='relative w-full'>
-                <p className='text-start absolute -top-6 left-12'>{project.description}</p>
-            </div>
-            <div className='flex flex-row justify-between items-center w-full gap-4'>
+        <Card className=' flex flex-col justify-between p-4 drop-shadow-md'>
+            <CardContent className='flex flex-col gap-4 justify-center items-center'>
+                <Image className='aspect-video' src={project.image} alt={project.image} height={900} width={1600}/>
+                <h2>{project.title}</h2>
+                <ProgressBar progress={project.progress}/>
+                <p className='text-start'>{project.description}</p>
+            </CardContent>
+            <CardFooter className='flex flex-row justify-between items-center w-full gap-4'>
                 <ButtonUI asChild variant={'outline'}>
                     <Link href='https://dao.hypha.earth/abya-yala/' target='_blank'>
                         Vote
                     </Link>
                 </ButtonUI>
                 <TwoIcons/>
-            </div>
-        </div>
+            </CardFooter>
+        </Card>
   )
 }
 
