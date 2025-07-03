@@ -52,7 +52,7 @@ const networks = [
 ]
 const IconSocial = ({ className }: { className: string }): JSX.Element => {
   return (
-        <div className={'grid grid-cols-7 w-fit gap-6 rounded-full p-2 place-items-center ' + className}>{networks.map((network) => (
+        <div className={'grid grid-cols-6 w-fit gap-6 rounded-full p-2 place-items-center ' + className}>{networks.map((network) => (
               <Link key={network.id} className='w-6'
                href={network.url} target='_blank'>
                 {network.image}
