@@ -25,15 +25,9 @@ import Partners from '@/components/Partners'
 import Projects from '@/components/Projects'
 import Sales from '@/components/Sales'
 
-const PresaleCountdown = dynamic(async () => await import('@/components/PresaleCountdown'), {
-  ssr: false
-})
-const InfoPhase = dynamic(async () => await import('@/components/functionsContract/InfoPhase'), {
-  ssr: false
-})
-const BuyInfo = dynamic(async () => await import('@/components/BuyInfo'), {
-  ssr: false
-})
+const PresaleCountdown = dynamic(async () => await import('@/components/PresaleCountdown'))
+const InfoPhase = dynamic(async () => await import('@/components/functionsContract/InfoPhase'))
+const BuyInfo = dynamic(async () => await import('@/components/BuyInfo'))
 
 // const currentDate = new Date()
 // const stopRenderingDate = new Date('2024-04-01')

@@ -16,7 +16,7 @@ const CardProject: React.FC<{ project: Project }> = ({ project }): JSX.Element =
   return (
         <div className=' drop-shadow-md flex flex-col bg-card justify-between aspect-square items-center  gap-8 p-6 rounded-3xl'>
             <div className='flex flex-col items-center gap-10'>
-                <Image src={project.image} className='object-cover aspect-square rounded-md' alt={project.title} width={200} height={200}></Image>
+                <Image src={project.image} className='object-cover aspect-video rounded-md' alt={project.title} width={1600} height={900}></Image>
                 <h1 className=' flex items-center'>{project.title}</h1>
             </div>
                 <ProgressBar className='text-white' progress={project.progress}></ProgressBar>

@@ -9,7 +9,7 @@ import Image from 'next/image'
 
 const TokenAddress = ({ token, link }: { token: string, link: string }): JSX.Element => {
   return (
-  <div className="flex items-center pb-2 self-end">
+  <div className="flex items-center pb-2">
     <Link href={link} target='_blank'>
     <p className="font-bold truncate sm:text-xl md:w-full w-52">
       {token}
@@ -43,7 +43,7 @@ const InfonToken = (): JSX.Element => {
   }
   return (
     <Card className="relative bg-azure-radiance-500 border-none shadow-azure-radiance-900 shadow-lg flex flex-col-reverse lg:grid md:grid-cols-4 md:grid-rows-1 justify-around -mt-64 md:-mt-72 mb-12 w-full md:max-w-screen-2xl rounded-3xl">
-        <div className='md:columns-1 pb-10 md:p-10 flex justify-center items-center bg-cover object-cover order-first'>
+        <div className='md:columns-1 pb-10 pl-0 md:pl-0 md:p-10 flex justify-center items-center bg-cover object-cover order-first'>
           <Image className=' md:flex-initial size-28' src={'/wiphala.webp'} alt='wiphala' height={200} width={200}/>
         </div>
       <CardHeader className="flex flex-col items-center col-span-2 backdrop-blur-sm order-last md:-order-2">
@@ -55,7 +55,7 @@ const InfonToken = (): JSX.Element => {
           <DecimalToken />
         </div>
       </CardHeader>
-      <CardContent className="flex flex-col md:gap-16 md:py-20 ">
+      <CardContent className="flex flex-col md:gap-16 md:py-20">
         <div className="flex flex-col items-center truncate text-sm md:text-base">
           <p>{text[3][language]}</p>
           <Link

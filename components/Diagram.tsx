@@ -22,13 +22,13 @@ export default function Diagram (): React.JSX.Element {
   const { language } = useLanguage()
 
   return (
-    <div className="w-full mt-24 md:my-0 max-w-4xl mx-auto p-4 text-center md:scale-125">
+    <div className="w-full mt-24 md:my-0 max-w-4xl mx-auto md:px-12 xl:px-4 p-4 text-center md:scale-125">
       <div className="relative flex flex-col md:space-y-40">
         <div className="grid grid-cols-1 md:flex justify-around gap-2">
           {elements.map((element, index) => {
             const line = index === elements.length - 1 ? 'h-[48rem] -bottom-[48rem] md:-bottom-40' : ''
             return (
-            <Card key={index} className={'border-none flex flex-col group justify-between items-center cursor-pointer contrast-125 '}>
+            <Card key={index} className={'border-none flex flex-col group justify-between items-center cursor-pointer contrast-[1.10] '}>
               {index < elements.length && (
                   <div className={line + ' absolute left-[49.8%] -bottom-40 w-0.5 h-40 md:h-40 -z-50 bg-black'}></div>
               )}
@@ -88,7 +88,7 @@ export default function Diagram (): React.JSX.Element {
           {categories.map((category, index) => {
             const evenCard = index % 2 === 0 ? '' : 'hidden md:block'
             return (
-            <Card key={index} className="border-none cursor-pointer group contrast-125 ">
+            <Card key={index} className="border-none cursor-pointer group contrast-[1.10] ">
               {index < categories.length && index !== categories.length - 1 && (
                   <div className={evenCard + ' absolute bottom-1/2 left-[100%] h-[2px] w-4 -z-50 bg-black'}></div>
               )}

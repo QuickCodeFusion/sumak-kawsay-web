@@ -57,7 +57,7 @@ export const HexDiagram = (): JSX.Element => {
       <div className="relative w-full md:scale-75" style={{ paddingBottom: '100%' }}>
         <div className="absolute inset-0 bg-cover bg-center ">
           {/* Enclosing circle */}
-          <div className="absolute inset-0 scale-110 rounded-full ring ring-slate-100 backdrop-blur-sm bg-gradient-to-b from-slate-50/55 to-slate-300/35 shadow-md" style={{ top: '0', left: '0', right: '0', bottom: '0' }} />
+          <div className="absolute inset-0 scale-110 rounded-full ring ring-slate-100 backdrop-blur-sm bg-gradient-to-b from-slate-100/55 to-slate-400/35 drop-shadow-sm" style={{ top: '0', left: '0', right: '0', bottom: '0' }} />
 
           {items.map((item, index) => (
             <div
@@ -69,7 +69,7 @@ export const HexDiagram = (): JSX.Element => {
                 transform: 'translate(-50%, -50%)'
               }}
             >
-              <Card className="w-full h-full rounded-full overflow-hidden contrast-125">
+              <Card className="w-full h-full rounded-full overflow-hidden contrast-[1.10] drop-shadow-sm">
                 <CardContent className="h-full flex items-center justify-center p-4 text-center">
                   <p className="font-bold text-balance leading-tight md:leading-normal text-foreground text-[0.5rem] sm:text-xs md:text-base lg:text-xl">
                     {item[language]}
