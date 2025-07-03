@@ -34,25 +34,54 @@ const InfoFooter = (): JSX.Element => {
     }
   }
   return (
-    <div className='container flex items-center justify-around flex-col md:grid grid-cols-3 place-items-center gap-4 p-4'>
-        <span>
-          <div className='flex gap-4 items-center'>
-            <Image className='rounded-full drop-shadow-[0px_0px_7px_rgba(255,255,255,0.8)]' src={Logo} alt='logo' width={50} height={50}/>
-            <p className='font-bold text-2xl drop-shadow-[0px_0px_7px_rgba(255,255,255,0.8)]'>{text[1][language]}</p>
+    <div className="container mx-auto px-4">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-4 place-items-center">
+        <div className="flex items-center gap-4 order-1">
+          <div className="relative">
+            <Image
+              className="h-12 w-12 rounded-full shadow-lg shadow-white/20"
+              src={Logo}
+              alt="Abya Yala DAO logo"
+              width={50}
+              height={50}
+              priority
+            />
           </div>
-        </span>
-        <IconSocial className='[&_svg]:fill-foreground drop-shadow-[0px_0px_7px_rgba(255,255,255,0.8)]'/>
-        <div className='flex  flex-col justify-center drop-shadow-[0px_0px_7px_rgba(255,255,255,0.8)]'>
-          <p>© {year} {text[2][language]}</p>
-          <div className='flex gap-2 text-sm'>
-            <a
-            // href="https://drive.google.com/file/d/1K8rGq0ahHfrr1SnNTm9l9FonBW3_dOqc/view?usp=sharing"
-            >{text[3][language]}</a>|<a
-            // href="https://drive.google.com/file/d/1SYo4OIxyJjzHigEmfR2X8KXrD-S62qgp/view?usp=sharing"
-            >{text[4][language]}</a>
-          </div>
-          <a className='text-sm' href="#">{text[5][language]}</a>
+          <h1 className="text-2xl font-bold drop-shadow-[0px_0px_7px_rgba(255,255,255,0.8)]">{text[1][language]}</h1>
         </div>
+
+        <nav className="order-2 md:order-2" aria-label="Social media links">
+          <IconSocial className="[&_svg]:fill-black drop-shadow-[0px_0px_7px_rgba(255,255,255,0.8)]" />
+        </nav>
+
+        <div className="flex flex-col items-center space-y-2 text-center drop-shadow-lg order-3 md:order-3">
+          <p className="text-sm md:text-base">
+            © {year} {text[2][language]}
+          </p>
+
+          <nav className="flex flex-wrap items-center justify-center gap-2 text-xs md:text-sm" aria-label="Legal links">
+            <a
+              href="#"
+              className="transition-colors hover:text-blue-200"
+              aria-label="View legal compliance information"
+            >
+              {text[3][language]}
+            </a>
+            <span className="text-white/60">|</span>
+            <a href="#" className="transition-colors hover:text-blue-200" aria-label="View privacy policy">
+              {text[4][language]}
+            </a>
+          </nav>
+
+          <a
+            className="text-xs md:text-sm transition-colors hover:text-blue-200"
+            href="#"
+            aria-label="View terms and conditions"
+          >
+            {text[5][language]}
+          </a>
+        </div>
+      </div>
     </div>
   )
 }

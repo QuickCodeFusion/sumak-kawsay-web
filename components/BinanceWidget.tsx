@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image'
 import { useEffect } from 'react'
 
 const BinanceWidget = (): JSX.Element => {
@@ -9,14 +10,19 @@ const BinanceWidget = (): JSX.Element => {
     document.body.appendChild(script)
   }, [])
   return (
-    <div className="binance-widget-marquee w-full"
-      data-cmc-ids="1,1027,5426,1839,52,3408,5805,74,3890,7083"
-      data-theme="light"
-      data-transparent="true"
-      data-locale="en"
-      data-powered-by="Powered by"
-      data-disclaimer="Disclaimer">
-    </div>
+    <section className='relative w-full'>
+
+      <div className='binance-widget-marquee overflow-y-visible w-full'
+        data-cmc-ids="1,1027,5426,1839,52,3408,5805,74,3890,7083"
+        data-theme="light"
+        data-transparent="true"
+        data-locale="en"
+        data-powered-by="Powered by"
+        data-disclaimer="Disclaimer">
+      </div>
+        <div></div>
+        <Image className='absolute top-full left-0 scale-150' src={'/fondofooter.png'} alt='fondo indigena' height={500} width={2000}></Image>
+    </section>
   )
 }
 

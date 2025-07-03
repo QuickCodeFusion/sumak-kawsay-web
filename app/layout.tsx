@@ -26,25 +26,15 @@ const RootLayout = ({
 }): React.JSX.Element => {
   return (
     <html lang="en">
-      <body className={
-        cn(
-          'min-h-screen',
-          poppins.className,
-          'bg-cover bg-no-repeat bg-center bg-fixed',
-          'h-screen flex'
-        )
-      }>
+      <body className={cn('min-h-screen font-poppins bg-cover bg-no-repeat bg-center bg-fixed', poppins.className)}>
         <Providers>
-          <ThemeProvider
-              attribute="class"
-              defaultTheme="light"
-              enableSystem
-              disableTransitionOnChange
-            >
-            <Navbar/>
-            {children}
-            <Footer/>
-            <BgVideo/>
+          <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
+            <div className="flex min-h-screen flex-col">
+              <Navbar />
+              <main className="flex-1">{children}</main>
+              <Footer />
+            </div>
+            <BgVideo />
           </ThemeProvider>
         </Providers>
       </body>
