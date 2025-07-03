@@ -57,7 +57,7 @@ export const HexDiagram = (): JSX.Element => {
       <div className="relative w-full md:scale-75" style={{ paddingBottom: '100%' }}>
         <div className="absolute inset-0 bg-cover bg-center ">
           {/* Enclosing circle */}
-          <div className="absolute inset-0 scale-110 rounded-full ring ring-slate-100 backdrop-blur-sm bg-gradient-to-b from-slate-50/55 to-slate-300/35 shadow-md drop-shadow-[1px_1px_10px_rgba(0,0,0,0.1)]" style={{ top: '0', left: '0', right: '0', bottom: '0' }} />
+          <div className="absolute inset-0 scale-110 rounded-full ring ring-slate-100 backdrop-blur-sm bg-gradient-to-b from-slate-50/55 to-slate-300/35 shadow-md" style={{ top: '0', left: '0', right: '0', bottom: '0' }} />
 
           {items.map((item, index) => (
             <div

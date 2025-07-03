@@ -3,24 +3,23 @@ import { Card, CardContent } from '@/components/ui/card'
 import Image from 'next/image'
 import { ButtonUI } from './ui/button'
 import Link from 'next/link'
+const elements = [
+  { name: 'EARTH', icon: '/level3.png', borderColor: ' drop-shadow-[1px_1px_10px_rgba(0,0,0,0.3)', return: '12', blocking: '12' },
+  { name: 'WATER', icon: '/watericon.png', borderColor: ' drop-shadow-[1px_1px_10px_rgba(0,0,0,0.3)', return: '18', blocking: '24' },
+  { name: 'AIR', icon: '/airicon.png', borderColor: ' drop-shadow-[1px_1px_10px_rgba(0,0,0,0.3)', return: '24', blocking: '36' },
+  { name: 'FIRE', icon: '/level2.png', borderColor: ' drop-shadow-[1px_1px_10px_rgba(0,0,0,0.3)', return: '30', blocking: '56' }
+]
+
+const text: Record<string, string> = {
+  en: 'Accelerator-Incubator',
+  es: 'Incubador-Acelerador',
+  pt: 'Incubador-Acelerador'
+}
+
+const categories = ['Local', 'Bioregional', 'Continental', 'Global']
 
 export default function Diagram (): React.JSX.Element {
-  const elements = [
-    { name: 'EARTH', icon: '/level3.png', borderColor: ' drop-shadow-[1px_1px_10px_rgba(0,0,0,0.3)', return: '12', blocking: '12' },
-    { name: 'WATER', icon: '/watericon.png', borderColor: ' drop-shadow-[1px_1px_10px_rgba(0,0,0,0.3)', return: '18', blocking: '24' },
-    { name: 'AIR', icon: '/airicon.png', borderColor: ' drop-shadow-[1px_1px_10px_rgba(0,0,0,0.3)', return: '24', blocking: '36' },
-    { name: 'FIRE', icon: '/level2.png', borderColor: ' drop-shadow-[1px_1px_10px_rgba(0,0,0,0.3)', return: '30', blocking: '56' }
-  ]
-
-  const text: Record<string, string> = {
-    en: 'Accelerator-Incubator',
-    es: 'Incubador-Acelerador',
-    pt: 'Incubador-Acelerador'
-  }
-
   const { language } = useLanguage()
-
-  const categories = ['Local', 'Bioregional', 'Continental', 'Global']
 
   return (
     <div className="w-full mt-24 md:my-0 max-w-4xl mx-auto p-4 text-center md:scale-125">
@@ -29,7 +28,7 @@ export default function Diagram (): React.JSX.Element {
           {elements.map((element, index) => {
             const line = index === elements.length - 1 ? 'h-[48rem] -bottom-[48rem] md:-bottom-40' : ''
             return (
-            <Card key={index} className={'border-none drop-shadow-[0px_0px_1px_rgba(0,0,0,0.2)] flex flex-col group justify-between items-center cursor-pointer contrast-125 '}>
+            <Card key={index} className={'border-none flex flex-col group justify-between items-center cursor-pointer contrast-125 '}>
               {index < elements.length && (
                   <div className={line + ' absolute left-[49.8%] -bottom-40 w-0.5 h-40 md:h-40 -z-50 bg-black'}></div>
               )}
