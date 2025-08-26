@@ -31,6 +31,11 @@ const InfoFooter = (): JSX.Element => {
       en: 'Terms & Conditions',
       es: 'Términos y Condiciones',
       pt: 'Termos e Condições'
+    },
+    6: {
+      en: 'Connect with us',
+      es: 'Conecta con nosotros',
+      pt: 'Conecte-se conosco'
     }
   }
   return (
@@ -79,6 +84,13 @@ const InfoFooter = (): JSX.Element => {
             aria-label="View terms and conditions"
           >
             {text[5][language]}
+          </a>
+          <a
+            className="text-xs md:text-sm transition-colors hover:text-blue-200 font-semibold"
+            href="https://www.shambhala.eu.com "
+            aria-label="Connect with us"
+          >
+            {text[6][language]}
           </a>
         </div>
       </div>
